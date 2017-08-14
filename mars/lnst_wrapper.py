@@ -106,7 +106,6 @@ class LnstWrapper(TestWrapper):
 
 if __name__ == "__main__":
     test_name = str(__file__)
-    format_str = "%(asctime)-15s  " + test_name + "  %(levelname)-5s :  %(message)s"
     lnst = LnstWrapper()
     rc = lnst.execute(sys.argv[1:])
     sys.exit(rc)

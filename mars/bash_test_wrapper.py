@@ -13,20 +13,18 @@ from reg2_wrapper.utils.parser.cmd_argument import RunningStage
 
 wrapper_dir = os.path.abspath(__file__)
 root_dir = os.path.abspath(os.path.join(wrapper_dir, '..', '..'))
-recipes_dir = os.path.join(root_dir, 'recipes', 'ovs_offload')
+ovs_tests_dir = os.path.join('..', '..', 'ovs-tests')
 
 
 class BashTestWrapper(StandaloneWrapper):
     def __init__(self):
         super(BashTestWrapper, self).__init__('Bash Test Wrapper')
 
-    def get_command(self, running_stage=RunningStage.RUN):
-        # TODO include bash to env and then execute bash script
-        cmd = self.test
-        return 'abcabc'
+    def get_prog_path(self):
+        return os.path.join(ovs_tests_dir, self.test)
 
-    def __set_pythonpath_envvar(self):
-        logging.info('Setting environment variables')
+    def __set_envvar(self):
+        self.Logger.info('Setting environment variables')
         for player in self.Players:
             player.putenv('CONFIG', self.config)
 
@@ -34,6 +32,7 @@ class BashTestWrapper(StandaloneWrapper):
         try:
             self.__set_envvar()
         except Exception, e:
+            self.Logger.error('run_pre_commands failed: %s' % str(e))
             return ErrorCode.FAIL
         return ErrorCode.SUCCESS
 
@@ -45,7 +44,6 @@ class BashTestWrapper(StandaloneWrapper):
 
 if __name__ == "__main__":
     test_name = str(__file__)
-    format_str = "%(asctime)-15s  " + test_name + "  %(levelname)-5s :  %(message)s"
     bashtest = BashTestWrapper()
     rc = bashtest.execute(sys.argv[1:])
     sys.exit(rc)
