@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CASEDEF>
+    <global>
+        <Test>
+            <name>bash_cases</name>
+            <info></info>
+            <owner>roid</owner>
+        </Test>
+        <Case>
+            <tags> bash </tags>
+            <wrapper> bash_test_wrapper.py </wrapper>
+            <tout> 300 </tout>
+             <params>
+                 <config> config_dev139.sh </config>
+             </params>
+        </Case>
+    </global>
+   
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules.sh </name>
+        <cmd>
+             <params>
+                 <test> test-tc-insert-rules.sh </test>
+             </params>
+        </cmd>
+    </case>
+
+</CASEDEF>

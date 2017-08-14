@@ -1,0 +1,57 @@
+<lnstrecipe>
+    <define>
+        <alias name="test_with_veth" value="yes" />
+    </define>
+    <network>
+        <host id="host1">
+            <params>
+                <param name="machine_type" value="baremetal"/>
+                <param name="ovs_support" value="true"/>
+                <param name="order" value="1"/>
+            </params>
+            <interfaces>
+                <eth id="if1" label="n1"/>
+                <veth_pair>
+                    <veth id="vm1" netns="vm1_ns">
+                        <addresses>
+                            <address value="8.9.10.1/24"/>
+                            <address value="8.9.10.2/24"/>
+                            <address value="8.9.10.3/24"/>
+                            <address value="8.9.10.4/24"/>
+                            <address value="2002:0db8:0:f101::1/64"/>
+                        </addresses>
+                    </veth>
+                    <veth id="vm1_rep"/>
+                </veth_pair>
+                <veth_pair>
+                    <veth id="vm2" netns="vm2_ns">
+                        <addresses>
+                            <address value="8.9.10.11/24"/>
+                            <address value="8.9.10.12/24"/>
+                            <address value="8.9.10.13/24"/>
+                            <address value="8.9.10.14/24"/>
+                            <address value="2002:0db8:0:f101::2/64"/>
+                        </addresses>
+                    </veth>
+                    <veth id="vm2_rep"/>
+                </veth_pair>
+                <ovs_bridge id="ovs1">
+                    <slaves>
+                        <slave id="vm1_rep">
+                            <options>
+                                <option name="ofport_request" value="1"/>
+                            </options>
+                        </slave>
+                        <slave id="vm2_rep">
+                            <options>
+                                <option name="ofport_request" value="11"/>
+                            </options>
+                        </slave>
+                    </slaves>
+                </ovs_bridge>
+            </interfaces>
+        </host>
+    </network>
+
+    <task python="header_rewrite.py" />
+</lnstrecipe>

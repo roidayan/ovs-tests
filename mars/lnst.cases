@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CASEDEF>
+    <global>
+        <Test>
+            <name>lnst_cases</name>
+            <info></info>
+            <owner>roid</owner>
+        </Test>
+        <Case>
+            <tags> lnst </tags>
+            <wrapper> lnst_wrapper.py </wrapper>
+            <tout> 300 </tout>
+             <params>
+                 <pools> dev138_139 </pools>
+             </params>
+        </Case>
+    </global>
+   
+    <case>
+        <tags> basic </tags>
+        <name> basic </name>
+        <cmd>
+             <params>
+                 <recipe> 01-basic.xml </recipe>
+             </params>
+        </cmd>
+    </case>
+
+    <case>
+        <tags> vlan </tags>
+        <name> vlan_in_host </name>
+        <cmd>
+             <params>
+                 <recipe> 03-vlan_in_host.xml </recipe>
+             </params>
+        </cmd>
+    </case>
+
+    <case>
+        <tags> vxlan </tags>
+        <name> 1_virt_ovs_vxlan </name>
+        <cmd>
+             <params>
+                 <recipe> 1_virt_ovs_vxlan.xml </recipe>
+             </params>
+        </cmd>
+    </case>
+
+    <case>
+        <tags> vxlan </tags>
+        <tags> stacked </tags>
+        <name> 1_virt_ovs_vxlan_stacked </name>
+        <cmd>
+             <params>
+                 <recipe> 1_virt_ovs_vxlan_stacked.xml </recipe>
+             </params>
+        </cmd>
+    </case>
+
+    <case>
+        <ignore>
+            <bug> 1092855 </bug>
+        </ignore>
+        <tags> vxlan </tags>
+        <tags> vxlan_ipv6 </tags>
+        <name> 1_virt_ovs_vxlan_ipv6 </name>
+        <cmd>
+             <params>
+                 <recipe> 1_virt_ovs_vxlan_ipv6.xml </recipe>
+             </params>
+        </cmd>
+    </case>
+
+    <case>
+        <ignore>
+            <condition>
+                <key> ovs_upstream:(False) </key>
+                <op> == </op>
+                <value> True </value>
+            </condition>
+        </ignore>
+        <tags> header_rewrite </tags>
+        <name> header_rewrite </name>
+        <cmd>
+             <params>
+                 <recipe> header_rewrite.xml </recipe>
+             </params>
+        </cmd>
+    </case>
+
+</CASEDEF>

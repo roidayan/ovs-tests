@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CASEDEF>
+	<global>
+		<Test>
+			<info>info of ping test</info>
+			<name>basic_ping_test</name>
+			<owner>roid</owner>
+		</Test>
+		<Case>
+			<tags> basic </tags>
+			<tags> icmp </tags>
+			<wrapper> ping_wrapper.py </wrapper>
+			<tout> 50 </tout>
+			<ignore>					
+			</ignore>	
+			<pre> 
+				<type> reg_exec_cmd </type>
+				<name> check_disk </name> 
+				<tout> 50 </tout>
+				<params>
+					<exec> df </exec>
+					<static_args> -h </static_args>
+				</params>
+			</pre>
+			<post> 
+				<type> reg_exec_cmd </type>
+				<name> check_disk </name> 
+				<tout> 50 </tout>
+				<params>
+					<exec> df </exec>
+					<static_args> -h </static_args>
+				</params>
+			</post>
+		</Case>
+	</global>
+	
+	<case> 
+		<tags> single_process </tags>
+		<info> ping case information </info>
+		<name> 1_processes </name>
+		<tout> 30 </tout>
+		<ignore> 
+			<condition>				
+				<key> NUM_VLANS </key>	
+				<op> in </op>			
+				<value> [int(100), int(30), str(100)] </value>		
+			</condition>				
+		</ignore>
+		<cmd>
+		 	<params> 
+		 		<static_args> --client_processes=1 --count=10 </static_args>
+		 	</params> 
+		</cmd>
+	</case>
+
+	<case> 
+		<tags> multi_process </tags>
+		<info> ping case information </info>
+		<name> 10_processes </name>
+		<tout> 30 </tout>
+		<cmd>
+		 	<params> 
+		 		<static_args> --client_processes=10 --count=10 </static_args>
+		 	</params> 
+		</cmd>
+	</case>
+</CASEDEF>
+
