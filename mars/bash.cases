@@ -198,15 +198,6 @@
     </case>
     <case>
         <tags> tc </tags>
-        <name> test-tc-insert-rate.sh </name>
-        <cmd>
-            <params>
-                <test> test-tc-insert-rate.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> tc </tags>
         <name> test-tc-insert-rules.sh </name>
         <cmd>
             <params>
@@ -220,15 +211,6 @@
         <cmd>
             <params>
                 <test> test-tc-max-rules.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> tc </tags>
-        <name> test-tc-reload-gact.sh </name>
-        <cmd>
-            <params>
-                <test> test-tc-reload-gact.sh </test>
             </params>
         </cmd>
     </case>
