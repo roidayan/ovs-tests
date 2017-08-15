@@ -15,15 +15,275 @@
              </params>
         </Case>
     </global>
-   
+
+    <case>
+        <tags> devlink </tags>
+        <name> test-devlink-encap.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-encap.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> devlink </tags>
+        <name> test-devlink-inline-mode2.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-inline-mode2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> devlink </tags>
+        <name> test-devlink-inline-mode.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-inline-mode.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> devlink </tags>
+        <name> test-devlink-show-in-each-link-mode.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-show-in-each-link-mode.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-add-del-different-flows.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-different-flows.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-add-del-flows-during-flows-cleanup.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-flows-during-flows-cleanup.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-add-flows-during-reload.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-flows-during-reload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-add-in-mode1-del-in-mode2.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-in-mode1-del-in-mode2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-del-flows-during-add.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-del-flows-during-add.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-del-flows-during-reload.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-del-flows-during-reload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-toggle-mode-ovs-crash.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-ovs-crash.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-ipv4-match.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ipv4-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-ipv6-match.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ipv6-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-persistent-data.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-persistent-data.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-replace-rule-hw.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-replace-rule-hw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-replace-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-replace-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-vxlan-in-ns-hw.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns-hw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-vxlan-in-ns.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> reload </tags>
+        <name> test-reload-modules-different-state.sh </name>
+        <cmd>
+            <params>
+                <test> test-reload-modules-different-state.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-groups-overlapping.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-groups-overlapping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-insert-rate.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rate.sh </test>
+            </params>
+        </cmd>
+    </case>
     <case>
         <tags> tc </tags>
         <name> test-tc-insert-rules.sh </name>
         <cmd>
-             <params>
-                 <test> test-tc-insert-rules.sh </test>
-             </params>
+            <params>
+                <test> test-tc-insert-rules.sh </test>
+            </params>
         </cmd>
     </case>
-
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-max-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-reload-gact.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-reload-gact.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-replace.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-replace.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-vf-rep-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-del.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-del.sh </test>
+            </params>
+        </cmd>
+    </case>
 </CASEDEF>
