@@ -15,7 +15,7 @@
              </params>
         </Case>
     </global>
-   
+
     <case>
         <tags> basic </tags>
         <name> basic </name>
