@@ -83,7 +83,7 @@ def prepare_for_test():
     nic2.get_host().run("ip -6 n replace %s dev %s lladdr %s" % (nic1.get_ip(4), nic2.get_devname(), nic1_mac), netns=nic2.get_netns())
 
     # icmp + mod mac
-    ofctl_add_flow("priority=2, in_port=11, dl_dst=aa:bb:cc:dd:ee:99, ip, icmp, nw_dst=8.9.10.01, actions=mod_dl_src:aa:bb:cc:dd:ee:99, mod_dl_dst:%s, output:1" % nic1_mac)
+    ofctl_add_flow("priority=2, in_port=11, dl_dst=aa:bb:cc:dd:ee:99, ip, icmp, nw_dst=8.9.10.1, actions=mod_dl_src:aa:bb:cc:dd:ee:99, mod_dl_dst:%s, output:1" % nic1_mac)
     ofctl_add_flow("priority=2, in_port=1, dl_dst=aa:bb:cc:dd:ee:99, ip, icmp, nw_dst=8.9.10.11, actions=mod_dl_src:aa:bb:cc:dd:ee:99, mod_dl_dst:%s, output:11" % nic2_mac)
 
     # tcp + mod ipv4
@@ -152,7 +152,7 @@ class IperfTest:
 #TODO make var for fake_ip
 def test_rewrite_ipv4():
     # TODO server needs bind to ip?
-    iperf.iperf(nic1, nic2, 3, 'vm1->vm2', '8.9.10.55', '-B %s' % nic1.get_ip(2), '-B %s' % nic2.get_ip(2))
+    iperf.iperf(nic1, nic2, ping_timeout, 'vm1->vm2', '8.9.10.55', '-B %s' % nic1.get_ip(2), '-B %s' % nic2.get_ip(2))
     m = tl.find_ovs_rule(hv, '2', '.*', '0x0800', 'set\(ipv4\(.*dst=8.9.10.13\)\),3')
     report_test_result("OVS rule: rewrite ipv4 dst (vm1->vm2)", m)
     m = tl.find_ovs_rule(hv, '3', '.*', '0x0800', 'set\(ipv4\(.*dst=8.9.10.3\)\),2')
@@ -169,7 +169,7 @@ def test_rewrite_mac():
 
 def test_rewrite_tcp_ports():
     # TODO server bind ip needed?
-    iperf.iperf(nic2, nic1, 3, 'vm1->vm2', nic1.get_ip(1), '-p 5050 -B %s' % nic2.get_ip(1), '-p 5051 -B %s' % nic1.get_ip(1))
+    iperf.iperf(nic2, nic1, ping_timeout, 'vm1->vm2', nic1.get_ip(1), '-p 5050 -B %s' % nic2.get_ip(1), '-p 5051 -B %s' % nic1.get_ip(1))
     m = tl.find_ovs_rule(hv, '2', '.*', '0x0800', 'set\(tcp\(src=5050\)\),3')
     report_test_result("OVS rule: rewrite tcp src (vm1->vm2)", m)
     m = tl.find_ovs_rule(hv, '3', '.*', '0x0800', 'set\(tcp\(dst=5051\)\),2')
@@ -178,7 +178,7 @@ def test_rewrite_tcp_ports():
 
 def test_rewrite_udp_ports():
     # TODO server bind ip needed?
-    iperf.iperf(nic2, nic1, 3, 'vm1->vm2', nic1.get_ip(1), '-p 4050 -u -B %s' % nic2.get_ip(1), '-p 4051 -u -B %s' % nic1.get_ip(1))
+    iperf.iperf(nic2, nic1, ping_timeout, 'vm1->vm2', nic1.get_ip(1), '-p 4050 -u -B %s' % nic2.get_ip(1), '-p 4051 -u -B %s' % nic1.get_ip(1))
     m = tl.find_ovs_rule(hv, '2', '.*', '0x0800', 'set\(udp\(src=4050\)\),3')
     report_test_result("OVS rule: rewrite udp src (vm1->vm2)", m)
     m = tl.find_ovs_rule(hv, '3', '.*', '0x0800', 'set\(udp\(dst=4051\)\),2')
@@ -187,7 +187,7 @@ def test_rewrite_udp_ports():
 
 def test_rewrite_ipv4_ttl():
     # TODO server bind ip needed?
-    iperf.iperf(nic2, nic1, 3, 'vm1->vm2', nic1.get_ip(3), '-B %s' % nic2.get_ip(3), '-B %s' % nic1.get_ip(3))
+    iperf.iperf(nic2, nic1, ping_timeout, 'vm1->vm2', nic1.get_ip(3), '-B %s' % nic2.get_ip(3), '-B %s' % nic1.get_ip(3))
     m = tl.find_ovs_rule(hv, '2', '.*', '0x0800', 'set\(ipv4\(.*ttl=63.*\)\),3')
     report_test_result("OVS rule: rewrite ipv4 ttl (vm1->vm2)", m)
     m = tl.find_ovs_rule(hv, '3', '.*', '0x0800', 'set\(ipv4\(.*ttl=63.*\)\),2')
