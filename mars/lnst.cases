@@ -73,6 +73,19 @@
 
     <case>
         <ignore>
+            <bug> 1048140 </bug>
+        </ignore>
+        <tags> vxlan </tags>
+        <name> 1_virt_ovs_vxlan_up_down </name>
+        <cmd>
+             <params>
+                 <recipe> 1_virt_ovs_vxlan_up_down.xml </recipe>
+             </params>
+        </cmd>
+    </case>
+
+    <case>
+        <ignore>
             <condition>
                 <key> ovs_upstream:(False) </key>
                 <op> == </op>
