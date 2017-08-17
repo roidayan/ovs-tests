@@ -39,6 +39,7 @@ ovs_br_name = ovs.get_devname()
 ping_count = 30
 ping_interval = 0.2
 ping_timeout = 10
+iperf_runtime = 3
 
 
 def ping(nic, options={}):
@@ -71,8 +72,8 @@ def prepare_for_test():
 
     # arp responder for mac mod
     # TODO: use static arp?
-    ofctl_add_flow("priority=10, arp, nw_dst=8.9.10.11, nw_src=8.9.10.01, actions=load:0x2->NXM_OF_ARP_OP[], move:NXM_OF_ETH_SRC[]->NXM_OF_ETH_DST[], mod_dl_src:aa:bb:cc:dd:ee:99, move:NXM_NX_ARP_SHA[]->NXM_NX_ARP_THA[], move:NXM_OF_ARP_SPA[]->NXM_OF_ARP_TPA[], load:0xaabbccddee99->NXM_NX_ARP_SHA[], load:0x08090a0b->NXM_OF_ARP_SPA[], in_port")
-    ofctl_add_flow("priority=10, arp, nw_dst=8.9.10.01, nw_src=8.9.10.11, actions=load:0x2->NXM_OF_ARP_OP[], move:NXM_OF_ETH_SRC[]->NXM_OF_ETH_DST[], mod_dl_src:aa:bb:cc:dd:ee:99, move:NXM_NX_ARP_SHA[]->NXM_NX_ARP_THA[], move:NXM_OF_ARP_SPA[]->NXM_OF_ARP_TPA[], load:0xaabbccddee99->NXM_NX_ARP_SHA[], load:0x08090a01->NXM_OF_ARP_SPA[], in_port")
+    ofctl_add_flow("priority=10, arp, nw_dst=8.9.10.11, nw_src=8.9.10.1, actions=load:0x2->NXM_OF_ARP_OP[], move:NXM_OF_ETH_SRC[]->NXM_OF_ETH_DST[], mod_dl_src:aa:bb:cc:dd:ee:99, move:NXM_NX_ARP_SHA[]->NXM_NX_ARP_THA[], move:NXM_OF_ARP_SPA[]->NXM_OF_ARP_TPA[], load:0xaabbccddee99->NXM_NX_ARP_SHA[], load:0x08090a0b->NXM_OF_ARP_SPA[], in_port")
+    ofctl_add_flow("priority=10, arp, nw_dst=8.9.10.1, nw_src=8.9.10.11, actions=load:0x2->NXM_OF_ARP_OP[], move:NXM_OF_ETH_SRC[]->NXM_OF_ETH_DST[], mod_dl_src:aa:bb:cc:dd:ee:99, move:NXM_NX_ARP_SHA[]->NXM_NX_ARP_THA[], move:NXM_OF_ARP_SPA[]->NXM_OF_ARP_TPA[], load:0xaabbccddee99->NXM_NX_ARP_SHA[], load:0x08090a01->NXM_OF_ARP_SPA[], in_port")
 
     # neighbor for ipv4 mod
     nic1.get_host().run("ip -4 n replace %s dev %s lladdr %s" % ("8.9.10.55", nic1.get_devname(), nic2_mac), netns=nic1.get_netns())
@@ -152,7 +153,7 @@ class IperfTest:
 #TODO make var for fake_ip
 def test_rewrite_ipv4():
     # TODO server needs bind to ip?
-    iperf.iperf(nic1, nic2, ping_timeout, 'vm1->vm2', '8.9.10.55', '-B %s' % nic1.get_ip(2), '-B %s' % nic2.get_ip(2))
+    iperf.iperf(nic1, nic2, iperf_runtime, 'vm1->vm2', '8.9.10.55', '-B %s' % nic1.get_ip(2), '-B %s' % nic2.get_ip(2))
     m = tl.find_ovs_rule(hv, '2', '.*', '0x0800', 'set\(ipv4\(.*dst=8.9.10.13\)\),3')
     report_test_result("OVS rule: rewrite ipv4 dst (vm1->vm2)", m)
     m = tl.find_ovs_rule(hv, '3', '.*', '0x0800', 'set\(ipv4\(.*dst=8.9.10.3\)\),2')
@@ -169,7 +170,7 @@ def test_rewrite_mac():
 
 def test_rewrite_tcp_ports():
     # TODO server bind ip needed?
-    iperf.iperf(nic2, nic1, ping_timeout, 'vm1->vm2', nic1.get_ip(1), '-p 5050 -B %s' % nic2.get_ip(1), '-p 5051 -B %s' % nic1.get_ip(1))
+    iperf.iperf(nic2, nic1, iperf_runtime, 'vm1->vm2', nic1.get_ip(1), '-p 5050 -B %s' % nic2.get_ip(1), '-p 5051 -B %s' % nic1.get_ip(1))
     m = tl.find_ovs_rule(hv, '2', '.*', '0x0800', 'set\(tcp\(src=5050\)\),3')
     report_test_result("OVS rule: rewrite tcp src (vm1->vm2)", m)
     m = tl.find_ovs_rule(hv, '3', '.*', '0x0800', 'set\(tcp\(dst=5051\)\),2')
@@ -178,7 +179,7 @@ def test_rewrite_tcp_ports():
 
 def test_rewrite_udp_ports():
     # TODO server bind ip needed?
-    iperf.iperf(nic2, nic1, ping_timeout, 'vm1->vm2', nic1.get_ip(1), '-p 4050 -u -B %s' % nic2.get_ip(1), '-p 4051 -u -B %s' % nic1.get_ip(1))
+    iperf.iperf(nic2, nic1, iperf_runtime, 'vm1->vm2', nic1.get_ip(1), '-p 4050 -u -B %s' % nic2.get_ip(1), '-p 4051 -u -B %s' % nic1.get_ip(1))
     m = tl.find_ovs_rule(hv, '2', '.*', '0x0800', 'set\(udp\(src=4050\)\),3')
     report_test_result("OVS rule: rewrite udp src (vm1->vm2)", m)
     m = tl.find_ovs_rule(hv, '3', '.*', '0x0800', 'set\(udp\(dst=4051\)\),2')
@@ -187,7 +188,7 @@ def test_rewrite_udp_ports():
 
 def test_rewrite_ipv4_ttl():
     # TODO server bind ip needed?
-    iperf.iperf(nic2, nic1, ping_timeout, 'vm1->vm2', nic1.get_ip(3), '-B %s' % nic2.get_ip(3), '-B %s' % nic1.get_ip(3))
+    iperf.iperf(nic2, nic1, iperf_runtime, 'vm1->vm2', nic1.get_ip(3), '-B %s' % nic2.get_ip(3), '-B %s' % nic1.get_ip(3))
     m = tl.find_ovs_rule(hv, '2', '.*', '0x0800', 'set\(ipv4\(.*ttl=63.*\)\),3')
     report_test_result("OVS rule: rewrite ipv4 ttl (vm1->vm2)", m)
     m = tl.find_ovs_rule(hv, '3', '.*', '0x0800', 'set\(ipv4\(.*ttl=63.*\)\),2')
