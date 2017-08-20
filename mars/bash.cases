@@ -214,6 +214,9 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1120825 </bug>
+        </ignore>
         <tags> tc </tags>
         <name> test-tc-max-rules.sh </name>
         <cmd>
