@@ -10,9 +10,17 @@
             <tags> bash </tags>
             <wrapper> bash_test_wrapper.py </wrapper>
             <tout> 300 </tout>
-             <params>
-                 <config> config_dev139.sh </config>
-             </params>
+            <params>
+                <config> config_dev139.sh </config>
+            </params>
+            <pre>
+                <type> reg_exec_cmd </type>
+                <name> stop_vms </name>
+                <tout> 30 </tout>
+                <params>
+                    <exec> [[run_time:remote_src_path]]/lnst/stop_vms.sh </exec>
+                </params>
+            </pre>
         </Case>
     </global>
 

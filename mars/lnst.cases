@@ -10,9 +10,9 @@
             <tags> lnst </tags>
             <wrapper> lnst_wrapper.py </wrapper>
             <tout> 300 </tout>
-             <params>
-                 <pools> dev138_139 </pools>
-             </params>
+            <params>
+                <pools> dev138_139 </pools>
+            </params>
         </Case>
     </global>
 
