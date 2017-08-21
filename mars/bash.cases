@@ -5,14 +5,6 @@
             <name>bash_cases</name>
             <info></info>
             <owner>roid</owner>
-        </Test>
-        <Case>
-            <tags> bash </tags>
-            <wrapper> bash_test_wrapper.py </wrapper>
-            <tout> 300 </tout>
-            <params>
-                <config> config_dev139.sh </config>
-            </params>
             <pre>
                 <type> reg_exec_cmd </type>
                 <name> stop_vms </name>
@@ -21,6 +13,14 @@
                     <exec> [[run_time:remote_src_path]]/lnst/stop_vms.sh </exec>
                 </params>
             </pre>
+        </Test>
+        <Case>
+            <tags> bash </tags>
+            <wrapper> bash_test_wrapper.py </wrapper>
+            <tout> 300 </tout>
+            <params>
+                <config> config_dev139.sh </config>
+            </params>
         </Case>
     </global>
 
