@@ -79,6 +79,9 @@ class LnstWrapper(TestWrapper):
             prog = os.path.join(venv, 'bin', prog)
 
         sys.argv = [prog, '-d', '-C', config, '--pools', self.pools]
+        for a in self.alias:
+            sys.argv.extend(['-A', a])
+
         sys.argv.extend(self.get_extra_args())
         sys.argv.extend(['run', recipe])
         cmd = ' '.join(sys.argv)
@@ -102,6 +105,7 @@ class LnstWrapper(TestWrapper):
         super(LnstWrapper, self).configure_parser()
         self.add_argument('--recipe', required=True, help="lnst recipe")
         self.add_argument('--pools', required=True, help="lnst pools")
+        self.add_argument('--alias', required=False, help="lnst recipe alias")
 
 
 if __name__ == "__main__":

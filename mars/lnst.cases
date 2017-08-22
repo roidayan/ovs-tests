@@ -65,9 +65,21 @@
         <tags> vxlan_ipv6 </tags>
         <name> 1_virt_ovs_vxlan_ipv6 </name>
         <cmd>
-             <params>
-                 <recipe> 1_virt_ovs_vxlan_ipv6.xml </recipe>
-             </params>
+            <params>
+                <recipe> 1_virt_ovs_vxlan_ipv6.xml </recipe>
+            </params>
+        </cmd>
+    </case>
+
+    <case>
+        <tags> vxlan </tags>
+        <tags> vxlan_ipv6 </tags>
+        <name> 1_virt_ovs_vxlan_ipv6 non-default vxlan port</name>
+        <cmd>
+            <params>
+                <recipe> 1_virt_ovs_vxlan_ipv6.xml </recipe>
+                <alias> vxlan_port=1111 </alias>
+            </params>
         </cmd>
     </case>
 
