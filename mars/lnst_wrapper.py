@@ -106,7 +106,7 @@ class LnstWrapper(TestWrapper):
         super(LnstWrapper, self).configure_parser()
         self.add_argument('--recipe', required=True, help="lnst recipe")
         self.add_argument('--pools', required=True, help="lnst pools")
-        self.add_argument('--alias', required=False, help="lnst recipe alias")
+        self.add_argument('--alias', required=False, help="lnst recipe alias", action='append')
 
 
 if __name__ == "__main__":
