@@ -97,6 +97,7 @@ class LnstWrapper(TestWrapper):
         return ErrorCode.SUCCESS
 
     def call(self, cmd):
+        self.Logger.info('Execute command: %s' % cmd)
         rc = Popen(cmd, shell=True).wait()
         #rc, out = getstatusoutput(cmd)
         return rc
