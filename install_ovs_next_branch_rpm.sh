@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export REPO="git clone http://l-gerrit.mtl.labs.mlnx:8080/openvswitch"
+export REPO="http://l-gerrit.mtl.labs.mlnx:8080/openvswitch"
 export BRANCH="asap2-direct-3.3-next"
 export TMPDIR="/tmp/ovs-next-$$"
 
