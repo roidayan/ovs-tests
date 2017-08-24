@@ -69,4 +69,6 @@ def verify_tc_rules(proto):
         tl.custom(host1, desc, 'ERROR: cannot find tc rule')
 
 
+# sleep a second before testing.
+ctl.wait(1)
 do_pings()
