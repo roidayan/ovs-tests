@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DIR=$(cd `dirname $0` ; pwd)
-RELEASE="/mswg/release/linux/ovs_release/testing/"
+RELEASE="/mswg/release/linux/ovs_release/latest/"
 RPMS="$RELEASE/RPMS"
 
 set -e
