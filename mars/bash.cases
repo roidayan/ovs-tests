@@ -127,6 +127,18 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1124753 </bug>
+        </ignore>
+        <tags> eswitch </tags>
+        <name> test-eswitch-no-carrier.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-no-carrier.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ovs </tags>
         <name> test-ovs-ipv4-match.sh </name>
         <cmd>
