@@ -221,10 +221,25 @@
     </case>
     <case>
         <tags> tc </tags>
-        <name> test-tc-insert-rules.sh </name>
+        <name> test-tc-insert-rules.sh skip test_basic_vxlan </name>
         <cmd>
             <params>
                 <test> test-tc-insert-rules.sh </test>
+                <option> SKIP=test_basic_vxlan </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1120257 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <name> test-tc-insert-rules.sh test_basic_vxlan </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules.sh </test>
+                <option> FILTER=test_basic_vxlan </option>
             </params>
         </cmd>
     </case>
