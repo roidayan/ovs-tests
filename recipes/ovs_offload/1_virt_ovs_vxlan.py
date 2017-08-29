@@ -70,5 +70,5 @@ def verify_tc_rules(proto):
 
 
 # sleep a second before testing.
-ctl.wait(1)
+ctl.wait(3)
 do_pings()
