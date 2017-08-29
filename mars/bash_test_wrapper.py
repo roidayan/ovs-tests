@@ -31,6 +31,10 @@ class BashTestWrapper(StandaloneWrapper):
                 for o in self.option:
                     o = o.split('=')
                     player.putenv(o[0], o[1])
+            if self.env:
+                for o in self.env.split():
+                    o = o.split('=')
+                    player.putenv(o[0], o[1])
 
     def run_pre_commands(self):
         try:
@@ -44,6 +48,7 @@ class BashTestWrapper(StandaloneWrapper):
         super(BashTestWrapper, self).configure_parser()
         self.add_argument('--config', required=True, help="config")
         self.add_argument('--test', required=True, help="test")
+        self.add_argument('--env', required=False, help="env options")
         self.add_argument('--option', required=False, help="env option", action='append')
 
 
