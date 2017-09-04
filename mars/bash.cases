@@ -185,15 +185,7 @@
     </case>
     <case>
         <tags> ovs </tags>
-        <name> test-ovs-vxlan-in-ns-hw.sh </name>
-        <cmd>
-            <params>
-                <test> test-ovs-vxlan-in-ns-hw.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> ovs </tags>
+        <tags> vxlan </tags>
         <name> test-ovs-vxlan-in-ns.sh </name>
         <cmd>
             <params>
