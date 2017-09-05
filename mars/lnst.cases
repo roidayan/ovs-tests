@@ -124,4 +124,17 @@
         </cmd>
     </case>
 
+    <case>
+        <ignore>
+            <bug> 1126868 </bug>
+        </ignore>
+        <tags> rdma </tags>
+        <name> basic_rdma </name>
+        <cmd>
+             <params>
+                 <recipe> basic_rdma.xml </recipe>
+             </params>
+        </cmd>
+    </case>
+
 </CASEDEF>
