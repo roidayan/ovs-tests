@@ -10,11 +10,11 @@ import logging
 tl = Testlib(ctl)
 
 # hosts
-host1 = ctl.get_host("h1")
-host2 = ctl.get_host("h2")
+host1 = ctl.get_host("host1")
+host2 = ctl.get_host("host2")
 
 # guest machines
-guest1 = ctl.get_host("test_host1")
+guest1 = ctl.get_host("guest1")
 
 guest1.sync_resources(modules=["IcmpPing", "Icmp6Ping"])
 
@@ -27,7 +27,10 @@ mtu = ctl.get_alias("mtu")
 turn_off_sriov = ctl.get_alias("turn_off_sriov")
 
 g1_nic = guest1.get_interface("if1")
-h2_nic = host2.get_device("int0")
+try:
+    h2_nic = host2.get_interface("if1")
+except KeyError:
+    h2_nic = host2.get_device("int0")
 
 vxlan_port = ctl.get_alias("vxlan_port")
 vxlan_dev = "vxlan_sys_%s" % vxlan_port

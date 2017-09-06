@@ -59,20 +59,24 @@
                         <address value="{$net}.2/24"/>
                     </addresses>
                 </eth>
-                <vxlan id="if1">
-                    <options>
-                        <option name="id" value="{$vxlan_key}"/>
-                        <option name="remote_ip" value="{$net}.1"/>
-                        <option name="dstport" value="{$vxlan_port}"/>
-                    </options>
-                    <slaves>
-                        <slave id="eth"/>
-                    </slaves>
-                    <addresses>
-                        <address value="{$vxlan_net}.2/24" />
-                        <address value="{$vxlan_net6}::2/64" />
-                    </addresses>
-                </vxlan>
+                <ovs_bridge id="ovs2">
+		    <internal id="int0">
+                        <options>
+                            <option name="name" value="int0"/>
+                        </options>
+                        <addresses>
+                            <address value="{$vxlan_net}.2/24"/>
+                            <address value="{$vxlan_net6}::2/24"/>
+                        </addresses>
+                    </internal>
+                    <tunnel id="vxlan1" type="vxlan">
+                        <options>
+                            <option name="option:remote_ip" value="{$net}.1"/>
+                            <option name="option:key" value="{$vxlan_key}"/>
+                            <option name="option:dst_port" value="{$vxlan_port}"/>
+                        </options>
+                    </tunnel>
+                </ovs_bridge>
             </interfaces>
         </host>
     </network>
