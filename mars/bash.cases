@@ -241,6 +241,7 @@
         </ignore>
         <tags> tc </tags>
         <name> test-tc-max-rules.sh </name>
+        <tout> 900 </tout>
         <cmd>
             <params>
                 <test> test-tc-max-rules.sh </test>
@@ -254,6 +255,7 @@
         <tags> tc </tags>
         <tags> 1M_rules </tags>
         <name> test-tc-max-rules-1M-rules.sh </name>
+        <tout> 900 </tout>
         <cmd>
             <params>
                 <test> test-tc-max-rules-1M-rules.sh </test>
