@@ -253,11 +253,10 @@
         </ignore>
         <tags> tc </tags>
         <tags> 1M_rules </tags>
-        <name> test-tc-max-rules.sh 1M rules </name>
+        <name> test-tc-max-rules-1M-rules.sh </name>
         <cmd>
             <params>
-                <test> test-tc-max-rules.sh </test>
-                <env> TIMEOUT=10m CASE_NIC=ens1f0 CASE_TWO_PORTS=0 CASE_SKIP=skip_sw CASE_COUNT=1000000 CASE_INDEX=0 </env>
+                <test> test-tc-max-rules-1M-rules.sh </test>
             </params>
         </cmd>
     </case>
