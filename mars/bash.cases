@@ -316,4 +316,19 @@
             </params>
         </cmd>
     </case>
+    <case>
+        <ignore>
+            <bug> 1120257 </bug>
+            <bug> 1048140 </bug>
+            <bug> 1135460 </bug>
+        </ignore>
+        <tags> vxlan </tags>
+        <tags> neigh_update </tags>
+        <name> test-vxlan-neigh-update.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-neigh-update.sh </test>
+            </params>
+        </cmd>
+    </case>
 </CASEDEF>
