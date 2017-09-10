@@ -11,7 +11,7 @@
             <wrapper> lnst_wrapper.py </wrapper>
             <tout> 300 </tout>
             <params>
-                <pools> dev138_139 </pools>
+                <pools> [[conf:extra_info.lnst_pool]] </pools>
             </params>
         </Case>
     </global>
