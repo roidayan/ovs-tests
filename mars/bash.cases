@@ -19,7 +19,7 @@
             <wrapper> bash_test_wrapper.py </wrapper>
             <tout> 300 </tout>
             <params>
-                <config> config_dev139.sh </config>
+                <config> [[conf:extra_info.bash_config]] </config>
             </params>
         </Case>
     </global>
