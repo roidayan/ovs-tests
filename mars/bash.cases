@@ -263,6 +263,9 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 988519 </bug>
+        </ignore>
         <tags> tc </tags>
         <name> test-tc-replace.sh </name>
         <cmd>
