@@ -194,6 +194,19 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1123491 </bug>
+        </ignore>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <name> test-ovs-vxlan-flow-key.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-flow-key.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> reload </tags>
         <name> test-reload-modules-different-state.sh </name>
         <cmd>
