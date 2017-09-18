@@ -52,6 +52,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Requires mft to burn FW which many times not installed. Bring back after auto installing mft.</info>
+            </disabled>
+        </ignore>
         <tags> devlink </tags>
         <name> test-devlink-show-in-each-link-mode.sh </name>
         <cmd>
