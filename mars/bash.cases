@@ -7,10 +7,10 @@
             <owner>roid</owner>
             <pre>
                 <type> reg_exec_cmd </type>
-                <name> stop_vms </name>
-                <tout> 30 </tout>
+                <name> preconfigure </name>
+                <tout> 240 </tout>
                 <params>
-                    <exec> [[run_time:remote_src_path]]/lnst/stop_vms.sh </exec>
+                    <exec> [[run_time:remote_src_path]]/lnst/load-test.sh </exec>
                 </params>
             </pre>
         </Test>

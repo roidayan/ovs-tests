@@ -5,6 +5,14 @@
             <name>lnst_cases</name>
             <info></info>
             <owner>roid</owner>
+            <pre>
+                <type> reg_exec_cmd </type>
+                <name> preconfigure </name>
+                <tout> 240 </tout>
+                <params>
+                    <exec> [[run_time:remote_src_path]]/lnst/load-test-with-vms.sh </exec>
+                </params>
+            </pre>
         </Test>
         <Case>
             <tags> lnst </tags>
