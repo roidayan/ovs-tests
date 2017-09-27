@@ -63,6 +63,7 @@
                         <option name="id" value="{$vxlan_key}"/>
                         <option name="remote_ip" value="{$net}::1"/>
                         <option name="dstport" value="{$vxlan_port}"/>
+                        <option name="extra" value="udp6zerocsumrx udp6zerocsumtx"/>
                     </options>
                     <slaves>
                         <slave id="eth"/>
