@@ -37,7 +37,9 @@
                         </options>
                     </tunnel>
                     <flow_entries>
+                        <entry>table=0,in_port=5,dl_dst=e4:11:22:33:44:55,dl_src=e4:11:22:33:44:55,actions=drop</entry>
                         <entry>table=0,in_port=5,actions=set_field:100->tun_id,output:10</entry>
+                        <entry>table=0,in_port=10,dl_dst=e4:11:22:33:44:55,dl_src=e4:11:22:33:44:55,actions=drop</entry>
                         <entry>table=0,in_port=10,tun_id=100,actions=output:5</entry>
                         <entry>table=0,priority=100,actions=drop</entry>
                     </flow_entries>
