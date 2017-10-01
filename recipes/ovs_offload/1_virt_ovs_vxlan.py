@@ -25,6 +25,7 @@ guest1.sync_resources(modules=["IcmpPing", "Icmp6Ping"])
 ipv = ctl.get_alias("ipv")
 mtu = ctl.get_alias("mtu")
 turn_off_sriov = ctl.get_alias("turn_off_sriov")
+skip_tc_verify = ctl.get_alias("skip_tc_verify")
 
 g1_nic = guest1.get_interface("if1")
 try:
@@ -42,13 +43,15 @@ def do_pings():
         ping((guest1, g1_nic, 0, {"scope": 0}),
              (host2, h2_nic, 0, {"scope": 0}),
              options=ping_opts, expect="pass")
-        verify_tc_rules('ip')
+        if not skip_tc_verify:
+            verify_tc_rules('ip')
 
     if ipv in ['ipv6', 'both']:
         ping6((guest1, g1_nic, 1, {"scope": 0}),
               (host2, h2_nic, 1, {"scope": 0}),
               options=ping_opts, expect="pass")
-        verify_tc_rules('ipv6')
+        if not skip_tc_verify:
+            verify_tc_rules('ipv6')
 
 
 def verify_tc_rules(proto):
