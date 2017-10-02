@@ -92,9 +92,6 @@
     </case>
 
     <case>
-        <ignore>
-            <bug> 1147629 </bug>
-        </ignore>
         <tags> vxlan </tags>
         <name> 1_virt_ovs_vxlan_flow_key </name>
         <cmd>
