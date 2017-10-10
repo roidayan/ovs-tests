@@ -38,7 +38,7 @@ total_time_sec = 60
 
 
 def start_pings(seconds):
-    ping_opts = {"count": seconds, "interval": 1.0, "limit_rate": 40}
+    ping_opts = {"count": seconds, "interval": 1.0, "limit_rate": 20}
     return ping((guest1, g1_nic, 0, {"scope": 0}),
                 (host2, h2_nic, 0, {"scope": 0}),
                 options=ping_opts, expect="pass", bg=True)
