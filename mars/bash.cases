@@ -321,6 +321,19 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1164801 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <name> test-tc-vxlan-decap-not-properly-offloaded.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-decap-not-properly-offloaded.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> eswitch </tags>
         <name> test-vf-rep-ping.sh </name>
         <cmd>
