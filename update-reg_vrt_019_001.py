@@ -8,22 +8,16 @@ import re
 import xml.etree.ElementTree as ET
 
 
-host = 'reg-r-vrt-019-060'
-PF = 'ens1f0'
-xml = 'reg_vrt_019_060_001/reg_vrt_019_060.xml'
+host = 'reg-r-vrt-019-001'
+xml = 'ovs02_reg_vrt_019_001/reg_vrt_019_001.xml'
 
-
-con = rpyc.classic.connect(host)
-#netifaces.ifaddresses('br0')[netifaces.AF_LINK][0]['addr']
-#server = RemoteRPC(host)
-#server.import_module('mlxlib.common.execute')
 
 AF_LINK = 17
-
 
 if not os.path.exists(xml):
     raise RuntimeError('Cannot find %s' % xml)
 
+con = rpyc.classic.connect(host)
 tree = ET.parse(xml)
 root = tree.getroot()
 eths = root.findall('.//eth')
