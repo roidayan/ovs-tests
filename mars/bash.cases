@@ -375,6 +375,7 @@
         <tags> vxlan </tags>
         <tags> neigh_update </tags>
         <tags> header_rewrite </tags>
+        <tags> neigh_update_with_header_rewrite </tags>
         <name> test-vxlan-neigh-update-with-pedit.sh </name>
         <cmd>
             <params>
