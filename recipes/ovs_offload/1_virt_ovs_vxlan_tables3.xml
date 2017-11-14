@@ -42,8 +42,8 @@
                         <entry>table=0,in_port=5,actions=resubmit(,1)</entry>
                         <entry>table=1,actions=output:10</entry>
                         <entry>table=0,in_port=10,dl_dst=e4:11:22:33:44:55,dl_src=e4:11:22:33:44:55,actions=drop</entry>
-                        <entry>table=0,tun_id=100,in_port=10,actions=push_vlan:0x8100,set_field:4097->vlan_vid,goto_table:3</entry>
-                        <entry>table=3,dl_vlan=1,actions=pop_vlan,output:5</entry>
+                        <entry>table=0,tun_id=100,in_port=10,actions=goto_table:3</entry>
+                        <entry>table=3,actions=output:5</entry>
                         <entry>table=0,priority=100,actions=drop</entry>
                     </flow_entries>
                 </ovs_bridge>
