@@ -174,13 +174,6 @@
     </case>
 
     <case>
-        <ignore>
-            <condition>
-                <key> ovs_upstream:(False) </key>
-                <op> == </op>
-                <value> True </value>
-            </condition>
-        </ignore>
         <tags> header_rewrite </tags>
         <name> header_rewrite </name>
         <cmd>
