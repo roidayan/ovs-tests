@@ -68,5 +68,5 @@ if ipv in ('ipv6', 'both'):
     g1.run(ping_mod6)
     verify_tc_rules('ipv6')
 
-if do_iperf:
+if do_iperf and ipv in ('ipv4', 'both'):
     tl.iperf(g1_guestnic, h2_vlan10, 10, 'vm1->h2')
