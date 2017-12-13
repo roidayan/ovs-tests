@@ -60,13 +60,16 @@ def verify_tc_rules(proto):
         tl.custom(h1, "TC rule %s vlan pop" % proto, 'ERROR: cannot find tc rule')
 
 
-if ipv in ('ipv4', 'both'):
-    g1.run(ping_mod)
-    verify_tc_rules('ip')
+ctl.wait(2)
 
-if ipv in ('ipv6', 'both'):
-    g1.run(ping_mod6)
-    verify_tc_rules('ipv6')
+for _ in range(2):
+    if ipv in ('ipv4', 'both'):
+        g1.run(ping_mod)
+        verify_tc_rules('ip')
+
+    if ipv in ('ipv6', 'both'):
+        g1.run(ping_mod6)
+        verify_tc_rules('ipv6')
 
 if do_iperf and ipv in ('ipv4', 'both'):
     tl.iperf(g1_guestnic, h2_vlan10, 10, 'vm1->h2')
