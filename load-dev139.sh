@@ -20,9 +20,9 @@ function set_mode() {
 
     if [ "$backport_centos_7_2" = 1 ]; then
         echo $2 > /sys/kernel/debug/mlx5/$pci/compat/mode
-        return
+    else
+        devlink dev eswitch set pci/$pci mode $2
     fi
-    devlink dev eswitch set pci/$pci mode $2
 }
 
 function set_eswitch_inline_mode() {
@@ -47,7 +47,9 @@ function reset_tc_nic() {
     tc qdisc add dev $nic1 ingress
 
     # activate hw offload
-    ethtool -K $nic1 hw-tc-offload on
+    if [ "$backport_centos_7_2" != 1 ]; then
+        ethtool -K $nic1 hw-tc-offload on
+    fi
 }
 
 function reset_tc() {
@@ -119,6 +121,7 @@ function del_ovs_bridges() {
 function clean() {
     echo "Cleanup"
     stop_vms
+    service openvswitch restart
     del_ovs_bridges
     reset_tc
     stop_sriov
@@ -138,7 +141,9 @@ function reload_modules() {
     local modules="mlx5_ib mlx5_core devlink cls_flower"
 
     if [ "$backport_centos_7_2" = 1 ]; then
-        modules="mlx5_ib mlx5_core cls_flower"
+        service openibd restart
+        set +e
+        return
     fi
 
     for m in $modules ; do
