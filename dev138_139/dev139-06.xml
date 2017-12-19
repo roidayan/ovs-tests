@@ -5,9 +5,9 @@
         <param name="machine_type" value="guest"/>
     </params>
     <interfaces>
-        <eth label="net139-2" id="rep">
+        <eth label="net139-2" id="vf1">
             <params>
-                <param name="hwaddr" value="e4:11:22:16:8a:51"/>
+                <param name="hwaddr" value="e4:11:22:4a:f4:51"/>
             </params>
         </eth>
     </interfaces>

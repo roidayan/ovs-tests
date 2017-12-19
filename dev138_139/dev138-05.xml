@@ -5,7 +5,7 @@
         <param name="machine_type" value="guest"/>
     </params>
     <interfaces>
-        <eth label="net138-1" id="rep">
+        <eth label="net138-1" id="vf0">
             <params>
                 <param name="hwaddr" value="e4:11:22:7b:76:50"/>
             </params>
