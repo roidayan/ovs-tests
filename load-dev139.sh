@@ -1,7 +1,7 @@
 #!/bin/sh
 
-nic=${1:-ens1f0}
-nic2=${2:-ens1f1}
+nic=${1:-ens2f0}
+nic2=${2:-ens2f1}
 vfs=2
 vms=`seq 5 6`
 hv=`hostname -s`
