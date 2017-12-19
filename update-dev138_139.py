@@ -9,7 +9,6 @@ import xml.etree.ElementTree as ET
 
 
 host = 'dev-r-vrt-139'
-PF = 'ens1f0'
 xml = 'dev138_139/dev139.xml'
 
 
