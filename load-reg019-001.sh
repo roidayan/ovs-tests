@@ -10,15 +10,15 @@ hv=`hostname -s`
 
 
 if [ `uname -r` = "3.10.0" ];  then
-    backport_centos_7_2=1
+    devlink_compat=1
 elif [ `uname -r` = "3.10.0-327.el7.x86_64" ]; then
-    backport_centos_7_2=1
+    devlink_compat=1
 fi
 
 function set_mode() {
     local pci=$(basename `readlink /sys/class/net/$1/device`)
 
-    if [ "$backport_centos_7_2" = 1 ]; then
+    if [ "$devlink_compat" = 1 ]; then
         echo $2 > /sys/kernel/debug/mlx5/$pci/compat/mode
     else
         devlink dev eswitch set pci/$pci mode $2
@@ -28,7 +28,7 @@ function set_mode() {
 function set_eswitch_inline_mode() {
     local pci=$(basename `readlink /sys/class/net/$1/device`)
 
-    if [ "$backport_centos_7_2" = 1 ]; then
+    if [ "$devlink_compat" = 1 ]; then
         echo $2 > /sys/kernel/debug/mlx5/$pci/compat/inline
     else
         devlink dev eswitch set pci/$pci inline-mode $2
@@ -47,7 +47,7 @@ function reset_tc_nic() {
     tc qdisc add dev $nic1 ingress
 
     # activate hw offload
-    if [ "$backport_centos_7_2" != 1 ]; then
+    if [ "$devlink_compat" != 1 ]; then
         ethtool -K $nic1 hw-tc-offload on
     fi
 }
@@ -121,7 +121,7 @@ function del_ovs_bridges() {
 function clean() {
     echo "Cleanup"
     stop_vms
-    service openvswitch restart
+    service openvswitch force-restart
     del_ovs_bridges
     reset_tc
     stop_sriov
@@ -140,8 +140,8 @@ function reload_modules() {
     set -e
     local modules="mlx5_ib mlx5_core devlink cls_flower"
 
-    if [ "$backport_centos_7_2" = 1 ]; then
-        service openibd restart
+    if [ "$devlink_compat" = 1 ]; then
+        service openibd force-restart
         set +e
         return
     fi
