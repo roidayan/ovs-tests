@@ -256,6 +256,19 @@
     </case>
     <case>
         <ignore>
+            <bug> 1240863 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <name> test-tc-insert-rules-port2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-port2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
             <bug> 1120825 </bug>
         </ignore>
         <tags> tc </tags>
@@ -295,6 +308,15 @@
     </case>
     <case>
         <tags> tc </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
         <name> test-tc-shuffle-2.sh </name>
         <cmd>
             <params>
@@ -312,11 +334,14 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1241076 </bug>
+        </ignore>
         <tags> tc </tags>
-        <name> test-tc-shuffle.sh </name>
+        <name> test-tc-shuffle-4.sh </name>
         <cmd>
             <params>
-                <test> test-tc-shuffle.sh </test>
+                <test> test-tc-shuffle-4.sh </test>
             </params>
         </cmd>
     </case>
@@ -339,6 +364,18 @@
         <cmd>
             <params>
                 <test> test-vf-rep-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1242030 </bug>
+        </ignore>
+        <tags> eswitch </tags>
+        <name> test-vf-rep-ping-reconfig-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-reconfig-sriov.sh </test>
             </params>
         </cmd>
     </case>
@@ -380,6 +417,46 @@
         <cmd>
             <params>
                 <test> test-vxlan-neigh-update-with-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1242052 </bug>
+        </ignore>
+        <tags> ecmp </tags>
+        <name> test-ecmp-add-del-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-add-del-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1242632 </bug>
+            <bug> 1242476 </bug>
+            <bug> 1243769 </bug>
+        </ignore>
+        <tags> ecmp </tags>
+        <name> test-ecmp-devlink-multipath.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-devlink-multipath.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1040416 </bug>
+            <bug> 1242030 </bug>
+            <bug> 1244300 </bug>
+        </ignore>
+        <tags> ecmp </tags>
+        <name> test-ecmp-vf-rep-ping-reconfig-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-vf-rep-ping-reconfig-sriov.sh </test>
             </params>
         </cmd>
     </case>
