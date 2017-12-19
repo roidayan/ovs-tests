@@ -460,4 +460,16 @@
             </params>
         </cmd>
     </case>
+    <case>
+        <ignore>
+            <bug> 1244622 </bug>
+        </ignore>
+        <tags> ecmp </tags>
+        <name> test-ecmp-lag-affinity.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-lag-affinity.sh </test>
+            </params>
+        </cmd>
+    </case>
 </CASEDEF>
