@@ -94,10 +94,17 @@ function del_ovs_bridges() {
     ovs-vsctl list-br | xargs -r -l ovs-vsctl del-br
 }
 
+function reset_ovs() {
+    service openvswitch restart
+    del_ovs_bridges
+    ovs-vsctl set Open_vSwitch . other_config:hw-offload=true
+    service openvswitch restart
+}
+
 function clean() {
     echo "Cleanup"
     stop_vms
-    del_ovs_bridges
+    reset_ovs
     reset_tc
     stop_sriov
 }
