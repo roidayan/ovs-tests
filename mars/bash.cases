@@ -271,7 +271,6 @@
             <bug> 1240863 </bug>
         </ignore>
         <tags> tc </tags>
-        <tags> vxlan </tags>
         <name> test-tc-insert-rules-port2.sh </name>
         <cmd>
             <params>
