@@ -256,6 +256,18 @@
     </case>
     <case>
         <ignore>
+            <bug> 1245633 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules-legacy.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-legacy.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
             <bug> 1240863 </bug>
         </ignore>
         <tags> tc </tags>
