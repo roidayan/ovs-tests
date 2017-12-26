@@ -7,9 +7,9 @@ import rpyc
 import re
 import xml.etree.ElementTree as ET
 
-
+mydir = os.path.dirname(__file__)
 host = 'dev-r-vrt-139'
-xml = 'dev138_139/dev139.xml'
+xml = os.path.join(mydir, 'dev138_139/dev139.xml')
 
 
 con = rpyc.classic.connect(host)
