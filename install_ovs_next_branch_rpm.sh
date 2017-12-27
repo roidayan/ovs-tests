@@ -1,7 +1,7 @@
 #!/bin/sh
 
 export REPO="http://l-gerrit.mtl.labs.mlnx:8080/openvswitch"
-export BRANCH="asap2-direct-3.3-next"
+export BRANCH="asap2-direct-3.4-next"
 export TMPDIR="/tmp/ovs-next-$$"
 
 set -e
