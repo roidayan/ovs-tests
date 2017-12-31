@@ -400,6 +400,9 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1241076 </bug>
+        </ignore>
         <tags> vf </tags>
         <name> test-vf-vf-fwd.sh </name>
         <cmd>
