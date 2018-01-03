@@ -89,6 +89,7 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> reload_modules </tags>
         <name> test-eswitch-add-flows-during-reload.sh </name>
         <cmd>
             <params>
@@ -116,6 +117,7 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> reload_modules </tags>
         <name> test-eswitch-del-flows-during-reload.sh </name>
         <cmd>
             <params>
@@ -213,7 +215,7 @@
         </cmd>
     </case>
     <case>
-        <tags> reload </tags>
+        <tags> reload_modules </tags>
         <name> test-reload-modules-different-state.sh </name>
         <cmd>
             <params>
@@ -485,6 +487,7 @@
             <bug> 1243769 </bug>
         </ignore>
         <tags> ecmp </tags>
+        <tags> reload_modules </tags>
         <name> test-ecmp-devlink-multipath.sh </name>
         <cmd>
             <params>
