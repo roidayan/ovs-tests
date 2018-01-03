@@ -33,9 +33,6 @@ try:
 except KeyError:
     h2_nic = host2.get_device("int0")
 
-vxlan_port = ctl.get_alias("vxlan_port")
-vxlan_dev = "vxlan_sys_%s" % vxlan_port
-
 
 def do_pings():
     ping_opts = {"count": 10, "interval": 0.2}
@@ -54,6 +51,18 @@ def do_pings():
             verify_tc_rules('ipv6')
 
 
+def get_vxlan_dev(host):
+    vxlan_port = ctl.get_alias("vxlan_port")
+    vxlan_dev = "vxlan_sys_%s" % vxlan_port
+    # in asap mlnx ofed the interface name is dummy_port.
+    vxlan_dummy = "dummy_%s" % vxlan_port
+    cmd = host.run("ip l show dev %s" % vxlan_dev)
+    out = cmd.out().strip()
+    if not out:
+        vxlan_dev = vxlan_dummy
+    return vxlan_dev
+
+
 def verify_tc_rules(proto):
     g1_mac = g1_nic.get_hwaddr()
     h2_mac = h2_nic.get_hwaddr()
@@ -66,6 +75,7 @@ def verify_tc_rules(proto):
     else:
         tl.custom(host1, desc, 'ERROR: cannot find tc rule')
 
+    vxlan_dev = get_vxlan_dev(host1)
     # decap rule
     m = tl.find_tc_rule(host1, vxlan_dev, h2_mac, g1_mac, proto, 'tunnel_key unset')
     desc = "TC rule %s tunnel_key unset" % proto
