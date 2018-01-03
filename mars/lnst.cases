@@ -140,6 +140,7 @@
     <case>
         <tags> vxlan </tags>
         <tags> vxlan_ipv6 </tags>
+        <tags> 2_virt_vxlan_ipv6 </tags>
         <name> 2_virt_ovs_vxlan_ipv6</name>
         <cmd>
             <params>
@@ -151,6 +152,7 @@
     <case>
         <tags> vxlan </tags>
         <tags> vxlan_ipv6 </tags>
+        <tags> 2_virt_vxlan_ipv6 </tags>
         <name> 2_virt_ovs_vxlan_ipv6 non-default vxlan port</name>
         <cmd>
             <params>
