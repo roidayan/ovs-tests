@@ -45,8 +45,8 @@ class Testlib:
             return None
 
         # find rule
-        pat_filter = r"^protocol %s pref .* dst_mac %s\n\s*src_mac %s\n.*\n\s*action order \s*\d+\s*:\s* %s" % (
-                proto, str(dst_mac).lower(), str(src_mac).lower(), action)
+        pat_filter = r"^protocol .* pref .* dst_mac %s\n\s*src_mac %s\n\s*eth_type %s\n.*\n\s*action order \s*\d+\s*:\s* %s" % (
+                str(dst_mac).lower(), str(src_mac).lower(), proto, action)
         pat_action = r".*\n\s*action order .* %s.*\n\s*Sent (?P<bytes>\d+) bytes (?P<pkts>\d+) pkt \(dropped (?P<drop>\d+), overlimits \d+ requeues \d+\)" % action
 
         logging.debug("device %s pattern '%s' action '%s'", dev, pat_filter, pat_action)

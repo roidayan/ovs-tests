@@ -65,7 +65,7 @@ ctl.wait(2)
 for _ in range(2):
     if ipv in ('ipv4', 'both'):
         g1.run(ping_mod)
-        verify_tc_rules('ip')
+        verify_tc_rules('ipv4')
 
     if ipv in ('ipv6', 'both'):
         g1.run(ping_mod6)

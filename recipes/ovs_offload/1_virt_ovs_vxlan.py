@@ -41,7 +41,7 @@ def do_pings():
              (host2, h2_nic, 0, {"scope": 0}),
              options=ping_opts, expect="pass")
         if not skip_tc_verify:
-            verify_tc_rules('ip')
+            verify_tc_rules('ipv4')
 
     if ipv in ['ipv6', 'both']:
         ping6((guest1, g1_nic, 1, {"scope": 0}),

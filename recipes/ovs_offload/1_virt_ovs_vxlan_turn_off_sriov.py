@@ -47,7 +47,7 @@ def do_test():
         turn_off_sriov()
         ctl.wait(2)
         ping_proc.intr()
-        verify_tc_rules('ip')
+        verify_tc_rules('ipv4')
 
     if ipv in ['ipv6', 'both']:
         ping_proc = ping6((guest1, g1_nic, 1, {"scope": 0}),

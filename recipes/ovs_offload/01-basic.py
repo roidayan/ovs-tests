@@ -70,7 +70,7 @@ def verify_tc_rules(proto):
 
 if ipv in ('ipv4', 'both'):
     ping()
-    verify_tc_rules('ip')
+    verify_tc_rules('ipv4')
     for size in (200, 400, 1000):
         ping({'size': size})
 
