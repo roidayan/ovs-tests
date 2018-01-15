@@ -8,17 +8,17 @@
     <interfaces>
         <eth id="pf" label="uplink">
             <params>
-                <param name="hwaddr" value="24:8a:07:9a:16:8a" />
+                <param name="hwaddr" value="24:8a:07:11:4a:f4" />
             </params>
         </eth>
         <eth id="ens2f0_0" label="net139-1">
             <params>
-                <param name="hwaddr" value="f2:2d:df:43:f3:95" />
+                <param name="hwaddr" value="ea:b5:10:8e:c9:07" />
             </params>
         </eth>
         <eth id="ens2f0_1" label="net139-2">
             <params>
-                <param name="hwaddr" value="be:7e:ae:5a:ca:ff" />
+                <param name="hwaddr" value="5a:d7:83:a6:39:84" />
             </params>
         </eth>
     </interfaces>
