@@ -53,7 +53,7 @@ def verify_tc_rules(proto):
     else:
         tl.custom(h1, "TC rule %s vlan push" % proto, 'ERROR: cannot find tc rule')
 
-    m = tl.find_tc_rule(h1, 'nic', h2_mac, g1_mac, '802.1Q', 'vlan pop')
+    m = tl.find_tc_rule(h1, 'nic', h2_mac, g1_mac, proto, 'vlan pop')
     if m:
         tl.custom(h1, "TC rule %s vlan pop" % proto)
     else:
