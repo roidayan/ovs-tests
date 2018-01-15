@@ -13,12 +13,12 @@
         </eth>
         <eth id="ens2f0_0" label="net139-1">
             <params>
-                <param name="hwaddr" value="76:c0:43:3b:a9:44" />
+                <param name="hwaddr" value="f2:2d:df:43:f3:95" />
             </params>
         </eth>
         <eth id="ens2f0_1" label="net139-2">
             <params>
-                <param name="hwaddr" value="de:ae:c6:87:39:71" />
+                <param name="hwaddr" value="be:7e:ae:5a:ca:ff" />
             </params>
         </eth>
     </interfaces>

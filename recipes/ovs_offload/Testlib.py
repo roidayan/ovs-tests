@@ -29,7 +29,7 @@ class Testlib:
         custom_mod = self._ctl.get_module("Custom", options=options)
         host.run(custom_mod, desc=desc)
 
-    def find_tc_rule(self, host, nic, src_mac, dst_mac, proto='.*', action='.*', tunnel=''):
+    def find_tc_rule(self, host, nic, src_mac, dst_mac, proto='.*', action='.*'):
         # find dev. i.e. ens5f0
         try:
             if1 = host.get_interface(nic)
