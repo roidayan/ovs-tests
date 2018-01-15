@@ -131,6 +131,13 @@ function clean() {
     reset_ovs
     reset_tc
     stop_sriov
+
+    for i in `ip l show type vxlan`; do
+        ip l del dev $i
+    done
+    for i in `ip l show type dummy`; do
+        ip l del dev $i
+    done
 }
 
 function warn_extra() {
