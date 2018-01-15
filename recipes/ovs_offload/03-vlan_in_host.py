@@ -60,7 +60,7 @@ def verify_tc_rules(proto):
         tl.custom(h1, "TC rule %s vlan pop" % proto, 'ERROR: cannot find tc rule')
 
 
-ctl.wait(2)
+ctl.wait(3)
 
 for _ in range(2):
     if ipv in ('ipv4', 'both'):
