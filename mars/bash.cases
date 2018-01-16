@@ -166,6 +166,7 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> persistent-data </tags>
         <name> test-ovs-persistent-data.sh </name>
         <cmd>
             <params>
