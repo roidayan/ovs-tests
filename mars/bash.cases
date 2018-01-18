@@ -405,10 +405,13 @@
         </cmd>
     </case>
     <case>
+<!--
         <ignore>
             <bug> 1241076 </bug>
         </ignore>
+-->
         <tags> vf </tags>
+        <tags> vf-vf-fwd </tags>
         <name> test-vf-vf-fwd.sh </name>
         <cmd>
             <params>
@@ -418,10 +421,13 @@
         </cmd>
     </case>
     <case>
+<!--
         <ignore>
             <bug> 1223798 </bug>
         </ignore>
+-->
         <tags> vf </tags>
+        <tags> vf-veth-fwd </tags>
         <name> test-vf-veth-fwd.sh </name>
         <cmd>
             <params>
