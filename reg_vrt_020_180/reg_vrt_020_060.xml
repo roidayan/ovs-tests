@@ -1,0 +1,24 @@
+<slavemachine>
+    <params>
+        <param name="hostname" value="10.213.20.60"/>
+        <param name="ovs_support" value="true"/>
+        <param name="machine_type" value="baremetal"/>
+    </params>
+    <interfaces>
+        <eth label="uplink" id="pf">
+            <params>
+                <param name="hwaddr" value="24:8a:07:38:21:48"/>
+            </params>
+        </eth>
+        <eth label="net60-1" id="rep1">
+            <params>
+                <param name="hwaddr" value="d6:1e:ae:d6:ee:b5"/>
+            </params>
+        </eth>
+        <eth label="net60-2" id="rep2">
+            <params>
+                <param name="hwaddr" value="f2:e3:61:52:11:09"/>
+            </params>
+        </eth>
+    </interfaces>
+</slavemachine>

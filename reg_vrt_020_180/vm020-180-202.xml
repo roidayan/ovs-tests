@@ -1,0 +1,14 @@
+<slavemachine>
+    <params>
+        <param name="hostname" value="10.213.20.202"/>
+<!--        <param name="libvirt_domain" value="dom139-6"/> -->
+        <param name="machine_type" value="guest"/>
+    </params>
+    <interfaces>
+        <eth label="net180-2" id="vf1">
+            <params>
+                <param name="hwaddr" value="e4:11:22:21:9c:51"/>
+            </params>
+        </eth>
+    </interfaces>
+</slavemachine>
