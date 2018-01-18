@@ -286,6 +286,7 @@
             <bug> 1120825 </bug>
         </ignore>
         <tags> tc </tags>
+        <tags> tc-max-rules </tags>
         <name> test-tc-max-rules.sh </name>
         <tout> 900 </tout>
         <cmd>
@@ -299,6 +300,7 @@
             <bug> 1120825 </bug>
         </ignore>
         <tags> tc </tags>
+        <tags> tc-max-rules </tags>
         <tags> 1M_rules </tags>
         <name> test-tc-max-rules-1M-rules.sh </name>
         <tout> 1200 </tout>
