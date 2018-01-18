@@ -7,17 +7,7 @@
     <interfaces>
         <eth label="uplink" id="pf">
             <params>
-                <param name="hwaddr" value="24:8a:07:38:21:48"/>
-            </params>
-        </eth>
-        <eth label="net60-1" id="rep1">
-            <params>
-                <param name="hwaddr" value="d6:1e:ae:d6:ee:b5"/>
-            </params>
-        </eth>
-        <eth label="net60-2" id="rep2">
-            <params>
-                <param name="hwaddr" value="f2:e3:61:52:11:09"/>
+                <param name="hwaddr" value="24:8a:07:a5:28:b0"/>
             </params>
         </eth>
     </interfaces>
