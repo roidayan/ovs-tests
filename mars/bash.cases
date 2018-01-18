@@ -195,6 +195,7 @@
     <case>
         <tags> ovs </tags>
         <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
         <name> test-ovs-vxlan-in-ns.sh </name>
         <cmd>
             <params>
@@ -208,6 +209,7 @@
         </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
         <name> test-ovs-vxlan-flow-key.sh </name>
         <cmd>
             <params>
