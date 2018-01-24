@@ -407,6 +407,18 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1251244 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <name> test-vf-vf-iperf.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-iperf.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
 <!--
         <ignore>
             <bug> 1241076 </bug>
