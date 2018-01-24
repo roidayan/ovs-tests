@@ -204,6 +204,17 @@
         </cmd>
     </case>
     <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-hw </tags>
+        <name> test-ovs-vxlan-in-ns-hw.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns-hw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
             <bug> 1123491 </bug>
         </ignore>
