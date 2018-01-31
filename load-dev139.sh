@@ -6,6 +6,10 @@ vfs=2
 vms=`seq 5 6`
 hv=`hostname -s`
 
+NICS=1
+MULTIPATH=0
+pci=$(basename `readlink /sys/class/net/$nic/device`)
+
 ##############################################################################
 
 
@@ -131,6 +135,7 @@ function clean() {
     reset_ovs
     reset_tc
     stop_sriov
+    devlink dev eswitch set pci/$pci multipath disable
 }
 
 function warn_extra() {
