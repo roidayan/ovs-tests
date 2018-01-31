@@ -239,6 +239,16 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-del-a-lot </tags>
+        <name> test-tc-del-a-lot.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-del-a-lot.sh </test>
+            </params>
+         </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
         <name> test-tc-groups-overlapping.sh </name>
         <cmd>
             <params>
