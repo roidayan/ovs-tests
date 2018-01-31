@@ -202,7 +202,7 @@ echo "Change mode to switchdev"
 unbind
 set_mode $nic switchdev
 set_eswitch_inline_mode $nic transport
-if [ "$NICS" != "2" ]; then
+if [ "$NICS" == "2" ]; then
     set_mode $nic2 switchdev
     set_eswitch_inline_mode $nic2 transport
 fi

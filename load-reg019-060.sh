@@ -165,7 +165,7 @@ reset_tc
 echo "Change mode to switchdev"
 unbind
 /labhome/roid/scripts/ovs/devlink-mode.sh $nic switchdev
-if [ "$NICS" != "2" ]; then
+if [ "$NICS" == "2" ]; then
     /labhome/roid/scripts/ovs/devlink-mode.sh $nic2 switchdev
 fi
 sleep 2
