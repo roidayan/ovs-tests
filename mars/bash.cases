@@ -487,6 +487,16 @@
         </cmd>
     </case>
     <case>
+        <tags> vf </tags>
+        <tags> vf-vf-diff-esw </tags>
+        <name> test-vf-vf-different-esw-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-different-esw-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> vxlan </tags>
         <name> test-vxlan-port-del.sh </name>
         <cmd>
