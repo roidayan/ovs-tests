@@ -400,6 +400,51 @@
         </cmd>
     </case>
     <case>
+        <tags> tc </tags>
+        <name> test-tc-shuffle-reload-gact.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-reload-gact.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1241076 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-shuffle-reload-mirred.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-reload-mirred.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1223798 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-shuffle-reload-mirred-skip-hw.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-reload-mirred-skip-hw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1294281 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-shuffle-cls_api.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-cls_api.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
             <bug> 1164801 </bug>
         </ignore>
