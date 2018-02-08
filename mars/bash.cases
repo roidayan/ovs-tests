@@ -386,10 +386,9 @@
         </cmd>
     </case>
     <case>
-<!--        <ignore>
+        <ignore>
             <bug> 1241076 </bug>
         </ignore>
--->
         <tags> tc </tags>
         <tags> tc-shuffle-4 </tags>
         <name> test-tc-shuffle-4.sh </name>
