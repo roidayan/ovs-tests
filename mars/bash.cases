@@ -305,6 +305,16 @@
         </cmd>
     </case>
     <case>
+        <tags> tc </tags>
+        <tags> header_rewrite </tags>
+        <name> test-tc-insert-rules-pedit.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
             <bug> 1120825 </bug>
         </ignore>
