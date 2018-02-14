@@ -514,11 +514,9 @@
         </cmd>
     </case>
     <case>
-<!--
         <ignore>
             <bug> 1223798 </bug>
         </ignore>
--->
         <tags> vf </tags>
         <tags> vf-veth-fwd </tags>
         <name> test-vf-veth-fwd.sh </name>
