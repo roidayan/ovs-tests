@@ -30,10 +30,12 @@ class BashTestWrapper(StandaloneWrapper):
             if self.option:
                 for o in self.option:
                     o = o.split('=')
+                    self.Logger.info("%s=%s" % (o[0], o[1]))
                     player.putenv(o[0], o[1])
             if self.env:
                 for o in self.env.split():
                     o = o.split('=')
+                    self.Logger.info("%s=%s" % (o[0], o[1]))
                     player.putenv(o[0], o[1])
 
     def run_pre_commands(self):
