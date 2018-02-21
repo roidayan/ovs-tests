@@ -327,8 +327,7 @@
         <cmd>
             <params>
                 <test> test-tc-max-rules.sh </test>
-                <option> CASE_INDEX=1 </option>
-                <option> CASE_TWO_PORTS=0 </option>
+                <option> CASE_INDEX=1,CASE_TWO_PORTS=0 </option>
             </params>
         </cmd>
     </case>
@@ -511,8 +510,7 @@
         <cmd>
             <params>
                 <test> test-vf-vf-fwd.sh </test>
-                <option> TIMEOUT=120 </option>
-                <option> ROUNDS=10 </option>
+                <option> TIMEOUT=120,ROUNDS=10 </option>
             </params>
         </cmd>
     </case>
@@ -526,8 +524,7 @@
         <cmd>
             <params>
                 <test> test-vf-veth-fwd.sh </test>
-                <option> TIMEOUT=120 </option>
-                <option> ROUNDS=10 </option>
+                <option> TIMEOUT=120,ROUNDS=10 </option>
             </params>
         </cmd>
     </case>

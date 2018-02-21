@@ -28,12 +28,7 @@ class BashTestWrapper(StandaloneWrapper):
         for player in self.Players:
             player.putenv('CONFIG', self.config)
             if self.option:
-                for o in self.option:
-                    o = o.split('=')
-                    self.Logger.info("%s=%s" % (o[0], o[1]))
-                    player.putenv(o[0], o[1])
-            if self.env:
-                for o in self.env.split():
+                for o in self.option.split(','):
                     o = o.split('=')
                     self.Logger.info("%s=%s" % (o[0], o[1]))
                     player.putenv(o[0], o[1])
@@ -50,8 +45,7 @@ class BashTestWrapper(StandaloneWrapper):
         super(BashTestWrapper, self).configure_parser()
         self.add_argument('--config', required=True, help="config")
         self.add_argument('--test', required=True, help="test")
-        self.add_argument('--env', required=False, help="env options")
-        self.add_argument('--option', required=False, help="env option", action='append')
+        self.add_argument('--option', required=False, help="env option")
 
 
 if __name__ == "__main__":
