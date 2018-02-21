@@ -320,6 +320,7 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-max-rules </tags>
         <tags> tc-max-rules-shared-action </tags>
         <name> test-tc-max-rules.sh shared action </name>
         <tout> 900 </tout>
