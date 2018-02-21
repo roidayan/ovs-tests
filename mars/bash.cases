@@ -310,11 +310,26 @@
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
         <name> test-tc-max-rules.sh </name>
-        <tout> 1800 </tout>
+        <tout> 900 </tout>
         <cmd>
             <params>
                 <test> test-tc-max-rules.sh </test>
                 <option> CASE_INDEX=0 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1120825 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <name> test-tc-max-rules.sh legacy</name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules.sh </test>
+                <option> CASE_INDEX=0,MODE=legacy </option>
             </params>
         </cmd>
     </case>
