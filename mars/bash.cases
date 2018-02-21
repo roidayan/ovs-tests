@@ -321,7 +321,7 @@
     <case>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
-        <name> test-tc-max-rules.sh legacy</name>
+        <name> test-tc-max-rules-legacy.sh</name>
         <tout> 900 </tout>
         <cmd>
             <params>
