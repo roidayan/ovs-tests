@@ -218,6 +218,45 @@
         </cmd>
     </case>
     <case>
+        <tags> ovs </tags>
+        <name> test-ovs-icmp-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-icmp-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-tcp-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-tcp-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-udp-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-udp-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1315045 </bug>
+        </ignore>
+        <tags> ovs </tags>
+        <name> test-ovs-overlap-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-overlap-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> reload_modules </tags>
         <name> test-reload-modules-different-state.sh </name>
         <cmd>
