@@ -68,7 +68,7 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start $i-Fedora-25 ; done
+    for i in $vms; do virsh -q start $i-RH-7.5 ; done
 }
 
 function wait_vms() {
