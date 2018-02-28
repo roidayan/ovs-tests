@@ -249,6 +249,7 @@
             <bug> 1315045 </bug>
         </ignore>
         <tags> ovs </tags>
+        <tags> overlap </tags>
         <name> test-ovs-overlap-rules.sh </name>
         <cmd>
             <params>
