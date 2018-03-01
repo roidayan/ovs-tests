@@ -11,14 +11,14 @@
 		    <param name="hwaddr" value="50:6b:4b:08:85:9e" />
             </params>
         </eth>
-        <eth id="p1p1_0" label="net-vm1">
+        <eth id="rep_p1p1_0" label="net-vm1">
             <params>
-                <param name="hwaddr" value="aa:c3:13:e1:6b:19" />
+                <param name="hwaddr" value="be:47:c1:11:2f:a2" />
             </params>
         </eth>
-        <eth id="p1p1_1" label="net-vm2">
+        <eth id="rep_p1p1_1" label="net-vm2">
             <params>
-                <param name="hwaddr" value="e2:3a:4e:6a:0f:61" />
+                <param name="hwaddr" value="72:6c:9f:8b:94:0e" />
             </params>
         </eth>
     </interfaces>
