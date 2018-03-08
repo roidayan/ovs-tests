@@ -483,10 +483,11 @@
         </cmd>
     </case>
     <case>
-        <ignore>
+<!--        <ignore>
             <bug> 1294281 </bug>
-        </ignore>
+        </ignore> -->
         <tags> tc </tags>
+        <tags> tc-shuffle-cls_api </tags>
         <name> test-tc-shuffle-cls_api.sh </name>
         <cmd>
             <params>
