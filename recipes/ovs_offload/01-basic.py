@@ -82,4 +82,4 @@ if ipv in ('ipv6', 'both'):
 
 if do_iperf:
     tl.iperf(g1_guestnic, g2_guestnic, 30, 'vm1->vm2')
-    tl.iperf(g1_guestnic, g2_guestnic, 30, 'vm1->vm2 SCTP', iperf3=True, iperf_opts='--sctp')
+    #tl.iperf(g1_guestnic, g2_guestnic, 30, 'vm1->vm2 SCTP', iperf3=True, iperf_opts='--sctp')
