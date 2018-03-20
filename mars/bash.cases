@@ -591,6 +591,18 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1335481 </bug>
+        </ignore>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> vxlan </tags>
         <name> test-vxlan-port-del.sh </name>
         <cmd>
