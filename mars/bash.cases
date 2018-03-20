@@ -530,6 +530,33 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1040416 </bug>
+            <bug> 896876 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <tags> frag </tags>
+        <name> test-vf-rep-ping-fragmented.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1333837 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <tags> frag </tags>
+        <name> test-vf-rep-udp-fragmented.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-udp-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> vf </tags>
         <name> test-vf-vf-ping.sh </name>
         <cmd>
