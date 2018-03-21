@@ -7,7 +7,7 @@
     <interfaces>
         <eth label="net139-2" id="vf1">
             <params>
-                <param name="hwaddr" value="e4:11:22:4a:f4:51"/>
+                <param name="hwaddr" value="e4:11:22:4a:ec:51"/>
             </params>
         </eth>
     </interfaces>
