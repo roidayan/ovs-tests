@@ -227,6 +227,19 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1334271 </bug>
+        </ignore>
+        <tags> ovs </tags>
+        <tags> frag </tags>
+        <name> test-ovs-icmp-frag-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-icmp-frag-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ovs </tags>
         <name> test-ovs-tcp-offload.sh </name>
         <cmd>
