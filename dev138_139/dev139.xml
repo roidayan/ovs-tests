@@ -8,7 +8,7 @@
     <interfaces>
         <eth id="pf" label="uplink">
             <params>
-                <param name="hwaddr" value="24:8a:07:11:4a:f4" />
+                <param name="hwaddr" value="24:8a:07:11:4a:ec" />
             </params>
         </eth>
         <eth id="ens2f0_0" label="net139-1">
