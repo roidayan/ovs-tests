@@ -232,10 +232,10 @@
         </ignore>
         <tags> ovs </tags>
         <tags> frag </tags>
-        <name> test-ovs-icmp-frag-offload.sh </name>
+        <name> test-ovs-icmp-frag.sh </name>
         <cmd>
             <params>
-                <test> test-ovs-icmp-frag-offload.sh </test>
+                <test> test-ovs-icmp-frag.sh </test>
             </params>
         </cmd>
     </case>
