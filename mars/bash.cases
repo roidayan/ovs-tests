@@ -343,6 +343,18 @@
     </case>
     <case>
         <ignore>
+            <bug> 1334271 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules-frag.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-frag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
             <bug> 1120825 </bug>
         </ignore>
         <tags> tc </tags>
