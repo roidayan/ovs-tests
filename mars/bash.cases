@@ -520,6 +520,7 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> vf </tags>
         <name> test-vf-rep-ping.sh </name>
         <cmd>
             <params>
@@ -532,6 +533,7 @@
             <bug> 1242030 </bug>
         </ignore>
         <tags> eswitch </tags>
+        <tags> vf </tags>
         <name> test-vf-rep-ping-reconfig-sriov.sh </name>
         <cmd>
             <params>
