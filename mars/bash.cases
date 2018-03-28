@@ -355,6 +355,18 @@
     </case>
     <case>
         <ignore>
+            <bug> 1338214 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-insert-rule-without-match.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rule-without-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
             <bug> 1120825 </bug>
         </ignore>
         <tags> tc </tags>
