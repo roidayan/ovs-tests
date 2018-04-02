@@ -433,6 +433,7 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-shuffle </tags>
         <name> test-tc-shuffle.sh </name>
         <cmd>
             <params>
@@ -442,6 +443,7 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-shuffle </tags>
         <name> test-tc-shuffle-2.sh </name>
         <cmd>
             <params>
@@ -451,6 +453,7 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-shuffle </tags>
         <name> test-tc-shuffle-3.sh </name>
         <cmd>
             <params>
@@ -463,6 +466,7 @@
             <bug> 1241076 </bug>
         </ignore>
         <tags> tc </tags>
+        <tags> tc-shuffle </tags>
         <tags> tc-shuffle-4 </tags>
         <name> test-tc-shuffle-4.sh </name>
         <cmd>
@@ -473,6 +477,7 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-shuffle </tags>
         <name> test-tc-shuffle-reload-gact.sh </name>
         <cmd>
             <params>
@@ -485,6 +490,7 @@
             <bug> 1241076 </bug>
         </ignore>
         <tags> tc </tags>
+        <tags> tc-shuffle </tags>
         <name> test-tc-shuffle-reload-mirred.sh </name>
         <cmd>
             <params>
@@ -497,6 +503,7 @@
             <bug> 1223798 </bug>
         </ignore>
         <tags> tc </tags>
+        <tags> tc-shuffle </tags>
         <name> test-tc-shuffle-reload-mirred-skip-hw.sh </name>
         <cmd>
             <params>
@@ -509,6 +516,7 @@
             <bug> 1294281 </bug>
         </ignore> -->
         <tags> tc </tags>
+        <tags> tc-shuffle </tags>
         <tags> tc-shuffle-cls_api </tags>
         <name> test-tc-shuffle-cls_api.sh </name>
         <cmd>
