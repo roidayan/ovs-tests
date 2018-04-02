@@ -54,7 +54,7 @@ class LnstWrapper(TestWrapper):
         self._python = p
 
     def update_pools(self):
-        cmd = self._python + ' update-%s.py' % self.pools
+        cmd = self._python + ' %s/update-%s.py' % (self.pools, self.pools)
         rc = self.call(cmd)
         self.Logger.info('Result of %s: %s' % (cmd, rc))
 
