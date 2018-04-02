@@ -13,11 +13,17 @@
 
 CX4=ens2f0
 CX4_2=ens2f0
+
 CX5=ens1f0
 CX5_2=ens1f1
 
-nic=${1:-$CX4}
-nic2=${2:-$CX4_2}
+if [ "$1" == "cx5" ]; then
+    nic=$CX5
+    nic2=$CX5_2
+else
+    nic=$CX4
+    nic2=$CX4_2
+fi
 vfs=2
 vms=`seq 5 6`
 hv=`hostname -s`

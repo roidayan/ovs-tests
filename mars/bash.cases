@@ -10,7 +10,7 @@
                 <name> preconfigure </name>
                 <tout> 240 </tout>
                 <params>
-                    <exec> [[run_time:remote_src_path]]/lnst/load-test.sh </exec>
+                    <exec> [[run_time:remote_src_path]]/lnst/load-test.sh [[conf:extra_info.hca_type]] </exec>
                 </params>
             </pre>
         </Test>
