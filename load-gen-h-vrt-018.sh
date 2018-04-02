@@ -1,7 +1,19 @@
 #!/bin/sh
 
-nic=${1:-p1p1}
-nic2=${2:-p1p2}
+CX4=p2p1
+CX4_2=p2p2
+
+CX5=p1p1
+CX5_2=p1p2
+
+if [ "$1" == "cx5" ]; then
+    nic=$CX5
+    nic2=$CX5_2
+else
+    nic=$CX4
+    nic2=$CX4_2
+fi
+
 vfs=2
 vms="gen-h-vrt-018-005 gen-h-vrt-018-006"
 

@@ -1,9 +1,22 @@
 #!/bin/sh
 
-nic=${1:-ens1f0}
-nic2=${2:-ens1f1}
+CX4=ens2f0
+CX4_2=ens2f1
+
+CX5=ens1f0
+CX5_2=ens1f1
+
+if [ "$1" == "cx5" ]; then
+    nic=$CX5
+    nic2=$CX5_2
+    vms=`seq 4 5`
+else
+    nic=$CX4
+    nic2=$CX4_2
+    vms=`seq 2 3`
+fi
+
 vfs=2
-vms=`seq 2 3`
 hv=`hostname -s`
 
 ##############################################################################
