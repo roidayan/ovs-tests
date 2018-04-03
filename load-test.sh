@@ -14,4 +14,4 @@ echo "SCRIPT $SCRIPT"
 
 DIR=$(cd `dirname $0` && pwd)
 
-$DIR/$SCRIPT
+$DIR/$SCRIPT $1
