@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 
 mydir = os.path.dirname(__file__)
 host = 'reg-r-vrt-020-180'
-xml = os.path.join(mydir, 'reg_vrt_020_180/reg_vrt_020_180.xml')
+xml = os.path.join(mydir, 'reg_vrt_020_180.xml')
 
 
 con = rpyc.classic.connect(host)
