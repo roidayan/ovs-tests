@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CASEDEF>
+    <global>
+        <Test>
+            <name>bash_cases</name>
+            <info></info>
+            <owner>roid</owner>
+            <pre>
+                <type> reg_exec_cmd </type>
+                <name> preconfigure </name>
+                <tout> 240 </tout>
+                <params>
+                    <exec> [[run_time:remote_src_path]]/lnst/load-test.sh [[conf:extra_info.hca_type]] </exec>
+                </params>
+            </pre>
+        </Test>
+        <Case>
+            <tags> bash </tags>
+            <wrapper> bash_test_wrapper.py </wrapper>
+            <tout> 300 </tout>
+            <params>
+                <config> [[conf:extra_info.bash_config]] </config>
+            </params>
+        </Case>
+    </global>
+
+        <tags> tc-del-a-lot </tags>
+        <name> test-tc-del-a-lot.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-del-a-lot.sh </test>
+            </params>
+         </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-groups-overlapping.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-groups-overlapping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1245633 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules-legacy.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-legacy.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1240863 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules-port2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-port2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> header_rewrite </tags>
+        <name> test-tc-insert-rules-pedit.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1334271 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules-frag.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-frag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1338214 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-insert-rule-without-match.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rule-without-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1120825 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <name> test-tc-max-rules.sh </name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules.sh </test>
+                <option> CASE_INDEX=0 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <name> test-tc-max-rules-legacy.sh</name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules-legacy.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <tags> tc-max-rules-shared-action </tags>
+        <name> test-tc-max-rules.sh shared action </name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules.sh </test>
+                <option> CASE_INDEX=1,CASE_TWO_PORTS=0 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1120825 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <tags> 1M_rules </tags>
+        <name> test-tc-max-rules-1M-rules.sh </name>
+        <tout> 1200 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules-1M-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 988519 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-replace.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-replace.sh </test>
+            </params>
+        </cmd>
+    </case>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1164801 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <name> test-tc-vxlan-decap-not-properly-offloaded.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-decap-not-properly-offloaded.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
+        <name> test-vf-rep-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1242030 </bug>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
+        <name> test-vf-rep-ping-reconfig-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-reconfig-sriov.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1040416 </bug>
+            <bug> 896876 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <tags> frag </tags>
+        <name> test-vf-rep-ping-fragmented.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1333837 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <tags> frag </tags>
+        <name> test-vf-rep-udp-fragmented.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-udp-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <name> test-vf-vf-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1251244 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <name> test-vf-vf-iperf.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-iperf.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+<!--
+        <ignore>
+            <bug> 1241076 </bug>
+        </ignore>
+-->
+        <tags> vf </tags>
+        <tags> vf-vf-fwd </tags>
+        <name> test-vf-vf-fwd.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-fwd.sh </test>
+                <option> TIMEOUT=120,ROUNDS=10 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1223798 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <tags> vf-veth-fwd </tags>
+        <name> test-vf-veth-fwd.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-veth-fwd.sh </test>
+                <option> TIMEOUT=120,ROUNDS=10 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <tags> vf-vf-diff-esw </tags>
+        <name> test-vf-vf-different-esw-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-different-esw-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+</CASEDEF>
