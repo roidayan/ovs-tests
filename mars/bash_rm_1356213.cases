@@ -23,7 +23,7 @@
             </params>
         </Case>
     </global>
-
+    <case>
         <tags> tc-del-a-lot </tags>
         <name> test-tc-del-a-lot.sh </name>
         <cmd>
