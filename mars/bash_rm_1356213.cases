@@ -174,9 +174,6 @@
             </params>
         </cmd>
     </case>
-            </params>
-        </cmd>
-    </case>
     <case>
         <ignore>
             <bug> 1164801 </bug>
