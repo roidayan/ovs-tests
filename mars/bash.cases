@@ -23,7 +23,117 @@
             </params>
         </Case>
     </global>
-
+    <case>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
+        <name> test-vf-rep-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1242030 </bug>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
+        <name> test-vf-rep-ping-reconfig-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-reconfig-sriov.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1040416 </bug>
+            <bug> 896876 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <tags> frag </tags>
+        <name> test-vf-rep-ping-fragmented.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1333837 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <tags> frag </tags>
+        <name> test-vf-rep-udp-fragmented.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-udp-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <name> test-vf-vf-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1251244 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <name> test-vf-vf-iperf.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-iperf.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+<!--
+        <ignore>
+            <bug> 1241076 </bug>
+        </ignore>
+-->
+        <tags> vf </tags>
+        <tags> vf-vf-fwd </tags>
+        <name> test-vf-vf-fwd.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-fwd.sh </test>
+                <option> TIMEOUT=120,ROUNDS=10 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1223798 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <tags> vf-veth-fwd </tags>
+        <name> test-vf-veth-fwd.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-veth-fwd.sh </test>
+                <option> TIMEOUT=120,ROUNDS=10 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <tags> vf-vf-diff-esw </tags>
+        <name> test-vf-vf-different-esw-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-different-esw-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
     <case>
         <tags> devlink </tags>
         <name> test-devlink-encap.sh </name>
@@ -537,118 +647,7 @@
                 <test> test-tc-vxlan-decap-not-properly-offloaded.sh </test>
             </params>
         </cmd>
-    </case>
-    <case>
-        <tags> eswitch </tags>
-        <tags> vf </tags>
-        <name> test-vf-rep-ping.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-rep-ping.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <ignore>
-            <bug> 1242030 </bug>
-        </ignore>
-        <tags> eswitch </tags>
-        <tags> vf </tags>
-        <name> test-vf-rep-ping-reconfig-sriov.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-rep-ping-reconfig-sriov.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <ignore>
-            <bug> 1040416 </bug>
-            <bug> 896876 </bug>
-        </ignore>
-        <tags> vf </tags>
-        <tags> frag </tags>
-        <name> test-vf-rep-ping-fragmented.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-rep-ping-fragmented.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <ignore>
-            <bug> 1333837 </bug>
-        </ignore>
-        <tags> vf </tags>
-        <tags> frag </tags>
-        <name> test-vf-rep-udp-fragmented.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-rep-udp-fragmented.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> vf </tags>
-        <name> test-vf-vf-ping.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-vf-ping.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <ignore>
-            <bug> 1251244 </bug>
-        </ignore>
-        <tags> vf </tags>
-        <name> test-vf-vf-iperf.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-vf-iperf.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-<!--
-        <ignore>
-            <bug> 1241076 </bug>
-        </ignore>
--->
-        <tags> vf </tags>
-        <tags> vf-vf-fwd </tags>
-        <name> test-vf-vf-fwd.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-vf-fwd.sh </test>
-                <option> TIMEOUT=120,ROUNDS=10 </option>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <ignore>
-            <bug> 1223798 </bug>
-        </ignore>
-        <tags> vf </tags>
-        <tags> vf-veth-fwd </tags>
-        <name> test-vf-veth-fwd.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-veth-fwd.sh </test>
-                <option> TIMEOUT=120,ROUNDS=10 </option>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> vf </tags>
-        <tags> vf-vf-diff-esw </tags>
-        <name> test-vf-vf-different-esw-ping.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-vf-different-esw-ping.sh </test>
-            </params>
-        </cmd>
-    </case>
+    </case> 
     <case>
         <ignore>
             <bug> 1335481 </bug>
