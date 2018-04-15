@@ -34,8 +34,12 @@ except KeyError:
     h2_nic = host2.get_device("int0")
 
 
-def do_pings():
-    ping_opts = {"count": 10, "interval": 0.2}
+def do_pings(warmup=False):
+    if warmup:
+        ping_opts = {"count": 1}
+    else:
+        ping_opts = {"count": 10, "interval": 0.2}
+
     if ipv in ['ipv4', 'both']:
         ping((guest1, g1_nic, 0, {"scope": 0}),
              (host2, h2_nic, 0, {"scope": 0}),
@@ -92,4 +96,5 @@ def verify_tc_rules(proto):
 
 # sleep a second before testing.
 ctl.wait(3)
+do_pings(warmup=True)
 do_pings()
