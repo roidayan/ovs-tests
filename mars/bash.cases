@@ -249,6 +249,7 @@
             <bug> 1124753 </bug>
         </ignore>
         <tags> eswitch </tags>
+        <tags> eswitch_no_carrier </tags>
         <name> test-eswitch-no-carrier.sh </name>
         <cmd>
             <params>
@@ -342,6 +343,7 @@
         </ignore>
         <tags> ovs </tags>
         <tags> frag </tags>
+        <tags> ovs_frag </tags>
         <name> test-ovs-icmp-frag.sh </name>
         <cmd>
             <params>
@@ -456,6 +458,8 @@
             <bug> 1334271 </bug>
         </ignore>
         <tags> tc </tags>
+        <tags> frag </tags>
+        <tags> tc_frag </tags>
         <name> test-tc-insert-rules-frag.sh </name>
         <cmd>
             <params>
