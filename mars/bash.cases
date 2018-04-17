@@ -444,6 +444,9 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1170023 </bug>
+        </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
         <name> test-tc-insert-rules-pedit.sh </name>
