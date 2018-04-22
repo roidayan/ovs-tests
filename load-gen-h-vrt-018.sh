@@ -1,7 +1,7 @@
 #!/bin/sh
 
-CX4=p2p1
-CX4_2=p2p2
+CX4=eth4
+CX4_2=eth5
 
 CX5=p1p1
 CX5_2=p1p2
@@ -80,7 +80,7 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start $i-RH-7.5 ; done
+    for i in $vms; do virsh -q start $i-SLES-15 ; done
 }
 
 function wait_vms() {

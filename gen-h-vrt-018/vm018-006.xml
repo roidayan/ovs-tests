@@ -4,7 +4,7 @@
         <param name="machine_type" value="guest"/>
     </params>
     <interfaces>
-        <eth id="ens6" label="net-vm2">
+        <eth id="eth1" label="net-vm2">
             <params>
                 <param name="hwaddr" value="e4:11:22:85:9e:51"/>
             </params>
