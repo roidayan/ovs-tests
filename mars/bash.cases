@@ -456,6 +456,19 @@
             </params>
         </cmd>
     </case>
+   <case>
+        <ignore>
+            <bug> 1366970 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <tags> header_rewrite </tags>
+        <name> test-tc-insert-rules-pedit-ttl.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-pedit-ttl.sh </test>
+            </params>
+        </cmd>
+    </case>
     <case>
         <ignore>
             <bug> 1334271 </bug>
