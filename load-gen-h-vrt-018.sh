@@ -3,8 +3,8 @@
 CX4=eth4
 CX4_2=eth5
 
-CX5=p1p1
-CX5_2=p1p2
+CX5=eth4
+CX5_2=eth5
 
 if [ "$1" == "cx5" ]; then
     nic=$CX5
