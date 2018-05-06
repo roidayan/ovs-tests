@@ -24,6 +24,17 @@
         </Case>
     </global>
     <case>
+	<ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1338573 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX, UBUNTU_INBOX, RHEL_INBOX] </value>
+                </condition>
+            </condition_group>
+	</ignore>
         <tags> eswitch </tags>
         <tags> vf </tags>
         <name> test-vf-rep-ping.sh </name>
@@ -35,7 +46,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1242030 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1242030 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> eswitch </tags>
         <tags> vf </tags>
@@ -48,8 +67,28 @@
     </case>
     <case>
         <ignore>
-            <bug> 1040416 </bug>
-            <bug> 896876 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <condition_group>
+                    <operand> OR </operand>
+                    <bug> 1040416 </bug>
+                    <bug> 896876 </bug>
+                </condition_group>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1338471 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX, UBUNTU_INBOX, RHEL_INBOX] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vf </tags>
         <tags> frag </tags>
@@ -62,7 +101,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1333837 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1333837 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vf </tags>
         <tags> frag </tags>
@@ -84,7 +131,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1251244 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1251244 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vf </tags>
         <name> test-vf-vf-iperf.sh </name>
@@ -95,11 +150,26 @@
         </cmd>
     </case>
     <case>
-<!--
         <ignore>
-            <bug> 1241076 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1241076 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1362175 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX, UBUNTU_INBOX, RHEL_INBOX] </value>
+                </condition>
+            </condition_group>
         </ignore>
--->
         <tags> vf </tags>
         <tags> vf-vf-fwd </tags>
         <name> test-vf-vf-fwd.sh </name>
@@ -112,7 +182,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1223798 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1223798 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vf </tags>
         <tags> vf-veth-fwd </tags>
@@ -187,7 +265,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1013092 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1013092 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> eswitch </tags>
         <name> test-eswitch-add-del-flows-during-flows-cleanup.sh </name>
@@ -246,7 +332,33 @@
     </case>
     <case>
         <ignore>
-            <bug> 1124753 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1124753 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1340238 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1362172 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX, UBUNTU_INBOX, RHEL_INBOX] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> eswitch </tags>
         <tags> eswitch_no_carrier </tags>
@@ -316,7 +428,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1123491 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1123491 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
@@ -339,7 +459,24 @@
     </case>
     <case>
         <ignore>
-            <bug> 1334271 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1334271 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1356558 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> ovs </tags>
         <tags> frag </tags>
@@ -371,7 +508,24 @@
     </case>
     <case>
         <ignore>
-            <bug> 1315045 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1315045 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1362189 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX, UBUNTU_INBOX, RHEL_INBOX] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> ovs </tags>
         <tags> overlap </tags>
@@ -392,6 +546,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1278642 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-del-a-lot </tags>
         <name> test-tc-del-a-lot.sh </name>
@@ -411,6 +576,26 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1339679 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [UBUNTU_INBOX] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1370330 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <name> test-tc-insert-rules.sh </name>
         <cmd>
@@ -421,7 +606,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1245633 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1245633 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <name> test-tc-insert-rules-legacy.sh </name>
@@ -433,7 +626,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1240863 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1240863 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <name> test-tc-insert-rules-port2.sh </name>
@@ -445,7 +646,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1170023 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1170023 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
@@ -458,7 +667,15 @@
     </case>
    <case>
         <ignore>
-            <bug> 1366970 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1366970 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
@@ -471,7 +688,24 @@
     </case>
     <case>
         <ignore>
-            <bug> 1334271 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1334271 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1356558 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> frag </tags>
@@ -485,7 +719,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1338214 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1338214 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <name> test-tc-insert-rule-without-match.sh </name>
@@ -497,7 +739,33 @@
     </case>
     <case>
         <ignore>
-            <bug> 1120825 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1120825 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1279755 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1370308 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
@@ -511,6 +779,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1370308 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
         <name> test-tc-max-rules-legacy.sh</name>
@@ -522,6 +801,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1370308 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX] </value>
+                </condition>
+            </condition_group>
+        <ignore>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
         <tags> tc-max-rules-shared-action </tags>
@@ -536,7 +826,33 @@
     </case>
     <case>
         <ignore>
-            <bug> 1120825 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1120825 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1279755 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1370308 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
@@ -551,7 +867,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 988519 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 988519 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <name> test-tc-replace.sh </name>
@@ -593,7 +917,24 @@
     </case>
     <case>
         <ignore>
-            <bug> 1241076 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1241076 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1362175 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX, UBUNTU_INBOX, RHEL_INBOX] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
@@ -617,7 +958,24 @@
     </case>
     <case>
         <ignore>
-            <bug> 1241076 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1241076 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1362175 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX, UBUNTU_INBOX, RHEL_INBOX] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
@@ -630,7 +988,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1223798 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1223798 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
@@ -642,9 +1008,17 @@
         </cmd>
     </case>
     <case>
-<!--        <ignore>
-            <bug> 1294281 </bug>
-        </ignore> -->
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1294281 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
         <tags> tc-shuffle-cls_api </tags>
@@ -657,7 +1031,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1164801 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1164801 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> vxlan </tags>
@@ -670,7 +1052,15 @@
     </case> 
     <case>
         <ignore>
-            <bug> 1335481 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1335481 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vxlan </tags>
         <name> test-vxlan-port-offload.sh </name>
@@ -691,9 +1081,20 @@
     </case>
     <case>
         <ignore>
-            <bug> 1120257 </bug>
-            <bug> 1048140 </bug>
-            <bug> 1135460 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <condition_group>
+                    <operand> OR </operand>
+                    <bug> 1120257 </bug>
+                    <bug> 1048140 </bug>
+                    <bug> 1135460 </bug>
+                </condition_group>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vxlan </tags>
         <tags> neigh_update </tags>
@@ -706,9 +1107,20 @@
     </case>
     <case>
         <ignore>
-            <bug> 1120257 </bug>
-            <bug> 1048140 </bug>
-            <bug> 1135460 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <condition_group>
+                    <operand> OR </operand>
+                    <bug> 1120257 </bug>
+                    <bug> 1048140 </bug>
+                    <bug> 1135460 </bug>
+                </condition_group>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vxlan </tags>
         <tags> neigh_update </tags>
@@ -723,7 +1135,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1242052 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1242052 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> ecmp </tags>
         <name> test-ecmp-add-del-rule.sh </name>
@@ -735,9 +1155,20 @@
     </case>
     <case>
         <ignore>
-            <bug> 1242632 </bug>
-            <bug> 1242476 </bug>
-            <bug> 1243769 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <condition_group>
+                    <operand> OR </operand>
+                    <bug> 1242632 </bug>
+                    <bug> 1242476 </bug>
+                    <bug> 1243769 </bug>
+                </condition_group>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> ecmp </tags>
         <tags> reload_modules </tags>
@@ -750,9 +1181,20 @@
     </case>
     <case>
         <ignore>
-            <bug> 1040416 </bug>
-            <bug> 1242030 </bug>
-            <bug> 1244300 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <condition_group>
+                    <operand> OR </operand>
+                    <bug> 1040416 </bug>
+                    <bug> 1242030 </bug>
+                    <bug> 1244300 </bug>
+                </condition_group>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> ecmp </tags>
         <name> test-ecmp-vf-rep-ping-reconfig-sriov.sh </name>
@@ -764,7 +1206,15 @@
     </case>
     <case>
         <ignore>
-            <bug> 1244622 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1244622 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> ecmp </tags>
         <name> test-ecmp-lag-affinity.sh </name>
