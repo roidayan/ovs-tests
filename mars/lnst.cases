@@ -78,8 +78,19 @@
 
     <case>
         <ignore>
-            <bug> 1092855 </bug>
-            <bug> 1134557 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <condition_group>
+                    <operand> OR </operand>
+                    <bug> 1092855 </bug>
+                    <bug> 1134557 </bug>
+                </condition_group>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vxlan </tags>
         <tags> vxlan_ipv6 </tags>
@@ -103,7 +114,15 @@
 
     <case>
         <ignore>
-            <bug> 1147629 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1147629 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vxlan </tags>
         <tags> tables </tags>
@@ -164,7 +183,15 @@
 
     <case>
         <ignore>
-            <bug> 1048140 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1048140 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vxlan </tags>
         <name> 1_virt_ovs_vxlan_up_down </name>
@@ -176,6 +203,17 @@
     </case>
 
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1370424 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> header_rewrite </tags>
         <name> header_rewrite </name>
         <cmd>
@@ -187,7 +225,15 @@
 
     <case>
         <ignore>
-            <bug> 1126868 </bug>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1126868 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> rdma </tags>
         <name> basic_rdma </name>
