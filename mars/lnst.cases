@@ -231,7 +231,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM, ASAP_MLNX_OFED_4_2] </value>
                 </condition>
             </condition_group>
         </ignore>
