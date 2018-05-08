@@ -113,6 +113,7 @@
         </ignore>
         <tags> vf </tags>
         <tags> frag </tags>
+        <tags> vf-rep-udp-fragmented </tags>
         <name> test-vf-rep-udp-fragmented.sh </name>
         <cmd>
             <params>
@@ -142,6 +143,7 @@
             </condition_group>
         </ignore>
         <tags> vf </tags>
+        <tags> vf-vf-iperf </tags>
         <name> test-vf-vf-iperf.sh </name>
         <cmd>
             <params>
@@ -276,6 +278,7 @@
             </condition_group>
         </ignore>
         <tags> eswitch </tags>
+        <tags> eswitch-add-del-flows-during-flows-cleanup </tags>
         <name> test-eswitch-add-del-flows-during-flows-cleanup.sh </name>
         <cmd>
             <params>
@@ -658,6 +661,7 @@
         </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
+        <tags> tc-insert-rules-pedit </tags>
         <name> test-tc-insert-rules-pedit.sh </name>
         <cmd>
             <params>
@@ -679,6 +683,7 @@
         </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
+        <tags> tc-insert-rules-pedit-ttl </tags>
         <name> test-tc-insert-rules-pedit-ttl.sh </name>
         <cmd>
             <params>
@@ -730,6 +735,7 @@
             </condition_group>
         </ignore>
         <tags> tc </tags>
+        <tags> tc-insert-rule-without-match </tags>
         <name> test-tc-insert-rule-without-match.sh </name>
         <cmd>
             <params>
