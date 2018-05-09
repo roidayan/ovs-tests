@@ -480,6 +480,15 @@
                     <value> [ASAP_MLNX_OFED_4_2] </value>
                 </condition>
             </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1338471 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX, UBUNTU_INBOX, RHEL_INBOX] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> ovs </tags>
         <tags> frag </tags>
@@ -711,6 +720,15 @@
                     <value> [ASAP_MLNX_OFED_4_2] </value>
                 </condition>
             </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1338471 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX, UBUNTU_INBOX, RHEL_INBOX] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> frag </tags>
@@ -912,6 +930,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1362175 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [SLES_INBOX, UBUNTU_INBOX, RHEL_INBOX] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
         <name> test-tc-shuffle-3.sh </name>
