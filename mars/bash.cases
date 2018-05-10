@@ -660,6 +660,27 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
+                <bug> 1341628 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM, ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-bad-egdev-rules </tags>
+        <name> test-tc-bad-egdev-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-bad-egdev-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
                 <bug> 1170023 </bug>
                 <condition>
                     <key> PROJECT </key>
@@ -678,7 +699,7 @@
             </params>
         </cmd>
     </case>
-   <case>
+    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
@@ -1256,6 +1277,46 @@
         <cmd>
             <params>
                 <test> test-ecmp-lag-affinity.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1318772 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> ecmp </tags>
+        <name> test-ecmp-add-multipath-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-add-multipath-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1318772 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> ecmp </tags>
+        <name> test-ecmp-restore-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-restore-rule.sh </test>
             </params>
         </cmd>
     </case>
