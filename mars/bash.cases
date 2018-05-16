@@ -1291,6 +1291,15 @@
                     <value> [ASAP_DIRECT, ASAP_UPSTREAM, ASAP_MLNX_OFED_4_2] </value>
                 </condition>
             </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1391181 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> ecmp </tags>
         <name> test-ecmp-add-multipath-rule.sh </name>
@@ -1309,6 +1318,15 @@
                     <key> PROJECT </key>
                     <op> in </op>
                     <value> [ASAP_DIRECT, ASAP_UPSTREAM, ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1391181 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
                 </condition>
             </condition_group>
         </ignore>
