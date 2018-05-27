@@ -44,6 +44,10 @@ class Testlib:
         if not out:
             return None
 
+        # tc sometimes shows more than 1 space
+        # e.g. vlan  push, tunnel_key  set
+        action = action.replace(' ', '\s+')
+
         # find rule
         pat_filter = r"^protocol .* pref .* dst_mac %s\n\s*src_mac %s\n\s*eth_type %s\n.*\n\s*action order \s*\d+\s*:\s* %s" % (
                 str(dst_mac).lower(), str(src_mac).lower(), proto, action)
