@@ -1,10 +1,10 @@
 #!/bin/bash
 
-CX4=ens2f0
-CX4_2=ens2f1
+CX4=p1p1
+CX4_2=p1p2
 
-CX5=enp130s0f0
-CX5_2=enp130s0f1
+CX5=p1p1
+CX5_2=p1p2
 
 if [ "$1" == "cx5" ]; then
     nic=$CX5
@@ -80,7 +80,7 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start $i-Ubuntu-18.04 ; done
+    for i in $vms; do virsh -q start $i-RH-7.5 ; done
 }
 
 function wait_vms() {
