@@ -47,13 +47,13 @@ ping_mod6 = ctl.get_module("Icmp6Ping",
 
 
 def verify_tc_rules(proto):
-    m = tl.find_tc_rule(h1, 'tap', g1_mac, h2_mac, proto, 'vlan\s+push')
+    m = tl.find_tc_rule(h1, 'tap', g1_mac, h2_mac, proto, 'vlan push')
     if m:
         tl.custom(h1, "TC rule %s vlan push" % proto)
     else:
         tl.custom(h1, "TC rule %s vlan push" % proto, 'ERROR: cannot find tc rule')
 
-    m = tl.find_tc_rule(h1, 'nic', h2_mac, g1_mac, proto, 'vlan\s+pop')
+    m = tl.find_tc_rule(h1, 'nic', h2_mac, g1_mac, proto, 'vlan pop')
     if m:
         tl.custom(h1, "TC rule %s vlan pop" % proto)
     else:
