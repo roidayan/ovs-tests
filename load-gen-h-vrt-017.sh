@@ -9,20 +9,45 @@ CX5_2=p1p2
 if [ "$1" == "cx5" ]; then
     nic=$CX5
     nic2=$CX5_2
+    vms=`seq 5 6`
 else
     nic=$CX4
     nic2=$CX4_2
+    vms=`seq 7 8`
 fi
 
 vfs=2
-vms="gen-h-vrt-017-005 gen-h-vrt-017-006"
+hv=`hostname -s`
 
 ##############################################################################
 
-function set_modes() {
-    local pci=$(basename `readlink /sys/class/net/$nic/device`)
-    devlink dev eswitch set pci/$pci inline-mode transport
-#    devlink dev eswitch set pci/$pci encap yes
+
+if [ `uname -r` = "3.10.0" ];  then
+    devlink_compat=1
+elif [ `uname -r` = "3.10.0-327.el7.x86_64" ]; then
+    devlink_compat=1
+elif [ `uname -r` = "3.10.0-862.el7.x86_64" ]; then
+    devlink_compat=1
+fi
+
+function set_mode() {
+    local pci=$(basename `readlink /sys/class/net/$1/device`)
+
+    if [ "$devlink_compat" = 1 ]; then
+        echo $2 > /sys/kernel/debug/mlx5/$pci/compat/mode
+    else
+        devlink dev eswitch set pci/$pci mode $2
+    fi
+}
+
+function set_eswitch_inline_mode() {
+    local pci=$(basename `readlink /sys/class/net/$1/device`)
+
+    if [ "$devlink_compat" = 1 ]; then
+        echo $2 > /sys/kernel/debug/mlx5/$pci/compat/inline
+    else
+        devlink dev eswitch set pci/$pci inline-mode $2
+    fi
 }
 
 function reset_tc_nic() {
@@ -37,7 +62,9 @@ function reset_tc_nic() {
     tc qdisc add dev $nic1 ingress
 
     # activate hw offload
-    ethtool -K $nic1 hw-tc-offload on
+    if [ "$devlink_compat" != 1 ]; then
+        ethtool -K $nic1 hw-tc-offload on
+    fi
 }
 
 function reset_tc() {
@@ -55,7 +82,7 @@ function stop_sriov() {
 
     for n in $nic $nic2 ; do
         sriov=/sys/class/net/$n/device/sriov_numvfs
-        /labhome/roid/scripts/ovs/devlink-mode.sh $n legacy
+        set_mode $n legacy
         if [ -e $sriov ]; then
             echo 0 > $sriov
         fi
@@ -80,13 +107,13 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start $i-RH-7.5 ; done
+    for i in $vms; do virsh -q start ${hv}-00${i}-RH-7.5 ; done
 }
 
 function wait_vms() {
     echo "Wait vms"
     for i in $vms; do
-        wait_vm $i
+        wait_vm ${hv}-00${i}
         break; # waiting for the first one
     done
 }
@@ -96,7 +123,7 @@ function wait_vm() {
 
     for i in 1 2 3 4; do
         ping -q -w 1 -c 1 $vm && break
-        sleep 15
+        sleep 10
     done
 
     sleep 10 ; # wait little more for lnst to be up
@@ -107,10 +134,10 @@ function del_ovs_bridges() {
 }
 
 function reset_ovs() {
-    service openvswitch-switch restart
+    service openvswitch restart
     del_ovs_bridges
     ovs-vsctl set Open_vSwitch . other_config:hw-offload=true
-    service openvswitch-switch restart
+    service openvswitch restart
 }
 
 function clean() {
@@ -119,6 +146,13 @@ function clean() {
     reset_ovs
     reset_tc
     stop_sriov
+
+    for i in `ip l show type vxlan`; do
+        ip l del dev $i
+    done
+    for i in `ip l show type dummy`; do
+        ip l del dev $i
+    done
 }
 
 function warn_extra() {
@@ -133,6 +167,13 @@ function reload_modules() {
     echo "Reload modules"
     set -e
     local modules="mlx5_ib mlx5_core devlink cls_flower"
+
+    if [ "$devlink_compat" = 1 ]; then
+        service openibd force-restart
+        set +e
+        return
+    fi
+
     for m in $modules ; do
         warn_extra $m
     done
@@ -176,14 +217,15 @@ reset_tc
 
 echo "Change mode to switchdev"
 unbind
-/labhome/roid/scripts/ovs/devlink-mode.sh $nic switchdev
+set_mode $nic switchdev
+set_eswitch_inline_mode $nic transport
 if [ "$NICS" == "2" ]; then
-    /labhome/roid/scripts/ovs/devlink-mode.sh $nic2 switchdev
+    set_mode $nic2 switchdev
+    set_eswitch_inline_mode $nic2 transport
 fi
 sleep 2
 nic_up
 reset_tc
-set_modes
 
 if [ "$WITH_VMS" == "1" ]; then
     start_vms
