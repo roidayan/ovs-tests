@@ -251,10 +251,10 @@
             <bug> 1251244 </bug>
         </ignore>
         <tags> vf </tags>
-        <name> test-vf-vf-iperf.sh </name>
+        <name> test-vf-vf-iperf-perf.sh </name>
         <cmd>
             <params>
-                <test> test-vf-vf-iperf.sh </test>
+                <test> test-vf-vf-iperf-perf.sh </test>
             </params>
         </cmd>
     </case>
