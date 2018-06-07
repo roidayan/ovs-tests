@@ -27,6 +27,26 @@
 	<ignore>
             <condition_group>
                 <operand> AND </operand>
+                <bug> 1416331 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+	</ignore>
+        <tags> ifstat </tags>
+        <name> test-ifstat.sh </name>
+        <cmd>
+            <params>
+                <test> test-ifstat.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+	<ignore>
+            <condition_group>
+                <operand> AND </operand>
                 <bug> 1338573 </bug>
                 <condition>
                     <key> PROJECT </key>
