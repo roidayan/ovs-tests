@@ -34,6 +34,15 @@
                     <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
                 </condition>
             </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1422671 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
 	</ignore>
         <tags> ifstat </tags>
         <name> test-ifstat.sh </name>
