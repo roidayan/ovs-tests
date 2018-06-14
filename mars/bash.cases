@@ -1371,7 +1371,11 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1318772 </bug>
+                <condition_group>
+                    <operand> OR </operand>
+                    <bug> 1318772 </bug>
+                    <bug> 1403698 </bug>
+                </condition_group>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
