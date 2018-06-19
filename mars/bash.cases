@@ -1145,7 +1145,17 @@
                 <test> test-tc-vxlan-decap-not-properly-offloaded.sh </test>
             </params>
         </cmd>
-    </case> 
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <name> test-tc-vxlan-outer-dst-mac.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-outer-dst-mac.sh </test>
+            </params>
+        </cmd>
+    </case>
     <case>
         <ignore>
             <condition_group>
