@@ -1,0 +1,237 @@
+#!/bin/bash
+
+CX4=enp130s0f0
+CX4_2=enp130s0f1
+
+CX5=p1p1
+CX5_2=p1p2
+
+if [ "$1" == "cx5" ]; then
+    nic=$CX5
+    nic2=$CX5_2
+    vms=`seq 5 6`
+else
+    nic=$CX4
+    nic2=$CX4_2
+    vms=`seq 5 6`
+fi
+
+vfs=2
+hv=`hostname -s`
+
+##############################################################################
+
+if [ -e /sys/kernel/debug/mlx5/$PCI/compat ]; then
+    echo "devlink compat debugfs"
+    devlink_compat=1
+    restart_openibd=1
+    __devlink_compat_dir="/sys/kernel/debug/mlx5/$pci/compat"
+elif [ -e /sys/class/net/$NIC/compat/devlink ]; then
+    echo "devlink compat sysfs"
+    devlink_compat=1
+    restart_openibd=1
+    __devlink_compat_dir="/sys/class/net/$nic/compat/devlink"
+fi
+
+function set_mode() {
+    local pci=$(basename `readlink /sys/class/net/$1/device`)
+
+    if [ "$devlink_compat" = 1 ]; then
+        echo $2 > $__devlink_compat_dir/mode
+    else
+        devlink dev eswitch set pci/$pci mode $2
+	echo devlink dev eswitch set pci/$pci mode $2
+    fi
+}
+
+function set_eswitch_inline_mode() {
+    local pci=$(basename `readlink /sys/class/net/$1/device`)
+
+    if [ "$devlink_compat" = 1 ]; then
+        echo $2 > $__devlink_compat_dir/inline
+    else
+        devlink dev eswitch set pci/$pci inline-mode $2
+    fi
+}
+
+function reset_tc_nic() {
+    local nic1="$1"
+
+    echo "reset tc for $nic1"
+
+    # reset ingress
+    tc qdisc del dev $nic1 ingress >/dev/null 2>&1
+
+    # add ingress
+    tc qdisc add dev $nic1 ingress
+
+    # activate hw offload
+    if [ "$devlink_compat" != 1 ]; then
+        ethtool -K $nic1 hw-tc-offload on
+    fi
+}
+
+function reset_tc() {
+#		tc filter del dev $nic1 parent ffff:
+    for n in $nic $nic2 ; do
+        for p in `ls -1d /sys/class/net/$n*`; do
+            nic1=`basename $p`
+            reset_tc_nic $nic1
+        done
+    done
+}
+
+function stop_sriov() {
+    local sriov
+
+    for n in $nic $nic2 ; do
+        sriov=/sys/class/net/$n/device/sriov_numvfs
+        set_mode $n legacy
+        if [ -e $sriov ]; then
+            echo 0 > $sriov
+        fi
+    done
+}
+
+function unbind() {
+    echo "Unbind VFs"
+    for n in $nic $nic2 ; do
+        for i in `ls -1d  /sys/class/net/$n/device/virtfn*`; do
+            pci=$(basename `readlink $i`)
+            echo "unbind $pci"
+            echo $pci > /sys/bus/pci/drivers/mlx5_core/unbind
+        done
+    done
+}
+
+function stop_vms() {
+    echo "Stop vms"
+    for i in `virsh list --name` ; do virsh -q destroy $i ; done
+}
+
+function start_vms() {
+    echo "Start vms"
+    for i in $vms; do virsh -q start ${hv}-00${i}-RH-7.4 ; done
+}
+
+function wait_vms() {
+    echo "Wait vms"
+    for i in $vms; do
+        wait_vm ${hv}-00${i}
+        break; # waiting for the first one
+    done
+}
+
+function wait_vm() {
+    local vm=$1
+
+    for i in 1 2 3 4; do
+        ping -q -w 1 -c 1 $vm && break
+        sleep 15
+    done
+
+    sleep 10 ; # wait little more for lnst to be up
+}
+
+function del_ovs_bridges() {
+    ovs-vsctl list-br | xargs -r -l ovs-vsctl del-br
+}
+
+function reset_ovs() {
+    service openvswitch restart
+    del_ovs_bridges
+    ovs-vsctl set Open_vSwitch . other_config:hw-offload=true
+    service openvswitch restart
+}
+
+function clean() {
+    echo "Cleanup"
+    stop_vms
+    reset_ovs
+    reset_tc
+    stop_sriov
+
+    for i in `ip l show type vxlan`; do
+        ip l del dev $i
+    done
+    for i in `ip l show type dummy`; do
+        ip l del dev $i
+    done
+}
+
+function warn_extra() {
+    local m="$1"
+    local path=`modinfo $m | grep ^filename`
+    if echo $path | grep -q extra ; then
+        echo "*** WARNING *** $m -> $path"
+    fi
+}
+
+function reload_modules() {
+    echo "Reload modules"
+    set -e
+    local modules="mlx5_ib mlx5_core devlink cls_flower"
+
+    if [ -e /etc/init.d/openibd ]; then
+        service openibd force-restart
+        set +e
+        return
+    fi
+
+    for m in $modules ; do
+        warn_extra $m
+    done
+    modprobe -r $modules ; modprobe -a $modules
+    set +e
+}
+
+function nic_up() {
+    echo "Nic up"
+    for n in $nic $nic2 ; do
+        for p in `ls -1d /sys/class/net/$n*`; do
+            nic1=`basename $p`
+            ifconfig $nic1 up
+        done
+    done
+}
+
+
+echo "********** LOAD `basename $0` **************" > /dev/kmsg
+
+clean
+if [ "$FAST" == "" ]; then
+    reload_modules
+fi
+
+echo "Enable $vfs VFs"
+/labhome/roid/scripts/ovs/set-macs.sh $nic $vfs
+if [ "$NICS" == "2" ]; then
+    /labhome/roid/scripts/ovs/set-macs.sh $nic2 $vfs
+fi
+
+test -e /sys/class/net/$nic/device/virtfn0 && nosriov=0 || nosriov=1
+if [ "$nosriov" == 1 ]; then
+    echo "Missing sriov interfaces"
+    exit 1
+fi
+
+nic_up
+sleep 1
+reset_tc
+
+echo "Change mode to switchdev"
+unbind
+set_mode $nic switchdev
+set_eswitch_inline_mode $nic transport
+if [ "$NICS" == "2" ]; then
+    set_mode $nic2 switchdev
+    set_eswitch_inline_mode $nic2 transport
+fi
+sleep 2
+nic_up
+reset_tc
+
+if [ "$WITH_VMS" == "1" ]; then
+    start_vms
+    wait_vms
+fi
