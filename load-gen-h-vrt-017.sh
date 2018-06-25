@@ -3,8 +3,8 @@
 CX4=p1p1
 CX4_2=p1p2
 
-CX5=p1p1
-CX5_2=p1p2
+CX5=enp130s0f0
+CX5_2=enp130s0f1
 
 if [ "$1" == "cx5" ]; then
     nic=$CX5
@@ -34,7 +34,7 @@ function set_mode() {
     local pci=$(basename `readlink /sys/class/net/$1/device`)
 
     if [ "$devlink_compat" = 1 ]; then
-        echo $2 > /sys/kernel/debug/mlx5/$pci/compat/mode
+        echo $2 > /sys/class/net/$1/compat/devlink/mode
     else
         devlink dev eswitch set pci/$pci mode $2
     fi
@@ -44,7 +44,7 @@ function set_eswitch_inline_mode() {
     local pci=$(basename `readlink /sys/class/net/$1/device`)
 
     if [ "$devlink_compat" = 1 ]; then
-        echo $2 > /sys/kernel/debug/mlx5/$pci/compat/inline
+        echo $2 > /sys/class/net/$1/compat/devlink/inline
     else
         devlink dev eswitch set pci/$pci inline-mode $2
     fi
