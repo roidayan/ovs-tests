@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CX4=enp130s0f0
-CX4_2=enp130s0f1
+CX4=enp129s0f0
+CX4_2=enp129s0f1
 
 CX5=p1p1
 CX5_2=p1p2
@@ -21,12 +21,12 @@ hv=`hostname -s`
 
 ##############################################################################
 
-if [ -e /sys/kernel/debug/mlx5/$PCI/compat ]; then
+if [ -e /sys/kernel/debug/mlx5/$pci/compat ]; then
     echo "devlink compat debugfs"
     devlink_compat=1
     restart_openibd=1
     __devlink_compat_dir="/sys/kernel/debug/mlx5/$pci/compat"
-elif [ -e /sys/class/net/$NIC/compat/devlink ]; then
+elif [ -e /sys/class/net/$nic/compat/devlink ]; then
     echo "devlink compat sysfs"
     devlink_compat=1
     restart_openibd=1

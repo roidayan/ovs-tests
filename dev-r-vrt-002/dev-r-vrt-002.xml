@@ -6,19 +6,19 @@
         <param name="order" value="1" />
     </params>
     <interfaces>
-        <eth id="enp130s0f0" label="uplink">
+        <eth id="enp129s0f0" label="uplink">
             <params>
-		    <param name="hwaddr" value="24:8a:07:38:21:54" />
+		<param name="hwaddr" value="24:8a:07:ad:aa:82" />
             </params>
         </eth>
-        <eth id="enp130s0f0_0" label="net-vm1">
+        <eth id="enp129s0f0_0" label="net-vm1">
             <params>
-                <param name="hwaddr" value="d6:55:02:63:00:d1" />
+                <param name="hwaddr" value="7a:46:87:b7:d3:2b" />
             </params>
         </eth>
-        <eth id="enp130s0f0_1" label="net-vm2">
+        <eth id="enp129s0f0_1" label="net-vm2">
             <params>
-                <param name="hwaddr" value="4e:f5:7f:0a:eb:46" />
+                <param name="hwaddr" value="52:9a:78:04:11:cc" />
             </params>
         </eth>
     </interfaces>

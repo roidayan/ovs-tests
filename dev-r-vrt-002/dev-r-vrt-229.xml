@@ -5,9 +5,9 @@
         <param name="machine_type" value="baremetal" />
     </params>
     <interfaces>
-        <eth id="enp6s0f0" label="uplink">
+        <eth id="enp4s0f0" label="uplink">
             <params>
-		    <param name="hwaddr" value="24:8a:07:38:21:5c" />
+		<param name="hwaddr" value="24:8a:07:38:21:54" />
             </params>
         </eth>
     </interfaces>
