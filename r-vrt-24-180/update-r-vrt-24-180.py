@@ -8,8 +8,8 @@ import re
 import xml.etree.ElementTree as ET
 
 
-host = 'gen-h-vrt-017'
-xml = 'gen-h-vrt-017/gen-h-vrt-017.xml'
+host = 'r-vrt-24-180'
+xml = 'r-vrt-24-180/r-vrt-24-180.xml'
 
 
 AF_LINK = 17

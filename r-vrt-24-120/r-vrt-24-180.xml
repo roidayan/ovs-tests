@@ -1,13 +1,13 @@
 <slavemachine>
     <params>
-        <param name="hostname" value="10.196.18.1" />
+        <param name="hostname" value="10.213.24.180" />
         <param name="ovs_support" value="true" />
         <param name="machine_type" value="baremetal" />
     </params>
     <interfaces>
-        <eth id="eth4" label="uplink">
+        <eth id="eth2" label="uplink">
             <params>
-		    <param name="hwaddr" value="50:6b:4b:08:85:9e" />
+		    <param name="hwaddr" value="24:8a:07:ad:0b:e8" />
             </params>
         </eth>
     </interfaces>
