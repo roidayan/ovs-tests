@@ -307,6 +307,15 @@
         </cmd>
     </case>
     <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-add-del-different-flows2.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-different-flows2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
@@ -324,6 +333,15 @@
         <cmd>
             <params>
                 <test> test-eswitch-add-del-flows-during-flows-cleanup.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-add-del-flows-during-flows-cleanup2.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-flows-during-flows-cleanup2.sh </test>
             </params>
         </cmd>
     </case>
@@ -371,6 +389,27 @@
         <cmd>
             <params>
                 <test> test-eswitch-toggle-mode-ovs-crash.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-toggle-modes.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-modes.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <bug> 1430455 </bug>
+        </ignore>
+        <tags> eswitch </tags>
+        <name> test-eswitch-toggle-mode-parallel.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-parallel.sh </test>
             </params>
         </cmd>
     </case>
@@ -705,6 +744,15 @@
         <cmd>
             <params>
                 <test> test-tc-insert-rules-port2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules-duplicates.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-duplicates.sh </test>
             </params>
         </cmd>
     </case>
@@ -1419,6 +1467,15 @@
         <cmd>
             <params>
                 <test> test-ecmp-restore-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ecmp </tags>
+        <name> test-ecmp-miss-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-miss-rules.sh </test>
             </params>
         </cmd>
     </case>
