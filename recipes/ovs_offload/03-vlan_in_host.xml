@@ -4,7 +4,7 @@
         <alias name="iperf" value="yes" />
         <alias name="vlan10_net" value="1.1.1"/>
         <alias name="vlan10_net6" value="fc00:0:0:0"/>
-        <alias name="vlan10_tag" value="187"/>
+        <alias name="vlan10_tag" value="8"/>
     </define>
     <network>
         <host id="host1">
