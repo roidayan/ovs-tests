@@ -340,6 +340,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1293937 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM, ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-flows-during-flows-cleanup2 </tags>
         <name> test-eswitch-add-del-flows-during-flows-cleanup2.sh </name>
@@ -891,6 +902,17 @@
                     <key> PROJECT </key>
                     <op> in </op>
                     <value> [ASAP_DIRECT, ASAP_UPSTREAM, ASAP_MLNX_OFED_4_2] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1441068 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
                 </condition>
             </condition_group>
         </ignore>
