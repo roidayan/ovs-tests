@@ -670,6 +670,18 @@
          </cmd>
     </case>
     <case>
+        <ignore>
+            <bug> 1341628 </bug>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-duplicate-hw-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-duplicate-hw-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> tc </tags>
         <name> test-tc-groups-overlapping.sh </name>
         <cmd>
