@@ -213,6 +213,18 @@
     </case>
     <case>
         <ignore>
+            <bug> 1297803 </bug>
+        </ignore>
+        <tags> vf </tags>
+        <name> test-vf-vf-fwd-fl_delete.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-fwd-fl_delete.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
             <condition_group>
                 <operand> AND </operand>
                 <bug> 1223798 </bug>
