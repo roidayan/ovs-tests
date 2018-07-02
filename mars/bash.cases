@@ -904,8 +904,6 @@
                     <value> [ASAP_DIRECT, ASAP_UPSTREAM, ASAP_MLNX_OFED_4_2] </value>
                 </condition>
             </condition_group>
-        </ignore>
-        <ignore>
             <condition_group>
                 <operand> AND </operand>
                 <bug> 1441068 </bug>
