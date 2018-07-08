@@ -539,6 +539,17 @@
         </cmd>
     </case>
     <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
+        <name> test-ovs-vxlan-in-ns-ipv6.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns-ipv6.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
