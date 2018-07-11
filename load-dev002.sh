@@ -130,7 +130,7 @@ function wait_vm() {
         sleep 15
     done
 
-    sleep 10 ; # wait little more for lnst to be up
+    sleep 15 ; # wait little more for lnst to be up
 }
 
 function del_ovs_bridges() {
