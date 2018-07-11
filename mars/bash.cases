@@ -801,7 +801,16 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ASAP_DIRECT, ASAP_UPSTREAM, ASAP_MLNX_OFED_4_2] </value>
+                    <value> [ASAP_DIRECT, ASAP_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1443045 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ASAP_MLNX_OFED_4_2] </value>
                 </condition>
             </condition_group>
         </ignore>
