@@ -1,15 +1,15 @@
 #!/bin/bash
 
-CX4=enp129s0f0
-CX4_2=enp129s0f1
+CX4=ens2f0
+CX4_2=ens2f1
 
-CX5=eth2
-CX5_2=eth3
+CX5=ens1f0
+CX5_2=ens1f1
 
 if [ "$1" == "cx5" ]; then
     nic=$CX5
     nic2=$CX5_2
-    vms=`seq 5 6`
+    vms=`seq 181 182`
 else
     nic=$CX4
     nic2=$CX4_2
@@ -111,7 +111,7 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start ${hv}-00${i}-RH-7.4 ; done
+    for i in $vms; do virsh -q start ${hv}-00${i}-RH-7.6 ; done
 }
 
 function wait_vms() {
