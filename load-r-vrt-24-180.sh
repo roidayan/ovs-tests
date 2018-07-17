@@ -111,13 +111,13 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start ${hv}-00${i}-RH-7.6 ; done
+    for i in $vms; do virsh -q start ${hv}-${i}-RH-7.6 ; done
 }
 
 function wait_vms() {
     echo "Wait vms"
     for i in $vms; do
-        wait_vm ${hv}-00${i}
+        wait_vm ${hv}-${i}
         break; # waiting for the first one
     done
 }
