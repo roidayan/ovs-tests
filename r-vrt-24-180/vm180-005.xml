@@ -6,7 +6,7 @@
     <interfaces>
         <eth id="ens6" label="net-vm1">
             <params>
-                <param name="hwaddr" value="6a:b1:72:ad:d8:38"/>
+                <param name="hwaddr" value="e4:11:22:0b:e8:50"/>
             </params>
         </eth>
     </interfaces>
