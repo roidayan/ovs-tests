@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 CX4=ens2f0
 CX4_2=ens2f1
@@ -21,20 +21,26 @@ hv=`hostname -s`
 
 ##############################################################################
 
-
-if [ `uname -r` = "3.10.0" ];  then
+if [ -e /sys/kernel/debug/mlx5/$pci/compat ]; then
+    echo "devlink compat debugfs"
     devlink_compat=1
-elif [ `uname -r` = "3.10.0-327.el7.x86_64" ]; then
+    restart_openibd=1
+    __devlink_compat_dir="/sys/kernel/debug/mlx5/$pci/compat"
+elif [ -e /sys/class/net/$nic/compat/devlink ]; then
+    echo "devlink compat sysfs"
     devlink_compat=1
+    restart_openibd=1
+    __devlink_compat_dir="/sys/class/net/$nic/compat/devlink"
 fi
 
 function set_mode() {
     local pci=$(basename `readlink /sys/class/net/$1/device`)
 
     if [ "$devlink_compat" = 1 ]; then
-        echo $2 > /sys/kernel/debug/mlx5/$pci/compat/mode
+        echo $2 > $__devlink_compat_dir/mode
     else
         devlink dev eswitch set pci/$pci mode $2
+	echo devlink dev eswitch set pci/$pci mode $2
     fi
 }
 
@@ -42,7 +48,7 @@ function set_eswitch_inline_mode() {
     local pci=$(basename `readlink /sys/class/net/$1/device`)
 
     if [ "$devlink_compat" = 1 ]; then
-        echo $2 > /sys/kernel/debug/mlx5/$pci/compat/inline
+        echo $2 > $__devlink_compat_dir/inline
     else
         devlink dev eswitch set pci/$pci inline-mode $2
     fi
@@ -105,7 +111,7 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start ${hv}-00${i}-Fedora-25 ; done
+    for i in $vms; do virsh -q start ${hv}-00${i}-CentOS-7.2 ; done
 }
 
 function wait_vms() {
@@ -121,10 +127,10 @@ function wait_vm() {
 
     for i in 1 2 3 4; do
         ping -q -w 1 -c 1 $vm && break
-        sleep 10
+        sleep 15
     done
 
-    sleep 10 ; # wait little more for lnst to be up
+    sleep 15 ; # wait little more for lnst to be up
 }
 
 function del_ovs_bridges() {
@@ -166,7 +172,7 @@ function reload_modules() {
     set -e
     local modules="mlx5_ib mlx5_core devlink cls_flower"
 
-    if [ "$devlink_compat" = 1 ]; then
+    if [ -e /etc/init.d/openibd ]; then
         service openibd force-restart
         set +e
         return
