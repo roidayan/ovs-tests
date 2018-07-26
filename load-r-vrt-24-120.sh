@@ -9,11 +9,11 @@ CX5_2=ens1f1
 if [ "$1" == "cx5" ]; then
     nic=$CX5
     nic2=$CX5_2
-    vms=`seq 121 122`
+    vms=(121 123)
 else
     nic=$CX4
     nic2=$CX4_2
-    vms=`seq 5 6`
+    vms=(5 6)
 fi
 
 vfs=2
@@ -111,13 +111,13 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start ${hv}-${i}-RH-7.2 ; done
+    for ((i=0; i< ${#vms[@]}; i++)) do virsh -q start ${hv}-${vms[i]}-RH-7.2 ; done
 }
 
 function wait_vms() {
     echo "Wait vms"
-    for i in $vms; do
-        wait_vm ${hv}-${i}
+    for ((i=0; i< ${#vms[@]}; i++)); do
+        wait_vm ${hv}-${vms[i]}
         break; # waiting for the first one
     done
 }
