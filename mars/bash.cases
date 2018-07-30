@@ -1160,6 +1160,7 @@
     <case>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-reload-gact </tags>
         <name> test-tc-shuffle-reload-gact.sh </name>
         <cmd>
             <params>
@@ -1190,6 +1191,7 @@
         </ignore>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-reload-mirred </tags>
         <name> test-tc-shuffle-reload-mirred.sh </name>
         <cmd>
             <params>
@@ -1211,6 +1213,7 @@
         </ignore>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-reload-mirred-skip-hw </tags>
         <name> test-tc-shuffle-reload-mirred-skip-hw.sh </name>
         <cmd>
             <params>
