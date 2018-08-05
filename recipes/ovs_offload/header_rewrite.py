@@ -99,9 +99,9 @@ def prepare_for_test():
     ofctl_add_flow("priority=2, in_port=11, ip, udp, nw_dst=8.9.10.02, tp_dst=4050, actions=mod_tp_dst=4051, output:1")
     ofctl_add_flow("priority=2, in_port=1, ip, udp, nw_dst=8.9.10.12, tp_src=4051, actions=mod_tp_src=4050, output:11")
 
-    # icmp6 + mod ipv6
-    ofctl_add_flow("priority=2, in_port=1, ip6, icmp6, ipv6_dst=2002:0db8:0:f101::55, actions=set_field:2002:0db8:0:f101::2->ipv6_dst, output:11")
-    ofctl_add_flow("priority=2, in_port=11, ip6, icmp6, ipv6_dst=2002:0db8:0:f101::1, actions=set_field:2002:0db8:0:f101::55->ipv6_src, output:1")
+    # tcp + mod ipv6
+    ofctl_add_flow("priority=2, in_port=1, ip6, tcp6, ipv6_dst=2002:0db8:0:f101::55, actions=set_field:2002:0db8:0:f101::2->ipv6_dst, output:11")
+    ofctl_add_flow("priority=2, in_port=11, ip6, tcp6, ipv6_dst=2002:0db8:0:f101::1, actions=set_field:2002:0db8:0:f101::55->ipv6_src, output:1")
 
     # tcp + mod ttl
     ofctl_add_flow("priority=2, in_port=11, ip, tcp, nw_dst=8.9.10.4, actions=dec_ttl, output:1")
@@ -160,6 +160,14 @@ def test_rewrite_ipv4():
     report_test_result("OVS rule: rewrite ipv4 dst (vm2->vm1)", m)
 
 
+def test_rewrite_ipv6():
+    iperf.iperf(nic1, nic2, iperf_runtime, 'vm1->vm2', '2002:0db8:0:f101::55', '-V', '-V')
+    m = tl.find_ovs_rule(hv, '2', nic2_mac, '0x86dd', 'set\(ipv6\(dst=2002:db8:0:f101::2\)\),3')
+    report_test_result("OVS rule: rewrite ipv6 dst (vm1->vm2)", m)
+    m = tl.find_ovs_rule(hv, '3', nic1_mac, '0x86dd', 'set\(ipv6\(src=2002:db8:0:f101::55,dst=2002:db8:0:f101::1\)\),2')
+    report_test_result("OVS rule: rewrite ipv6 src (vm2->vm1)", m)
+
+
 def test_rewrite_mac():
     ping(nic1, { "addr": nic2.get_ip(0) })
     m = tl.find_ovs_rule(hv, '2', 'aa:bb:cc:dd:ee:99', '0x0800', 'set\(eth\(src=aa:bb:cc:dd:ee:99,dst=%s\)\),3' % str(nic2_mac).lower())
@@ -195,21 +203,13 @@ def test_rewrite_ipv4_ttl():
     report_test_result("OVS rule: rewrite ipv4 ttl (vm2->vm1)", m)
 
 
-def test_rewrite_ipv6():
-    ping(nic1, { "addr": "2002:0db8:0:f101::55" })
-    m = tl.find_ovs_rule(hv, '2', nic2_mac, '0x86dd', 'set\(ipv6\(dst=2002:db8:0:f101::2\)\),3')
-    report_test_result("OVS rule: rewrite ipv6 dst (vm1->vm2)", m)
-    m = tl.find_ovs_rule(hv, '3', nic1_mac, '0x86dd', 'set\(ipv6\(src=2002:db8:0:f101::55,dst=2002:db8:0:f101::1\)\),2')
-    report_test_result("OVS rule: rewrite ipv6 src (vm2->vm1)", m)
-
-
 rewrite_tests = [
     test_rewrite_ipv4,
+    test_rewrite_ipv6,
     test_rewrite_mac,
     test_rewrite_tcp_ports,
     test_rewrite_udp_ports,
     test_rewrite_ipv4_ttl,
-    test_rewrite_ipv6,
 ]
 
 prepare_for_test()
