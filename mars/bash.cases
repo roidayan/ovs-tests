@@ -355,6 +355,16 @@
         </cmd>
     </case>
     <case>
+        <tags> reload_modules </tags>
+        <tags> eswitch </tags>
+        <name> test-eswitch-reload-modules-different-state.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-reload-modules-different-state.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> eswitch </tags>
         <tags> reload_modules </tags>
         <name> test-eswitch-add-flows-during-reload.sh </name>
@@ -659,15 +669,6 @@
         <cmd>
             <params>
                 <test> test-ovs-overlap-rules.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> reload_modules </tags>
-        <name> test-reload-modules-different-state.sh </name>
-        <cmd>
-            <params>
-                <test> test-reload-modules-different-state.sh </test>
             </params>
         </cmd>
     </case>
