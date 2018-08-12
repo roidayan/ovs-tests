@@ -1332,8 +1332,9 @@
     </case>
     <case>
         <ignore>
-            <bug> 1431299 </bug>
+            <bug> 1324532 </bug>
             <bug> 1435023 </bug>
+            <bug> 1431299 </bug>
         </ignore>
         <tags> vxlan </tags>
         <tags> neigh_update </tags>
