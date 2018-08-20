@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-eswitch-toggle-modes</name>
+    <desc>test-eswitch-toggle-modes</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>eswitch</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

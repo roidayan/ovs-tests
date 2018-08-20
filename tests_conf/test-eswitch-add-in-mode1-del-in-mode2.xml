@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-eswitch-add-in-mode1-del-in-mode2</name>
+    <desc>test-eswitch-add-in-mode1-del-in-mode2</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>eswitch</tag>
+  </tags>
+  <ignore>
+    <bug>1481373</bug>
+  </ignore>
+</testdef>

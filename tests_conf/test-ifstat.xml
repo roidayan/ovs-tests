@@ -1,0 +1,12 @@
+<testdef>
+  <info>
+    <name>test-ifstat</name>
+    <desc>test-ifstat</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags/>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

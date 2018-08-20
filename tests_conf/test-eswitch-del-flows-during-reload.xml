@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-eswitch-del-flows-during-reload</name>
+    <desc>test-eswitch-del-flows-during-reload</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>eswitch</tag>
+  </tags>
+  <ignore>
+    <bug>1481373</bug>
+  </ignore>
+</testdef>

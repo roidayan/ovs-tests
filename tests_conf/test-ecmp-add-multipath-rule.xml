@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-ecmp-add-multipath-rule</name>
+    <desc>test-ecmp-add-multipath-rule</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>ecmp</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

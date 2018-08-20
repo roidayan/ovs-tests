@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-tc-shuffle-3</name>
+    <desc>test-tc-shuffle-3</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

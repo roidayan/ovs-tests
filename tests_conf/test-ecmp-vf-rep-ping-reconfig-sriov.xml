@@ -1,0 +1,16 @@
+<testdef>
+  <info>
+    <name>test-ecmp-vf-rep-ping-reconfig-sriov</name>
+    <desc>test-ecmp-vf-rep-ping-reconfig-sriov</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>rep</tag>
+    <tag>vf</tag>
+    <tag>ecmp</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

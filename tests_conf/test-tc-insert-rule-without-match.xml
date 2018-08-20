@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-tc-insert-rule-without-match</name>
+    <desc>test-tc-insert-rule-without-match</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

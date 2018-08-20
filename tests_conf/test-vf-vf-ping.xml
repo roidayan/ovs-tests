@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-vf-vf-ping</name>
+    <desc>test-vf-vf-ping</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>vf</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

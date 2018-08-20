@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-ecmp-rule-stats</name>
+    <desc>test-ecmp-rule-stats</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>ecmp</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

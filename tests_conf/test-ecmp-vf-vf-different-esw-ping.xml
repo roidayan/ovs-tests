@@ -1,0 +1,15 @@
+<testdef>
+  <info>
+    <name>test-ecmp-vf-vf-different-esw-ping</name>
+    <desc>test-ecmp-vf-vf-different-esw-ping</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>vf</tag>
+    <tag>ecmp</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

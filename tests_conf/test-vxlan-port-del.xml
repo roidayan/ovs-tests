@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-vxlan-port-del</name>
+    <desc>test-vxlan-port-del</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>vxlan</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

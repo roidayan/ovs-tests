@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-tc-del-a-lot</name>
+    <desc>test-tc-del-a-lot</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

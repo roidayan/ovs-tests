@@ -1,0 +1,15 @@
+<testdef>
+  <info>
+    <name>test-ovs-vxlan-in-ns</name>
+    <desc>test-ovs-vxlan-in-ns</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>vxlan</tag>
+    <tag>ovs</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

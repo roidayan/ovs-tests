@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-eswitch-127-reps</name>
+    <desc>test-eswitch-127-reps</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>eswitch</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

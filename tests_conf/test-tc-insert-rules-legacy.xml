@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-tc-insert-rules-legacy</name>
+    <desc>test-tc-insert-rules-legacy</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

@@ -1,0 +1,15 @@
+<testdef>
+  <info>
+    <name>test-vf-rep-udp-fragmented</name>
+    <desc>test-vf-rep-udp-fragmented</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>rep</tag>
+    <tag>vf</tag>
+  </tags>
+  <ignore>
+    <bug>1333837</bug>
+  </ignore>
+</testdef>

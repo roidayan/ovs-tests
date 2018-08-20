@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-devlink-show-in-each-link-mode</name>
+    <desc>test-devlink-show-in-each-link-mode</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>devlink</tag>
+  </tags>
+  <ignore>
+    <bug>1497154</bug>
+  </ignore>
+</testdef>

@@ -1,0 +1,15 @@
+<testdef>
+  <info>
+    <name>test-ovs-rewrite-ipv4-macs</name>
+    <desc>test-ovs-rewrite-ipv4-macs</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>ipv4</tag>
+    <tag>ovs</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

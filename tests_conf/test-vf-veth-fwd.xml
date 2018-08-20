@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-vf-veth-fwd</name>
+    <desc>test-vf-veth-fwd</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>vf</tag>
+  </tags>
+  <ignore>
+    <bug>1486319</bug>
+  </ignore>
+</testdef>

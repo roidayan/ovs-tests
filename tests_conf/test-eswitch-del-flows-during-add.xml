@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-eswitch-del-flows-during-add</name>
+    <desc>test-eswitch-del-flows-during-add</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>eswitch</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

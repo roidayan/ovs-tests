@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-ovs-persistent-data</name>
+    <desc>test-ovs-persistent-data</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>ovs</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

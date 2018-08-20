@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-tc-multi-prio-chains</name>
+    <desc>test-tc-multi-prio-chains</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

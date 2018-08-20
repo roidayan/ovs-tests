@@ -1,0 +1,15 @@
+<testdef>
+  <info>
+    <name>test-tc-vxlan-decap-not-properly-offloaded</name>
+    <desc>test-tc-vxlan-decap-not-properly-offloaded</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+    <tag>vxlan</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

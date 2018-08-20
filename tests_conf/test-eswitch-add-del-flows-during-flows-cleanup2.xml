@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-eswitch-add-del-flows-during-flows-cleanup2</name>
+    <desc>test-eswitch-add-del-flows-during-flows-cleanup2</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>eswitch</tag>
+  </tags>
+  <ignore>
+    <bug>1293937</bug>
+  </ignore>
+</testdef>

@@ -1,0 +1,15 @@
+<testdef>
+  <info>
+    <name>test-vf-rep-ping</name>
+    <desc>test-vf-rep-ping</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>rep</tag>
+    <tag>vf</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

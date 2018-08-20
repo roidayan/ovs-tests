@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-devlink-encap</name>
+    <desc>test-devlink-encap</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>devlink</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>
