@@ -4,7 +4,7 @@
     <desc>test-tc-shuffle-reload-mirred-skip-hw</desc>
     <owner>Roi Dayan</owner>
   </info>
-  <tout>300</tout>
+  <tout>1800</tout>
   <tags>
     <tag>tc</tag>
   </tags>

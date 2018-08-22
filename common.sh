@@ -329,7 +329,8 @@ function require_multipath_support() {
     fi
 
     if [ "$m" == "" ]; then
-        fail "Require multipath support"
+        log "SKIP (Require multipath support)"
+	exit 0
     fi
 }
 
@@ -681,21 +682,21 @@ function test_done() {
 
 function not_relevant_for_cx5() {
     if [ "$DEVICE_IS_CX5" = 1 ]; then
-        log "Test not relevant for ConnectX-5"
+        log "SKIP (Test not relevant for ConnectX-5)"
         exit 0
     fi
 }
 
 function not_relevant_for_cx4() {
     if [ "$DEVICE_IS_CX4" = 1 ]; then
-        log "Test not relevant for ConnectX-4"
+        log "SKIP (Test not relevant for ConnectX-4)"
         exit 0
     fi
 }
 
 function not_relevant_for_cx4lx() {
     if [ "$DEVICE_IS_CX4_LX" = 1 ]; then
-        log "Test not relevant for ConnectX-4 Lx"
+        log "SKIP (Test not relevant for ConnectX-4 Lx)"
         exit 0
     fi
 }

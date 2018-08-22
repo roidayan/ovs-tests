@@ -33,7 +33,7 @@ Run tests steps
     asap_dev_reg project root directory), which includes relevant NIC network
     interfaces data (PF0, PF1, VF0,VF1,REP0,REP1):
 
-    1.  Nic type should be dual port NIC ConnectX-5 in Ethernet mode when:
+    1.  Nic type should be dual port NIC ConnectX-5/ConnectX-4Lx in Ethernet mode when:
 
         1.  PF0 is the network interface of the NIC’s first physical function
 

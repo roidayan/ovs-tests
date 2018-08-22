@@ -4,7 +4,7 @@
     <desc>test-tc-max-rules-legacy</desc>
     <owner>Roi Dayan</owner>
   </info>
-  <tout>420</tout>
+  <tout>1800</tout>
   <tags>
     <tag>tc</tag>
   </tags>
