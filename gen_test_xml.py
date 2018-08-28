@@ -109,7 +109,7 @@ def parse_args():
                          help='Pass a small description of the test (Mandatory)')                         
     parser.add_argument('--owner',required=True,
                          help='test owner name')
-    parser.add_argument('--tout', default=1000,
+    parser.add_argument('--tout', default="1000",
                         help='time out for the test (default 1000)')
     parser.add_argument('--tag', action='append',required=True,
                         help='associate a tag(s) with this test (Mandatory)')
