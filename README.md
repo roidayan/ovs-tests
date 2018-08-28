@@ -7,52 +7,55 @@ Run tests steps
 
 1.  install required packages:
 
-    1.  upstream kernel under test (branch net-next):
+    1.  upstream kernel under test (branch net-next)
 
     2.  openvswitch:
         if not altered use (https://github.com/openvswitch/ovs.git branch
         master), installation instructions can be found at
-        http://docs.openvswitch.org/en/latest/intro/install/
+        http://docs.openvswitch.org/en/latest/intro/install/ ,
+        note: need to install ovs using rpms so ovs scripts is also installed
+        as part of the installation.
 
-    3.  iproute2: if not altered use
-        (https://github.com/ndev2/iproute2-next.git branch master)
+    3.  iproute2:
+        if not altered use:
+          1.  for upstream master version:
+              http://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git
+          2.  for “next“ version:
+              http://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git
 
     4.  install iperf latest version
 
     5.  install iperf3 latest version
 
     6.  make sure python scapy library installed as some tests uses it,
-        python2-scapy.noarch or python34-scapy.noarch
+        python2-scapy.noarch or python34-scapy.noarch (or using python install
+        pip install scapy)
 
-2.  clone developers tests package:
-    git clone ssh://<user>@l-gerrit.mtl.labs.mlnx:29418/asap_dev_reg
-    when <user> is the gerrit user name (can also use the clone command from
-    gerrit project general page)
-
-3.  for the NIC under test need to define a custom configurations file (at
+2.  for the NIC under test need to define a custom configurations file (at
     asap_dev_reg project root directory), which includes relevant NIC network
     interfaces data (PF0, PF1, VF0,VF1,REP0,REP1):
 
-    1.  Nic type should be dual port NIC ConnectX-5/ConnectX-4Lx in Ethernet mode when:
+    1.  Nic type should be dual port NIC ConnectX-5/ConnectX-4Lx in Ethernet mode where:
 
-        1.  PF0 is the network interface of the NIC’s first physical function
+        1.  <PF0> is the network interface of the NIC’s first physical function
 
-        2.  PF1 is the network interface of the NIC’s second physical function
+        2.  <PF1> is the network interface of the NIC’s second physical function
             (the second port)
 
-        3.  VF0 is the network interface of the first virtual function created
+        3.  <VF0> is the network interface of the first virtual function created
             on PF0
 
-        4.  VF1 is the network interface of the second virtual function created
+        4.  <VF1> is the network interface of the second virtual function created
             on PF0
 
-        5.  REP0 is the network interface of the first representor created when
+        5.  <REP0> is the network interface of the first representor created when
             switched to switchdev mode on PF0
 
-        6.  REP1 is the network interface of the second representor created when
+        6.  <REP1> is the network interface of the second representor created when
             switched to switchdev mode on PF0
 
-    2.  example configuration file needed:
+    2.  example configuration file needed (some example config files can be found
+        at project root directory named “config_*.sh“):
         NIC=<PF0>
         NIC2=<PF1>
         VF=<VF0>
@@ -61,15 +64,17 @@ Run tests steps
         REP=<REP0>
         REP2=<REP1>
 
-4.  to run tests (at asap_dev_reg project root directory):
+3.  to run tests (at asap_dev_reg project root directory):
 
     1.  Make sure sriov is enabled on the NIC and that the number
-        of vfs allowed is at least two
+        of vfs allowed on the device is at least two
 
-    2.  export configuration file:
+    2.  Make sure device is in ETH mode
+
+    3.  export configuration file:
         export CONFIG=<file from 3>
 
-    3.  run ./test-all-dev.py
+    4.  run ./test-all-dev.py
 
 
 Notes
@@ -81,14 +86,9 @@ Notes
 Add new test steps
 ==================
 
-1.  clone developers tests package:
-    git clone ssh://<user>@l-gerrit.mtl.labs.mlnx:29418/asap_dev_reg
-    when <user> is the gerrit user name (can also use the clone command from
-    gerrit project general page)
+1.  add relevant test with test naming convention “test-<…>.sh”
 
-2.  add relevant test with test naming convention “test-<…>.sh”
-
-3.  add a matching xml configuration file under “tests_conf” directory with
+2.  add a matching xml configuration file under “tests_conf” directory with
     naming convention <test_name from 2>.xml , the xml will include the
     following data (see existing XML file for exact structure):
 
@@ -126,7 +126,7 @@ Notes
     my_dir="\$(dirname "\$0")"
     . \$my_dir/common.sh
 
-2. there is a utility script “gen_test_xml.py” provided to automate step "3."
+2. there is a utility script “gen_test_xml.py” provided to automate step “2.“
    when adding a new test:
         usage: gen_test_xml.py [-h] --fname FNAME --desc DESC --owner OWNER
                        [--tout TOUT] --tag TAG [--ignore_test] [--bug BUG]
