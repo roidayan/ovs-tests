@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CASEDEF>
+    <global>
+        <Test>
+            <name>bash_cases</name>
+            <info></info>
+            <owner>roid</owner>
+            <pre>
+                <type> reg_exec_cmd </type>
+                <name> preconfigure </name>
+                <tout> 240 </tout>
+                <params>
+                    <exec> [[run_time:remote_src_path]]/load-test.sh [[conf:extra_info.hca_type]] </exec>
+                </params>
+            </pre>
+        </Test>
+        <Case>
+            <tags> bash </tags>
+            <wrapper> bash_test_wrapper.py </wrapper>
+            <tout> 300 </tout>
+            <params>
+                <config> [[conf:extra_info.bash_config]] </config>
+            </params>
+        </Case>
+    </global>
+    <case>
+        <tags> ifstat </tags>
+        <name> test-ifstat.sh </name>
+        <cmd>
+            <params>
+                <test> test-ifstat.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
+        <name> test-vf-rep-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
+        <name> test-vf-rep-ping-reconfig-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-reconfig-sriov.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <tags> frag </tags>
+        <name> test-vf-rep-ping-fragmented.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1333837 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> frag </tags>
+        <tags> vf-rep-udp-fragmented </tags>
+        <name> test-vf-rep-udp-fragmented.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-udp-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <name> test-vf-vf-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1251244 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> vf-vf-iperf </tags>
+        <name> test-vf-vf-iperf-perf.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-iperf-perf.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1486319 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> vf-vf-fwd </tags>
+        <name> test-vf-vf-fwd.sh </name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-vf-vf-fwd.sh </test>
+                <option> ROUNDS=10 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <tags> vf-vf-fwd-fl_delete </tags>
+        <name> test-vf-vf-fwd-fl_delete.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-fwd-fl_delete.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <condition_group>
+                    <operand> OR </operand>
+                    <bug> 1486319 </bug>
+                    <bug> 1506933 </bug>
+                </condition_group>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> vf-veth-fwd </tags>
+        <name> test-vf-veth-fwd.sh </name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-vf-veth-fwd.sh </test>
+                <option> ROUNDS=10 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1512689 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> vf-vf-diff-esw </tags>
+        <name> test-vf-vf-different-esw-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-different-esw-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> devlink </tags>
+        <name> test-devlink-encap.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-encap.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> devlink </tags>
+        <name> test-devlink-inline-mode2.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-inline-mode2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> devlink </tags>
+        <name> test-devlink-inline-mode.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-inline-mode.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> devlink </tags>
+        <name> test-devlink-show-in-each-link-mode.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-show-in-each-link-mode.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-add-del-different-flows </tags>
+        <name> test-eswitch-add-del-different-flows.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-different-flows.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-add-del-different-flows2 </tags>
+        <name> test-eswitch-add-del-different-flows2.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-different-flows2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1013092 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch-add-del-flows-during-flows-cleanup </tags>
+        <name> test-eswitch-add-del-flows-during-flows-cleanup.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-flows-during-flows-cleanup.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1293937 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch-add-del-flows-during-flows-cleanup2 </tags>
+        <name> test-eswitch-add-del-flows-during-flows-cleanup2.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-flows-during-flows-cleanup2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> reload_modules </tags>
+        <tags> eswitch </tags>
+        <name> test-eswitch-reload-modules-different-state.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-reload-modules-different-state.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> reload_modules </tags>
+        <name> test-eswitch-add-flows-during-reload.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-flows-during-reload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1481378 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <name> test-eswitch-add-in-mode1-del-in-mode2.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-in-mode1-del-in-mode2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-del-flows-during-add.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-del-flows-during-add.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1481373 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> reload_modules </tags>
+        <name> test-eswitch-del-flows-during-reload.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-del-flows-during-reload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-toggle-mode-ovs-crash </tags>
+        <name> test-eswitch-toggle-mode-ovs-crash.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-ovs-crash.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-toggle-modes </tags>
+        <name> test-eswitch-toggle-modes.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-modes.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-toggle-mode-parallel </tags>
+        <name> test-eswitch-toggle-mode-parallel.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-parallel.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch_no_carrier </tags>
+        <name> test-eswitch-no-carrier.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-no-carrier.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-ipv4-match.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ipv4-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-ipv6-match.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ipv6-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> persistent-data </tags>
+        <name> test-ovs-persistent-data.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-persistent-data.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-replace-rule-hw.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-replace-rule-hw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-replace-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-replace-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
+        <name> test-ovs-vxlan-in-ns.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
+        <name> test-ovs-vxlan-in-ns-ipv6.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns-ipv6.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
+        <name> test-ovs-vxlan-flow-key.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-flow-key.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-icmp-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-icmp-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> frag </tags>
+        <tags> ovs_frag </tags>
+        <name> test-ovs-icmp-frag.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-icmp-frag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-tcp-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-tcp-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-udp-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-udp-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> overlap </tags>
+        <name> test-ovs-overlap-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-overlap-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-del-a-lot </tags>
+        <name> test-tc-del-a-lot.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-del-a-lot.sh </test>
+            </params>
+         </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-duplicate-hw-rules </tags>
+        <name> test-tc-duplicate-hw-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-duplicate-hw-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-groups-overlapping.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-groups-overlapping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules-legacy.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-legacy.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules-port2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-port2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-insert-rules-duplicates </tags>
+        <name> test-tc-insert-rules-duplicates.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-duplicates.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-bad-egdev-rules </tags>
+        <name> test-tc-bad-egdev-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-bad-egdev-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1471381 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> header_rewrite </tags>
+        <tags> tc-insert-rules-pedit </tags>
+        <name> test-tc-insert-rules-pedit.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1366970 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> header_rewrite </tags>
+        <tags> tc-insert-rules-pedit-ttl </tags>
+        <name> test-tc-insert-rules-pedit-ttl.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-pedit-ttl.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> frag </tags>
+        <tags> tc_frag </tags>
+        <name> test-tc-insert-rules-frag.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-frag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-insert-rule-without-match </tags>
+        <name> test-tc-insert-rule-without-match.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rule-without-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <name> test-tc-max-rules.sh </name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules.sh </test>
+                <option> CASE_INDEX=0 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <name> test-tc-max-rules-legacy.sh</name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules-legacy.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <tags> tc-max-rules-shared-action </tags>
+        <name> test-tc-max-rules.sh shared action </name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules.sh </test>
+                <option> CASE_INDEX=1,CASE_TWO_PORTS=0 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1499479 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <tags> 1M_rules </tags>
+        <name> test-tc-max-rules-1M-rules.sh </name>
+        <tout> 1200 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules-1M-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 988519 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-replace.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-replace.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-4 </tags>
+        <name> test-tc-shuffle-4.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-4.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-reload-gact </tags>
+        <name> test-tc-shuffle-reload-gact.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-reload-gact.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-reload-mirred </tags>
+        <name> test-tc-shuffle-reload-mirred.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-reload-mirred.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-reload-mirred-skip-hw </tags>
+        <name> test-tc-shuffle-reload-mirred-skip-hw.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-reload-mirred-skip-hw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-cls_api </tags>
+        <name> test-tc-shuffle-cls_api.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-cls_api.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <name> test-tc-vxlan-decap-not-properly-offloaded.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-decap-not-properly-offloaded.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <name> test-tc-vxlan-outer-dst-mac.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-outer-dst-mac.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-del.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <tags> neigh_update </tags>
+        <name> test-vxlan-neigh-update.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-neigh-update.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <tags> neigh_update </tags>
+        <name> test-vxlan-neigh-update-warn.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-neigh-update-warn.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <tags> neigh_update </tags>
+        <tags> header_rewrite </tags>
+        <tags> neigh_update_with_header_rewrite </tags>
+        <name> test-vxlan-neigh-update-with-pedit.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-neigh-update-with-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <name> test-ecmp-add-del-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-add-del-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <tags> reload_modules </tags>
+        <name> test-ecmp-devlink-multipath.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-devlink-multipath.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <name> test-ecmp-vf-rep-ping-reconfig-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-vf-rep-ping-reconfig-sriov.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <name> test-ecmp-lag-affinity.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-lag-affinity.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <name> test-ecmp-add-multipath-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-add-multipath-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <name> test-ecmp-restore-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-restore-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <tags> ecmp-miss-rules </tags>
+        <name> test-ecmp-miss-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-miss-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+</CASEDEF>
