@@ -125,7 +125,7 @@ function wait_vms() {
 function wait_vm() {
     local vm=$1
 
-    for i in 1 2 3 4; do
+    for i in 1 2 3 4 5; do
         ping -q -w 1 -c 1 $vm && break
         sleep 15
     done
