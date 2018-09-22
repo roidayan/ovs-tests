@@ -13,7 +13,7 @@ from reg2_wrapper.utils.parser.cmd_argument import RunningStage
 
 wrapper_dir = os.path.abspath(__file__)
 root_dir = os.path.abspath(os.path.join(wrapper_dir, '..', '..'))
-ovs_tests_dir = os.path.join('..', '..', 'ovs-tests')
+ovs_tests_dir = os.path.join('..')
 
 
 class BashTestWrapper(StandaloneWrapper):
