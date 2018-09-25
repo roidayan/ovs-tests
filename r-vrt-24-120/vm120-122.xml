@@ -1,6 +1,6 @@
 <slavemachine>
     <params>
-        <param name="hostname" value="10.213.24.123"/>
+        <param name="hostname" value="10.213.24.122"/>
         <param name="machine_type" value="guest"/>
     </params>
     <interfaces>

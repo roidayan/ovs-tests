@@ -9,7 +9,7 @@ CX5_2=ens1f1
 if [ "$1" == "cx5" ]; then
     nic=$CX5
     nic2=$CX5_2
-    vms=(121 123)
+    vms=(121 122)
 else
     nic=$CX4
     nic2=$CX4_2
