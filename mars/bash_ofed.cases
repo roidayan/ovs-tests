@@ -241,6 +241,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> devlink </tags>
         <name> test-devlink-encap.sh </name>
         <cmd>
@@ -250,6 +261,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> devlink </tags>
         <name> test-devlink-inline-mode2.sh </name>
         <cmd>
@@ -339,6 +361,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> reload_modules </tags>
         <tags> eswitch </tags>
         <name> test-eswitch-reload-modules-different-state.sh </name>
@@ -359,6 +392,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <name> test-eswitch-add-in-mode1-del-in-mode2.sh </name>
         <cmd>
@@ -450,6 +494,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch_no_carrier </tags>
         <name> test-eswitch-no-carrier.sh </name>
@@ -647,6 +702,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <name> test-tc-insert-rules-legacy.sh </name>
         <cmd>
@@ -665,6 +731,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rules-duplicates </tags>
         <name> test-tc-insert-rules-duplicates.sh </name>
@@ -777,6 +854,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
         <name> test-tc-max-rules-legacy.sh</name>
