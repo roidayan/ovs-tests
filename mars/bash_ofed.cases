@@ -935,6 +935,7 @@
             </condition_group>
         </ignore>
         <tags> tc </tags>
+        <tags> tc-replace </tags>
         <name> test-tc-replace.sh </name>
         <cmd>
             <params>
