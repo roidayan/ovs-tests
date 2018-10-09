@@ -111,7 +111,7 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start ${hv}-${i}-RH-7.6 ; done
+    for i in $vms; do virsh -q start ${hv}-${i}-CentOS-7.4 ; done
 }
 
 function wait_vms() {
@@ -170,7 +170,7 @@ function warn_extra() {
 function reload_modules() {
     echo "Reload modules"
     set -e
-    local modules="mlx5_ib mlx5_core devlink cls_flower"
+    local modules="mlx5_core devlink cls_flower"
 
     if [ -e /etc/init.d/openibd ]; then
         service openibd force-restart
