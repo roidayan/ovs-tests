@@ -18,6 +18,7 @@ fi
 
 vfs=2
 hv=`hostname -s`
+pci=$(basename `readlink /sys/class/net/$nic/device`)
 
 ##############################################################################
 

@@ -18,9 +18,9 @@ fi
 
 vfs=2
 hv=`hostname -s`
+pci=$(basename `readlink /sys/class/net/$nic/device`)
 
 ##############################################################################
-
 if [ -e /sys/kernel/debug/mlx5/$pci/compat ]; then
     echo "devlink compat debugfs"
     devlink_compat=1
