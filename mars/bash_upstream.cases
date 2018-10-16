@@ -45,6 +45,17 @@
     <case>
         <tags> eswitch </tags>
         <tags> vf </tags>
+        <tags> test-vf-rep-ping-change-mtu </tags>
+        <name> test-vf-rep-ping-change-mtu.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-change-mtu.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
         <name> test-vf-rep-ping-reconfig-sriov.sh </name>
         <cmd>
             <params>
@@ -81,6 +92,33 @@
         <cmd>
             <params>
                 <test> test-vf-rep-udp-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <tags> frag </tags>
+        <tags> test-vf-rep-tcp-fragmented </tags>
+        <name> test-vf-rep-tcp-fragmented.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-tcp-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> vf </tags>
+        <tags> test-vf-rep-iperf </tags>
+        <name> test-vf-rep-iperf.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-iperf.sh </test>
             </params>
         </cmd>
     </case>
@@ -148,6 +186,16 @@
         </cmd>
     </case>
     <case>
+        <tags> vf </tags>
+        <tags> test-vf-vf-fwd-fl_classify </tags>
+        <name> test-vf-vf-fwd-fl_classify.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-fwd-fl_classify.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
@@ -192,6 +240,22 @@
         <cmd>
             <params>
                 <test> test-vf-vf-different-esw-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> vf </tags>
+        <tags> test-vf-zero-header-raw </tags>
+        <name> test-vf-zero-header-raw.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-zero-header-raw.sh </test>
             </params>
         </cmd>
     </case>
@@ -404,6 +468,16 @@
         </cmd>
     </case>
     <case>
+        <tags> eswitch </tags>
+        <tags> test-eswitch-127-reps </tags>
+        <name> test-eswitch-127-reps.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-127-reps.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ovs </tags>
         <name> test-ovs-ipv4-match.sh </name>
         <cmd>
@@ -451,6 +525,27 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> header_rewrite </tags>
+        <tags> test-ovs-rewrite-ipv4-macs </tags>
+        <name> test-ovs-rewrite-ipv4-macs.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-rewrite-ipv4-macs.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> test-ovs-dpctl-flows-ttl-tos </tags>
+        <name> test-ovs-dpctl-flows-ttl-tos.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-dpctl-flows-ttl-tos.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
         <name> test-ovs-vxlan-in-ns.sh </name>
@@ -468,6 +563,19 @@
         <cmd>
             <params>
                 <test> test-ovs-vxlan-in-ns-ipv6.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
+        <tags> header_rewrite </tags>
+        <tags> test-ovs-vxlan-in-ns-and-rewrite-ipv4 </tags>
+        <name> test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh </test>
             </params>
         </cmd>
     </case>
@@ -556,6 +664,16 @@
         <cmd>
             <params>
                 <test> test-tc-groups-overlapping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-groups-multi-fgs </tags>
+        <name> test-tc-groups-multi-fgs.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-groups-multi-fgs.sh </test>
             </params>
         </cmd>
     </case>
@@ -673,6 +791,16 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> test-tc-ip-tos-ip-ttl </tags>
+        <name> test-tc-ip-tos-ip-ttl.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-ip-tos-ip-ttl.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
         <tags> tc-max-rules </tags>
         <name> test-tc-max-rules.sh </name>
         <tout> 900 </tout>
@@ -748,6 +876,36 @@
         <cmd>
             <params>
                 <test> test-tc-replace.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-reoffload </tags>
+        <name> test-tc-reoffload.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-reoffload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-rule-add-null-qdisc </tags>
+        <name> test-tc-rule-add-null-qdisc.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-rule-add-null-qdisc.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-rule-act-add </tags>
+        <name> test-tc-rule-act-add.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-rule-act-add.sh </test>
             </params>
         </cmd>
     </case>
@@ -833,6 +991,118 @@
         <cmd>
             <params>
                 <test> test-tc-shuffle-cls_api.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-multi-prio-chains </tags>
+        <name> test-tc-multi-prio-chains.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-multi-prio-chains.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-multi-masks-per-prio </tags>
+        <name> test-tc-multi-masks-per-prio.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-multi-masks-per-prio.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-perf-update </tags>
+        <name> test-tc-perf-update.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-perf-update.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-par-add-ovr-del </tags>
+        <name> test-tc-par-add-ovr-del.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-par-add-ovr-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-merged-esw-vf-pf </tags>
+        <name> test-tc-merged-esw-vf-pf.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-merged-esw-vf-pf.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-merged-esw-vf-vf </tags>
+        <name> test-tc-merged-esw-vf-vf.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-merged-esw-vf-vf.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-traffic-qdisc-del </tags>
+        <name> test-tc-traffic-qdisc-del.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-traffic-qdisc-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-traffic-proto-add-del </tags>
+        <name> test-tc-traffic-proto-add-del.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-traffic-proto-add-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-traffic-filters-add-del </tags>
+        <name> test-tc-traffic-filters-add-del.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-traffic-filters-add-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-traffic-chain-flush </tags>
+        <name> test-tc-traffic-chain-flush.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-traffic-chain-flush.sh </test>
             </params>
         </cmd>
     </case>
@@ -1010,6 +1280,86 @@
         <cmd>
             <params>
                 <test> test-ecmp-miss-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <tags> test-ecmp-add-vxlan-encap-disable-sriov </tags>
+        <name> test-ecmp-add-vxlan-encap-disable-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-add-vxlan-encap-disable-sriov.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <tags> test-ecmp-add-vxlan-rule </tags>
+        <name> test-ecmp-add-vxlan-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-add-vxlan-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <tags> test-ecmp-rule-stats </tags>
+        <name> test-ecmp-rule-stats.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-rule-stats.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <tags> test-ecmp-vf-vf-different-esw-ping </tags>
+        <name> test-ecmp-vf-vf-different-esw-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-vf-vf-different-esw-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <tags> test-ecmp-vf-vf-ping </tags>
+        <name> test-ecmp-vf-vf-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-vf-vf-ping.sh </test>
             </params>
         </cmd>
     </case>
