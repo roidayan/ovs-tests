@@ -166,6 +166,7 @@
         <tags> vf </tags>
         <tags> test-vf-vf-fwd-fl_classify </tags>
         <name> test-vf-vf-fwd-fl_classify.sh </name>
+        <tout> 600 </tout>
         <cmd>
             <params>
                 <test> test-vf-vf-fwd-fl_classify.sh </test>
@@ -1001,6 +1002,7 @@
         <tags> tc </tags>
         <tags> test-tc-par-add-ovr-del </tags>
         <name> test-tc-par-add-ovr-del.sh </name>
+        <tout> 900 </tout>
         <cmd>
             <params>
                 <test> test-tc-par-add-ovr-del.sh </test>
@@ -1031,6 +1033,7 @@
         <tags> tc </tags>
         <tags> test-tc-traffic-qdisc-del </tags>
         <name> test-tc-traffic-qdisc-del.sh </name>
+        <tout> 400 </tout>
         <cmd>
             <params>
                 <test> test-tc-traffic-qdisc-del.sh </test>
@@ -1041,6 +1044,7 @@
         <tags> tc </tags>
         <tags> test-tc-traffic-proto-add-del </tags>
         <name> test-tc-traffic-proto-add-del.sh </name>
+        <tout> 400 </tout>
         <cmd>
             <params>
                 <test> test-tc-traffic-proto-add-del.sh </test>
@@ -1051,6 +1055,7 @@
         <tags> tc </tags>
         <tags> test-tc-traffic-filters-add-del </tags>
         <name> test-tc-traffic-filters-add-del.sh </name>
+        <tout> 400 </tout>
         <cmd>
             <params>
                 <test> test-tc-traffic-filters-add-del.sh </test>
@@ -1061,6 +1066,7 @@
         <tags> tc </tags>
         <tags> test-tc-traffic-chain-flush </tags>
         <name> test-tc-traffic-chain-flush.sh </name>
+        <tout> 400 </tout>
         <cmd>
             <params>
                 <test> test-tc-traffic-chain-flush.sh </test>
