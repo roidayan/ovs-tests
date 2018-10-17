@@ -1093,12 +1093,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Not supported with old kernels like 3.10</info>
-            </disabled>
-        </ignore>
         <tags> tc </tags>
         <tags> test-tc-rule-act-add </tags>
         <name> test-tc-rule-act-add.sh </name>
