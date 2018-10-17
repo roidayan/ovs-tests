@@ -1093,6 +1093,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Not supported with old kernels like 3.10</info>
+            </disabled>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-rule-act-add </tags>
         <name> test-tc-rule-act-add.sh </name>
@@ -1286,7 +1292,7 @@
         <tags> tc </tags>
         <tags> test-tc-par-add-ovr-del </tags>
         <name> test-tc-par-add-ovr-del.sh </name>
-        <tout> 900 </tout>
+        <tout> 1100 </tout>
         <cmd>
             <params>
                 <test> test-tc-par-add-ovr-del.sh </test>
@@ -1294,6 +1300,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Not supported yet.</info>
+            </disabled>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-merged-esw-vf-pf </tags>
         <name> test-tc-merged-esw-vf-pf.sh </name>
