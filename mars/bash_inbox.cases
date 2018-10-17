@@ -96,17 +96,6 @@
         </cmd>
     </case>
     <case>
-        <tags> vf </tags>
-        <tags> frag </tags>
-        <tags> test-vf-rep-tcp-fragmented </tags>
-        <name> test-vf-rep-tcp-fragmented.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-rep-tcp-fragmented.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
         <ignore>
             <disabled>
                 <valid> True </valid>
