@@ -171,7 +171,7 @@ function warn_extra() {
 function reload_modules() {
     echo "Reload modules"
     set -e
-    local modules="mlx5_core devlink cls_flower"
+    local modules="cls_flower mlx5_ib mlx5_core devlink"
 
     if [ -e /etc/init.d/openibd ]; then
         service openibd force-restart
