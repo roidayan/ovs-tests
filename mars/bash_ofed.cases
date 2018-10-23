@@ -205,10 +205,20 @@
                     <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
                 </condition>
             </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1540625 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vf </tags>
         <tags> vf-vf-fwd-fl_delete </tags>
         <name> test-vf-vf-fwd-fl_delete.sh </name>
+        <tout> 800 </tout>
         <cmd>
             <params>
                 <test> test-vf-vf-fwd-fl_delete.sh </test>
@@ -216,6 +226,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1480847 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> test-vf-vf-fwd-fl_classify </tags>
         <name> test-vf-vf-fwd-fl_classify.sh </name>
@@ -475,6 +496,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1481373 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> reload_modules </tags>
         <name> test-eswitch-del-flows-during-reload.sh </name>
@@ -801,6 +833,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1540621 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <name> test-tc-insert-rules.sh </name>
         <cmd>

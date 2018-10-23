@@ -145,6 +145,7 @@
         <tags> vf </tags>
         <tags> vf-vf-fwd-fl_delete </tags>
         <name> test-vf-vf-fwd-fl_delete.sh </name>
+        <tout> 800 </tout>
         <cmd>
             <params>
                 <test> test-vf-vf-fwd-fl_delete.sh </test>
