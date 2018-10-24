@@ -398,6 +398,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Developers did not specify if this test supported on this setup or not.</info>
+            </disabled>
+        </ignore>
         <tags> eswitch </tags>
         <tags> test-eswitch-127-reps </tags>
         <name> test-eswitch-127-reps.sh </name>
@@ -465,6 +471,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Developers did not specify if this test supported on this setup or not.</info>
+            </disabled>
+        </ignore>
         <tags> ovs </tags>
         <tags> test-ovs-dpctl-flows-ttl-tos </tags>
         <name> test-ovs-dpctl-flows-ttl-tos.sh </name>
@@ -742,6 +754,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Developers did not specify if this test supported on this setup or not.</info>
+            </disabled>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-ip-tos-ip-ttl </tags>
         <name> test-tc-ip-tos-ip-ttl.sh </name>
@@ -969,6 +987,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Developers did not specify if this test supported on this setup or not.</info>
+            </disabled>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-multi-masks-per-prio </tags>
         <name> test-tc-multi-masks-per-prio.sh </name>
@@ -1032,6 +1056,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Developers did not specify if this test supported on this setup or not.</info>
+            </disabled>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-qdisc-del </tags>
         <name> test-tc-traffic-qdisc-del.sh </name>
@@ -1043,6 +1073,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Developers did not specify if this test supported on this setup or not.</info>
+            </disabled>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-proto-add-del </tags>
         <name> test-tc-traffic-proto-add-del.sh </name>
@@ -1054,6 +1090,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Developers did not specify if this test supported on this setup or not.</info>
+            </disabled>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-filters-add-del </tags>
         <name> test-tc-traffic-filters-add-del.sh </name>
@@ -1065,6 +1107,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Developers did not specify if this test supported on this setup or not.</info>
+            </disabled>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-chain-flush </tags>
         <name> test-tc-traffic-chain-flush.sh </name>

@@ -429,6 +429,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1524524 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-toggle-modes </tags>
         <name> test-eswitch-toggle-modes.sh </name>
@@ -459,6 +470,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1540622 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> test-eswitch-127-reps </tags>
         <name> test-eswitch-127-reps.sh </name>
@@ -771,6 +793,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1540620 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rule-without-match </tags>
         <name> test-tc-insert-rule-without-match.sh </name>
@@ -891,6 +924,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1540623 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-rule-act-add </tags>
         <name> test-tc-rule-act-add.sh </name>
@@ -1028,6 +1072,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Developers did not specify if this test supported on this setup or not.</info>
+            </disabled>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-par-add-ovr-del </tags>
         <name> test-tc-par-add-ovr-del.sh </name>
