@@ -132,8 +132,9 @@ function warn_extra() {
 function reload_modules() {
     echo "Reload modules"
     set -e
-    
-    local modules="mlx5_ib mlx5_core cls_flower"
+
+    # Disable mlx5_ib reload since it is not included with JD kernel
+    local modules="mlx5_core cls_flower"
     
     for m in $modules ; do
         warn_extra $m
