@@ -657,17 +657,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1472553 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [RHEL_7_6_INBOX] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-bad-egdev-rules </tags>
         <name> test-tc-bad-egdev-rules.sh </name>
@@ -733,17 +722,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1472549 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [RHEL_7_6_INBOX] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rule-without-match </tags>
         <name> test-tc-insert-rule-without-match.sh </name>

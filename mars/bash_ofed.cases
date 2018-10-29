@@ -496,17 +496,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1481373 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> reload_modules </tags>
         <name> test-eswitch-del-flows-during-reload.sh </name>
@@ -785,17 +774,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1442351 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> overlap </tags>
         <name> test-ovs-overlap-rules.sh </name>
@@ -915,17 +893,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1443045 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-bad-egdev-rules </tags>
         <name> test-tc-bad-egdev-rules.sh </name>
@@ -969,21 +936,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <condition_group>
-                    <operand> OR </operand>
-                    <bug> 1441068 </bug>
-                    <bug> 1523783 </bug>
-                </condition_group>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rule-without-match </tags>
         <name> test-tc-insert-rule-without-match.sh </name>
