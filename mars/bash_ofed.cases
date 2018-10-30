@@ -1354,7 +1354,7 @@
         <tags> tc </tags>
         <tags> test-tc-traffic-proto-add-del </tags>
         <name> test-tc-traffic-proto-add-del.sh </name>
-        <tout> 400 </tout>
+        <tout> 600 </tout>
         <cmd>
             <params>
                 <test> test-tc-traffic-proto-add-del.sh </test>
