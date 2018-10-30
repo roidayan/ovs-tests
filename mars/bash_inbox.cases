@@ -96,12 +96,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> vf </tags>
         <tags> test-vf-rep-iperf </tags>
         <name> test-vf-rep-iperf.sh </name>
@@ -197,6 +191,22 @@
         <cmd>
             <params>
                 <test> test-vf-zero-header-raw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> vf </tags>
+        <tags> test-vf-lag </tags>
+        <name> test-vf-lag.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-lag.sh </test>
             </params>
         </cmd>
     </case>
@@ -398,12 +408,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Developers did not specify if this test supported on this setup or not.</info>
-            </disabled>
-        </ignore>
         <tags> eswitch </tags>
         <tags> test-eswitch-127-reps </tags>
         <name> test-eswitch-127-reps.sh </name>
@@ -471,12 +475,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Developers did not specify if this test supported on this setup or not.</info>
-            </disabled>
-        </ignore>
         <tags> ovs </tags>
         <tags> test-ovs-dpctl-flows-ttl-tos </tags>
         <name> test-ovs-dpctl-flows-ttl-tos.sh </name>
@@ -534,6 +532,17 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> test-ovs-multi-vxlan-bridge-ingress </tags>
+        <name> test-ovs-multi-vxlan-bridge-ingress.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-multi-vxlan-bridge-ingress.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
         <name> test-ovs-icmp-offload.sh </name>
         <cmd>
             <params>
@@ -577,6 +586,27 @@
         <cmd>
             <params>
                 <test> test-ovs-overlap-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-vf-mirror </tags>
+        <name> test-tc-vf-mirror.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vf-mirror.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> header_rewrite </tags>
+        <tags> test-tc-vf-mirror-pedit </tags>
+        <name> test-tc-vf-mirror-pedit.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vf-mirror-pedit.sh </test>
             </params>
         </cmd>
     </case>
@@ -732,12 +762,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Developers did not specify if this test supported on this setup or not.</info>
-            </disabled>
-        </ignore>
         <tags> tc </tags>
         <tags> test-tc-ip-tos-ip-ttl </tags>
         <name> test-tc-ip-tos-ip-ttl.sh </name>
@@ -965,12 +989,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Developers did not specify if this test supported on this setup or not.</info>
-            </disabled>
-        </ignore>
         <tags> tc </tags>
         <tags> test-tc-multi-masks-per-prio </tags>
         <name> test-tc-multi-masks-per-prio.sh </name>
@@ -1034,12 +1052,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Developers did not specify if this test supported on this setup or not.</info>
-            </disabled>
-        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-qdisc-del </tags>
         <name> test-tc-traffic-qdisc-del.sh </name>
@@ -1051,12 +1063,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Developers did not specify if this test supported on this setup or not.</info>
-            </disabled>
-        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-proto-add-del </tags>
         <name> test-tc-traffic-proto-add-del.sh </name>
@@ -1068,12 +1074,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Developers did not specify if this test supported on this setup or not.</info>
-            </disabled>
-        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-filters-add-del </tags>
         <name> test-tc-traffic-filters-add-del.sh </name>
@@ -1085,12 +1085,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Developers did not specify if this test supported on this setup or not.</info>
-            </disabled>
-        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-chain-flush </tags>
         <name> test-tc-traffic-chain-flush.sh </name>
@@ -1355,6 +1349,104 @@
         <cmd>
             <params>
                 <test> test-ecmp-vf-vf-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ct-icmp-fwd </tags>
+        <name> test-ct-icmp-fwd.sh </name>
+        <cmd>
+            <params>
+                <test> test-ct-icmp-fwd.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ct-icmp </tags>
+        <name> test-ct-icmp.sh </name>
+        <cmd>
+            <params>
+                <test> test-ct-icmp.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> header_rewrite </tags>
+        <tags> test-ct-tcp-pedit </tags>
+        <name> test-ct-tcp-pedit.sh </name>
+        <cmd>
+            <params>
+                <test> test-ct-tcp-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> header_rewrite </tags>
+        <tags> test-ct-tcp-vf-mirror-pedit </tags>
+        <name> test-ct-tcp-vf-mirror-pedit.sh </name>
+        <cmd>
+            <params>
+                <test> test-ct-tcp-vf-mirror-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ct-tcp </tags>
+        <name> test-ct-tcp.sh </name>
+        <cmd>
+            <params>
+                <test> test-ct-tcp.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ct-udp </tags>
+        <name> test-ct-udp.sh </name>
+        <cmd>
+            <params>
+                <test> test-ct-udp.sh </test>
             </params>
         </cmd>
     </case>
