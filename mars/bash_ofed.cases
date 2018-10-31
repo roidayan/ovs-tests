@@ -168,6 +168,15 @@
                     <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
                 </condition>
             </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1548309 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vf </tags>
         <tags> vf-vf-fwd </tags>
@@ -252,6 +261,15 @@
                     <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
                 </condition>
             </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1548309 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> vf </tags>
         <tags> vf-veth-fwd </tags>
@@ -310,6 +328,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Not full supported yet on Ofed </info>
+            </disabled>
+        </ignore>
         <tags> vf </tags>
         <tags> test-vf-lag </tags>
         <name> test-vf-lag.sh </name>
@@ -787,6 +811,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551256 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-vf-mirror </tags>
         <name> test-tc-vf-mirror.sh </name>
@@ -797,6 +832,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551256 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
         <tags> test-tc-vf-mirror-pedit </tags>
@@ -1153,6 +1199,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1548309 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
         <tags> tc-shuffle-4 </tags>
@@ -1194,6 +1251,15 @@
                     <key> PROJECT </key>
                     <op> in </op>
                     <value> [RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1548309 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -1277,6 +1343,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551273 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-multi-masks-per-prio </tags>
         <name> test-tc-multi-masks-per-prio.sh </name>
@@ -1303,6 +1380,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551359 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-par-add-ovr-del </tags>
         <name> test-tc-par-add-ovr-del.sh </name>
@@ -1340,6 +1428,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551292 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-qdisc-del </tags>
         <name> test-tc-traffic-qdisc-del.sh </name>
@@ -1351,6 +1450,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551540 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-proto-add-del </tags>
         <name> test-tc-traffic-proto-add-del.sh </name>
@@ -1362,6 +1472,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551540 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-filters-add-del </tags>
         <name> test-tc-traffic-filters-add-del.sh </name>
@@ -1373,6 +1494,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551540 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-traffic-chain-flush </tags>
         <name> test-tc-traffic-chain-flush.sh </name>
