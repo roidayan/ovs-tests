@@ -408,6 +408,12 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Test must be updated to do the needed configurations and set the required number of vfs. </info>
+            </disabled>
+        </ignore>
         <tags> eswitch </tags>
         <tags> test-eswitch-127-reps </tags>
         <name> test-eswitch-127-reps.sh </name>
