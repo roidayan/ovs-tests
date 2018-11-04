@@ -53,9 +53,8 @@ function reload_mlx5() {
     if [ "$devlink_compat" = 1 ]; then
 	service openibd force-restart
     else
-        # Disable mlx5_ib reload since it is not included with JD kernel
-        modprobe -r mlx5_core || fail "Failed to unload modules"
-        modprobe -a mlx5_core || fail "Failed to load modules"
+        modprobe -r mlx5_ib mlx5_core || fail "Failed to unload modules"
+        modprobe -a mlx5_core mlx5_ib || fail "Failed to load modules"
     fi
 
     set_macs
