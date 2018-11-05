@@ -492,6 +492,16 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> test-ovs-dpctl-flows-enc_ttl-enc_tos </tags>
+        <name> test-ovs-dpctl-flows-enc_ttl-enc_tos.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-dpctl-flows-ttl-tos.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
         <name> test-ovs-vxlan-in-ns.sh </name>

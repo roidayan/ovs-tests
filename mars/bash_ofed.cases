@@ -723,6 +723,27 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1552152 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> ovs </tags>
+        <tags> test-ovs-dpctl-flows-enc_ttl-enc_tos </tags>
+        <name> test-ovs-dpctl-flows-enc_ttl-enc_tos.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-dpctl-flows-ttl-tos.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
