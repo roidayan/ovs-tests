@@ -131,21 +131,15 @@ function warn_extra() {
 
 function reload_modules() {
     echo "Reload modules"
+    set -e
 
     local modules="mlx5_ib mlx5_core cls_flower"
-
-    lsmod | grep mlx5_ib >& /dev/null
-    if [ $? -ne 0 ]; then
-        modules="mlx5_core cls_flower"
-    fi
-
-    set -e
+    
     for m in $modules ; do
         warn_extra $m
     done
     modprobe -r $modules ; modprobe -a $modules
     set +e
-    echo "Reload modules done"
 }
 
 function nic_up() {

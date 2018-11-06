@@ -625,15 +625,8 @@ function reload_modules() {
     if [ -e /etc/init.d/openibd ]; then
         service openibd force-restart || fail "Failed to restart openibd service"
     else
-        local modules="mlx5_ib mlx5_core"
-
-        lsmod | grep mlx5_ib >& /dev/null
-        if [ $? -ne 0 ]; then
-            modules="mlx5_core"
-        fi
-
-        modprobe -r $modules || fail "Failed to unload modules"
-        modprobe -a $modules || fail "Failed to load modules"
+        modprobe -r mlx5_ib mlx5_core || fail "Failed to unload modules"
+        modprobe -a mlx5_core mlx5_ib || fail "Failed to load modules"
     fi
 
     check_kasan || fail "Detected KASAN in journalctl"
