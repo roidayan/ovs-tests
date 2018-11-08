@@ -9,13 +9,15 @@ CX5_2=ens1f1
 if [ "$1" == "cx5" ]; then
     nic=$CX5
     nic2=$CX5_2
+    vms=(063 064)
 else
     nic=$CX4
     nic2=$CX4_2
+    vms=(061 062)
 fi
 
 vfs=2
-vms="reg-r-vrt-019-060-061 reg-r-vrt-019-060-062"
+hv=`hostname -s`
 
 ##############################################################################
 
@@ -80,13 +82,13 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start $i-CentOS-7.5 ; done
+    for ((i=0; i< ${#vms[@]}; i++)) do virsh -q start ${hv}-${vms[i]}-CentOS-7.5 ; done
 }
 
 function wait_vms() {
     echo "Wait vms"
-    for i in $vms; do
-        wait_vm $i
+    for ((i=0; i< ${#vms[@]}; i++)); do
+        wait_vm ${hv}-${vms[i]}
         break; # waiting for the first one
     done
 }
@@ -94,7 +96,7 @@ function wait_vms() {
 function wait_vm() {
     local vm=$1
 
-    for i in 1 2 3 4 5; do
+    for i in 1 2 3 4 5 6; do
         ping -q -w 1 -c 1 $vm && break
         sleep 15
     done
