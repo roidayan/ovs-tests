@@ -13,7 +13,7 @@ if [ "$1" == "cx5" ]; then
 else
     nic=$CX4
     nic2=$CX4_2
-    vms=`seq 5 6`
+    vms=`seq 183 184`
 fi
 
 vfs=2
@@ -112,7 +112,7 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start ${hv}-${i}-RH-7.6 ; done
+    for i in $vms; do virsh -q start ${hv}-${i}-RH-8.0 ; done
 }
 
 function wait_vms() {
