@@ -1,0 +1,4252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CASEDEF>
+    <global>
+        <Test>
+            <name>bash_cases</name>
+            <info></info>
+            <owner>roid</owner>
+            <pre>
+                <type> reg_exec_cmd </type>
+                <name> preconfigure </name>
+                <tout> 240 </tout>
+                <params>
+                    <exec> [[run_time:remote_src_path]]/asap_dev_reg/load-test.sh [[conf:extra_info.hca_type]] </exec>
+                </params>
+            </pre>
+        </Test>
+        <Case>
+            <tags> bash </tags>
+            <wrapper> bash_test_wrapper.py </wrapper>
+            <tout> 300 </tout>
+            <params>
+                <config> [[conf:extra_info.bash_config]] </config>
+            </params>
+        </Case>
+    </global>
+    <case>
+        <tags> ifstat </tags>
+        <name> test-ifstat.sh </name>
+        <cmd>
+            <params>
+                <test> test-ifstat.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
+        <name> test-vf-rep-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
+        <tags> test-vf-rep-ping-change-mtu </tags>
+        <name> test-vf-rep-ping-change-mtu.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-change-mtu.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
+        <name> test-vf-rep-ping-reconfig-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-reconfig-sriov.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <tags> frag </tags>
+        <name> test-vf-rep-ping-fragmented.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-ping-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1333837 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> frag </tags>
+        <tags> vf-rep-udp-fragmented </tags>
+        <name> test-vf-rep-udp-fragmented.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-udp-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <tags> test-vf-rep-iperf </tags>
+        <name> test-vf-rep-iperf.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-iperf.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <name> test-vf-vf-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1251244 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> vf-vf-iperf </tags>
+        <name> test-vf-vf-iperf-perf.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-iperf-perf.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1548309 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> vf-vf-fwd </tags>
+        <name> test-vf-vf-fwd.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-fwd.sh </test>
+                <option> TIMEOUT=120,ROUNDS=10 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1480847 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1540625 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> vf-vf-fwd-fl_delete </tags>
+        <name> test-vf-vf-fwd-fl_delete.sh </name>
+        <tout> 800 </tout>
+        <cmd>
+            <params>
+                <test> test-vf-vf-fwd-fl_delete.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1480847 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> test-vf-vf-fwd-fl_classify </tags>
+        <name> test-vf-vf-fwd-fl_classify.sh </name>
+        <tout> 600 </tout>
+        <cmd>
+            <params>
+                <test> test-vf-vf-fwd-fl_classify.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1548309 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> vf-veth-fwd </tags>
+        <name> test-vf-veth-fwd.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-veth-fwd.sh </test>
+                <option> TIMEOUT=120,ROUNDS=10 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1512689 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> vf-vf-diff-esw </tags>
+        <name> test-vf-vf-different-esw-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-different-esw-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> vf </tags>
+        <tags> test-vf-zero-header-raw </tags>
+        <name> test-vf-zero-header-raw.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-zero-header-raw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Not full supported yet on Ofed </info>
+            </disabled>
+        </ignore>
+        <tags> vf </tags>
+        <tags> test-vf-lag </tags>
+        <name> test-vf-lag.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-lag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> devlink </tags>
+        <name> test-devlink-encap.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-encap.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> devlink </tags>
+        <name> test-devlink-inline-mode2.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-inline-mode2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> devlink </tags>
+        <name> test-devlink-inline-mode.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-inline-mode.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> devlink </tags>
+        <name> test-devlink-show-in-each-link-mode.sh </name>
+        <cmd>
+            <params>
+                <test> test-devlink-show-in-each-link-mode.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-add-del-different-flows </tags>
+        <name> test-eswitch-add-del-different-flows.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-different-flows.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-add-del-different-flows2 </tags>
+        <name> test-eswitch-add-del-different-flows2.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-different-flows2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1013092 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch-add-del-flows-during-flows-cleanup </tags>
+        <name> test-eswitch-add-del-flows-during-flows-cleanup.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-flows-during-flows-cleanup.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1293937 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch-add-del-flows-during-flows-cleanup2 </tags>
+        <name> test-eswitch-add-del-flows-during-flows-cleanup2.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-del-flows-during-flows-cleanup2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> reload_modules </tags>
+        <tags> eswitch </tags>
+        <name> test-eswitch-reload-modules-different-state.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-reload-modules-different-state.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> reload_modules </tags>
+        <name> test-eswitch-add-flows-during-reload.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-flows-during-reload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <name> test-eswitch-add-in-mode1-del-in-mode2.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-add-in-mode1-del-in-mode2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <name> test-eswitch-del-flows-during-add.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-del-flows-during-add.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> reload_modules </tags>
+        <name> test-eswitch-del-flows-during-reload.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-del-flows-during-reload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch-toggle-mode-ovs-crash </tags>
+        <name> test-eswitch-toggle-mode-ovs-crash.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-ovs-crash.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch-toggle-modes </tags>
+        <name> test-eswitch-toggle-modes.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-modes.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch-toggle-mode-parallel </tags>
+        <name> test-eswitch-toggle-mode-parallel.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-parallel.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch_no_carrier </tags>
+        <name> test-eswitch-no-carrier.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-no-carrier.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Test must be updated to do the needed configurations and set the required number of vfs. </info>
+            </disabled>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> test-eswitch-127-reps </tags>
+        <name> test-eswitch-127-reps.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-127-reps.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-ipv4-match.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ipv4-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-ipv6-match.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ipv6-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> persistent-data </tags>
+        <name> test-ovs-persistent-data.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-persistent-data.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1519191 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> ovs </tags>
+        <name> test-ovs-replace-rule-hw.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-replace-rule-hw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-replace-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-replace-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> header_rewrite </tags>
+        <tags> test-ovs-rewrite-ipv4-macs </tags>
+        <name> test-ovs-rewrite-ipv4-macs.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-rewrite-ipv4-macs.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1552152 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> ovs </tags>
+        <tags> test-ovs-dpctl-flows-ttl-tos </tags>
+        <name> test-ovs-dpctl-flows-ttl-tos.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-dpctl-flows-ttl-tos.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1552152 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> ovs </tags>
+        <tags> test-ovs-dpctl-flows-enc_ttl-enc_tos </tags>
+        <name> test-ovs-dpctl-flows-enc_ttl-enc_tos.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-dpctl-flows-ttl-tos.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
+        <name> test-ovs-vxlan-in-ns.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
+        <name> test-ovs-vxlan-in-ns-ipv6.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns-ipv6.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
+        <tags> header_rewrite </tags>
+        <tags> test-ovs-vxlan-in-ns-and-rewrite-ipv4 </tags>
+        <name> test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
+        <name> test-ovs-vxlan-flow-key.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-flow-key.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> test-ovs-multi-vxlan-bridge-ingress </tags>
+        <name> test-ovs-multi-vxlan-bridge-ingress.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-multi-vxlan-bridge-ingress.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-icmp-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-icmp-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> frag </tags>
+        <tags> ovs_frag </tags>
+        <name> test-ovs-icmp-frag.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-icmp-frag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-tcp-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-tcp-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <name> test-ovs-udp-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-udp-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> overlap </tags>
+        <name> test-ovs-overlap-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-overlap-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551256 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-vf-mirror </tags>
+        <name> test-tc-vf-mirror.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vf-mirror.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551256 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> header_rewrite </tags>
+        <tags> test-tc-vf-mirror-pedit </tags>
+        <name> test-tc-vf-mirror-pedit.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vf-mirror-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-del-a-lot </tags>
+        <name> test-tc-del-a-lot.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-del-a-lot.sh </test>
+            </params>
+         </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-duplicate-hw-rules </tags>
+        <name> test-tc-duplicate-hw-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-duplicate-hw-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-groups-overlapping.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-groups-overlapping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-groups-multi-fgs </tags>
+        <name> test-tc-groups-multi-fgs.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-groups-multi-fgs.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1540621 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules-legacy.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-legacy.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <name> test-tc-insert-rules-port2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-port2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-insert-rules-duplicates </tags>
+        <name> test-tc-insert-rules-duplicates.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-duplicates.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-bad-egdev-rules </tags>
+        <name> test-tc-bad-egdev-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-bad-egdev-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> header_rewrite </tags>
+        <tags> tc-insert-rules-pedit </tags>
+        <name> test-tc-insert-rules-pedit.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> header_rewrite </tags>
+        <tags> tc-insert-rules-pedit-ttl </tags>
+        <name> test-tc-insert-rules-pedit-ttl.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-pedit-ttl.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> frag </tags>
+        <tags> tc_frag </tags>
+        <name> test-tc-insert-rules-frag.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-frag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-insert-rule-without-match </tags>
+        <name> test-tc-insert-rule-without-match.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rule-without-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-ip-tos-ip-ttl </tags>
+        <name> test-tc-ip-tos-ip-ttl.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-ip-tos-ip-ttl.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1279755 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <name> test-tc-max-rules.sh </name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules.sh </test>
+                <option> CASE_INDEX=0 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1523783 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <name> test-tc-max-rules-legacy.sh</name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules-legacy.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1279755 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <tags> tc-max-rules-shared-action </tags>
+        <name> test-tc-max-rules.sh shared action </name>
+        <tout> 900 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules.sh </test>
+                <option> CASE_INDEX=1,CASE_TWO_PORTS=0 </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1279755 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-max-rules </tags>
+        <tags> 1M_rules </tags>
+        <name> test-tc-max-rules-1M-rules.sh </name>
+        <tout> 1200 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-max-rules-1M-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 988519 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-replace </tags>
+        <name> test-tc-replace.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-replace.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-reoffload </tags>
+        <name> test-tc-reoffload.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-reoffload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1548569 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-rule-add-null-qdisc </tags>
+        <name> test-tc-rule-add-null-qdisc.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-rule-add-null-qdisc.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-rule-act-add </tags>
+        <name> test-tc-rule-act-add.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-rule-act-add.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <name> test-tc-shuffle-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1548309 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-4 </tags>
+        <name> test-tc-shuffle-4.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-4.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1480847 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-reload-gact </tags>
+        <name> test-tc-shuffle-reload-gact.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-reload-gact.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1480847 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1548309 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-reload-mirred </tags>
+        <name> test-tc-shuffle-reload-mirred.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-reload-mirred.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1480847 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-reload-mirred-skip-hw </tags>
+        <name> test-tc-shuffle-reload-mirred-skip-hw.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-reload-mirred-skip-hw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1294281 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, RHEL_7_4_OFED] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1520459 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-cls_api </tags>
+        <name> test-tc-shuffle-cls_api.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-shuffle-cls_api.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-multi-prio-chains </tags>
+        <name> test-tc-multi-prio-chains.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-multi-prio-chains.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551273 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-multi-masks-per-prio </tags>
+        <name> test-tc-multi-masks-per-prio.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-multi-masks-per-prio.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-perf-update </tags>
+        <name> test-tc-perf-update.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-perf-update.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551359 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-par-add-ovr-del </tags>
+        <name> test-tc-par-add-ovr-del.sh </name>
+        <tout> 1100 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-par-add-ovr-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Not supported yet.</info>
+            </disabled>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-merged-esw-vf-pf </tags>
+        <name> test-tc-merged-esw-vf-pf.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-merged-esw-vf-pf.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-merged-esw-vf-vf </tags>
+        <name> test-tc-merged-esw-vf-vf.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-merged-esw-vf-vf.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Chaining feature is not supported yet </info>
+            </disabled>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-traffic-qdisc-del </tags>
+        <name> test-tc-traffic-qdisc-del.sh </name>
+        <tout> 400 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-traffic-qdisc-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551540 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-traffic-proto-add-del </tags>
+        <name> test-tc-traffic-proto-add-del.sh </name>
+        <tout> 600 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-traffic-proto-add-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551540 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-traffic-filters-add-del </tags>
+        <name> test-tc-traffic-filters-add-del.sh </name>
+        <tout> 400 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-traffic-filters-add-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551540 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-traffic-chain-flush </tags>
+        <name> test-tc-traffic-chain-flush.sh </name>
+        <tout> 400 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-traffic-chain-flush.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <name> test-tc-vxlan-decap-not-properly-offloaded.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-decap-not-properly-offloaded.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <name> test-tc-vxlan-outer-dst-mac.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-outer-dst-mac.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <name> test-vxlan-port-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-port-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+</CASEDEF>
