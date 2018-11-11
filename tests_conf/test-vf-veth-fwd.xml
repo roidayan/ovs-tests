@@ -10,5 +10,6 @@
   </tags>
   <ignore>
     <bug>1486319</bug>
+    <bug>1506933</bug>
   </ignore>
 </testdef>

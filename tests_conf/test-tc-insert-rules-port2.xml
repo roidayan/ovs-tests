@@ -9,6 +9,6 @@
     <tag>tc</tag>
   </tags>
   <ignore>
-    <bug/>
+    <bug>154726</bug>
   </ignore>
 </testdef>
