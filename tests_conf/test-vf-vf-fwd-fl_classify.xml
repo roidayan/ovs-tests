@@ -9,6 +9,6 @@
     <tag>vf</tag>
   </tags>
   <ignore>
-    <bug/>
+    <bug>1546760</bug>
   </ignore>
 </testdef>
