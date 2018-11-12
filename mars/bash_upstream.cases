@@ -704,6 +704,22 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-vf-remote-mirror </tags>
+        <name> test-tc-vf-remote-mirror.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vf-mirror-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> tc </tags>
         <tags> tc-del-a-lot </tags>
         <name> test-tc-del-a-lot.sh </name>
@@ -1125,6 +1141,27 @@
         <cmd>
             <params>
                 <test> test-tc-par-add-ovr-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1527583 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_UPSTREAM] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-par-add-del </tags>
+        <name> test-tc-par-add-del.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-par-add-del.sh </test>
             </params>
         </cmd>
     </case>

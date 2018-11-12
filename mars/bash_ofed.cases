@@ -856,7 +856,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -877,7 +877,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -885,6 +885,22 @@
         <tags> header_rewrite </tags>
         <tags> test-tc-vf-mirror-pedit </tags>
         <name> test-tc-vf-mirror-pedit.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vf-mirror-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-vf-remote-mirror </tags>
+        <name> test-tc-vf-remote-mirror.sh </name>
         <cmd>
             <params>
                 <test> test-tc-vf-mirror-pedit.sh </test>
@@ -1393,15 +1409,10 @@
     </case>
     <case>
         <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1551273 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
-                </condition>
-            </condition_group>
+            <disabled>
+                <valid> True </valid>
+                <info> Not supported with old kernels. </info>
+            </disabled>
         </ignore>
         <tags> tc </tags>
         <tags> test-tc-multi-masks-per-prio </tags>
@@ -1447,6 +1458,27 @@
         <cmd>
             <params>
                 <test> test-tc-par-add-ovr-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1551359 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> test-tc-par-add-del </tags>
+        <name> test-tc-par-add-del.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-par-add-del.sh </test>
             </params>
         </cmd>
     </case>
