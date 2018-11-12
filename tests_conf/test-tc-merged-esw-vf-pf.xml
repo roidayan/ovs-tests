@@ -1,0 +1,16 @@
+<testdef>
+  <info>
+    <name>test-tc-merged-esw-vf-pf</name>
+    <desc>test-tc-merged-esw-vf-pf</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+    <tag>vf</tag>
+  </tags>
+  <ignore>
+    <bug/>
+    <IgnoreByTestAll/>
+  </ignore>
+</testdef>

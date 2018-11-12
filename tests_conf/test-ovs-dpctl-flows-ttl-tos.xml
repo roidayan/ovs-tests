@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-ovs-dpctl-flows-ttl-tos</name>
+    <desc>test-ovs-dpctl-flows-ttl-tos</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>ovs</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

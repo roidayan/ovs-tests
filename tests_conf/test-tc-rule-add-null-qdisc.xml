@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-tc-rule-add-null-qdisc</name>
+    <desc>test-tc-rule-add-null-qdisc</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

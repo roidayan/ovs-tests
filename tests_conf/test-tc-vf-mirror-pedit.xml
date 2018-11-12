@@ -1,0 +1,15 @@
+<testdef>
+  <info>
+    <name>test-tc-vf-mirror-pedit</name>
+    <desc>test-tc-vf-mirror-pedit</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+    <tag>vf</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

@@ -1,0 +1,16 @@
+<testdef>
+  <info>
+    <name>test-tc-vf-remote-mirror</name>
+    <desc>test-tc-vf-remote-mirror</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+    <tag>vf</tag>
+  </tags>
+  <ignore>
+    <bug/>
+    <IgnoreByTestAll/>
+  </ignore>
+</testdef>

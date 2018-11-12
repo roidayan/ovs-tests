@@ -1,0 +1,15 @@
+<testdef>
+  <info>
+    <name>test-tc-perf-update</name>
+    <desc>test-tc-perf-update</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+  </tags>
+  <ignore>
+    <bug/>
+    <IgnoreByTestAll/>
+  </ignore>
+</testdef>

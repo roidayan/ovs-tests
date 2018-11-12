@@ -1,0 +1,15 @@
+<testdef>
+  <info>
+    <name>test-ovs-multi-vxlan-bridge-ingress</name>
+    <desc>test-ovs-multi-vxlan-bridge-ingress</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>vxlan</tag>
+    <tag>ovs</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>

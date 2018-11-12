@@ -1,0 +1,14 @@
+<testdef>
+  <info>
+    <name>test-tc-ip-tos-ip-ttl</name>
+    <desc>test-tc-ip-tos-ip-ttl</desc>
+    <owner>Roi Dayan</owner>
+  </info>
+  <tout>300</tout>
+  <tags>
+    <tag>tc</tag>
+  </tags>
+  <ignore>
+    <bug/>
+  </ignore>
+</testdef>
