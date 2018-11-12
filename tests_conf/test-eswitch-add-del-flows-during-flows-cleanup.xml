@@ -9,6 +9,6 @@
     <tag>eswitch</tag>
   </tags>
   <ignore>
-    <bug>1293937</bug>
+    <bug>1013092</bug>
   </ignore>
 </testdef>
