@@ -592,6 +592,7 @@
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
+        <tags> ovs-vxlan-in-ns-ipv6 </tags>
         <name> test-ovs-vxlan-in-ns-ipv6.sh </name>
         <cmd>
             <params>
