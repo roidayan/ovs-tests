@@ -443,8 +443,8 @@ function bind_vfs() {
             echo $vfpci > /sys/bus/pci/drivers/mlx5_core/bind
         fi
     done
-    # sometimes need half a second for netdevs to appear.
-    sleep 0.5
+    # sometimes need a second for netdevs to appear.
+    sleep 1
 }
 
 function get_sw_id() {
