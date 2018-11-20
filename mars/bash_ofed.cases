@@ -1028,6 +1028,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1556324 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
         <tags> tc-insert-rules-pedit </tags>
@@ -1039,6 +1050,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1556324 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
         <tags> tc-insert-rules-pedit-ttl </tags>
@@ -1158,6 +1180,15 @@
                     <key> PROJECT </key>
                     <op> in </op>
                     <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1552627 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_4_OFED] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -1651,6 +1682,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1556324 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> vxlan </tags>
         <tags> neigh_update </tags>
         <tags> header_rewrite </tags>
