@@ -170,7 +170,7 @@
             </condition_group>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1548309 </bug>
+                <bug> 1562677 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
@@ -263,7 +263,7 @@
             </condition_group>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1548309 </bug>
+                <bug> 1562677 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
@@ -691,6 +691,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1556315 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> header_rewrite </tags>
         <tags> test-ovs-rewrite-ipv4-macs </tags>
@@ -840,6 +851,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1442351 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> overlap </tags>
         <name> test-ovs-overlap-rules.sh </name>
@@ -879,6 +901,15 @@
                     <key> PROJECT </key>
                     <op> in </op>
                     <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1556315 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -1018,6 +1049,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1443045 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-bad-egdev-rules </tags>
         <name> test-tc-bad-egdev-rules.sh </name>
@@ -1031,7 +1073,7 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1556324 </bug>
+                <bug> 1556315 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
@@ -1053,7 +1095,7 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1556324 </bug>
+                <bug> 1556315 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
@@ -1093,6 +1135,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1556337 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_OFED] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> test-tc-ip-tos-ip-ttl </tags>
         <name> test-tc-ip-tos-ip-ttl.sh </name>
@@ -1207,7 +1260,7 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 988519 </bug>
+                <bug> 1546353 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
@@ -1685,7 +1738,7 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1556324 </bug>
+                <bug> 1556315 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
