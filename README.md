@@ -31,6 +31,8 @@ Run tests steps
         python2-scapy.noarch or python34-scapy.noarch (or using python install
         pip install scapy)
 
+    7.  install tcpdump latest version
+
 2.  for the NIC under test need to define a custom configurations file (at
     asap_dev_reg project root directory), which includes relevant NIC network
     interfaces data (PF0, PF1, VF0,VF1,REP0,REP1):
@@ -71,10 +73,13 @@ Run tests steps
 
     2.  Make sure device is in ETH mode
 
-    3.  export configuration file:
+    3.  Make sure Open-vSwitch HW offload is enabled
+        ovs-vsctl set Open_vSwitch . other_config:hw-offload=true
+
+    4.  export configuration file:
         export CONFIG=<file from 3>
 
-    4.  run ./test-all-dev.py
+    5.  run ./test-all-dev.py
 
 
 Notes
