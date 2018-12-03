@@ -184,17 +184,6 @@
     </case>
 
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1126868 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> rdma </tags>
         <name> basic_rdma </name>
         <cmd>

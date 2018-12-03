@@ -229,12 +229,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> vf </tags>
         <tags> test-vf-zero-header-raw </tags>
         <name> test-vf-zero-header-raw.sh </name>
@@ -262,6 +256,7 @@
     </case>
     <case>
         <tags> devlink </tags>
+        <tags> devlink-encap </tags>
         <name> test-devlink-encap.sh </name>
         <cmd>
             <params>
@@ -271,6 +266,7 @@
     </case>
     <case>
         <tags> devlink </tags>
+        <tags> devlink-inline-mode2 </tags>
         <name> test-devlink-inline-mode2.sh </name>
         <cmd>
             <params>
@@ -280,6 +276,7 @@
     </case>
     <case>
         <tags> devlink </tags>
+        <tags> devlink-inline-mode </tags>
         <name> test-devlink-inline-mode.sh </name>
         <cmd>
             <params>
@@ -289,6 +286,7 @@
     </case>
     <case>
         <tags> devlink </tags>
+        <tags> devlink-show-in-each-link-mode </tags>
         <name> test-devlink-show-in-each-link-mode.sh </name>
         <cmd>
             <params>
@@ -408,17 +406,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1481373 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> reload_modules </tags>
         <name> test-eswitch-del-flows-during-reload.sh </name>
@@ -807,17 +794,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1471381 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
         <tags> tc-insert-rules-pedit </tags>
@@ -829,17 +805,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1366970 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
         <tags> tc-insert-rules-pedit-ttl </tags>
