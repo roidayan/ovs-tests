@@ -45,6 +45,17 @@
     <case>
         <tags> eswitch </tags>
         <tags> vf </tags>
+        <tags> test-vf-rep-change-mtu </tags>
+        <name> test-vf-rep-change-mtu.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-rep-change-mtu.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
         <tags> test-vf-rep-ping-change-mtu </tags>
         <name> test-vf-rep-ping-change-mtu.sh </name>
         <cmd>
@@ -618,18 +629,23 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Test must be updated to do the needed configurations and set the required number of vfs. </info>
-            </disabled>
-        </ignore>
         <tags> eswitch </tags>
         <tags> test-eswitch-127-reps </tags>
         <name> test-eswitch-127-reps.sh </name>
+        <tout> 700 </tout>
         <cmd>
             <params>
                 <test> test-eswitch-127-reps.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> test-eswitch-sriov-vf-up </tags>
+        <name> test-eswitch-sriov-vf-up.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-sriov-vf-up.sh </test>
             </params>
         </cmd>
     </case>
@@ -868,6 +884,134 @@
         <cmd>
             <params>
                 <test> test-ovs-overlap-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ovs-ct-icmp </tags>
+        <name> test-ovs-ct-icmp.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-icmp.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ovs-ct-udp </tags>
+        <name> test-ovs-ct-udp.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-udp.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ovs-ct-scapy-udp </tags>
+        <name> test-ovs-ct-scapy-udp.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ovs-ct-scapy-udp-nat </tags>
+        <name> test-ovs-ct-scapy-udp-nat.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-nat.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ovs-ct-scapy-udp-reload </tags>
+        <name> test-ovs-ct-scapy-udp-reload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-reload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ovs-ct-scapy-udp-down-up </tags>
+        <name> test-ovs-ct-scapy-udp-down-up.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-down-up.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ovs-ct-scapy-udp-cycle-esw-modes </tags>
+        <name> test-ovs-ct-scapy-udp-cycle-esw-modes.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-cycle-esw-modes.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> test-ovs-ct-icmp-cycle-esw-modes </tags>
+        <name> test-ovs-ct-icmp-cycle-esw-modes.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-icmp-cycle-esw-modes.sh </test>
             </params>
         </cmd>
     </case>
@@ -1131,6 +1275,16 @@
         <cmd>
             <params>
                 <test> test-tc-insert-rule-without-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> test-tc-insert-rule-rep-uplink-vlan </tags>
+        <name> test-tc-insert-rule-rep-uplink-vlan.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rule-rep-uplink-vlan.sh </test>
             </params>
         </cmd>
     </case>
