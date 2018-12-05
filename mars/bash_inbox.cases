@@ -433,6 +433,7 @@
         <tags> eswitch </tags>
         <tags> test-eswitch-sriov-vf-up </tags>
         <name> test-eswitch-sriov-vf-up.sh </name>
+        <tout> 600 </tout>
         <cmd>
             <params>
                 <test> test-eswitch-sriov-vf-up.sh </test>
