@@ -207,17 +207,6 @@
     </case>
 
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1556315 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> header_rewrite </tags>
         <name> header_rewrite </name>
         <cmd>

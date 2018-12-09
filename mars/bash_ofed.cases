@@ -708,17 +708,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1556315 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> header_rewrite </tags>
         <tags> test-ovs-rewrite-ipv4-macs </tags>
@@ -1048,15 +1037,6 @@
                     <value> [CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
                 </condition>
             </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1556315 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED] </value>
-                </condition>
-            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
@@ -1215,17 +1195,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1556315 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
         <tags> tc-insert-rules-pedit </tags>
@@ -1237,17 +1206,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1556315 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
         <tags> tc-insert-rules-pedit-ttl </tags>
@@ -1890,17 +1848,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1556315 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vxlan </tags>
         <tags> neigh_update </tags>
         <tags> header_rewrite </tags>
