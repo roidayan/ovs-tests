@@ -694,12 +694,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ovs-ct-icmp </tags>
         <name> test-ovs-ct-icmp.sh </name>
@@ -710,12 +704,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ovs-ct-udp </tags>
         <name> test-ovs-ct-udp.sh </name>
@@ -726,12 +714,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ovs-ct-scapy-udp </tags>
         <name> test-ovs-ct-scapy-udp.sh </name>
@@ -742,12 +724,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ovs-ct-scapy-udp-nat </tags>
         <name> test-ovs-ct-scapy-udp-nat.sh </name>
@@ -758,12 +734,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ovs-ct-scapy-udp-reload </tags>
         <name> test-ovs-ct-scapy-udp-reload.sh </name>
@@ -774,12 +744,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ovs-ct-scapy-udp-down-up </tags>
         <name> test-ovs-ct-scapy-udp-down-up.sh </name>
@@ -790,12 +754,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ovs-ct-scapy-udp-cycle-esw-modes </tags>
         <name> test-ovs-ct-scapy-udp-cycle-esw-modes.sh </name>
@@ -806,12 +764,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ovs-ct-icmp-cycle-esw-modes </tags>
         <name> test-ovs-ct-icmp-cycle-esw-modes.sh </name>
@@ -1620,12 +1572,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ct-icmp-fwd </tags>
         <name> test-ct-icmp-fwd.sh </name>
@@ -1636,12 +1582,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ct-icmp </tags>
         <name> test-ct-icmp.sh </name>
@@ -1652,12 +1592,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> header_rewrite </tags>
         <tags> test-ct-tcp-pedit </tags>
@@ -1669,12 +1603,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> header_rewrite </tags>
         <tags> test-ct-tcp-vf-mirror-pedit </tags>
@@ -1686,12 +1614,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ct-tcp </tags>
         <name> test-ct-tcp.sh </name>
@@ -1702,12 +1624,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> test-ct-udp </tags>
         <name> test-ct-udp.sh </name>
