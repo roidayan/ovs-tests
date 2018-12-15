@@ -1623,14 +1623,4 @@
             </params>
         </cmd>
     </case>
-    <case>
-        <tags> ct </tags>
-        <tags> test-ct-udp </tags>
-        <name> test-ct-udp.sh </name>
-        <cmd>
-            <params>
-                <test> test-ct-udp.sh </test>
-            </params>
-        </cmd>
-    </case>
 </CASEDEF>

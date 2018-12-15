@@ -2128,20 +2128,4 @@
             </params>
         </cmd>
     </case>
-    <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
-        <tags> ct </tags>
-        <tags> test-ct-udp </tags>
-        <name> test-ct-udp.sh </name>
-        <cmd>
-            <params>
-                <test> test-ct-udp.sh </test>
-            </params>
-        </cmd>
-    </case>
 </CASEDEF>
