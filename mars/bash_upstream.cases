@@ -419,6 +419,7 @@
     <case>
         <tags> eswitch </tags>
         <tags> reload_modules </tags>
+        <tags> eswitch-del-flows-during-reload </tags>
         <name> test-eswitch-del-flows-during-reload.sh </name>
         <cmd>
             <params>

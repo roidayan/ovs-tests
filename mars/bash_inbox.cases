@@ -223,6 +223,7 @@
     </case>
     <case>
         <tags> devlink </tags>
+        <tags> devlink-encap </tags>
         <name> test-devlink-encap.sh </name>
         <cmd>
             <params>
@@ -232,6 +233,7 @@
     </case>
     <case>
         <tags> devlink </tags>
+        <tags> devlink-inline-mode2 </tags>
         <name> test-devlink-inline-mode2.sh </name>
         <cmd>
             <params>
@@ -241,6 +243,7 @@
     </case>
     <case>
         <tags> devlink </tags>
+        <tags> devlink-inline-mode </tags>
         <name> test-devlink-inline-mode.sh </name>
         <cmd>
             <params>
@@ -250,6 +253,7 @@
     </case>
     <case>
         <tags> devlink </tags>
+        <tags> devlink-show-in-each-link-mode </tags>
         <name> test-devlink-show-in-each-link-mode.sh </name>
         <cmd>
             <params>
@@ -371,6 +375,7 @@
     <case>
         <tags> eswitch </tags>
         <tags> reload_modules </tags>
+        <tags> eswitch-del-flows-during-reload </tags>
         <name> test-eswitch-del-flows-during-reload.sh </name>
         <cmd>
             <params>
