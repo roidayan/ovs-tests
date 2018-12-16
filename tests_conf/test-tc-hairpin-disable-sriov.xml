@@ -1,0 +1,12 @@
+<testdef>
+  <info>
+    <name>test-tc-hairpin-disable-sriov</name>
+    <desc>Test add hairpin rule and disable sriov</desc>
+    <owner>Avihu Hagag</owner>
+  </info>
+  <tout>1000</tout>
+  <tags>
+    <tag>hairpin</tag>
+  </tags>
+  <ignore/>
+</testdef>

@@ -1,0 +1,12 @@
+<testdef>
+  <info>
+    <name>test-hairpin-tc-rules</name>
+    <desc>Testing hairpin by adding tc rules</desc>
+    <owner>Avihu Hagag</owner>
+  </info>
+  <tout>1000</tout>
+  <tags>
+    <tag>hairpin</tag>
+  </tags>
+  <ignore/>
+</testdef>
