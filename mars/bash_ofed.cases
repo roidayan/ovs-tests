@@ -243,11 +243,11 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1480847 </bug>
+                <bug> 1593079 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [RHEL_7_4_OFED] </value>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -1551,20 +1551,11 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1294281 </bug>
+                <bug> 1583853 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_OFED, RHEL_7_4_OFED] </value>
-                </condition>
-            </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1520459 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [RHEL_7_5_OFED] </value>
+                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED, RHEL_7_4_OFED, RHEL_7_5_OFED] </value>
                 </condition>
             </condition_group>
         </ignore>

@@ -92,7 +92,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [RHEL_7_6_INBOX] </value>
+                    <value> [RHEL_7_6_INBOX, RHEL_8_0_INBOX] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -126,6 +126,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1251244 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_8_0_INBOX] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-iperf </tags>
         <name> test-vf-vf-iperf-perf.sh </name>
@@ -570,6 +581,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1572489 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_8_0_INBOX] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> test-ovs-multi-vxlan-bridge-ingress </tags>
