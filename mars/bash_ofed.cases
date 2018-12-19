@@ -643,23 +643,33 @@
     </case>
     <case>
         <tags> eswitch </tags>
-        <tags> eswitch-127-reps </tags>
-        <name> test-eswitch-127-reps.sh </name>
-        <tout> 700 </tout>
-        <cmd>
-            <params>
-                <test> test-eswitch-127-reps.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> eswitch </tags>
         <tags> eswitch-sriov-vf-up </tags>
         <name> test-eswitch-sriov-vf-up.sh </name>
         <tout> 600 </tout>
         <cmd>
             <params>
                 <test> test-eswitch-sriov-vf-up.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-rep-up-time </tags>
+        <name> test-eswitch-rep-up-time.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-rep-up-time.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-127-reps </tags>
+        <name> test-eswitch-127-reps.sh </name>
+        <tout> 700 </tout>
+        <cmd>
+            <params>
+                <test> test-eswitch-127-reps.sh </test>
             </params>
         </cmd>
     </case>
@@ -811,6 +821,19 @@
         <cmd>
             <params>
                 <test> test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
+        <tags> header_rewrite </tags>
+        <tags> ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off </tags>
+        <name> test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh </test>
             </params>
         </cmd>
     </case>
@@ -993,6 +1016,22 @@
         <cmd>
             <params>
                 <test> test-ovs-ct-scapy-udp-cycle-esw-modes.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
+        <tags> ovs-ct-scapy-udp-vf-mirror </tags>
+        <name> test-ovs-ct-scapy-udp-vf-mirror.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-vf-mirror.sh </test>
             </params>
         </cmd>
     </case>
@@ -1686,6 +1725,26 @@
         </cmd>
     </case>
     <case>
+        <tags> tc </tags>
+        <tags> tc-par-add-dump-del </tags>
+        <name> test-tc-par-add-dump-del.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-par-add-dump-del.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-par-add-dup </tags>
+        <name> test-tc-par-add-dup.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-par-add-dup.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
             <disabled>
                 <valid> True </valid>
@@ -1796,12 +1855,66 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-hairpin </tags>
+        <tags> tc-hairpin-rules </tags>
+        <name> test-tc-hairpin-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-hairpin-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-hairpin </tags>
+        <tags> tc-hairpin-disable-sriov </tags>
+        <name> test-tc-hairpin-disable-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-hairpin-disable-sriov.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-qinq-rules </tags>
+        <name> test-tc-qinq-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-qinq-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
         <tags> vxlan </tags>
         <tags> tc-vxlan-decap-not-properly-offloaded </tags>
         <name> test-tc-vxlan-decap-not-properly-offloaded.sh </name>
         <cmd>
             <params>
                 <test> test-tc-vxlan-decap-not-properly-offloaded.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <tags> tc-vxlan-decap-in-skip-sw </tags>
+        <name> test-tc-vxlan-decap-in-skip-sw.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-decap-in-skip-sw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <tags> tc-vxlan-decap-proto-all </tags>
+        <name> test-tc-vxlan-decap-proto-all.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-decap-proto-all.sh </test>
             </params>
         </cmd>
     </case>
