@@ -35,6 +35,7 @@
     <case>
         <tags> eswitch </tags>
         <tags> vf </tags>
+        <tags> vf-rep-ping </tags>
         <name> test-vf-rep-ping.sh </name>
         <cmd>
             <params>
@@ -45,7 +46,7 @@
     <case>
         <tags> eswitch </tags>
         <tags> vf </tags>
-        <tags> test-vf-rep-change-mtu </tags>
+        <tags> vf-rep-change-mtu </tags>
         <name> test-vf-rep-change-mtu.sh </name>
         <cmd>
             <params>
@@ -56,7 +57,7 @@
     <case>
         <tags> eswitch </tags>
         <tags> vf </tags>
-        <tags> test-vf-rep-ping-change-mtu </tags>
+        <tags> vf-rep-ping-change-mtu </tags>
         <name> test-vf-rep-ping-change-mtu.sh </name>
         <cmd>
             <params>
@@ -67,6 +68,7 @@
     <case>
         <tags> eswitch </tags>
         <tags> vf </tags>
+        <tags> vf-rep-ping-reconfig-sriov </tags>
         <name> test-vf-rep-ping-reconfig-sriov.sh </name>
         <cmd>
             <params>
@@ -77,6 +79,7 @@
     <case>
         <tags> vf </tags>
         <tags> frag </tags>
+        <tags> vf-rep-ping-fragmented </tags>
         <name> test-vf-rep-ping-fragmented.sh </name>
         <cmd>
             <params>
@@ -108,7 +111,7 @@
     </case>
     <case>
         <tags> vf </tags>
-        <tags> test-vf-rep-iperf </tags>
+        <tags> vf-rep-iperf </tags>
         <name> test-vf-rep-iperf.sh </name>
         <cmd>
             <params>
@@ -118,6 +121,7 @@
     </case>
     <case>
         <tags> vf </tags>
+        <tags> vf-vf-ping </tags>
         <name> test-vf-vf-ping.sh </name>
         <cmd>
             <params>
@@ -138,7 +142,7 @@
             </condition_group>
         </ignore>
         <tags> vf </tags>
-        <tags> vf-vf-iperf </tags>
+        <tags> vf-vf-iperf-perf </tags>
         <name> test-vf-vf-iperf-perf.sh </name>
         <cmd>
             <params>
@@ -182,7 +186,7 @@
     </case>
     <case>
         <tags> vf </tags>
-        <tags> test-vf-vf-fwd-fl_classify </tags>
+        <tags> vf-vf-fwd-fl_classify </tags>
         <name> test-vf-vf-fwd-fl_classify.sh </name>
         <tout> 600 </tout>
         <cmd>
@@ -231,7 +235,7 @@
             </condition_group>
         </ignore>
         <tags> vf </tags>
-        <tags> vf-vf-diff-esw </tags>
+        <tags> vf-vf-different-esw-ping </tags>
         <name> test-vf-vf-different-esw-ping.sh </name>
         <cmd>
             <params>
@@ -241,7 +245,7 @@
     </case>
     <case>
         <tags> vf </tags>
-        <tags> test-vf-zero-header-raw </tags>
+        <tags> vf-zero-header-raw </tags>
         <name> test-vf-zero-header-raw.sh </name>
         <cmd>
             <params>
@@ -257,7 +261,7 @@
             </disabled>
         </ignore>
         <tags> vf </tags>
-        <tags> test-vf-lag </tags>
+        <tags> vf-lag </tags>
         <name> test-vf-lag.sh </name>
         <cmd>
             <params>
@@ -370,6 +374,7 @@
     <case>
         <tags> reload_modules </tags>
         <tags> eswitch </tags>
+        <tags> eswitch-reload-modules-different-state </tags>
         <name> test-eswitch-reload-modules-different-state.sh </name>
         <cmd>
             <params>
@@ -380,6 +385,7 @@
     <case>
         <tags> eswitch </tags>
         <tags> reload_modules </tags>
+        <tags> eswitch-add-flows-during-reload </tags>
         <name> test-eswitch-add-flows-during-reload.sh </name>
         <cmd>
             <params>
@@ -400,6 +406,7 @@
             </condition_group>
         </ignore>
         <tags> eswitch </tags>
+        <tags> eswitch-add-in-mode1-del-in-mode2 </tags>
         <name> test-eswitch-add-in-mode1-del-in-mode2.sh </name>
         <cmd>
             <params>
@@ -409,6 +416,7 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> eswitch-del-flows-during-add </tags>
         <name> test-eswitch-del-flows-during-add.sh </name>
         <cmd>
             <params>
@@ -491,7 +499,7 @@
             </condition_group>
         </ignore>
         <tags> eswitch </tags>
-        <tags> test-eswitch-127-reps </tags>
+        <tags> eswitch-127-reps </tags>
         <name> test-eswitch-127-reps.sh </name>
         <tout> 700 </tout>
         <cmd>
@@ -502,7 +510,7 @@
     </case>
     <case>
         <tags> eswitch </tags>
-        <tags> test-eswitch-sriov-vf-up </tags>
+        <tags> eswitch-sriov-vf-up </tags>
         <name> test-eswitch-sriov-vf-up.sh </name>
         <tout> 600 </tout>
         <cmd>
@@ -513,6 +521,7 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> ovs-ipv4-match </tags>
         <name> test-ovs-ipv4-match.sh </name>
         <cmd>
             <params>
@@ -522,6 +531,7 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> ovs-ipv6-match </tags>
         <name> test-ovs-ipv6-match.sh </name>
         <cmd>
             <params>
@@ -541,6 +551,7 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> ovs-replace-rule-hw </tags>
         <name> test-ovs-replace-rule-hw.sh </name>
         <cmd>
             <params>
@@ -550,6 +561,7 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> ovs-replace-rule </tags>
         <name> test-ovs-replace-rule.sh </name>
         <cmd>
             <params>
@@ -560,7 +572,7 @@
     <case>
         <tags> ovs </tags>
         <tags> header_rewrite </tags>
-        <tags> test-ovs-rewrite-ipv4-macs </tags>
+        <tags> ovs-rewrite-ipv4-macs </tags>
         <name> test-ovs-rewrite-ipv4-macs.sh </name>
         <cmd>
             <params>
@@ -570,7 +582,7 @@
     </case>
     <case>
         <tags> ovs </tags>
-        <tags> test-ovs-dpctl-flows-ttl-tos </tags>
+        <tags> ovs-dpctl-flows-ttl-tos </tags>
         <name> test-ovs-dpctl-flows-ttl-tos.sh </name>
         <cmd>
             <params>
@@ -580,7 +592,7 @@
     </case>
     <case>
         <tags> ovs </tags>
-        <tags> test-ovs-dpctl-flows-enc_ttl-enc_tos </tags>
+        <tags> ovs-dpctl-flows-enc_ttl-enc_tos </tags>
         <name> test-ovs-dpctl-flows-enc_ttl-enc_tos.sh </name>
         <cmd>
             <params>
@@ -592,6 +604,7 @@
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
+        <tags> ovs-vxlan-in-ns </tags>
         <name> test-ovs-vxlan-in-ns.sh </name>
         <cmd>
             <params>
@@ -616,7 +629,7 @@
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
         <tags> header_rewrite </tags>
-        <tags> test-ovs-vxlan-in-ns-and-rewrite-ipv4 </tags>
+        <tags> ovs-vxlan-in-ns-and-rewrite-ipv4 </tags>
         <name> test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh </name>
         <cmd>
             <params>
@@ -628,6 +641,7 @@
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
+        <tags> ovs-vxlan-flow-key </tags>
         <name> test-ovs-vxlan-flow-key.sh </name>
         <cmd>
             <params>
@@ -638,7 +652,7 @@
     <case>
         <tags> ovs </tags>
         <tags> vxlan </tags>
-        <tags> test-ovs-multi-vxlan-bridge-ingress </tags>
+        <tags> ovs-multi-vxlan-bridge-ingress </tags>
         <name> test-ovs-multi-vxlan-bridge-ingress.sh </name>
         <cmd>
             <params>
@@ -648,6 +662,7 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> ovs-icmp-offload </tags>
         <name> test-ovs-icmp-offload.sh </name>
         <cmd>
             <params>
@@ -659,6 +674,7 @@
         <tags> ovs </tags>
         <tags> frag </tags>
         <tags> ovs_frag </tags>
+        <tags> ovs-icmp-frag </tags>
         <name> test-ovs-icmp-frag.sh </name>
         <cmd>
             <params>
@@ -668,6 +684,7 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> ovs-tcp-offload </tags>
         <name> test-ovs-tcp-offload.sh </name>
         <cmd>
             <params>
@@ -677,6 +694,7 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> ovs-udp-offload </tags>
         <name> test-ovs-udp-offload.sh </name>
         <cmd>
             <params>
@@ -696,7 +714,7 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> test-ovs-ct-icmp </tags>
+        <tags> ovs-ct-icmp </tags>
         <name> test-ovs-ct-icmp.sh </name>
         <cmd>
             <params>
@@ -706,7 +724,7 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> test-ovs-ct-scapy-udp </tags>
+        <tags> ovs-ct-scapy-udp </tags>
         <name> test-ovs-ct-scapy-udp.sh </name>
         <cmd>
             <params>
@@ -716,7 +734,7 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> test-ovs-ct-scapy-udp-nat </tags>
+        <tags> ovs-ct-scapy-udp-nat </tags>
         <name> test-ovs-ct-scapy-udp-nat.sh </name>
         <cmd>
             <params>
@@ -726,7 +744,7 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> test-ovs-ct-scapy-udp-reload </tags>
+        <tags> ovs-ct-scapy-udp-reload </tags>
         <name> test-ovs-ct-scapy-udp-reload.sh </name>
         <cmd>
             <params>
@@ -736,7 +754,7 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> test-ovs-ct-scapy-udp-down-up </tags>
+        <tags> ovs-ct-scapy-udp-down-up </tags>
         <name> test-ovs-ct-scapy-udp-down-up.sh </name>
         <cmd>
             <params>
@@ -746,7 +764,7 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> test-ovs-ct-scapy-udp-cycle-esw-modes </tags>
+        <tags> ovs-ct-scapy-udp-cycle-esw-modes </tags>
         <name> test-ovs-ct-scapy-udp-cycle-esw-modes.sh </name>
         <cmd>
             <params>
@@ -756,7 +774,7 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> test-ovs-ct-icmp-cycle-esw-modes </tags>
+        <tags> ovs-ct-icmp-cycle-esw-modes </tags>
         <name> test-ovs-ct-icmp-cycle-esw-modes.sh </name>
         <cmd>
             <params>
@@ -766,7 +784,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-vf-mirror </tags>
+        <tags> tc-vf-mirror </tags>
         <name> test-tc-vf-mirror.sh </name>
         <cmd>
             <params>
@@ -777,7 +795,7 @@
     <case>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
-        <tags> test-tc-vf-mirror-pedit </tags>
+        <tags> tc-vf-mirror-pedit </tags>
         <name> test-tc-vf-mirror-pedit.sh </name>
         <cmd>
             <params>
@@ -793,7 +811,7 @@
             </disabled>
         </ignore>
         <tags> tc </tags>
-        <tags> test-tc-vf-remote-mirror </tags>
+        <tags> tc-vf-remote-mirror </tags>
         <name> test-tc-vf-remote-mirror.sh </name>
         <cmd>
             <params>
@@ -823,6 +841,7 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-groups-overlapping </tags>
         <name> test-tc-groups-overlapping.sh </name>
         <cmd>
             <params>
@@ -832,7 +851,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-groups-multi-fgs </tags>
+        <tags> tc-groups-multi-fgs </tags>
         <name> test-tc-groups-multi-fgs.sh </name>
         <cmd>
             <params>
@@ -842,6 +861,7 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-insert-rules </tags>
         <name> test-tc-insert-rules.sh </name>
         <cmd>
             <params>
@@ -851,6 +871,7 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-insert-rules-legacy </tags>
         <name> test-tc-insert-rules-legacy.sh </name>
         <cmd>
             <params>
@@ -860,6 +881,7 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-insert-rules-port2 </tags>
         <name> test-tc-insert-rules-port2.sh </name>
         <cmd>
             <params>
@@ -913,6 +935,7 @@
         <tags> tc </tags>
         <tags> frag </tags>
         <tags> tc_frag </tags>
+        <tags> tc-insert-rules-frag </tags>
         <name> test-tc-insert-rules-frag.sh </name>
         <cmd>
             <params>
@@ -932,7 +955,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-insert-rule-rep-uplink-vlan </tags>
+        <tags> tc-insert-rule-rep-uplink-vlan </tags>
         <name> test-tc-insert-rule-rep-uplink-vlan.sh </name>
         <cmd>
             <params>
@@ -942,7 +965,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-ip-tos-ip-ttl </tags>
+        <tags> tc-ip-tos-ip-ttl </tags>
         <name> test-tc-ip-tos-ip-ttl.sh </name>
         <cmd>
             <params>
@@ -965,6 +988,7 @@
     <case>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
+        <tags> tc-max-rules-legacy </tags>
         <name> test-tc-max-rules-legacy.sh</name>
         <tout> 900 </tout>
         <cmd>
@@ -1032,7 +1056,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-reoffload </tags>
+        <tags> tc-reoffload </tags>
         <name> test-tc-reoffload.sh </name>
         <cmd>
             <params>
@@ -1042,7 +1066,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-rule-add-null-qdisc </tags>
+        <tags> tc-rule-add-null-qdisc </tags>
         <name> test-tc-rule-add-null-qdisc.sh </name>
         <cmd>
             <params>
@@ -1063,7 +1087,7 @@
             </condition_group>
         </ignore>
         <tags> tc </tags>
-        <tags> test-tc-rule-act-add </tags>
+        <tags> tc-rule-act-add </tags>
         <name> test-tc-rule-act-add.sh </name>
         <cmd>
             <params>
@@ -1084,6 +1108,7 @@
     <case>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-2 </tags>
         <name> test-tc-shuffle-2.sh </name>
         <cmd>
             <params>
@@ -1094,6 +1119,7 @@
     <case>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
+        <tags> tc-shuffle-3 </tags>
         <name> test-tc-shuffle-3.sh </name>
         <cmd>
             <params>
@@ -1158,7 +1184,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-multi-prio-chains </tags>
+        <tags> tc-multi-prio-chains </tags>
         <name> test-tc-multi-prio-chains.sh </name>
         <cmd>
             <params>
@@ -1168,7 +1194,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-multi-masks-per-prio </tags>
+        <tags> tc-multi-masks-per-prio </tags>
         <name> test-tc-multi-masks-per-prio.sh </name>
         <cmd>
             <params>
@@ -1184,7 +1210,7 @@
             </disabled>
         </ignore>
         <tags> tc </tags>
-        <tags> test-tc-perf-update </tags>
+        <tags> tc-perf-update </tags>
         <name> test-tc-perf-update.sh </name>
         <cmd>
             <params>
@@ -1205,7 +1231,7 @@
             </condition_group>
         </ignore>
         <tags> tc </tags>
-        <tags> test-tc-par-add-ovr-del </tags>
+        <tags> tc-par-add-ovr-del </tags>
         <name> test-tc-par-add-ovr-del.sh </name>
         <tout> 1100 </tout>
         <cmd>
@@ -1227,7 +1253,7 @@
             </condition_group>
         </ignore>
         <tags> tc </tags>
-        <tags> test-tc-par-add-del </tags>
+        <tags> tc-par-add-del </tags>
         <name> test-tc-par-add-del.sh </name>
         <cmd>
             <params>
@@ -1243,7 +1269,7 @@
             </disabled>
         </ignore>
         <tags> tc </tags>
-        <tags> test-tc-merged-esw-vf-pf </tags>
+        <tags> tc-merged-esw-vf-pf </tags>
         <name> test-tc-merged-esw-vf-pf.sh </name>
         <cmd>
             <params>
@@ -1253,7 +1279,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-merged-esw-vf-vf </tags>
+        <tags> tc-merged-esw-vf-vf </tags>
         <name> test-tc-merged-esw-vf-vf.sh </name>
         <cmd>
             <params>
@@ -1263,7 +1289,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-traffic-qdisc-del </tags>
+        <tags> tc-traffic-qdisc-del </tags>
         <name> test-tc-traffic-qdisc-del.sh </name>
         <tout> 400 </tout>
         <cmd>
@@ -1274,7 +1300,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-traffic-proto-add-del </tags>
+        <tags> tc-traffic-proto-add-del </tags>
         <name> test-tc-traffic-proto-add-del.sh </name>
         <tout> 600 </tout>
         <cmd>
@@ -1285,7 +1311,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-traffic-filters-add-del </tags>
+        <tags> tc-traffic-filters-add-del </tags>
         <name> test-tc-traffic-filters-add-del.sh </name>
         <tout> 400 </tout>
         <cmd>
@@ -1296,7 +1322,7 @@
     </case>
     <case>
         <tags> tc </tags>
-        <tags> test-tc-traffic-chain-flush </tags>
+        <tags> tc-traffic-chain-flush </tags>
         <name> test-tc-traffic-chain-flush.sh </name>
         <tout> 400 </tout>
         <cmd>
@@ -1308,6 +1334,7 @@
     <case>
         <tags> tc </tags>
         <tags> vxlan </tags>
+        <tags> tc-vxlan-decap-not-properly-offloaded </tags>
         <name> test-tc-vxlan-decap-not-properly-offloaded.sh </name>
         <cmd>
             <params>
@@ -1318,6 +1345,7 @@
     <case>
         <tags> tc </tags>
         <tags> vxlan </tags>
+        <tags> tc-vxlan-outer-dst-mac </tags>
         <name> test-tc-vxlan-outer-dst-mac.sh </name>
         <cmd>
             <params>
@@ -1327,6 +1355,7 @@
     </case>
     <case>
         <tags> vxlan </tags>
+        <tags> vxlan-port-offload </tags>
         <name> test-vxlan-port-offload.sh </name>
         <cmd>
             <params>
@@ -1336,6 +1365,7 @@
     </case>
     <case>
         <tags> vxlan </tags>
+        <tags> vxlan-port-del </tags>
         <name> test-vxlan-port-del.sh </name>
         <cmd>
             <params>
@@ -1346,6 +1376,7 @@
     <case>
         <tags> vxlan </tags>
         <tags> neigh_update </tags>
+        <tags> vxlan-neigh-update </tags>
         <name> test-vxlan-neigh-update.sh </name>
         <cmd>
             <params>
@@ -1356,6 +1387,7 @@
     <case>
         <tags> vxlan </tags>
         <tags> neigh_update </tags>
+        <tags> vxlan-neigh-update-warn </tags>
         <name> test-vxlan-neigh-update-warn.sh </name>
         <cmd>
             <params>
@@ -1383,6 +1415,7 @@
             </disabled>
         </ignore>
         <tags> ecmp </tags>
+        <tags> ecmp-add-del-rule </tags>
         <name> test-ecmp-add-del-rule.sh </name>
         <cmd>
             <params>
@@ -1398,7 +1431,7 @@
             </disabled>
         </ignore>
         <tags> ecmp </tags>
-        <tags> reload_modules </tags>
+        <tags> ecmp-devlink-multipath </tags>
         <name> test-ecmp-devlink-multipath.sh </name>
         <cmd>
             <params>
@@ -1414,6 +1447,7 @@
             </disabled>
         </ignore>
         <tags> ecmp </tags>
+        <tags> ecmp-vf-rep-ping-reconfig-sriov </tags>
         <name> test-ecmp-vf-rep-ping-reconfig-sriov.sh </name>
         <cmd>
             <params>
@@ -1429,6 +1463,7 @@
             </disabled>
         </ignore>
         <tags> ecmp </tags>
+        <tags> ecmp-lag-affinity </tags>
         <name> test-ecmp-lag-affinity.sh </name>
         <cmd>
             <params>
@@ -1444,6 +1479,7 @@
             </disabled>
         </ignore>
         <tags> ecmp </tags>
+        <tags> ecmp-add-multipath-rule </tags>
         <name> test-ecmp-add-multipath-rule.sh </name>
         <cmd>
             <params>
@@ -1459,6 +1495,7 @@
             </disabled>
         </ignore>
         <tags> ecmp </tags>
+        <tags> ecmp-restore-rule </tags>
         <name> test-ecmp-restore-rule.sh </name>
         <cmd>
             <params>
@@ -1490,7 +1527,7 @@
             </disabled>
         </ignore>
         <tags> ecmp </tags>
-        <tags> test-ecmp-add-vxlan-encap-disable-sriov </tags>
+        <tags> ecmp-add-vxlan-encap-disable-sriov </tags>
         <name> test-ecmp-add-vxlan-encap-disable-sriov.sh </name>
         <cmd>
             <params>
@@ -1506,7 +1543,7 @@
             </disabled>
         </ignore>
         <tags> ecmp </tags>
-        <tags> test-ecmp-add-vxlan-rule </tags>
+        <tags> ecmp-add-vxlan-rule </tags>
         <name> test-ecmp-add-vxlan-rule.sh </name>
         <cmd>
             <params>
@@ -1522,7 +1559,7 @@
             </disabled>
         </ignore>
         <tags> ecmp </tags>
-        <tags> test-ecmp-rule-stats </tags>
+        <tags> ecmp-rule-stats </tags>
         <name> test-ecmp-rule-stats.sh </name>
         <cmd>
             <params>
@@ -1538,7 +1575,7 @@
             </disabled>
         </ignore>
         <tags> ecmp </tags>
-        <tags> test-ecmp-vf-vf-different-esw-ping </tags>
+        <tags> ecmp-vf-vf-different-esw-ping </tags>
         <name> test-ecmp-vf-vf-different-esw-ping.sh </name>
         <cmd>
             <params>
@@ -1554,7 +1591,7 @@
             </disabled>
         </ignore>
         <tags> ecmp </tags>
-        <tags> test-ecmp-vf-vf-ping </tags>
+        <tags> ecmp-vf-vf-ping </tags>
         <name> test-ecmp-vf-vf-ping.sh </name>
         <cmd>
             <params>
@@ -1564,7 +1601,7 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> test-ct-icmp-fwd </tags>
+        <tags> ct-icmp-fwd </tags>
         <name> test-ct-icmp-fwd.sh </name>
         <cmd>
             <params>
@@ -1574,7 +1611,7 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> test-ct-icmp </tags>
+        <tags> ct-icmp </tags>
         <name> test-ct-icmp.sh </name>
         <cmd>
             <params>
@@ -1585,7 +1622,7 @@
     <case>
         <tags> ct </tags>
         <tags> header_rewrite </tags>
-        <tags> test-ct-tcp-pedit </tags>
+        <tags> ct-tcp-pedit </tags>
         <name> test-ct-tcp-pedit.sh </name>
         <cmd>
             <params>
@@ -1596,7 +1633,7 @@
     <case>
         <tags> ct </tags>
         <tags> header_rewrite </tags>
-        <tags> test-ct-tcp-vf-mirror-pedit </tags>
+        <tags> ct-tcp-vf-mirror-pedit </tags>
         <name> test-ct-tcp-vf-mirror-pedit.sh </name>
         <cmd>
             <params>
@@ -1606,7 +1643,7 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> test-ct-tcp </tags>
+        <tags> ct-tcp </tags>
         <name> test-ct-tcp.sh </name>
         <cmd>
             <params>
