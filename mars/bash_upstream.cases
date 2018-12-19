@@ -606,7 +606,7 @@
         <name> test-ovs-dpctl-flows-enc_ttl-enc_tos.sh </name>
         <cmd>
             <params>
-                <test> test-ovs-dpctl-flows-ttl-tos.sh </test>
+                <test> test-ovs-dpctl-flows-enc_ttl-enc_tos.sh </test>
             </params>
         </cmd>
     </case>
