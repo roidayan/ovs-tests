@@ -65,20 +65,14 @@ class Testlib:
                 return None
         return None
 
-    def find_ovs_rule(self, host, in_port, dst_mac, proto='.*', action='.*', type='offloaded'):
-        cmd = host.run("ovs-appctl dpctl/dump-flows type=%s" % type)
+    def find_ovs_rule(self, host, in_port, dst_mac, proto='.*', action='.*'):
+        cmd = host.run("ovs-appctl dpctl/dump-flows type=offloaded")
         out = cmd.out().strip()
 
         if not out:
             return None
 
-        if type == 'offloaded':
-            # in offloaded the first attr is in_port so make sure it is.
-            pat_prefix = '^'
-        else:
-            pat_prefix = '.*,'
-
-        pat_filter = pat_prefix + r"in_port\(%s\).*,eth\(.*dst=%s\).*,eth_type\(%s\).*" % (in_port, str(dst_mac).lower(), proto)
+        pat_filter = r".*in_port\(%s\).*,eth\(.*dst=%s\).*,eth_type\(%s\).*" % (in_port, str(dst_mac).lower(), proto)
         pat_action = r".*\spackets:(?P<pkts>\d+), bytes:(?P<bytes>\d+), used:(?P<used>[\d.]+)s, actions:%s" % action
 
         logging.debug("in_port '%s' filter '%s' action '%s'", in_port, pat_filter, pat_action)
