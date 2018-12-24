@@ -803,6 +803,18 @@
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
+        <tags> ovs-vxlan-in-ns-dpctl </tags>
+        <name> test-ovs-vxlan-in-ns-dpctl.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-in-ns-dpctl.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> vxlan-tc-sw </tags>
         <tags> ovs-vxlan-in-ns-ipv6 </tags>
         <name> test-ovs-vxlan-in-ns-ipv6.sh </name>
         <cmd>
@@ -840,12 +852,22 @@
     <case>
         <tags> ovs </tags>
         <tags> vxlan </tags>
-        <tags> vxlan-tc-sw </tags>
         <tags> ovs-vxlan-flow-key </tags>
         <name> test-ovs-vxlan-flow-key.sh </name>
         <cmd>
             <params>
                 <test> test-ovs-vxlan-flow-key.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> ovs-vxlan-remove-tunnel-during-traffic </tags>
+        <name> test-ovs-vxlan-remove-tunnel-during-traffic.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-remove-tunnel-during-traffic.sh </test>
             </params>
         </cmd>
     </case>
