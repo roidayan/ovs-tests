@@ -3,13 +3,13 @@
 CX4=enp129s0f0
 CX4_2=enp129s0f1
 
-CX5=p1p1
-CX5_2=p1p2
+CX5=enp130s0f0
+CX5_2=enp130s0f1
 
 if [ "$1" == "cx5" ]; then
     nic=$CX5
     nic2=$CX5_2
-    vms=`seq 5 6`
+    vms=`seq 7 8`
 else
     nic=$CX4
     nic2=$CX4_2
