@@ -465,12 +465,32 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> eswitch-rep-channels-time </tags>
+        <name> test-eswitch-rep-channels-time.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-rep-channels-time.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
         <tags> eswitch-127-reps </tags>
         <name> test-eswitch-127-reps.sh </name>
         <tout> 700 </tout>
         <cmd>
             <params>
                 <test> test-eswitch-127-reps.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-change-hfunc </tags>
+        <name> test-eswitch-change-hfunc.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-change-hfunc.sh </test>
             </params>
         </cmd>
     </case>
@@ -758,6 +778,16 @@
         <cmd>
             <params>
                 <test> test-ovs-ct-scapy-udp-nat.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-scapy-udp-nat-reconfig-flows </tags>
+        <name> test-ovs-ct-scapy-udp-nat-reconfig-flows.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-nat-reconfig-flows.sh </test>
             </params>
         </cmd>
     </case>
