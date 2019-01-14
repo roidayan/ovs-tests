@@ -757,6 +757,22 @@
             </disabled>
         </ignore>
         <tags> ct </tags>
+        <tags> ovs-ct-tcp </tags>
+        <name> test-ovs-ct-tcp.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-tcp.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ct </tags>
         <tags> ovs-ct-scapy-udp </tags>
         <name> test-ovs-ct-scapy-udp.sh </name>
         <cmd>
@@ -868,6 +884,27 @@
         <cmd>
             <params>
                 <test> test-ovs-ct-icmp-cycle-esw-modes.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1623421 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [RHEL_7_6_INBOX] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> ovs </tags>
+        <tags> ovs-no-implicit-rewrite-on-match </tags>
+        <name> test-ovs-no-implicit-rewrite-on-match.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-no-implicit-rewrite-on-match.sh </test>
             </params>
         </cmd>
     </case>
@@ -1469,6 +1506,16 @@
         <cmd>
             <params>
                 <test> test-tc-qinq-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-icmp-4-channels </tags>
+        <name> test-tc-icmp-4-channels.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-icmp-4-channels.sh </test>
             </params>
         </cmd>
     </case>
