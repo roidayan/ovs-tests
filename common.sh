@@ -80,21 +80,23 @@ function __setup_common() {
         fail "Missing NIC"
     fi
 
-    if [ ! -e /sys/class/net/$NIC/device ]; then
-        fail "Cannot find NIC $NIC"
+    local nic=$(get_pf $NIC)
+    if [ ! -e /sys/class/net/$nic/device ]; then
+        fail "Cannot find NIC $nic"
     fi
 
-    if [ -n "$NIC2" ] && [ ! -e /sys/class/net/$NIC2/device ]; then
-        fail "Cannot find NIC2 $NIC2"
+    local nic2=$(get_pf $NIC2)
+    if [ -n "$nic2" ] && [ ! -e /sys/class/net/$nic2/device ]; then
+        fail "Cannot find NIC2 $nic2"
     fi
 
     local status
     local device
 
-    PCI=$(basename `readlink /sys/class/net/$NIC/device`)
-    DEVICE=`cat /sys/class/net/$NIC/device/device`
-    FW=`get_nic_fw $NIC`
-    status="NIC $NIC FW $FW PCI $PCI DEVICE $DEVICE"
+    PCI=$(basename `readlink /sys/class/net/$nic/device`)
+    DEVICE=`cat /sys/class/net/$nic/device/device`
+    FW=`get_nic_fw $nic`
+    status="NIC $nic FW $FW PCI $PCI DEVICE $DEVICE"
 
     __test_for_devlink_compat
 
@@ -289,9 +291,22 @@ function devlink_compat_dir() {
     eval echo "$__devlink_compat_dir";
 }
 
+function get_pf {
+    local nic=$1
+    local nic_new=${1}_65534
+    if ip link show dev $nic > /dev/null 2>&1; then
+        echo $nic
+    elif ip link show dev $nic_new > /dev/null 2>&1; then
+        echo $nic_new
+    else
+        echo ""
+    fi
+}
+
 function switch_mode() {
     local nic=${2:-$NIC}
-    local pci=$(basename `readlink /sys/class/net/$nic/device`)
+    local nic_new=$(get_pf $nic)
+    local pci=$(basename `readlink /sys/class/net/$nic_new/device`)
     local extra="$extra_mode"
 
     echo "Change eswitch ($pci) mode to $1 $extra"
@@ -479,6 +494,8 @@ function set_macs() {
 
 function unbind_vfs() {
     local nic=${1:-$NIC}
+    nic=$(get_pf $nic)
+    echo "unbind_vfs $nic"
     echo "unbind vfs of $nic"
     for i in `ls -1d /sys/class/net/$nic/device/virt*`; do
         vfpci=$(basename `readlink $i`)
@@ -812,8 +829,8 @@ function __cleanup() {
 }
 
 function __setup_clean() {
-    [ "$NIC" != "" ] && ifconfig $NIC 0 && reset_tc $NIC
-    [ "$NIC2" != "" ] && ifconfig $NIC2 0 && reset_tc $NIC2
+    [ "$NIC" != "" ] && ifconfig $(get_pf $NIC) 0 && reset_tc $(get_pf $NIC)
+    [ "$NIC2" != "" ] && ifconfig $(get_pf $NIC2) 0 && reset_tc $(get_pf $NIC2)
     [ "$VF" != "" ] && [ -e /sys/class/net/$VF ] && ifconfig $VF 0
     [ "$VF2" != "" ] && [ -e /sys/class/net/$VF2 ] && ifconfig $VF2 0
 }
