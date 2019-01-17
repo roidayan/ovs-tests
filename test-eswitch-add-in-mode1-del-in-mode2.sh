@@ -25,8 +25,8 @@ function add_rules() {
     for i in `seq $COUNT`; do
         num1=`printf "%02x" $((i / 100))`
         num2=`printf "%02x" $((i % 100))`
-        tc_filter add dev $NIC1 protocol ip parent ffff: prio $i \
-            flower skip_sw indev $NIC1 \
+        tc_filter add dev $(get_pf $NIC1) protocol ip parent ffff: prio $i \
+            flower skip_sw indev $(get_pf $NIC1) \
             src_mac e1:22:33:44:${num1}:$num2 \
             dst_mac e2:22:33:44:${num1}:$num2 \
             action drop
@@ -35,7 +35,7 @@ function add_rules() {
 
 function add_vlan_rule() {
     title "- add vlan rule"
-    tc_filter add dev $NIC1 protocol 802.1Q parent ffff: prio 15 \
+    tc_filter add dev $(get_pf $NIC1) protocol 802.1Q parent ffff: prio 15 \
                 flower skip_sw \
                         dst_mac e4:11:22:11:4a:51 \
                         src_mac e4:11:22:11:4a:50 \
@@ -57,15 +57,15 @@ function create_vxlan_interface() {
     [ $? -ne 0 ] && err "Failed to create vxlan interface" && return 1
     ip link set dev $vx up
     tc qdisc add dev $vx ingress
-    ip addr flush dev $NIC
-    ip addr add $ip_src/16 dev $NIC
-    ip neigh add $ip_dst lladdr e4:11:22:11:55:55 dev $NIC
+    ip addr flush dev $(get_pf $NIC)
+    ip addr add $ip_src/16 dev $(get_pf $NIC)
+    ip neigh add $ip_dst lladdr e4:11:22:11:55:55 dev $(get_pf $NIC)
     # wait for vxlan port to be marked as offloaded port by the hw
     sleep 1
 }
 
 function clean_vxlan_interface() {
-    ip addr flush dev $NIC
+    ip addr flush dev $(get_pf $NIC)
     ip link del $vx
 }
 
@@ -91,7 +91,7 @@ function add_vxlan_rule() {
 
 function test_legacy_switchdev() {
     title "Add rule in legacy mode and reset in switchdev"
-    reset_tc_nic $NIC
+    reset_tc_nic $(get_pf $NIC)
     switch_mode_legacy
     add_rules
     add_vlan_rule
@@ -100,13 +100,13 @@ function test_legacy_switchdev() {
     title "- switch to switchdev"
     switch_mode_switchdev
     title " - reset tc"
-    reset_tc_nic $NIC
+    reset_tc_nic $(get_pf $NIC)
     success
 }
 
 function test_switchdev_legacy() {
     title "Add rule in switchdev mode and reset in legacy"
-    reset_tc_nic $NIC
+    reset_tc_nic $(get_pf $NIC)
     switch_mode_switchdev
     title "- add rules"
     add_rules
@@ -117,7 +117,7 @@ function test_switchdev_legacy() {
     title "- switch to legacy"
     switch_mode_legacy
     title " - reset tc"
-    reset_tc_nic $NIC
+    reset_tc_nic $(get_pf $NIC)
     success
 }
 
