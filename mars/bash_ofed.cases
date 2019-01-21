@@ -643,17 +643,6 @@
     </case>
     <case>
         <tags> eswitch </tags>
-        <tags> eswitch-sriov-vf-up </tags>
-        <name> test-eswitch-sriov-vf-up.sh </name>
-        <tout> 600 </tout>
-        <cmd>
-            <params>
-                <test> test-eswitch-sriov-vf-up.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> eswitch </tags>
         <tags> eswitch-rep-up-time </tags>
         <name> test-eswitch-rep-up-time.sh </name>
         <cmd>
@@ -669,17 +658,6 @@
         <cmd>
             <params>
                 <test> test-eswitch-rep-channels-time.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> eswitch </tags>
-        <tags> eswitch-127-reps </tags>
-        <name> test-eswitch-127-reps.sh </name>
-        <tout> 700 </tout>
-        <cmd>
-            <params>
-                <test> test-eswitch-127-reps.sh </test>
             </params>
         </cmd>
     </case>
@@ -1421,6 +1399,7 @@
         </ignore>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
+        <tags> tc-max-rules-case-index-0 </tags>
         <name> test-tc-max-rules.sh </name>
         <tout> 900 </tout>
         <cmd>

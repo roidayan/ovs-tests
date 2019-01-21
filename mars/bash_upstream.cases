@@ -486,17 +486,6 @@
             </params>
         </cmd>
     </case>
-        <case>
-        <tags> eswitch </tags>
-        <tags> eswitch-sriov-vf-up </tags>
-        <name> test-eswitch-sriov-vf-up.sh </name>
-        <tout> 600 </tout>
-        <cmd>
-            <params>
-                <test> test-eswitch-sriov-vf-up.sh </test>
-            </params>
-        </cmd>
-    </case>
     <case>
         <tags> eswitch </tags>
         <tags> eswitch-rep-up-time </tags>
@@ -514,28 +503,6 @@
         <cmd>
             <params>
                 <test> test-eswitch-rep-channels-time.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1540622 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
-        <tags> eswitch </tags>
-        <tags> eswitch-127-reps </tags>
-        <name> test-eswitch-127-reps.sh </name>
-        <tout> 700 </tout>
-        <cmd>
-            <params>
-                <test> test-eswitch-127-reps.sh </test>
             </params>
         </cmd>
     </case>
@@ -1092,6 +1059,7 @@
     <case>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
+        <tags> tc-max-rules-case-index-0 </tags>
         <name> test-tc-max-rules.sh </name>
         <tout> 900 </tout>
         <cmd>
