@@ -4,7 +4,7 @@
         <Test>
             <name>bash_cases</name>
             <info></info>
-            <owner>roid</owner>
+            <owner>ziyadat</owner>
             <pre>
                 <type> reg_exec_cmd </type>
                 <name> preconfigure </name>
@@ -1730,22 +1730,6 @@
         <cmd>
             <params>
                 <test> test-tc-multi-masks-per-prio.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
-        <tags> tc </tags>
-        <tags> tc-perf-update </tags>
-        <name> test-tc-perf-update.sh </name>
-        <cmd>
-            <params>
-                <test> test-tc-perf-update.sh </test>
             </params>
         </cmd>
     </case>
