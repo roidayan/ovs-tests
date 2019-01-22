@@ -535,6 +535,16 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> ovs-dpctl-flows </tags>
+        <name> test-ovs-dpctl-flows.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-dpctl-flows.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
         <tags> ovs-dpctl-flows-ttl-tos </tags>
         <name> test-ovs-dpctl-flows-ttl-tos.sh </name>
         <cmd>
@@ -883,6 +893,16 @@
         <cmd>
             <params>
                 <test> test-ovs-no-implicit-rewrite-on-match.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> ovs-vf-mirror </tags>
+        <name> test-ovs-vf-mirror.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vf-mirror.sh </test>
             </params>
         </cmd>
     </case>
@@ -1485,6 +1505,17 @@
     <case>
         <tags> tc </tags>
         <tags> vxlan </tags>
+        <tags> tc-vxlan-encap </tags>
+        <name> test-tc-vxlan-encap.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-encap.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
         <tags> tc-vxlan-decap-not-properly-offloaded </tags>
         <name> test-tc-vxlan-decap-not-properly-offloaded.sh </name>
         <cmd>
@@ -1769,6 +1800,22 @@
         <cmd>
             <params>
                 <test> test-ecmp-vf-vf-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <disabled>
+                <valid> True </valid>
+                <info> Unsupported.</info>
+            </disabled>
+        </ignore>
+        <tags> ecmp </tags>
+        <tags> ecmp-route-events </tags>
+        <name> test-ecmp-route-events.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-route-events.sh </test>
             </params>
         </cmd>
     </case>
