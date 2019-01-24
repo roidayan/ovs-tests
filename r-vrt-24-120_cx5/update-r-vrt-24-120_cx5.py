@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 
 
 host = 'r-vrt-24-120'
-xml = 'r-vrt-24-120/r-vrt-24-120.xml'
+xml = 'r-vrt-24-120_cx5/r-vrt-24-120.xml'
 
 
 AF_LINK = 17

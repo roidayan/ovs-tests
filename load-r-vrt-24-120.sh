@@ -13,7 +13,7 @@ if [ "$1" == "cx5" ]; then
 else
     nic=$CX4
     nic2=$CX4_2
-    vms=(5 6)
+    vms=(123 124)
 fi
 
 vfs=2
