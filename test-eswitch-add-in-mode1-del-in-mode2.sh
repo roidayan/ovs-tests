@@ -91,8 +91,8 @@ function add_vxlan_rule() {
 
 function test_legacy_switchdev() {
     title "Add rule in legacy mode and reset in switchdev"
-    reset_tc_nic $(get_pf $NIC)
     switch_mode_legacy
+    reset_tc_nic $(get_pf $NIC)
     add_rules
     add_vlan_rule
     title "- unbind vfs"
@@ -106,8 +106,8 @@ function test_legacy_switchdev() {
 
 function test_switchdev_legacy() {
     title "Add rule in switchdev mode and reset in legacy"
-    reset_tc_nic $(get_pf $NIC)
     switch_mode_switchdev
+    reset_tc_nic $(get_pf $NIC)
     title "- add rules"
     add_rules
     add_vlan_rule
