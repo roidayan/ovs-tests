@@ -82,7 +82,7 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for ((i=0; i< ${#vms[@]}; i++)) do virsh -q start ${hv}-${vms[i]}-CentOS-7.5 ; done
+    for ((i=0; i< ${#vms[@]}; i++)) do virsh -q start ${hv}-${vms[i]}-CentOS-7.4 ; done
 }
 
 function wait_vms() {
