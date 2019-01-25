@@ -21,7 +21,7 @@ if [ -z "$rep" ]; then
     fail "Missing rep $rep"
     exit 1
 fi
-reset_tc_nic $(get_pf $NIC)
+reset_tc_nic $NIC
 reset_tc_nic $rep
 
 set -e
@@ -33,8 +33,8 @@ function add_rules() {
     for i in `seq $COUNT`; do
         num1=`printf "%02x" $((i / 100))`
         num2=`printf "%02x" $((i % 100))`
-        tc filter add dev $(get_pf $NIC1) protocol ip parent ffff: prio $i \
-            flower skip_sw indev $(get_pf $NIC1) \
+        tc filter add dev $NIC1 protocol ip parent ffff: prio $i \
+            flower skip_sw indev $NIC1 \
             src_mac e1:22:33:44:${num1}:$num2 \
             dst_mac e2:22:33:44:${num1}:$num2 \
             action drop || fail "Failed to add rule"
@@ -46,13 +46,13 @@ function add_rules_vlan() {
     for i in `seq $COUNT`; do
         num1=`printf "%02x" $((i / 100))`
         num2=`printf "%02x" $((i % 100))`
-        tc filter add dev $(get_pf $NIC1) protocol 802.1Q parent ffff: prio $i \
-            flower skip_sw indev $(get_pf $NIC1) \
+        tc filter add dev $NIC1 protocol 802.1Q parent ffff: prio $i \
+            flower skip_sw indev $NIC1 \
             src_mac e1:22:33:44:${num1}:$num2 \
             dst_mac e2:22:33:44:${num1}:$num2 \
             vlan_ethtype 0x800 \
             vlan_id 100 \
-            action mirred egress redirect dev $(get_pf $NIC1)
+            action mirred egress redirect dev $NIC1
     done
 }
 
@@ -61,8 +61,8 @@ function add_rules_vlan_drop() {
     for i in `seq $COUNT`; do
         num1=`printf "%02x" $((i / 100))`
         num2=`printf "%02x" $((i % 100))`
-        tc filter add dev $(get_pf $NIC1) protocol 802.1Q parent ffff: prio $i \
-            flower skip_sw indev $(get_pf $NIC1) \
+        tc filter add dev $NIC1 protocol 802.1Q parent ffff: prio $i \
+            flower skip_sw indev $NIC1 \
             src_mac e1:22:33:44:${num1}:$num2 \
             dst_mac e2:22:33:44:${num1}:$num2 \
             vlan_ethtype 0x800 \
@@ -77,15 +77,14 @@ function del_rules() {
     for i in `seq $COUNT`; do
         num1=`printf "%02x" $((i / 100))`
         num2=`printf "%02x" $((i % 100))`
-        tc filter del dev $(get_pf $NIC1) parent ffff: prio $i || fail "Failed to del rule $i"
+        tc filter del dev $NIC1 parent ffff: prio $i || fail "Failed to del rule $i"
     done
 }
 
 
 for NIC1 in $NIC $rep ; do
     title "Test nic $NIC1"
-    nic1=$(get_pf $NIC1)
-    reset_tc_nic $nic1
+    reset_tc_nic $NIC1
     add_rules
     del_rules
     add_rules_vlan
@@ -93,7 +92,7 @@ for NIC1 in $NIC $rep ; do
     add_rules_vlan_drop
     del_rules
     echo "reset"
-    reset_tc_nic $nic1
+    reset_tc_nic $NIC1
 done
 
 test_done
