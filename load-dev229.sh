@@ -3,13 +3,13 @@
 CX4=enp4s0f0
 CX4_2=enp4s0f1
 
-CX5=p1p1
-CX5_2=p1p2
+CX5=enp6s0f0
+CX5_2=enp6s0f1
 
 if [ "$1" == "cx5" ]; then
     nic=$CX5
     nic2=$CX5_2
-    vms=`seq 5 6`
+    vms=`seq 7 8`
 else
     nic=$CX4
     nic2=$CX4_2
@@ -112,7 +112,7 @@ function stop_vms() {
 
 function start_vms() {
     echo "Start vms"
-    for i in $vms; do virsh -q start ${hv}-00${i}-RH-7.5 ; done
+    for i in $vms; do virsh -q start ${hv}-00${i}-CentOS-7.6 ; done
 }
 
 function wait_vms() {
@@ -171,18 +171,23 @@ function warn_extra() {
 function reload_modules() {
     echo "Reload modules"
     set -e
-    local modules="mlx5_ib mlx5_core devlink cls_flower"
+    local modules="mlx5_core cls_flower"
 
     if [ -e /etc/init.d/openibd ]; then
         service openibd force-restart
         set +e
         return
     fi
-
+           
     for m in $modules ; do
         warn_extra $m
     done
-    modprobe -r $modules ; modprobe -a $modules
+
+    modprobe -q -r mlx5_ib
+
+    set -e
+    modprobe -r $modules
+    modprobe -a $modules
     set +e
 }
 

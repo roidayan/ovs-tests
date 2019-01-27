@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 
 
 host = 'dev-r-vrt-229'
-xml = 'dev-r-vrt-229/dev-r-vrt-229.xml'
+xml = 'dev_r_vrt_229_cx5/dev-r-vrt-229.xml'
 
 
 AF_LINK = 17
