@@ -473,6 +473,16 @@
         </cmd>
     </case>
     <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-miss-rules </tags>
+        <name> test-eswitch-miss-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-miss-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ovs </tags>
         <tags> ovs-ipv4-match </tags>
         <name> test-ovs-ipv4-match.sh </name>
@@ -560,6 +570,26 @@
         <cmd>
             <params>
                 <test> test-ovs-dpctl-flows-enc_ttl-enc_tos.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> ovs-gre-in-ns </tags>
+        <name> test-ovs-gre-in-ns.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-gre-in-ns.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> ovs-aging-tc-rules </tags>
+        <name> test-ovs-aging-tc-rules.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-aging-tc-rules.sh </test>
             </params>
         </cmd>
     </case>
@@ -941,6 +971,16 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-insert-rules-gre </tags>
+        <name> test-tc-insert-rules-gre.sh </name>
+        <cmd>
+            <params>
+                <test>test-tc-insert-rules-gre.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
         <tags> tc-insert-rules-legacy </tags>
         <name> test-tc-insert-rules-legacy.sh </name>
         <cmd>
@@ -1051,6 +1091,16 @@
         <cmd>
             <params>
                 <test> test-tc-insert-rule-rep-uplink-vlan.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-insert-fail-hw </tags>
+        <name> test-tc-insert-fail-hw.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-fail-hw.sh </test>
             </params>
         </cmd>
     </case>
@@ -1619,16 +1669,6 @@
     </case>
     <case>
         <tags> ecmp </tags>
-        <tags> ecmp-miss-rules </tags>
-        <name> test-ecmp-miss-rules.sh </name>
-        <cmd>
-            <params>
-                <test> test-ecmp-miss-rules.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> ecmp </tags>
         <tags> ecmp-add-vxlan-encap-disable-sriov </tags>
         <name> test-ecmp-add-vxlan-encap-disable-sriov.sh </name>
         <cmd>
@@ -1684,6 +1724,16 @@
         <cmd>
             <params>
                 <test> test-ecmp-route-events.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ecmp </tags>
+        <tags> ecmp-failover-failback </tags>
+        <name> test-ecmp-failover-failback.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-failover-failback.sh </test>
             </params>
         </cmd>
     </case>
