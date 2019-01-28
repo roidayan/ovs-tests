@@ -722,12 +722,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ovs-ct-icmp </tags>
         <name> test-ovs-ct-icmp.sh </name>
@@ -738,12 +732,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ovs-ct-tcp </tags>
         <name> test-ovs-ct-tcp.sh </name>
@@ -754,12 +742,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ovs-ct-scapy-udp </tags>
         <name> test-ovs-ct-scapy-udp.sh </name>
@@ -770,12 +752,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ovs-ct-scapy-udp-nat </tags>
         <name> test-ovs-ct-scapy-udp-nat.sh </name>
@@ -796,12 +772,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ovs-ct-scapy-udp-reload </tags>
         <name> test-ovs-ct-scapy-udp-reload.sh </name>
@@ -812,12 +782,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ovs-ct-scapy-udp-down-up </tags>
         <name> test-ovs-ct-scapy-udp-down-up.sh </name>
@@ -828,12 +792,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ovs-ct-scapy-udp-cycle-esw-modes </tags>
         <name> test-ovs-ct-scapy-udp-cycle-esw-modes.sh </name>
@@ -844,12 +802,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ovs-ct-scapy-udp-vf-mirror </tags>
         <name> test-ovs-ct-scapy-udp-vf-mirror.sh </name>
@@ -860,12 +812,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ovs-ct-icmp-cycle-esw-modes </tags>
         <name> test-ovs-ct-icmp-cycle-esw-modes.sh </name>
@@ -1612,12 +1558,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-del-rule </tags>
         <name> test-ecmp-add-del-rule.sh </name>
@@ -1628,12 +1568,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-devlink-multipath </tags>
         <name> test-ecmp-devlink-multipath.sh </name>
@@ -1644,12 +1578,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-vf-rep-ping-reconfig-sriov </tags>
         <name> test-ecmp-vf-rep-ping-reconfig-sriov.sh </name>
@@ -1660,12 +1588,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-lag-affinity </tags>
         <name> test-ecmp-lag-affinity.sh </name>
@@ -1676,12 +1598,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-multipath-rule </tags>
         <name> test-ecmp-add-multipath-rule.sh </name>
@@ -1692,12 +1608,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-restore-rule </tags>
         <name> test-ecmp-restore-rule.sh </name>
@@ -1708,12 +1618,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-miss-rules </tags>
         <name> test-ecmp-miss-rules.sh </name>
@@ -1724,12 +1628,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-vxlan-encap-disable-sriov </tags>
         <name> test-ecmp-add-vxlan-encap-disable-sriov.sh </name>
@@ -1740,12 +1638,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-vxlan-rule </tags>
         <name> test-ecmp-add-vxlan-rule.sh </name>
@@ -1756,12 +1648,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-rule-stats </tags>
         <name> test-ecmp-rule-stats.sh </name>
@@ -1772,12 +1658,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-vf-vf-different-esw-ping </tags>
         <name> test-ecmp-vf-vf-different-esw-ping.sh </name>
@@ -1788,12 +1668,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-vf-vf-ping </tags>
         <name> test-ecmp-vf-vf-ping.sh </name>
@@ -1804,12 +1678,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-route-events </tags>
         <name> test-ecmp-route-events.sh </name>
@@ -1820,12 +1688,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ct-icmp-fwd </tags>
         <name> test-ct-icmp-fwd.sh </name>
@@ -1836,12 +1698,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ct-icmp </tags>
         <name> test-ct-icmp.sh </name>
@@ -1852,12 +1708,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> header_rewrite </tags>
         <tags> ct-tcp-pedit </tags>
@@ -1869,12 +1719,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> header_rewrite </tags>
         <tags> ct-tcp-vf-mirror-pedit </tags>
@@ -1886,12 +1730,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ct </tags>
         <tags> ct-tcp </tags>
         <name> test-ct-tcp.sh </name>

@@ -254,12 +254,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> vf </tags>
         <tags> vf-lag </tags>
         <name> test-vf-lag.sh </name>
@@ -907,12 +901,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-vf-remote-mirror </tags>
         <name> test-tc-vf-remote-mirror.sh </name>
@@ -1370,12 +1358,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Not supported yet.</info>
-            </disabled>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-merged-esw-vf-pf </tags>
         <name> test-tc-merged-esw-vf-pf.sh </name>
@@ -1591,12 +1573,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-del-rule </tags>
         <name> test-ecmp-add-del-rule.sh </name>
@@ -1607,12 +1583,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-devlink-multipath </tags>
         <name> test-ecmp-devlink-multipath.sh </name>
@@ -1623,12 +1593,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-vf-rep-ping-reconfig-sriov </tags>
         <name> test-ecmp-vf-rep-ping-reconfig-sriov.sh </name>
@@ -1639,12 +1603,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-lag-affinity </tags>
         <name> test-ecmp-lag-affinity.sh </name>
@@ -1655,12 +1613,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-multipath-rule </tags>
         <name> test-ecmp-add-multipath-rule.sh </name>
@@ -1671,12 +1623,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-restore-rule </tags>
         <name> test-ecmp-restore-rule.sh </name>
@@ -1687,12 +1633,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-miss-rules </tags>
         <name> test-ecmp-miss-rules.sh </name>
@@ -1703,12 +1643,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-vxlan-encap-disable-sriov </tags>
         <name> test-ecmp-add-vxlan-encap-disable-sriov.sh </name>
@@ -1719,12 +1653,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-vxlan-rule </tags>
         <name> test-ecmp-add-vxlan-rule.sh </name>
@@ -1735,12 +1663,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-rule-stats </tags>
         <name> test-ecmp-rule-stats.sh </name>
@@ -1751,12 +1673,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-vf-vf-different-esw-ping </tags>
         <name> test-ecmp-vf-vf-different-esw-ping.sh </name>
@@ -1767,12 +1683,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-vf-vf-ping </tags>
         <name> test-ecmp-vf-vf-ping.sh </name>
@@ -1783,12 +1693,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <disabled>
-                <valid> True </valid>
-                <info> Unsupported.</info>
-            </disabled>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-route-events </tags>
         <name> test-ecmp-route-events.sh </name>
