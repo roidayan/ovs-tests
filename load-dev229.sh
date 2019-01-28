@@ -209,6 +209,8 @@ if [ "$FAST" == "" ]; then
     reload_modules
 fi
 
+sleep 1 ; # wait little more for nic to be up
+
 echo "Enable $vfs VFs"
 /labhome/roid/scripts/ovs/set-macs.sh $nic $vfs
 if [ "$NICS" == "2" ]; then
