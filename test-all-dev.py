@@ -62,13 +62,26 @@ class Command(object):
         def target():
             #print 'Thread started'
             self.logname = os.path.join(LOGDIR, os.path.basename(self.cmd)+'.log')
+            FNULL = open(os.devnull, 'w')
             with open(self.logname, 'w') as f1:
                 # piping stdout to file seems to miss stderr msgs so we use pipe
                 # and write to file at the end.
+                # clear dmesg
+                subprocess.call("dmesg -C", shell=True)
+
+                # run command and get output
                 self.process = subprocess.Popen(self.cmd, shell=True, stdout=subprocess.PIPE,
                                                 stderr=subprocess.STDOUT, close_fds=True)
                 self.out = self.process.communicate()
                 f1.write(self.out[0])
+
+                # get dmesg log for this test
+                dmesg_process= subprocess.Popen("dmesg -c", shell=True, stdout=subprocess.PIPE,
+                                                stderr=FNULL, close_fds=True)
+                dmesgout = dmesg_process.communicate()
+                f1.write("\n################################ dmesg logs from this test ################################\n")
+                f1.write(dmesgout[0])
+
             #print 'Thread finished'
             return
 
