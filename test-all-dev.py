@@ -13,7 +13,7 @@ from mlxredmine import MlxRedmine
 
 MYNAME = os.path.basename(__file__)
 MYDIR = os.path.abspath(os.path.dirname(__file__))
-LOGDIR = mkdtemp(prefix='log')
+LOGDIR = None
 DEST_DIR = os.path.join(MYDIR,"tests_conf")
 
 TESTS = sorted(glob(MYDIR + '/test-*.sh'))
@@ -113,6 +113,8 @@ def parse_args():
                         help='Pass parm to each test')
     parser.add_argument('--exclude_tag', action='append',  
                         help='exclude all tests with tag')
+    parser.add_argument('--logs_dir',
+                        help='Set path to logs dir')
     args = parser.parse_args()
     return args
 
@@ -221,6 +223,11 @@ def get_test_timeout(test_path):
 def main():
     args = parse_args()
     ignore = False
+    global LOGDIR
+    if args.logs_dir:
+            LOGDIR = args.logs_dir
+    else:
+            LOGDIR = mkdtemp(prefix='log')
     if args.from_test:
         ignore = True
     if args.exclude:
