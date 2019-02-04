@@ -1,10 +1,10 @@
 NIC=ens2f0
 NIC2=ens2f1
-VF=ens2f0v0
+VF=ens2f2
 VF1=$VF
-VF2=ens2f0v1
-REP=ens2f0_0
-REP2=ens2f0_1
+VF2=ens2f3
+REP=ens2f0_pf0vf0
+REP2=ens2f0_pf0vf1
 PERF_TC_L2_INSERT=0
 PERF_TC_L2_DELETE=0
 PERF_TC_L2_MEMORY=0
