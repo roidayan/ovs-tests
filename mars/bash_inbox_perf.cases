@@ -13,6 +13,14 @@
                     <exec> [[run_time:remote_src_path]]/asap_dev_reg/load-test.sh [[conf:extra_info.hca_type]] </exec>
                 </params>
             </pre>
+            <pre>
+                <type> reg_exec_cmd </type>
+                <name> stop_ovs </name>
+                <tout> 60 </tout>
+                <params>
+                    <exec> systemctl stop openvswitch </exec>
+                </params>
+            </pre>
         </Test>
         <Case>
             <tags> bash </tags>
