@@ -27,7 +27,7 @@
         <tags> eswitch </tags>
         <tags> eswitch-sriov-vf-up </tags>
         <name> test-eswitch-sriov-vf-up.sh </name>
-        <tout> 600 </tout>
+        <tout> 700 </tout>
         <cmd>
             <params>
                 <test> test-eswitch-sriov-vf-up.sh </test>
@@ -49,7 +49,7 @@
         <tags> eswitch </tags>
         <tags> eswitch-127-reps </tags>
         <name> test-eswitch-127-reps.sh </name>
-        <tout> 700 </tout>
+        <tout> 800 </tout>
         <cmd>
             <params>
                 <test> test-eswitch-127-reps.sh </test>
