@@ -1053,6 +1053,17 @@
         </cmd>
     </case>
     <case>
+        <tags> tc </tags>
+        <tags> header_rewrite </tags>
+        <tags> tc-insert-rules-pedit-ttl-ip </tags>
+        <name> test-tc-insert-rules-pedit-ttl-ip.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-pedit-ttl-ip.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
