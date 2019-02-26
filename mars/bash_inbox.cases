@@ -35,17 +35,6 @@
     <case>
         <tags> eswitch </tags>
         <tags> vf </tags>
-        <tags> vf-rep-ping </tags>
-        <name> test-vf-rep-ping.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-rep-ping.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> eswitch </tags>
-        <tags> vf </tags>
         <tags> vf-rep-change-mtu </tags>
         <name> test-vf-rep-change-mtu.sh </name>
         <cmd>
@@ -439,26 +428,6 @@
         <cmd>
             <params>
                 <test> test-eswitch-no-carrier.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> eswitch </tags>
-        <tags> eswitch-rep-up-time </tags>
-        <name> test-eswitch-rep-up-time.sh </name>
-        <cmd>
-            <params>
-                <test> test-eswitch-rep-up-time.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> eswitch </tags>
-        <tags> eswitch-rep-channels-time </tags>
-        <name> test-eswitch-rep-channels-time.sh </name>
-        <cmd>
-            <params>
-                <test> test-eswitch-rep-channels-time.sh </test>
             </params>
         </cmd>
     </case>
@@ -1353,47 +1322,6 @@
         <cmd>
             <params>
                 <test> test-tc-multi-masks-per-prio.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> tc </tags>
-        <tags> tc-par-add-ovr-del </tags>
-        <name> test-tc-par-add-ovr-del.sh </name>
-        <tout> 1100 </tout>
-        <cmd>
-            <params>
-                <test> test-tc-par-add-ovr-del.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> tc </tags>
-        <tags> tc-par-add-del </tags>
-        <name> test-tc-par-add-del.sh </name>
-        <cmd>
-            <params>
-                <test> test-tc-par-add-del.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> tc </tags>
-        <tags> tc-par-add-dump-del </tags>
-        <name> test-tc-par-add-dump-del.sh </name>
-        <cmd>
-            <params>
-                <test> test-tc-par-add-dump-del.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> tc </tags>
-        <tags> tc-par-add-dup </tags>
-        <name> test-tc-par-add-dup.sh </name>
-        <cmd>
-            <params>
-                <test> test-tc-par-add-dup.sh </test>
             </params>
         </cmd>
     </case>
