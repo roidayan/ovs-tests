@@ -446,6 +446,7 @@
         <tags> eswitch </tags>
         <tags> eswitch-toggle-modes </tags>
         <name> test-eswitch-toggle-modes.sh </name>
+        <tout> 400 </tout>
         <cmd>
             <params>
                 <test> test-eswitch-toggle-modes.sh </test>
@@ -1104,7 +1105,7 @@
         <tags> tc-max-rules </tags>
         <tags> tc-max-rules-case-index-0 </tags>
         <name> test-tc-max-rules.sh </name>
-        <tout> 1000 </tout>
+        <tout> 1200 </tout>
         <cmd>
             <params>
                 <test> test-tc-max-rules.sh </test>
@@ -1366,7 +1367,7 @@
         <tags> tc </tags>
         <tags> tc-traffic-proto-add-del </tags>
         <name> test-tc-traffic-proto-add-del.sh </name>
-        <tout> 600 </tout>
+        <tout> 700 </tout>
         <cmd>
             <params>
                 <test> test-tc-traffic-proto-add-del.sh </test>
