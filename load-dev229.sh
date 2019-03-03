@@ -126,9 +126,9 @@ function wait_vms() {
 function wait_vm() {
     local vm=$1
 
-    for i in 1 2 3 4 5; do
+    for i in 1 2 3 4 5 6 7 8 9 10; do
         ping -q -w 1 -c 1 $vm && break
-        sleep 15
+        sleep 10
     done
 
     sleep 15 ; # wait little more for lnst to be up
@@ -224,7 +224,7 @@ if [ "$nosriov" == 1 ]; then
 fi
 
 nic_up
-sleep 1
+sleep 2
 reset_tc
 
 echo "Change mode to switchdev"
@@ -235,7 +235,7 @@ if [ "$NICS" == "2" ]; then
     set_mode $nic2 switchdev
     set_eswitch_inline_mode $nic2 transport
 fi
-sleep 2
+sleep 3
 nic_up
 reset_tc
 
