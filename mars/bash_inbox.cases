@@ -884,7 +884,7 @@
         <name> test-tc-vf-remote-mirror.sh </name>
         <cmd>
             <params>
-                <test> test-tc-vf-mirror-pedit.sh </test>
+                <test> test-tc-vf-remote-mirror.sh </test>
             </params>
         </cmd>
     </case>
