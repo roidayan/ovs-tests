@@ -651,6 +651,26 @@
         </cmd>
     </case>
     <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-set-vf-mac </tags>
+        <name> test-eswitch-set-vf-mac.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-set-vf-mac.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-set-vf-rate </tags>
+        <name> test-eswitch-set-vf-rate.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-set-vf-rate.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ovs </tags>
         <tags> ovs-ipv4-match </tags>
         <name> test-ovs-ipv4-match.sh </name>
