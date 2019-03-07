@@ -9,15 +9,14 @@ CX5_2=ens1f1
 if [ "$1" == "cx5" ]; then
     nic=$CX5
     nic2=$CX5_2
-    vms=(063 064)
 else
     nic=$CX4
     nic2=$CX4_2
-    vms=(061 062)
 fi
 
 vfs=2
 hv=`hostname -s`
+vms=(061 062)
 
 ##############################################################################
 
@@ -96,7 +95,7 @@ function wait_vms() {
 function wait_vm() {
     local vm=$1
 
-    for i in 1 2 3 4 5 6; do
+    for i in 1 2 3 4 5 6 7 8 9 10; do
         ping -q -w 1 -c 1 $vm && break
         sleep 15
     done

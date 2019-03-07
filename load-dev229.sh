@@ -9,16 +9,15 @@ CX5_2=enp6s0f1
 if [ "$1" == "cx5" ]; then
     nic=$CX5
     nic2=$CX5_2
-    vms=`seq 7 8`
 else
     nic=$CX4
     nic2=$CX4_2
-    vms=`seq 5 6`
 fi
 
 vfs=2
 hv=`hostname -s`
 pci=$(basename `readlink /sys/class/net/$nic/device`)
+vms=`seq 5 6`
 
 ##############################################################################
 
@@ -128,7 +127,7 @@ function wait_vm() {
 
     for i in 1 2 3 4 5 6 7 8 9 10; do
         ping -q -w 1 -c 1 $vm && break
-        sleep 10
+        sleep 15
     done
 
     sleep 15 ; # wait little more for lnst to be up
