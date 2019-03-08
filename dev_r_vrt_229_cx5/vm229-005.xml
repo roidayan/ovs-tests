@@ -1,12 +1,12 @@
 <slavemachine>
     <params>
-        <param name="hostname" value="10.213.19.5"/>
+        <param name="hostname" value="10.212.229.5"/>
         <param name="machine_type" value="guest"/>
     </params>
     <interfaces>
-        <eth id="ens6" label="net019_001-vm4">
+        <eth id="ens6" label="net-vm1">
             <params>
-                <param name="hwaddr" value="e4:11:22:16:82:51"/>
+                <param name="hwaddr" value="e4:11:22:26:a2:50"/>
             </params>
         </eth>
     </interfaces>
