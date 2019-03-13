@@ -77,17 +77,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1333837 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vf </tags>
         <tags> frag </tags>
         <tags> vf-rep-udp-fragmented </tags>
@@ -119,17 +108,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1251244 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-iperf-perf </tags>
         <name> test-vf-vf-iperf-perf.sh </name>
@@ -141,17 +119,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1486319 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-fwd </tags>
         <name> test-vf-vf-fwd.sh </name>
@@ -186,21 +153,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <condition_group>
-                    <operand> OR </operand>
-                    <bug> 1486319 </bug>
-                    <bug> 1506933 </bug>
-                </condition_group>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vf </tags>
         <tags> vf-veth-fwd </tags>
         <name> test-vf-veth-fwd.sh </name>
@@ -213,17 +165,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1512689 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-different-esw-ping </tags>
         <name> test-vf-vf-different-esw-ping.sh </name>
@@ -314,17 +255,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1013092 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-flows-during-flows-cleanup </tags>
         <name> test-eswitch-add-del-flows-during-flows-cleanup.sh </name>
@@ -336,17 +266,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1293937 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-flows-during-flows-cleanup2 </tags>
         <name> test-eswitch-add-del-flows-during-flows-cleanup2.sh </name>
@@ -380,17 +299,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1481378 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-in-mode1-del-in-mode2 </tags>
         <name> test-eswitch-add-in-mode1-del-in-mode2.sh </name>
@@ -432,17 +340,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1524524 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-toggle-modes </tags>
         <name> test-eswitch-toggle-modes.sh </name>
@@ -874,17 +771,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1623421 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> ovs-no-implicit-rewrite-on-match </tags>
         <name> test-ovs-no-implicit-rewrite-on-match.sh </name>
@@ -1159,17 +1045,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1499479 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
         <tags> 1M_rules </tags>
@@ -1182,17 +1057,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 988519 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-replace </tags>
         <name> test-tc-replace.sh </name>
@@ -1223,17 +1087,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1540623 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_UPSTREAM] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-rule-act-add </tags>
         <name> test-tc-rule-act-add.sh </name>

@@ -80,17 +80,6 @@
     </case>
 
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1440542 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vxlan </tags>
         <tags> vxlan_ipv6 </tags>
         <tags> 1_virt_ovs_vxlan_ipv6 </tags>
@@ -149,17 +138,6 @@
     </case>
 
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1440542 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vxlan </tags>
         <tags> vxlan_ipv6 </tags>
         <tags> 2_virt_vxlan_ipv6 </tags>
@@ -172,17 +150,6 @@
     </case>
 
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1440542 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_OFED, CENTOS_7_2_NON_DEFAULT_KERNEL_OFED] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vxlan </tags>
         <tags> vxlan_ipv6 </tags>
         <tags> 2_virt_vxlan_ipv6 </tags>
