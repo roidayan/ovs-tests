@@ -24,33 +24,12 @@
         </Case>
     </global>
     <case>
-        <tags> eswitch </tags>
-        <tags> vf </tags>
-        <tags> vf-rep-ping </tags>
-        <name> test-vf-rep-ping.sh </name>
+        <tags> tc </tags>
+        <tags> tc-perf-update </tags>
+        <name> test-tc-perf-update.sh </name>
         <cmd>
             <params>
-                <test> test-vf-rep-ping.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> eswitch </tags>
-        <tags> eswitch-rep-up-time </tags>
-        <name> test-eswitch-rep-up-time.sh </name>
-        <cmd>
-            <params>
-                <test> test-eswitch-rep-up-time.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> eswitch </tags>
-        <tags> eswitch-rep-channels-time </tags>
-        <name> test-eswitch-rep-channels-time.sh </name>
-        <cmd>
-            <params>
-                <test> test-eswitch-rep-channels-time.sh </test>
+                <test> test-tc-perf-update.sh </test>
             </params>
         </cmd>
     </case>
@@ -96,12 +75,33 @@
         </cmd>
     </case>
     <case>
-        <tags> tc </tags>
-        <tags> tc-perf-update </tags>
-        <name> test-tc-perf-update.sh </name>
+        <tags> eswitch </tags>
+        <tags> vf </tags>
+        <tags> vf-rep-ping </tags>
+        <name> test-vf-rep-ping.sh </name>
         <cmd>
             <params>
-                <test> test-tc-perf-update.sh </test>
+                <test> test-vf-rep-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-rep-up-time </tags>
+        <name> test-eswitch-rep-up-time.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-rep-up-time.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-rep-channels-time </tags>
+        <name> test-eswitch-rep-channels-time.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-rep-channels-time.sh </test>
             </params>
         </cmd>
     </case>
