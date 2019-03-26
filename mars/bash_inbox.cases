@@ -783,6 +783,16 @@
         </cmd>
     </case>
     <case>
+        <tags> ovs </tags>
+        <tags> ovs-vf-lag </tags>
+        <name> test-ovs-vf-lag.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vf-lag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> tc </tags>
         <tags> tc-vf-mirror </tags>
         <name> test-tc-vf-mirror.sh </name>
@@ -810,6 +820,16 @@
         <cmd>
             <params>
                 <test> test-tc-vf-remote-mirror.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-vlan-modify </tags>
+        <name> test-tc-vlan-modify.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vlan-modify.sh </test>
             </params>
         </cmd>
     </case>
@@ -1548,6 +1568,16 @@
         <cmd>
             <params>
                 <test> test-ct-tcp-vf-mirror-pedit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ct-tcp-reload </tags>
+        <name> test-ct-tcp-reload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ct-tcp-reload.sh </test>
             </params>
         </cmd>
     </case>
