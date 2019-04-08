@@ -34,6 +34,15 @@
                         <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1655878 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
         </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-sriov-vf-up </tags>
@@ -54,6 +63,15 @@
                         <key> PROJECT </key>
                         <op> in </op>
                         <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1655878 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>

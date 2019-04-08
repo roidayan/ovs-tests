@@ -108,6 +108,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1582714 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-iperf-perf </tags>
         <name> test-vf-vf-iperf-perf.sh </name>
@@ -150,6 +161,15 @@
                         <key> PROJECT </key>
                         <op> in </op>
                         <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1592868 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -266,6 +286,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1681570 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-flows-during-flows-cleanup </tags>
         <name> test-eswitch-add-del-flows-during-flows-cleanup.sh </name>
@@ -277,6 +308,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1681570 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-flows-during-flows-cleanup2 </tags>
         <name> test-eswitch-add-del-flows-during-flows-cleanup2.sh </name>
@@ -341,6 +383,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1582642 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> reload_modules </tags>
         <tags> eswitch-del-flows-during-reload </tags>
@@ -516,6 +569,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1601573 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-dpctl-flows-ttl-tos </tags>
         <name> test-ovs-dpctl-flows-ttl-tos.sh </name>
@@ -575,7 +639,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -826,6 +890,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1731456 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-no-implicit-rewrite-on-match </tags>
         <name> test-ovs-no-implicit-rewrite-on-match.sh </name>
@@ -877,6 +952,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1601619 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-vf-remote-mirror </tags>
         <name> test-tc-vf-remote-mirror.sh </name>
@@ -1019,6 +1105,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1551898 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
         <tags> tc-insert-rules-pedit-ttl-ip </tags>
@@ -1153,6 +1250,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1730473 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-reoffload </tags>
         <name> test-tc-reoffload.sh </name>
@@ -1405,7 +1513,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
