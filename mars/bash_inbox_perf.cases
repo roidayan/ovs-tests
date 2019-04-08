@@ -75,6 +75,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1662696 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> vf </tags>
         <tags> vf-rep-ping </tags>
@@ -86,6 +97,26 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1670881 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1662780 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-rep-up-time </tags>
         <name> test-eswitch-rep-up-time.sh </name>
@@ -96,6 +127,26 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1670881 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1662780 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-rep-channels-time </tags>
         <name> test-eswitch-rep-channels-time.sh </name>

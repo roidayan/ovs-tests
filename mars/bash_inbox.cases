@@ -77,6 +77,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1333837 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> frag </tags>
         <tags> vf-rep-udp-fragmented </tags>
@@ -140,6 +151,26 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1670874 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1574596 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-fwd-fl_classify </tags>
         <name> test-vf-vf-fwd-fl_classify.sh </name>
@@ -252,6 +283,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1667763 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-flows-during-flows-cleanup </tags>
         <name> test-eswitch-add-del-flows-during-flows-cleanup.sh </name>
@@ -262,6 +304,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1667763 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-flows-during-flows-cleanup2 </tags>
         <name> test-eswitch-add-del-flows-during-flows-cleanup2.sh </name>
@@ -314,6 +367,26 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1670933 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565836 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> reload_modules </tags>
         <tags> eswitch-del-flows-during-reload </tags>
@@ -365,6 +438,26 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1670939 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1663718 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-change-hfunc </tags>
         <name> test-eswitch-change-hfunc.sh </name>
@@ -405,6 +498,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-ipv4-match </tags>
         <name> test-ovs-ipv4-match.sh </name>
@@ -415,6 +519,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-ipv6-match </tags>
         <name> test-ovs-ipv6-match.sh </name>
@@ -425,6 +540,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> persistent-data </tags>
         <name> test-ovs-persistent-data.sh </name>
@@ -435,6 +561,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-replace-rule-hw </tags>
         <name> test-ovs-replace-rule-hw.sh </name>
@@ -445,6 +582,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-replace-rule </tags>
         <name> test-ovs-replace-rule.sh </name>
@@ -486,6 +634,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1552152 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-dpctl-flows-enc_ttl-enc_tos </tags>
         <name> test-ovs-dpctl-flows-enc_ttl-enc_tos.sh </name>
@@ -506,6 +665,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-aging-tc-rules </tags>
         <name> test-ovs-aging-tc-rules.sh </name>
@@ -516,6 +686,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -528,6 +709,26 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1678626 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -540,6 +741,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -552,6 +764,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -565,6 +788,26 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1678631 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -578,6 +821,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> ovs-vxlan-flow-key </tags>
@@ -600,6 +854,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565840 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> ovs-multi-vxlan-bridge-ingress </tags>
@@ -611,6 +876,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-icmp-offload </tags>
         <name> test-ovs-icmp-offload.sh </name>
@@ -621,6 +897,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> frag </tags>
         <tags> ovs_frag </tags>
@@ -633,6 +920,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565830 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-tcp-offload </tags>
         <name> test-ovs-tcp-offload.sh </name>
@@ -643,6 +941,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1565389 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-udp-offload </tags>
         <name> test-ovs-udp-offload.sh </name>
@@ -763,6 +1072,26 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1678645 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1659734 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-no-implicit-rewrite-on-match </tags>
         <name> test-ovs-no-implicit-rewrite-on-match.sh </name>
@@ -814,6 +1143,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1716233 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-vf-remote-mirror </tags>
         <name> test-tc-vf-remote-mirror.sh </name>
@@ -956,6 +1296,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1551898 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5, RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
         <tags> tc-insert-rules-pedit-ttl-ip </tags>
@@ -988,6 +1339,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1663081 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rule-rep-uplink-vlan </tags>
         <name> test-tc-insert-rule-rep-uplink-vlan.sh </name>
@@ -998,6 +1360,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1678660 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-fail-hw </tags>
         <name> test-tc-insert-fail-hw.sh </name>
@@ -1056,6 +1429,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1472437 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5, RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
         <tags> 1M_rules </tags>
@@ -1068,6 +1452,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1693550 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-replace </tags>
         <name> test-tc-replace.sh </name>
@@ -1098,6 +1493,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1716256 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-rule-act-add </tags>
         <name> test-tc-rule-act-add.sh </name>
@@ -1235,6 +1641,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1574590 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-traffic-qdisc-del </tags>
         <name> test-tc-traffic-qdisc-del.sh </name>
@@ -1246,6 +1663,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1574590 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-traffic-proto-add-del </tags>
         <name> test-tc-traffic-proto-add-del.sh </name>
@@ -1257,6 +1685,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1574590 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-traffic-filters-add-del </tags>
         <name> test-tc-traffic-filters-add-del.sh </name>
@@ -1268,6 +1707,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1574590 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-traffic-chain-flush </tags>
         <name> test-tc-traffic-chain-flush.sh </name>
@@ -1321,6 +1771,26 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1670902 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1663362 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> vxlan </tags>
         <tags> tc-vxlan-encap </tags>
@@ -1343,6 +1813,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1360599 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5, RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> vxlan </tags>
         <tags> tc-vxlan-decap-in-skip-sw </tags>
@@ -1354,6 +1835,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1663401 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> vxlan </tags>
         <tags> tc-vxlan-decap-proto-all </tags>
