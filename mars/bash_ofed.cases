@@ -108,6 +108,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1583842 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-iperf-perf </tags>
         <name> test-vf-vf-iperf-perf.sh </name>
@@ -129,6 +140,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1540625 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-fwd-fl_delete </tags>
         <name> test-vf-vf-fwd-fl_delete.sh </name>
@@ -140,6 +162,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1593079 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-fwd-fl_classify </tags>
         <name> test-vf-vf-fwd-fl_classify.sh </name>
@@ -466,6 +499,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1716786 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-dpctl-flows </tags>
         <name> test-ovs-dpctl-flows.sh </name>
@@ -476,6 +520,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1707084 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-dpctl-flows-ttl-tos </tags>
         <name> test-ovs-dpctl-flows-ttl-tos.sh </name>
@@ -486,6 +541,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1716789 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-dpctl-flows-enc_ttl-enc_tos </tags>
         <name> test-ovs-dpctl-flows-enc_ttl-enc_tos.sh </name>
@@ -528,6 +594,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1687001 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -565,6 +642,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1708975 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -589,6 +677,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1718036 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> ovs-vxlan-remove-tunnel-during-traffic </tags>
@@ -621,6 +720,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1687001 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> frag </tags>
         <tags> ovs_frag </tags>
@@ -653,6 +763,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1670979 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> overlap </tags>
         <name> test-ovs-overlap-rules.sh </name>
@@ -783,6 +904,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1715873 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-vf-lag </tags>
         <name> test-ovs-vf-lag.sh </name>
@@ -824,6 +956,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1718531 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-vlan-modify </tags>
         <name> test-tc-vlan-modify.sh </name>
@@ -874,6 +1017,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1716797 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rules </tags>
         <name> test-tc-insert-rules.sh </name>
@@ -914,6 +1068,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1610862 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rules-duplicates </tags>
         <name> test-tc-insert-rules-duplicates.sh </name>
@@ -967,6 +1132,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1716808 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> frag </tags>
         <tags> tc_frag </tags>
@@ -998,6 +1174,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1688886 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-fail-hw </tags>
         <name> test-tc-insert-fail-hw.sh </name>
@@ -1078,6 +1265,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1709234 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-reoffload </tags>
         <name> test-tc-reoffload.sh </name>
@@ -1088,6 +1286,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1709735 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-rule-add-null-qdisc </tags>
         <name> test-tc-rule-add-null-qdisc.sh </name>
@@ -1098,6 +1307,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1710252 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-rule-act-add </tags>
         <name> test-tc-rule-act-add.sh </name>
@@ -1450,6 +1670,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1709250 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-restore-rule </tags>
         <name> test-ecmp-restore-rule.sh </name>
@@ -1460,6 +1691,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1709250 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-vxlan-encap-disable-sriov </tags>
         <name> test-ecmp-add-vxlan-encap-disable-sriov.sh </name>
@@ -1470,6 +1712,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1709250 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-vxlan-rule </tags>
         <name> test-ecmp-add-vxlan-rule.sh </name>
@@ -1480,6 +1733,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1709250 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-rule-stats </tags>
         <name> test-ecmp-rule-stats.sh </name>
@@ -1510,6 +1774,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1709250 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-route-events </tags>
         <name> test-ecmp-route-events.sh </name>
@@ -1520,6 +1795,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1709250 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-failover-failback </tags>
         <name> test-ecmp-failover-failback.sh </name>
