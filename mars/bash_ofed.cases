@@ -720,7 +720,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
+                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -777,7 +777,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
+                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -1038,15 +1038,6 @@
                     <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
-             <condition_group>
-                <operand> AND </operand>
-                <bug> 1687001 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
         </ignore>
         <tags> ovs </tags>
         <tags> ovs-no-implicit-rewrite-on-match </tags>
@@ -1210,16 +1201,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1593061 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
             <condition_group>
@@ -1259,7 +1241,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
+                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
             <condition_group>
@@ -1511,7 +1493,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
+                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
             <condition_group>
@@ -1630,7 +1612,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
             <condition_group>
