@@ -840,6 +840,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1582642 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ct </tags>
         <tags> ovs-ct-scapy-udp-reload </tags>
         <name> test-ovs-ct-scapy-udp-reload.sh </name>
@@ -1119,7 +1130,7 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1551898 </bug>
+                    <bug> 1732710 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
