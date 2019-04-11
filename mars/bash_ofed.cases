@@ -400,6 +400,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1733569 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-toggle-mode-ovs-crash </tags>
         <name> test-eswitch-toggle-mode-ovs-crash.sh </name>
@@ -410,6 +421,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1733569 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-toggle-modes </tags>
         <name> test-eswitch-toggle-modes.sh </name>
@@ -1031,7 +1053,7 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1659734 </bug>
+                <bug> 1733506 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
