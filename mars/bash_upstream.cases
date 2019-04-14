@@ -160,7 +160,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
                 <condition_group>
@@ -318,6 +318,15 @@
                         <value> [CENTOS_7_4_JD_CX5] </value>
                     </condition>
                 </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1734602 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
         </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-flows-during-flows-cleanup2 </tags>
@@ -454,7 +463,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -639,7 +648,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_JD_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_JD_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -687,7 +696,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1188,7 +1197,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1504,7 +1513,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1519,6 +1528,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1732534 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-qinq-rules </tags>
         <name> test-tc-qinq-rules.sh </name>
@@ -1567,7 +1587,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_JD_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_JD_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1601,7 +1621,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1730,7 +1750,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
