@@ -184,6 +184,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1732766 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> vf-veth-fwd </tags>
         <name> test-vf-veth-fwd.sh </name>
@@ -1312,6 +1323,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1615551 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-rule-act-add </tags>
         <name> test-tc-rule-act-add.sh </name>
@@ -1451,6 +1473,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1735072 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-traffic-qdisc-del </tags>
         <name> test-tc-traffic-qdisc-del.sh </name>
@@ -1462,6 +1495,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1735072 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-traffic-proto-add-del </tags>
         <name> test-tc-traffic-proto-add-del.sh </name>
@@ -1473,6 +1517,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1735072 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-traffic-filters-add-del </tags>
         <name> test-tc-traffic-filters-add-del.sh </name>
@@ -1484,6 +1539,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1735072 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-traffic-chain-flush </tags>
         <name> test-tc-traffic-chain-flush.sh </name>
@@ -1666,6 +1732,15 @@
                         <key> PROJECT </key>
                         <op> in </op>
                         <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1582642 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
