@@ -1,0 +1,15 @@
+<testdef>
+  <info>
+    <name>test-ovs-geneve-in-ns</name>
+    <desc>test-ovs-geneve-in-ns</desc>
+    <owner>Yevgeny Kliteynik</owner>
+  </info>
+  <tout>1000</tout>
+  <tags>
+    <tag>geneve</tag>
+    <tag>ovs</tag>
+  </tags>
+  <ignore>
+    </bug>
+  </ignore>
+</testdef>
