@@ -77,17 +77,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1333837 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [RHEL_8_0_INBOX_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> vf </tags>
         <tags> frag </tags>
         <tags> vf-rep-udp-fragmented </tags>
@@ -634,17 +623,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1552152 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [RHEL_8_0_INBOX_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> ovs-dpctl-flows-enc_ttl-enc_tos </tags>
         <name> test-ovs-dpctl-flows-enc_ttl-enc_tos.sh </name>
@@ -1079,16 +1057,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [RHEL_7_7_INBOX_CX5] </value>
-                    </condition>
-                </condition_group>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1659734 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [RHEL_8_0_INBOX_CX5] </value>
+                        <value> [RHEL_7_7_INBOX_CX5, RHEL_8_0_INBOX_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
