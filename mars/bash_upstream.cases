@@ -535,7 +535,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -566,7 +566,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -587,7 +587,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -663,6 +663,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1752154 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-aging-tc-rules </tags>
         <name> test-ovs-aging-tc-rules.sh </name>
@@ -1634,7 +1645,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1672,7 +1683,11 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1707536 </bug>
+                    <condition_group>
+                        <operand> OR </operand>
+                        <bug> 1707536 </bug>
+                        <bug> 1732534 </bug>
+                    </condition_group>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
@@ -1890,7 +1905,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
