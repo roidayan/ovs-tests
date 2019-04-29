@@ -524,6 +524,16 @@
         </cmd>
     </case>
     <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-sqn-overflow </tags>
+        <name> test-eswitch-sqn-overflow.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-sqn-overflow.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ovs </tags>
         <tags> ovs-ipv4-match </tags>
         <name> test-ovs-ipv4-match.sh </name>

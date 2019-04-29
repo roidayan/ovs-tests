@@ -487,6 +487,16 @@
         </cmd>
     </case>
     <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-sqn-overflow </tags>
+        <name> test-eswitch-sqn-overflow.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-sqn-overflow.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
                 <condition_group>
                     <operand> AND </operand>

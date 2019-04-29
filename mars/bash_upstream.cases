@@ -518,6 +518,27 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1755201 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch-sqn-overflow </tags>
+        <name> test-eswitch-sqn-overflow.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-sqn-overflow.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ovs </tags>
         <tags> ovs-ipv4-match </tags>
         <name> test-ovs-ipv4-match.sh </name>
