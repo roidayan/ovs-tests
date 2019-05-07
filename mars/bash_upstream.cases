@@ -218,6 +218,16 @@
     </case>
     <case>
         <tags> vf </tags>
+        <tags> vf-vf-prio-tag-ping </tags>
+        <name> test-vf-vf-prio-tag-ping.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-vf-prio-tag-ping.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
         <tags> vf-zero-header-raw </tags>
         <name> test-vf-zero-header-raw.sh </name>
         <cmd>
@@ -1845,12 +1855,33 @@
     </case>
     <case>
         <tags> vxlan </tags>
+        <tags> vxlan-rx-vlan-push-offload </tags>
+        <name> test-vxlan-rx-vlan-push-offload.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-rx-vlan-push-offload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
         <tags> neigh_update </tags>
         <tags> vxlan-neigh-update </tags>
         <name> test-vxlan-neigh-update.sh </name>
         <cmd>
             <params>
                 <test> test-vxlan-neigh-update.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vxlan </tags>
+        <tags> neigh_update </tags>
+        <tags> vxlan-neigh-update-stack </tags>
+        <name> test-vxlan-neigh-update-stack.sh </name>
+        <cmd>
+            <params>
+                <test> test-vxlan-neigh-update-stack.sh </test>
             </params>
         </cmd>
     </case>
