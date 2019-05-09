@@ -1408,6 +1408,15 @@
                         <value> [CENTOS_7_4_JD_CX5] </value>
                     </condition>
                 </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1763707 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> tc-rule-act-add </tags>
@@ -1854,6 +1863,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1764800 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> vxlan </tags>
         <tags> vxlan-rx-vlan-push-offload </tags>
         <name> test-vxlan-rx-vlan-push-offload.sh </name>
@@ -1932,7 +1952,7 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1714809 </bug>
+                    <bug> 1761680 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
