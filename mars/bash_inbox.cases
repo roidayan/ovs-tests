@@ -1001,21 +1001,21 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> ovs-ct-scapy-udp-nat </tags>
-        <name> test-ovs-ct-scapy-udp-nat.sh </name>
+        <tags> ovs-ct-scapy-udp-jd-nat </tags>
+        <name> test-ovs-ct-scapy-udp-jd-nat.sh </name>
         <cmd>
             <params>
-                <test> test-ovs-ct-scapy-udp-nat.sh </test>
+                <test> test-ovs-ct-scapy-udp-jd-nat.sh </test>
             </params>
         </cmd>
     </case>
     <case>
         <tags> ct </tags>
-        <tags> ovs-ct-scapy-udp-nat-reconfig-flows </tags>
-        <name> test-ovs-ct-scapy-udp-nat-reconfig-flows.sh </name>
+        <tags> ovs-ct-scapy-udp-jd-nat-reconfig-flows </tags>
+        <name> test-ovs-ct-scapy-udp-jd-nat-reconfig-flows.sh </name>
         <cmd>
             <params>
-                <test> test-ovs-ct-scapy-udp-nat-reconfig-flows.sh </test>
+                <test> test-ovs-ct-scapy-udp-jd-nat-reconfig-flows.sh </test>
             </params>
         </cmd>
     </case>
@@ -1606,16 +1606,6 @@
         <cmd>
             <params>
                 <test> test-tc-multi-masks-per-prio.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> tc </tags>
-        <tags> tc-merged-esw-vf-pf </tags>
-        <name> test-tc-merged-esw-vf-pf.sh </name>
-        <cmd>
-            <params>
-                <test> test-tc-merged-esw-vf-pf.sh </test>
             </params>
         </cmd>
     </case>
