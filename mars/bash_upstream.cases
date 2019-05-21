@@ -24,6 +24,16 @@
         </Case>
     </global>
     <case>
+        <tags> ethtool </tags>
+        <tags> ethtool-basic </tags>
+        <name> test-ethtool-basic.sh </name>
+        <cmd>
+            <params>
+                <test> test-ethtool-basic.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ifstat </tags>
         <name> test-ifstat.sh </name>
         <cmd>
@@ -549,6 +559,16 @@
         </cmd>
     </case>
     <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-ingress-rate-limit </tags>
+        <name> test-eswitch-ingress-rate-limit.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-ingress-rate-limit.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ovs </tags>
         <tags> ovs-ipv4-match </tags>
         <name> test-ovs-ipv4-match.sh </name>
@@ -886,6 +906,26 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct-vxlan </tags>
+        <name> test-ovs-ct-vxlan.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-vxlan.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-geneve </tags>
+        <name> test-ovs-ct-geneve.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-geneve.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
         <tags> ovs-ct-icmp </tags>
         <name> test-ovs-ct-icmp.sh </name>
         <cmd>
@@ -911,6 +951,56 @@
         <cmd>
             <params>
                 <test> test-ovs-ct-scapy-udp.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-scapy-udp-aging </tags>
+        <name> test-ovs-ct-scapy-udp-aging.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-aging.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-scapy-udp-ct-clear </tags>
+        <name> test-ovs-ct-scapy-udp-ct-clear.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-ct-clear.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-scapy-udp-nat-dnat </tags>
+        <name> test-ovs-ct-scapy-udp-nat-dnat.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-nat-dnat.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-scapy-udp-nat-nop </tags>
+        <name> test-ovs-ct-scapy-udp-nat-nop.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-nat-nop.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-scapy-udp-nat-snat </tags>
+        <name> test-ovs-ct-scapy-udp-nat-snat.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-nat-snat.sh </test>
             </params>
         </cmd>
     </case>
@@ -1033,6 +1123,28 @@
         <cmd>
             <params>
                 <test> test-ovs-vf-lag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> ovs-qinq </tags>
+        <tags> ovs-qinq-1 </tags>
+        <name> test-ovs-qinq-1.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-qinq-1.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> ovs-qinq </tags>
+        <tags> ovs-qinq-2 </tags>
+        <name> test-ovs-qinq-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-qinq-2.sh </test>
             </params>
         </cmd>
     </case>
@@ -1196,6 +1308,16 @@
         <cmd>
             <params>
                 <test> test-tc-bad-egdev-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-bad-indr-vlan-rule </tags>
+        <name> test-tc-bad-indr-vlan-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-bad-indr-vlan-rule.sh </test>
             </params>
         </cmd>
     </case>
@@ -1804,6 +1926,17 @@
     <case>
         <tags> tc </tags>
         <tags> vxlan </tags>
+        <tags> tc-vxlan-decap-key-port-only </tags>
+        <name> test-tc-vxlan-decap-key-port-only.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-decap-key-port-only.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
         <tags> tc-vxlan-outer-dst-mac </tags>
         <name> test-tc-vxlan-outer-dst-mac.sh </name>
         <cmd>
@@ -1939,17 +2072,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1761680 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-restore-rule </tags>
         <name> test-ecmp-restore-rule.sh </name>
@@ -1960,17 +2082,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1714809 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-vxlan-encap-disable-sriov </tags>
         <name> test-ecmp-add-vxlan-encap-disable-sriov.sh </name>
