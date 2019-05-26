@@ -24,6 +24,17 @@
         </Case>
     </global>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1775915 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [RHEL_7_7_INBOX_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-perf-update </tags>
         <name> test-tc-perf-update.sh </name>
