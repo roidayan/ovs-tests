@@ -24,6 +24,17 @@
         </Case>
     </global>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1777915 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ethtool </tags>
         <tags> ethtool-basic </tags>
         <name> test-ethtool-basic.sh </name>
@@ -559,6 +570,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1777918 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-ingress-rate-limit </tags>
         <name> test-eswitch-ingress-rate-limit.sh </name>
@@ -1147,6 +1169,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1777901 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-qinq </tags>
         <tags> ovs-qinq-1 </tags>
@@ -1158,6 +1191,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1777901 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-qinq </tags>
         <tags> ovs-qinq-2 </tags>
@@ -1332,6 +1376,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1777997 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-bad-indr-vlan-rule </tags>
         <name> test-tc-bad-indr-vlan-rule.sh </name>
@@ -1944,6 +1999,17 @@
         </cmd>
     </case>
     <case>
+       <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1776194 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> vxlan </tags>
         <tags> tc-vxlan-decap-key-port-only </tags>
@@ -2013,7 +2079,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
