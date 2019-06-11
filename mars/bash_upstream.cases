@@ -45,6 +45,16 @@
         </cmd>
     </case>
     <case>
+        <tags> ethtool </tags>
+        <tags> ethtool-steering </tags>
+        <name> test-ethtool-steering.sh </name>
+        <cmd>
+            <params>
+                <test> test-ethtool-steering.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ifstat </tags>
         <name> test-ifstat.sh </name>
         <cmd>
@@ -457,6 +467,16 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> eswitch-diff-vfs-per-port </tags>
+        <name> test-eswitch-diff-vfs-per-port.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-diff-vfs-per-port.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
         <tags> eswitch-toggle-mode-ovs-crash </tags>
         <name> test-eswitch-toggle-mode-ovs-crash.sh </name>
         <cmd>
@@ -732,6 +752,28 @@
         <cmd>
             <params>
                 <test> test-ovs-gre-in-ns.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> ovs-geneve </tags>
+        <tags> ovs-geneve-in-ns </tags>
+        <name> test-ovs-geneve-in-ns.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-geneve-in-ns.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> ovs-geneve </tags>
+        <tags> ovs-geneve-in-ns-ipv6 </tags>
+        <name> test-ovs-geneve-in-ns-ipv6.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-geneve-in-ns-ipv6.sh </test>
             </params>
         </cmd>
     </case>
@@ -1320,7 +1362,17 @@
         <name> test-tc-insert-rules-gre.sh </name>
         <cmd>
             <params>
-                <test>test-tc-insert-rules-gre.sh </test>
+                <test> test-tc-insert-rules-gre.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-insert-rules-geneve </tags>
+        <name> test-tc-insert-rules-geneve.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-geneve.sh </test>
             </params>
         </cmd>
     </case>
@@ -2139,16 +2191,6 @@
     </case>
     <case>
         <tags> ecmp </tags>
-        <tags> ecmp-vf-rep-ping-reconfig-sriov </tags>
-        <name> test-ecmp-vf-rep-ping-reconfig-sriov.sh </name>
-        <cmd>
-            <params>
-                <test> test-ecmp-vf-rep-ping-reconfig-sriov.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> ecmp </tags>
         <tags> ecmp-add-multipath-rule </tags>
         <name> test-ecmp-add-multipath-rule.sh </name>
         <cmd>
@@ -2221,21 +2263,11 @@
     </case>
     <case>
         <tags> ecmp </tags>
-        <tags> ecmp-vf-vf-different-esw-ping </tags>
-        <name> test-ecmp-vf-vf-different-esw-ping.sh </name>
+        <tags> ecmp-load-balance </tags>
+        <name> test-ecmp-load-balance.sh </name>
         <cmd>
             <params>
-                <test> test-ecmp-vf-vf-different-esw-ping.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> ecmp </tags>
-        <tags> ecmp-vf-vf-ping </tags>
-        <name> test-ecmp-vf-vf-ping.sh </name>
-        <cmd>
-            <params>
-                <test> test-ecmp-vf-vf-ping.sh </test>
+                <test> test-ecmp-load-balance.sh </test>
             </params>
         </cmd>
     </case>
