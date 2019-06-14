@@ -9,6 +9,6 @@
     <tag>geneve</tag>
   </tags>
   <ignore>
-    </bug>
+    <bug/>
   </ignore>
 </testdef>
