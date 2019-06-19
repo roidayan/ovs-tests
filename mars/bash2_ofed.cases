@@ -49,7 +49,7 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1702663 </bug>
+                <bug> 1540622 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
