@@ -1110,6 +1110,26 @@
             </params>
         </cmd>
     </case>
+       <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-icmp-frag </tags>
+        <name> test-ovs-ct-icmp-frag.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-icmp-frag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-udp-frag </tags>
+        <name> test-ovs-ct-udp-frag.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-udp-frag.sh </test>
+            </params>
+        </cmd>
+    </case>
     <case>
         <tags> ct </tags>
         <tags> ovs-ct-tcp </tags>
@@ -2380,6 +2400,16 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ct-icmp </tags>
+        <name> test-ct-icmp.sh </name>
+        <cmd>
+            <params>
+                <test> test-ct-icmp.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
         <tags> ct-icmp-fwd </tags>
         <name> test-ct-icmp-fwd.sh </name>
         <cmd>
@@ -2390,11 +2420,11 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> ct-icmp </tags>
-        <name> test-ct-icmp.sh </name>
+        <tags> ct-icmp-frag </tags>
+        <name> test-ct-icmp-frag.sh </name>
         <cmd>
             <params>
-                <test> test-ct-icmp.sh </test>
+                <test> test-ct-icmp-frag.sh </test>
             </params>
         </cmd>
     </case>
