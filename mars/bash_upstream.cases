@@ -31,7 +31,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -45,6 +45,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1820000 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ethtool </tags>
         <tags> ethtool-steering </tags>
         <name> test-ethtool-steering.sh </name>
@@ -86,6 +97,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1811982 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> vf </tags>
         <tags> vf-rep-ping-reconfig-sriov </tags>
@@ -108,6 +130,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1333837 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> frag </tags>
         <tags> vf-rep-udp-fragmented </tags>
@@ -146,7 +179,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -191,7 +224,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
                 <condition_group>
@@ -200,7 +233,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -222,7 +255,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -318,6 +351,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1821529 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-different-flows </tags>
         <name> test-eswitch-add-del-different-flows.sh </name>
@@ -328,6 +372,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1821529 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-different-flows2 </tags>
         <name> test-eswitch-add-del-different-flows2.sh </name>
@@ -345,7 +400,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -367,16 +422,16 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1734602 </bug>
+                    <bug> 1821529 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -394,11 +449,11 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1688863 </bug>
+                    <bug> 1821529 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -434,6 +489,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1821529 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-del-flows-during-add </tags>
         <name> test-eswitch-del-flows-during-add.sh </name>
@@ -447,11 +513,20 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
+                    <bug> 1821529 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
                     <bug> 1582642 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -525,7 +600,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -576,7 +651,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -597,7 +672,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -628,7 +703,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -659,7 +734,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -680,7 +755,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -722,7 +797,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -778,17 +853,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1752154 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> ovs-aging-tc-rules </tags>
         <name> test-ovs-aging-tc-rules.sh </name>
@@ -811,17 +875,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1465595 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_JD_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -866,7 +919,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1126,7 +1179,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1197,7 +1250,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1231,17 +1284,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1777901 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> ovs-qinq </tags>
         <tags> ovs-qinq-1 </tags>
@@ -1253,17 +1295,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1777901 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> ovs-qinq </tags>
         <tags> ovs-qinq-2 </tags>
@@ -1285,6 +1316,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1821529 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> header_rewrite </tags>
         <tags> tc-vf-mirror-pedit </tags>
@@ -1303,7 +1345,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1417,17 +1459,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1732521 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rules-duplicates </tags>
         <name> test-tc-insert-rules-duplicates.sh </name>
@@ -1448,17 +1479,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1777997 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_NET_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-bad-indr-vlan-rule </tags>
         <name> test-tc-bad-indr-vlan-rule.sh </name>
@@ -1498,7 +1518,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1552,7 +1572,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1643,7 +1663,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1674,16 +1694,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
-                    </condition>
-                </condition_group>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1763707 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1823,7 +1834,16 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1821539 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1845,7 +1865,16 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1821539 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1867,7 +1896,16 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1821539 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1889,7 +1927,16 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
+                    </condition>
+                </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1821539 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1915,17 +1962,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1732534 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-hairpin </tags>
         <tags> tc-hairpin-disable-sriov </tags>
@@ -1937,17 +1973,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1732534 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-qinq-rules </tags>
         <name> test-tc-qinq-rules.sh </name>
@@ -1958,17 +1983,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1732534 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-icmp-4-channels </tags>
         <name> test-tc-icmp-4-channels.sh </name>
@@ -1979,21 +1993,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <condition_group>
-                        <operand> OR </operand>
-                        <bug> 1707536 </bug>
-                        <bug> 1732534 </bug>
-                    </condition_group>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-wrong-tunnel </tags>
         <name> test-tc-wrong-tunnel.sh </name>
@@ -2011,7 +2010,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_JD_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_JD_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -2045,7 +2044,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -2071,17 +2070,6 @@
         </cmd>
     </case>
     <case>
-       <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1776194 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> vxlan </tags>
         <tags> tc-vxlan-decap-key-port-only </tags>
@@ -2107,20 +2095,11 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1688863 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-                <condition_group>
-                    <operand> AND </operand>
                     <bug> 1582642 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -2151,7 +2130,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -2220,6 +2199,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1761680 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-restore-rule </tags>
         <name> test-ecmp-restore-rule.sh </name>
@@ -2240,17 +2230,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1714809 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-vxlan-rule </tags>
         <name> test-ecmp-add-vxlan-rule.sh </name>
@@ -2264,11 +2243,11 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1714809 </bug>
+                    <bug> 1800513 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -2282,6 +2261,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1641302 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-load-balance </tags>
         <name> test-ecmp-load-balance.sh </name>
@@ -2292,17 +2282,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1714809 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-route-events </tags>
         <name> test-ecmp-route-events.sh </name>
@@ -2313,17 +2292,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1714809 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-failover-failback </tags>
         <name> test-ecmp-failover-failback.sh </name>

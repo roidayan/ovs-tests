@@ -4,7 +4,7 @@
         <Test>
             <name>bash_cases</name>
             <info></info>
-            <owner>roid</owner>
+            <owner>ziyadat</owner>
             <pre>
                 <type> reg_exec_cmd </type>
                 <name> preconfigure </name>
@@ -27,20 +27,11 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1702663 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-                <condition_group>
-                    <operand> AND </operand>
                     <bug> 1655878 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -58,20 +49,11 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1702663 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [CENTOS_7_4_UPSTREAM_CX5, CENTOS_7_4_NET_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-                <condition_group>
-                    <operand> AND </operand>
                     <bug> 1655878 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [CENTOS_7_4_JD_CX5] </value>
+                        <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
