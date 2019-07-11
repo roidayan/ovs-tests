@@ -56,6 +56,15 @@
                         <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1540622 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
         </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-127-reps </tags>
