@@ -33,6 +33,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1825751 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ethtool </tags>
         <tags> ethtool-basic </tags>
         <name> test-ethtool-basic.sh </name>
@@ -205,6 +216,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1825786 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-different-esw-ping </tags>
         <name> test-vf-vf-different-esw-ping.sh </name>
@@ -514,6 +536,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1824060 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-miss-rules </tags>
         <name> test-eswitch-miss-rules.sh </name>
@@ -1752,6 +1785,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1726617 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
         <tags> tc-max-rules-case-index-0 </tags>
@@ -1829,6 +1873,17 @@
                     <key> PROJECT </key>
                     <op> in </op>
                     <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1825788 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -1935,7 +1990,7 @@
             </condition_group>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1802236 </bug>
+                <bug> 1811990 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
@@ -2557,11 +2612,11 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1725808 </bug>
+                <bug> 1825745 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
+                    <value> [CENTOS_7_5_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
         </ignore>
