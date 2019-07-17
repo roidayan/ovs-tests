@@ -1274,6 +1274,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1806091 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-vf-lag </tags>
         <name> test-ovs-vf-lag.sh </name>
@@ -2206,7 +2217,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
