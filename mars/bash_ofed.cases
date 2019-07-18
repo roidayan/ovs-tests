@@ -1046,6 +1046,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1830716 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-tcp-offload </tags>
         <name> test-ovs-tcp-offload.sh </name>
@@ -2219,6 +2230,15 @@
                     <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1830741 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> tc-traffic-proto-add-del </tags>
@@ -2241,6 +2261,15 @@
                     <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1830741 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> tc-traffic-filters-add-del </tags>
@@ -2261,6 +2290,15 @@
                     <key> PROJECT </key>
                     <op> in </op>
                     <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1830741 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
         </ignore>
