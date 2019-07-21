@@ -1067,6 +1067,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1831497 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ CENTOS_7_6_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-udp-offload </tags>
         <name> test-ovs-udp-offload.sh </name>
@@ -2356,6 +2367,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1831556 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ CENTOS_7_4_OFED_4_6_CX5 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-icmp-4-channels </tags>
         <name> test-tc-icmp-4-channels.sh </name>
