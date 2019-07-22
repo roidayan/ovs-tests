@@ -351,6 +351,16 @@
         </cmd>
     </case>
     <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-reps-2ports </tags>
+        <name> test-eswitch-reps-2ports.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-reps-2ports.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
@@ -865,6 +875,17 @@
     <case>
         <tags> ovs </tags>
         <tags> vxlan </tags>
+        <tags> ovs-vxlan </tags>
+        <name> test-ovs-vxlan.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
         <tags> ovs-vxlan-in-ns </tags>
         <name> test-ovs-vxlan-in-ns.sh </name>
@@ -1033,6 +1054,26 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct-vxlan-2 </tags>
+        <name> test-ovs-ct-vxlan-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-vxlan-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-vxlan-3 </tags>
+        <name> test-ovs-ct-vxlan-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-vxlan-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
         <tags> ovs-ct-geneve </tags>
         <name> test-ovs-ct-geneve.sh </name>
         <cmd>
@@ -1093,6 +1134,26 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct-tcp-iperf3 </tags>
+        <name> test-ovs-ct-tcp-iperf3.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-tcp-iperf3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-tcp-mac-rewrite </tags>
+        <name> test-ovs-ct-tcp-mac-rewrite.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-tcp-mac-rewrite.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
         <tags> ovs-ct-scapy-udp </tags>
         <name> test-ovs-ct-scapy-udp.sh </name>
         <cmd>
@@ -1108,6 +1169,16 @@
         <cmd>
             <params>
                 <test> test-ovs-ct-scapy-udp-aging.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-scapy-udp-aging-ovs </tags>
+        <name> test-ovs-ct-scapy-udp-aging-ovs.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-aging-ovs.sh </test>
             </params>
         </cmd>
     </case>
@@ -2066,6 +2137,17 @@
         <cmd>
             <params>
                 <test> test-tc-vxlan-decap-in-skip-sw.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
+        <tags> tc-vxlan-decap-inner-match-drop </tags>
+        <name> test-tc-vxlan-decap-inner-match-drop.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-decap-inner-match-drop.sh </test>
             </params>
         </cmd>
     </case>
