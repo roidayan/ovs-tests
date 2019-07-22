@@ -597,6 +597,16 @@
         </cmd>
     </case>
     <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-reps-2ports </tags>
+        <name> test-eswitch-reps-2ports.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-reps-2ports.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
@@ -1131,6 +1141,26 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct-vxlan-2 </tags>
+        <name> test-ovs-ct-vxlan-2.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-vxlan-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-vxlan-3 </tags>
+        <name> test-ovs-ct-vxlan-3.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-vxlan-3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
         <tags> ovs-ct-geneve </tags>
         <name> test-ovs-ct-geneve.sh </name>
         <cmd>
@@ -1181,11 +1211,32 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct-tcp-iperf3 </tags>
+        <name> test-ovs-ct-tcp-iperf3.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-tcp-iperf3.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
         <tags> ovs-ct-tcp-2ports </tags>
         <name> test-ovs-ct-tcp-2ports.sh </name>
         <cmd>
             <params>
                 <test> test-ovs-ct-tcp-2ports.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> header_rewrite </tags>
+        <tags> ovs-ct-tcp-mac-rewrite </tags>
+        <name> test-ovs-ct-tcp-mac-rewrite.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-tcp-mac-rewrite.sh </test>
             </params>
         </cmd>
     </case>
@@ -1206,6 +1257,16 @@
         <cmd>
             <params>
                 <test> test-ovs-ct-scapy-udp-aging.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct-scapy-udp-aging-ovs </tags>
+        <name> test-ovs-ct-scapy-udp-aging-ovs.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-scapy-udp-aging-ovs.sh </test>
             </params>
         </cmd>
     </case>
@@ -1409,6 +1470,17 @@
         <cmd>
             <params>
                 <test> test-ovs-qinq-2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> ovs-vxlan </tags>
+        <name> test-ovs-vxlan.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan.sh </test>
             </params>
         </cmd>
     </case>
@@ -2475,6 +2547,17 @@
     <case>
         <tags> tc </tags>
         <tags> vxlan </tags>
+        <tags> tc-vxlan-decap-inner-match-drop </tags>
+        <name> test-tc-vxlan-decap-inner-match-drop.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-vxlan-decap-inner-match-drop.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> vxlan </tags>
         <tags> tc-vxlan-decap-proto-all </tags>
         <name> test-tc-vxlan-decap-proto-all.sh </name>
         <cmd>
@@ -2606,27 +2689,6 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1795414 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
-        <tags> ecmp </tags>
-        <tags> ecmp-add-multipath-rule </tags>
-        <name> test-ecmp-add-multipath-rule.sh </name>
-        <cmd>
-            <params>
-                <test> test-ecmp-add-multipath-rule.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
                 <bug> 1725808 </bug>
                 <condition>
                     <key> PROJECT </key>
@@ -2746,6 +2808,27 @@
         <cmd>
             <params>
                 <test> test-ecmp-failover-failback.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1795414 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+        <tags> ecmp </tags>
+        <tags> ecmp-add-multipath-rule </tags>
+        <name> test-ecmp-add-multipath-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ecmp-add-multipath-rule.sh </test>
             </params>
         </cmd>
     </case>
