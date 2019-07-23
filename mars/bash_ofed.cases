@@ -1021,7 +1021,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5 ] </value>
+                    <value> [ CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5 ] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -1095,7 +1095,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ CENTOS_7_6_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5] </value>
+                    <value> [ CENTOS_7_6_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5 ] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -1399,6 +1399,15 @@
                     <key> PROJECT </key>
                     <op> in </op>
                     <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1835651 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ CENTOS_7_4_OFED_4_6_CX5 ] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -2311,6 +2320,15 @@
                     <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5] </value>
                 </condition>
             </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1830741 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ CENTOS_7_5_OFED_4_6_CX5 ] </value>
+                </condition>
+            </condition_group>
         </ignore>
         <tags> tc </tags>
         <tags> tc-traffic-qdisc-del </tags>
@@ -2545,6 +2563,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1835642 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ CENTOS_7_6_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> vxlan </tags>
         <tags> tc-vxlan-decap-inner-match-drop </tags>
