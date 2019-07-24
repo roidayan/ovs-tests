@@ -1352,7 +1352,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [FEDORA_27_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1401,7 +1401,7 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1821529 </bug>
+                    <bug> 1838347 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
@@ -2141,6 +2141,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1837362 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> vxlan </tags>
         <tags> tc-vxlan-decap-inner-match-drop </tags>
@@ -2292,17 +2303,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1761680 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-restore-rule </tags>
         <name> test-ecmp-restore-rule.sh </name>
@@ -2385,6 +2385,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1837353 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-failover-failback </tags>
         <name> test-ecmp-failover-failback.sh </name>
