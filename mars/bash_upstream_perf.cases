@@ -24,17 +24,6 @@
         </Case>
     </global>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1712968 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-perf-update </tags>
         <name> test-tc-perf-update.sh </name>
