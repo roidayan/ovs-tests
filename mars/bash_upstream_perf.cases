@@ -57,6 +57,27 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-par-add-del-vxlan </tags>
+        <name> test-tc-par-add-del-vxlan.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-par-add-del-vxlan.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-par-add-del-vxlan-neigh-update </tags>
+        <name> test-tc-par-add-del-vxlan-neigh-update.sh </name>
+        <tout> 400 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-par-add-del-vxlan-neigh-update.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
         <tags> tc-par-add-dump-del </tags>
         <name> test-tc-par-add-dump-del.sh </name>
         <cmd>
