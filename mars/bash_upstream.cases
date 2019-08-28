@@ -1044,6 +1044,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-vxlan </tags>
         <name> test-ovs-ct-vxlan.sh </name>
         <cmd>
@@ -1054,6 +1055,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-vxlan-2 </tags>
         <name> test-ovs-ct-vxlan-2.sh </name>
         <cmd>
@@ -1064,6 +1066,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-vxlan-3 </tags>
         <name> test-ovs-ct-vxlan-3.sh </name>
         <cmd>
@@ -1074,6 +1077,29 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
+        <tags> ovs-ct-vxlan-vf-lag </tags>
+        <name> test-ovs-ct-vxlan-vf-lag.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-vxlan-vf-lag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct </tags>
+        <tags> ovs-ct-vxlan-vf-mirror </tags>
+        <name> test-ovs-ct-vxlan-vf-mirror.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-vxlan-vf-mirror.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-geneve </tags>
         <name> test-ovs-ct-geneve.sh </name>
         <cmd>
@@ -1084,6 +1110,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-icmp </tags>
         <name> test-ovs-ct-icmp.sh </name>
         <cmd>
@@ -1094,6 +1121,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-icmp-frag </tags>
         <name> test-ovs-ct-icmp-frag.sh </name>
         <cmd>
@@ -1104,6 +1132,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-udp-frag </tags>
         <name> test-ovs-ct-udp-frag.sh </name>
         <cmd>
@@ -1114,6 +1143,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-tcp </tags>
         <name> test-ovs-ct-tcp.sh </name>
         <cmd>
@@ -1124,6 +1154,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-tcp-2ports </tags>
         <name> test-ovs-ct-tcp-2ports.sh </name>
         <cmd>
@@ -1134,6 +1165,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-tcp-iperf3 </tags>
         <name> test-ovs-ct-tcp-iperf3.sh </name>
         <cmd>
@@ -1144,6 +1176,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-tcp-mac-rewrite </tags>
         <name> test-ovs-ct-tcp-mac-rewrite.sh </name>
         <cmd>
@@ -1154,6 +1187,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp </tags>
         <name> test-ovs-ct-scapy-udp.sh </name>
         <cmd>
@@ -1164,6 +1198,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-aging </tags>
         <name> test-ovs-ct-scapy-udp-aging.sh </name>
         <cmd>
@@ -1174,6 +1209,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-aging-ovs </tags>
         <name> test-ovs-ct-scapy-udp-aging-ovs.sh </name>
         <cmd>
@@ -1184,6 +1220,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-ct-clear </tags>
         <name> test-ovs-ct-scapy-udp-ct-clear.sh </name>
         <cmd>
@@ -1194,6 +1231,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-nat-dnat </tags>
         <name> test-ovs-ct-scapy-udp-nat-dnat.sh </name>
         <cmd>
@@ -1204,6 +1242,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-nat-nop </tags>
         <name> test-ovs-ct-scapy-udp-nat-nop.sh </name>
         <cmd>
@@ -1214,6 +1253,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-nat-snat </tags>
         <name> test-ovs-ct-scapy-udp-nat-snat.sh </name>
         <cmd>
@@ -1224,6 +1264,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-jd-nat </tags>
         <name> test-ovs-ct-scapy-udp-jd-nat.sh </name>
         <cmd>
@@ -1234,6 +1275,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-jd-nat-reconfig-flows </tags>
         <name> test-ovs-ct-scapy-udp-jd-nat-reconfig-flows.sh </name>
         <cmd>
@@ -1255,6 +1297,7 @@
                 </condition_group>
         </ignore>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-reload </tags>
         <name> test-ovs-ct-scapy-udp-reload.sh </name>
         <cmd>
@@ -1265,6 +1308,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-down-up </tags>
         <name> test-ovs-ct-scapy-udp-down-up.sh </name>
         <cmd>
@@ -1275,6 +1319,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-cycle-esw-modes </tags>
         <name> test-ovs-ct-scapy-udp-cycle-esw-modes.sh </name>
         <cmd>
@@ -1285,6 +1330,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-vf-mirror </tags>
         <name> test-ovs-ct-scapy-udp-vf-mirror.sh </name>
         <cmd>
@@ -1295,6 +1341,7 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-scapy-udp-2ports </tags>
         <name> test-ovs-ct-scapy-udp-2ports.sh </name>
         <cmd>
@@ -1305,11 +1352,23 @@
     </case>
     <case>
         <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-icmp-cycle-esw-modes </tags>
         <name> test-ovs-ct-icmp-cycle-esw-modes.sh </name>
         <cmd>
             <params>
                 <test> test-ovs-ct-icmp-cycle-esw-modes.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct </tags>
+        <tags> ovs-ct-miss-to-sw </tags>
+        <name> test-ovs-ct-miss-to-sw.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-miss-to-sw.sh </test>
             </params>
         </cmd>
     </case>
