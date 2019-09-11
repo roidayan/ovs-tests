@@ -182,6 +182,15 @@
                         <value> [FEDORA_27_JD_CX5] </value>
                     </condition>
                 </condition_group>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1251244 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
         </ignore>
         <tags> vf </tags>
         <tags> vf-vf-iperf-perf </tags>
@@ -1740,7 +1749,7 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1658428 </bug>
+                    <bug> 1901640 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
@@ -2123,6 +2132,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1904158 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-hairpin </tags>
         <tags> tc-hairpin-rules </tags>
@@ -2134,6 +2154,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1904158 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-hairpin </tags>
         <tags> tc-hairpin-disable-sriov </tags>
