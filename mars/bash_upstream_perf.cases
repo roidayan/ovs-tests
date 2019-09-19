@@ -25,16 +25,6 @@
     </global>
     <case>
         <tags> tc </tags>
-        <tags> tc-perf-update </tags>
-        <name> test-tc-perf-update.sh </name>
-        <cmd>
-            <params>
-                <test> test-tc-perf-update.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <tags> tc </tags>
         <tags> tc-par-add-ovr-del </tags>
         <name> test-tc-par-add-ovr-del.sh </name>
         <tout> 1200 </tout>
@@ -148,6 +138,66 @@
         <cmd>
             <params>
                 <test> test-eswitch-rep-channels-time.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <pre>
+            <type> reg_exec_cmd </type>
+            <name> preconfigure </name>
+            <tout> 300 </tout>
+            <params>
+                <exec> /.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/load-test.sh [[conf:extra_info.hca_type]] </exec>
+            </params>
+        </pre>
+        <tags> tc </tags>
+        <tags> tc-insertion-rate-fw </tags>
+        <name> test-tc-insertion-rate-fw.sh </name>
+        <tout> 1500 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-insertion-rate-fw.sh </test>
+                <option> /.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/tc-insertion-rate-fw-data.txt </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <pre>
+            <type> reg_exec_cmd </type>
+            <name> preconfigure </name>
+            <tout> 300 </tout>
+            <params>
+                <exec> /.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/load-test.sh [[conf:extra_info.hca_type]] </exec>
+            </params>
+        </pre>
+        <tags> tc </tags>
+        <tags> tc-insertion-rate-skip_hw </tags>
+        <name> test-tc-insertion-rate-skip_hw.sh </name>
+        <tout> 1000 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-insertion-rate-skip_hw.sh </test>
+                <option> /.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/tc-insertion-rate-skip_hw-data.txt </option>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <pre>
+            <type> reg_exec_cmd </type>
+            <name> preconfigure </name>
+            <tout> 300 </tout>
+            <params>
+                <exec> /.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/load-test.sh [[conf:extra_info.hca_type]] </exec>
+            </params>
+        </pre>
+        <tags> tc </tags>
+        <tags> tc-insertion-rate-sw </tags>
+        <name> test-tc-insertion-rate-sw.sh </name>
+        <tout> 1400 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-insertion-rate-sw.sh </test>
+                <option> /.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/tc-insertion-rate-sw-data.txt </option>
             </params>
         </cmd>
     </case>
