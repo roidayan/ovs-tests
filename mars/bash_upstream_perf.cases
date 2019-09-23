@@ -157,7 +157,7 @@
         <cmd>
             <params>
                 <test> test-tc-insertion-rate-fw.sh </test>
-                <option> /.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/tc-insertion-rate-fw-data.txt </option>
+                <option> BASE_LINE_FILE=/.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/tc-insertion-rate-fw-data.txt </option>
             </params>
         </cmd>
     </case>
@@ -177,7 +177,7 @@
         <cmd>
             <params>
                 <test> test-tc-insertion-rate-skip_hw.sh </test>
-                <option> /.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/tc-insertion-rate-skip_hw-data.txt </option>
+                <option> BASE_LINE_FILE=/.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/tc-insertion-rate-skip_hw-data.txt </option>
             </params>
         </cmd>
     </case>
@@ -197,7 +197,7 @@
         <cmd>
             <params>
                 <test> test-tc-insertion-rate-sw.sh </test>
-                <option> /.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/tc-insertion-rate-sw-data.txt </option>
+                <option> BASE_LINE_FILE=/.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/tc-insertion-rate-sw-data.txt </option>
             </params>
         </cmd>
     </case>
