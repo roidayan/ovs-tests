@@ -58,11 +58,11 @@
                 </condition_group>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1540622 </bug>
+                    <bug> 1918316 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
