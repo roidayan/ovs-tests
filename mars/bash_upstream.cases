@@ -1815,6 +1815,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1928555 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
         <tags> 1M_rules </tags>
@@ -2020,11 +2031,11 @@
                 </condition_group>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1821539 </bug>
+                    <bug> 1928570 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -2051,11 +2062,11 @@
                 </condition_group>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1821539 </bug>
+                    <bug> 1928570 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -2082,11 +2093,11 @@
                 </condition_group>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1821539 </bug>
+                    <bug> 1928570 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -2113,11 +2124,11 @@
                 </condition_group>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1821539 </bug>
+                    <bug> 1928570 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
