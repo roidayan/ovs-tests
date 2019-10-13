@@ -33,17 +33,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1825751 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> ethtool </tags>
         <tags> ethtool-basic </tags>
         <name> test-ethtool-basic.sh </name>
@@ -52,6 +41,17 @@
                 <test> test-ethtool-basic.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1825751 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> eswitch </tags>
@@ -129,17 +129,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1583842 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-iperf-perf </tags>
         <name> test-vf-vf-iperf-perf.sh </name>
@@ -148,6 +137,41 @@
                 <test> test-vf-vf-iperf-perf.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1918199 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ 4.20.0-mlnx, 5.2.0-mlnx ] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1583842 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4, centos_7_2 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> vf </tags>
@@ -161,17 +185,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1726617 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-fwd-fl_delete </tags>
         <name> test-vf-vf-fwd-fl_delete.sh </name>
@@ -181,6 +194,27 @@
                 <test> test-vf-vf-fwd-fl_delete.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1726617 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4, centos_7_2 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <ignore>
@@ -327,17 +361,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1669330 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-flows-during-flows-cleanup </tags>
         <name> test-eswitch-add-del-flows-during-flows-cleanup.sh </name>
@@ -346,19 +369,29 @@
                 <test> test-eswitch-add-del-flows-during-flows-cleanup.sh </test>
             </params>
         </cmd>
-    </case>
-    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1669330 </bug>
+                <bug> 1928565 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4, centos_7_2 ] </value>
                 </condition>
             </condition_group>
         </ignore>
+    </case>
+    <case>
         <tags> eswitch </tags>
         <tags> eswitch-add-del-flows-during-flows-cleanup2 </tags>
         <name> test-eswitch-add-del-flows-during-flows-cleanup2.sh </name>
@@ -367,6 +400,27 @@
                 <test> test-eswitch-add-del-flows-during-flows-cleanup2.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1928565 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4, centos_7_2 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> reload_modules </tags>
@@ -617,17 +671,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1630228 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-change-hfunc </tags>
         <name> test-eswitch-change-hfunc.sh </name>
@@ -636,6 +679,46 @@
                 <test> test-eswitch-change-hfunc.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1927267 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_5 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ 4.20.0-mlnx ] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1927267 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_2, centos_7_4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <ignore>
@@ -761,17 +844,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1755846 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> ovs-replace-rule-hw </tags>
         <name> test-ovs-replace-rule-hw.sh </name>
@@ -780,8 +852,6 @@
                 <test> test-ovs-replace-rule-hw.sh </test>
             </params>
         </cmd>
-    </case>
-    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
@@ -789,10 +859,12 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
+                    <value> [ MLNX_OFED-4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
+    </case>
+    <case>
         <tags> ovs </tags>
         <tags> ovs-replace-rule </tags>
         <name> test-ovs-replace-rule.sh </name>
@@ -801,28 +873,19 @@
                 <test> test-ovs-replace-rule.sh </test>
             </params>
         </cmd>
-    </case>
-    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1652907 </bug>
+                <bug> 1755846 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1806380 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                    <value> [ MLNX_OFED-4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
+    </case>
+    <case>
         <tags> ovs </tags>
         <tags> header_rewrite </tags>
         <tags> ovs-rewrite-ipv4-macs </tags>
@@ -845,6 +908,27 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
+                <bug> 1806380 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> ovs-dpctl-flows </tags>
+        <name> test-ovs-dpctl-flows.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-dpctl-flows.sh </test>
+            </params>
+        </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
                 <bug> 1716786 </bug>
                 <condition>
                     <key> PROJECT </key>
@@ -852,14 +936,14 @@
                     <value> [ MLNX_OFED-4 ] </value>
                 </condition>
                 <condition>
-                    <key> OS </key>
-                    <op> in </op>
-                    <value> [ centos_7_4 ] </value>
-                </condition>
-                <condition>
                     <key> KERNEL </key>
                     <op> in </op>
                     <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
