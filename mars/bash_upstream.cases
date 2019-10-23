@@ -311,11 +311,23 @@
     </case>
     <case>
         <tags> vf </tags>
+        <tags> vf-lag-all </tags>
         <tags> vf-lag </tags>
         <name> test-vf-lag.sh </name>
         <cmd>
             <params>
                 <test> test-vf-lag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <tags> vf-lag-all </tags>
+        <tags> vf-lag-before-sriov </tags>
+        <name> test-vf-lag-before-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-lag-before-sriov.sh </test>
             </params>
         </cmd>
     </case>
@@ -593,11 +605,47 @@
     <case>
         <tags> eswitch </tags>
         <tags> eswitch-toggle-mode-parallel </tags>
+        <tags> eswitch-toggle-mode-parallel-all </tags>
         <name> test-eswitch-toggle-mode-parallel.sh </name>
         <tout> 600 </tout>
         <cmd>
             <params>
                 <test> test-eswitch-toggle-mode-parallel.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-toggle-mode-parallel2 </tags>
+        <tags> eswitch-toggle-mode-parallel-all </tags>
+        <name> test-eswitch-toggle-mode-parallel2.sh </name>
+        <tout> 600 </tout>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-parallel2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1944974 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch-toggle-mode-parallel3 </tags>
+        <tags> eswitch-toggle-mode-parallel-all </tags>
+        <name> test-eswitch-toggle-mode-parallel3.sh </name>
+        <tout> 600 </tout>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-parallel3.sh </test>
             </params>
         </cmd>
     </case>
@@ -801,11 +849,24 @@
     <case>
         <tags> ovs </tags>
         <tags> header_rewrite </tags>
+        <tags> ovs-header-rewrite </tags>
         <tags> ovs-rewrite-ipv4-macs </tags>
         <name> test-ovs-rewrite-ipv4-macs.sh </name>
         <cmd>
             <params>
                 <test> test-ovs-rewrite-ipv4-macs.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> header_rewrite </tags>
+        <tags> ovs-header-rewrite </tags>
+        <tags> ovs-rewrite-tos-dscp </tags>
+        <name> test-ovs-rewrite-tos-dscp.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-rewrite-tos-dscp.sh </test>
             </params>
         </cmd>
     </case>
