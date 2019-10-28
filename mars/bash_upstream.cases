@@ -1691,6 +1691,27 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1718378 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-insert-rules-mirror </tags>
+        <name> test-tc-insert-rules-mirror.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-mirror.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> tc </tags>
         <tags> tc-insert-rules-port2 </tags>
         <name> test-tc-insert-rules-port2.sh </name>
