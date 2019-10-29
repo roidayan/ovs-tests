@@ -494,6 +494,108 @@
         </cmd>
     </case>
     <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-toggle-mode-parallel2 </tags>
+        <tags> eswitch-toggle-mode-parallel-all </tags>
+        <name> test-eswitch-toggle-mode-parallel2.sh </name>
+        <tout> 600 </tout>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-parallel2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-toggle-mode-parallel3 </tags>
+        <tags> eswitch-toggle-mode-parallel-all </tags>
+        <name> test-eswitch-toggle-mode-parallel3.sh </name>
+        <tout> 600 </tout>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-parallel3.sh </test>
+            </params>
+        </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1955352 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_5 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ 4.20.0-mlnx ] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1955352 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_6 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ 5.2.0-mlnx ] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1955352 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_2 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1955352 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+    </case>
+    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
@@ -1752,6 +1854,16 @@
         <cmd>
             <params>
                 <test> test-tc-insert-rules-legacy.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-insert-rules-mirror </tags>
+        <name> test-tc-insert-rules-mirror.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-mirror.sh </test>
             </params>
         </cmd>
     </case>
