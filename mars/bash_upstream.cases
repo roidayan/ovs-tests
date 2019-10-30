@@ -290,6 +290,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1951263 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-prio-tag-ping </tags>
         <name> test-vf-vf-prio-tag-ping.sh </name>
@@ -681,17 +692,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1890707 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-miss-rules </tags>
         <name> test-eswitch-miss-rules.sh </name>
@@ -722,17 +722,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1755201 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-sqn-overflow </tags>
         <name> test-eswitch-sqn-overflow.sh </name>
@@ -2528,17 +2517,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1890811 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-restore-rule </tags>
         <name> test-ecmp-restore-rule.sh </name>
@@ -2621,17 +2599,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1890811 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-failover-failback </tags>
         <name> test-ecmp-failover-failback.sh </name>
