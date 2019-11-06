@@ -954,6 +954,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1962272 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -1629,6 +1640,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1962272 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rules </tags>
         <name> test-tc-insert-rules.sh </name>
@@ -1711,6 +1733,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1962272 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rules-duplicates </tags>
         <name> test-tc-insert-rules-duplicates.sh </name>
@@ -2281,11 +2314,11 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1890711 </bug>
+                    <bug> 1962272 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -2444,7 +2477,7 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1764800 </bug>
+                    <bug> 1885705 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
@@ -2462,6 +2495,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1962272 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> vxlan </tags>
         <tags> neigh_update </tags>
         <tags> vxlan-neigh-update </tags>
@@ -2484,6 +2528,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1962272 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> vxlan </tags>
         <tags> neigh_update </tags>
         <tags> vxlan-neigh-update-warn </tags>
@@ -2495,6 +2550,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1962272 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> vxlan </tags>
         <tags> neigh_update </tags>
         <tags> header_rewrite </tags>
@@ -2507,6 +2573,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1962272 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-multipath-rule </tags>
         <name> test-ecmp-add-multipath-rule.sh </name>
@@ -2517,6 +2594,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1962272 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-restore-rule </tags>
         <name> test-ecmp-restore-rule.sh </name>
@@ -2527,6 +2615,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1962272 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-vxlan-encap-disable-sriov </tags>
         <name> test-ecmp-add-vxlan-encap-disable-sriov.sh </name>
@@ -2537,6 +2636,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1962272 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-add-vxlan-rule </tags>
         <name> test-ecmp-add-vxlan-rule.sh </name>
@@ -2550,7 +2660,7 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1800513 </bug>
+                    <bug> 1962272 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
@@ -2571,7 +2681,7 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1641302 </bug>
+                    <bug> 1962272 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
@@ -2599,6 +2709,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1962272 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ecmp </tags>
         <tags> ecmp-failover-failback </tags>
         <name> test-ecmp-failover-failback.sh </name>
