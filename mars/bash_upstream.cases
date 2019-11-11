@@ -334,11 +334,11 @@
     <case>
         <tags> vf </tags>
         <tags> vf-lag-all </tags>
-        <tags> vf-lag-before-sriov </tags>
-        <name> test-vf-lag-before-sriov.sh </name>
+        <tags> vf-lag-nic-netdev </tags>
+        <name> test-vf-lag-nic-netdev.sh </name>
         <cmd>
             <params>
-                <test> test-vf-lag-before-sriov.sh </test>
+                <test> test-vf-lag-nic-netdev.sh </test>
             </params>
         </cmd>
     </case>
@@ -594,6 +594,16 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> eswitch-toggle-mode-nic-netdev </tags>
+        <name> test-eswitch-toggle-mode-nic-netdev.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-nic-netdev.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
         <tags> eswitch-toggle-mode-ovs-crash </tags>
         <name> test-eswitch-toggle-mode-ovs-crash.sh </name>
         <cmd>
@@ -662,6 +672,16 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> eswitch-nic-netdev-tx </tags>
+        <name> test-eswitch-nic-netdev-tx.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-nic-netdev-tx.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
         <tags> eswitch_no_carrier </tags>
         <name> test-eswitch-no-carrier.sh </name>
         <cmd>
@@ -718,6 +738,16 @@
         <cmd>
             <params>
                 <test> test-eswitch-set-vf-rate.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-set-vf-vlan </tags>
+        <name> test-eswitch-set-vf-vlan.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-set-vf-vlan.sh </test>
             </params>
         </cmd>
     </case>
@@ -1698,6 +1728,27 @@
         <cmd>
             <params>
                 <test> test-tc-insert-rules-legacy.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1909500 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-insert-rules-matchall </tags>
+        <name> test-tc-insert-rules-matchall.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-matchall.sh </test>
             </params>
         </cmd>
     </case>
