@@ -162,13 +162,13 @@
             </params>
         </pre>
         <tags> tc </tags>
-        <tags> tc-insertion-rate-fw </tags>
-        <name> test-tc-insertion-rate-fw.sh </name>
+        <tags> tc-insertion-rate-fw-no_percpu </tags>
+        <name> test-tc-insertion-rate-fw-no_percpu.sh </name>
         <tout> 1500 </tout>
         <cmd>
             <params>
-                <test> test-tc-insertion-rate-fw.sh </test>
-                <option> BASE_LINE_FILE=/.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/[[conf:extra_info.branch_name]]/[[conf:extra_info.hca_type]]/tc-insertion-rate-fw-data.txt </option>
+                <test> test-tc-insertion-rate-fw-no_percpu.sh </test>
+                <option> BASE_LINE_FILE=/.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/[[conf:extra_info.branch_name]]/[[conf:extra_info.hca_type]]/tc-insertion-rate-fw-no_percpu-data.txt </option>
             </params>
         </cmd>
     </case>
@@ -183,13 +183,13 @@
         </pre>
         <tags> tc </tags>
 
-        <tags> tc-insertion-rate-skip_hw </tags>
-        <name> test-tc-insertion-rate-skip_hw.sh </name>
+        <tags> tc-insertion-rate-skip_hw-no_percpu </tags>
+        <name> test-tc-insertion-rate-skip_hw-no_percpu.sh </name>
         <tout> 1000 </tout>
         <cmd>
             <params>
-                <test> test-tc-insertion-rate-skip_hw.sh </test>
-                <option> BASE_LINE_FILE=/.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/[[conf:extra_info.branch_name]]/[[conf:extra_info.hca_type]]/tc-insertion-rate-skip_hw-data.txt </option>
+                <test> test-tc-insertion-rate-skip_hw-no_percpu.sh </test>
+                <option> BASE_LINE_FILE=/.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/[[conf:extra_info.branch_name]]/[[conf:extra_info.hca_type]]/tc-insertion-rate-skip_hw-no_percpu-data.txt </option>
             </params>
         </cmd>
     </case>
@@ -203,13 +203,13 @@
             </params>
         </pre>
         <tags> tc </tags>
-        <tags> tc-insertion-rate-sw </tags>
-        <name> test-tc-insertion-rate-sw.sh </name>
+        <tags> tc-insertion-rate-sw-no_percpu </tags>
+        <name> test-tc-insertion-rate-sw-no_percpu.sh </name>
         <tout> 1400 </tout>
         <cmd>
             <params>
-                <test> test-tc-insertion-rate-sw.sh </test>
-                <option> BASE_LINE_FILE=/.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/[[conf:extra_info.branch_name]]/[[conf:extra_info.hca_type]]/tc-insertion-rate-sw-data.txt </option>
+                <test> test-tc-insertion-rate-sw-no_percpu.sh </test>
+                <option> BASE_LINE_FILE=/.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/REG-R-VRT-019-060/upstream_perf/[[conf:extra_info.branch_name]]/[[conf:extra_info.hca_type]]/tc-insertion-rate-sw-no_percpu-data.txt </option>
             </params>
         </cmd>
     </case>
