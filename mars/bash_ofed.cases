@@ -217,17 +217,6 @@
         </ignore>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1593079 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> vf </tags>
         <tags> vf-vf-fwd-fl_classify </tags>
         <name> test-vf-vf-fwd-fl_classify.sh </name>
@@ -237,6 +226,17 @@
                 <test> test-vf-vf-fwd-fl_classify.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1593079 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> vf </tags>
@@ -381,12 +381,16 @@
                 <condition>
                     <key> KERNEL </key>
                     <op> in </op>
-                    <value> [ default ] </value>
+                    <value> [ 4.20.0-mlnx, default ] </value>
                 </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1955352 </bug>
                 <condition>
-                    <key> OS </key>
+                    <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ centos_7_4, centos_7_2 ] </value>
+                    <value> [ MLNX_OFED-4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -412,12 +416,16 @@
                 <condition>
                     <key> KERNEL </key>
                     <op> in </op>
-                    <value> [ default ] </value>
+                    <value> [ 4.20.0-mlnx, default ] </value>
                 </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1955352 </bug>
                 <condition>
-                    <key> OS </key>
+                    <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ centos_7_4, centos_7_2 ] </value>
+                    <value> [ MLNX_OFED-4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -445,26 +453,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1718998 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1655572 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-add-in-mode1-del-in-mode2 </tags>
         <name> test-eswitch-add-in-mode1-del-in-mode2.sh </name>
@@ -473,6 +461,17 @@
                 <test> test-eswitch-add-in-mode1-del-in-mode2.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug>  1655572 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> eswitch </tags>
@@ -1021,17 +1020,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1687001 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -1042,28 +1030,19 @@
                 <test> test-ovs-vxlan-in-ns.sh </test>
             </params>
         </cmd>
-    </case>
-    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1687001 </bug>
+                <bug> 1708975</bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1718182 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
+                    <value> [ MLNX_OFED-4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
+    </case>
+    <case>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -1074,6 +1053,27 @@
                 <test> test-ovs-vxlan-in-ns-dpctl.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1919896 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_2 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> ovs </tags>
@@ -1088,17 +1088,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1687001 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> vxlan-tc-sw </tags>
@@ -1110,6 +1099,17 @@
                 <test> test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1708975 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <ignore>
@@ -1167,26 +1167,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1718036 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1610829 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> ovs-vxlan-remove-tunnel-during-traffic </tags>
@@ -1196,6 +1176,17 @@
                 <test> test-ovs-vxlan-remove-tunnel-during-traffic.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1610829 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> ovs </tags>
@@ -1607,26 +1598,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1733506 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1835651 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [ CENTOS_7_4_OFED_4_6_CX5 ] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> ovs </tags>
         <tags> ovs-no-implicit-rewrite-on-match </tags>
         <name> test-ovs-no-implicit-rewrite-on-match.sh </name>
@@ -1635,6 +1606,17 @@
                 <test> test-ovs-no-implicit-rewrite-on-match.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1733506 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> ovs </tags>
@@ -1763,17 +1745,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1718531 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-vlan-modify </tags>
         <name> test-tc-vlan-modify.sh </name>
@@ -1782,6 +1753,27 @@
                 <test> test-tc-vlan-modify.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1718531 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4, centos_7_2 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> tc </tags>
@@ -1833,6 +1825,25 @@
             </params>
         </cmd>
         <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1939639 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_2 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+            </condition_group>
             <condition_group>
                 <operand> AND </operand>
                 <bug> 1716797 </bug>
@@ -1903,35 +1914,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1655572 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1718998 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1709285 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rules-legacy </tags>
         <name> test-tc-insert-rules-legacy.sh </name>
@@ -1940,6 +1922,17 @@
                 <test> test-tc-insert-rules-legacy.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1655572 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> tc </tags>
@@ -1962,17 +1955,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1610862 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rules-duplicates </tags>
         <name> test-tc-insert-rules-duplicates.sh </name>
@@ -1981,19 +1963,19 @@
                 <test> test-tc-insert-rules-duplicates.sh </test>
             </params>
         </cmd>
-    </case>
-    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1443045 </bug>
+                <bug> 1610862 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
+                    <value> [ MLNX_OFED-4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
+    </case>
+    <case>
         <tags> tc </tags>
         <tags> tc-bad-egdev-rules </tags>
         <name> test-tc-bad-egdev-rules.sh </name>
@@ -2002,19 +1984,19 @@
                 <test> test-tc-bad-egdev-rules.sh </test>
             </params>
         </cmd>
-    </case>
-    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1795404 </bug>
+                <bug> 1583350 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
+                    <value> [ MLNX_OFED-4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
+    </case>
+    <case>
         <tags> tc </tags>
         <tags> tc-bad-indr-vlan-rule </tags>
         <name> test-tc-bad-indr-vlan-rule.sh </name>
@@ -2023,6 +2005,17 @@
                 <test> test-tc-bad-indr-vlan-rule.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1795404 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> tc </tags>
@@ -2080,26 +2073,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1655572 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1718998 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rule-without-match </tags>
         <name> test-tc-insert-rule-without-match.sh </name>
@@ -2108,6 +2081,17 @@
                 <test> test-tc-insert-rule-without-match.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug>  1655572 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <ignore>
@@ -2152,17 +2136,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1556337 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5,CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-ip-tos-ip-ttl </tags>
         <name> test-tc-ip-tos-ip-ttl.sh </name>
@@ -2171,6 +2144,22 @@
                 <test> test-tc-ip-tos-ip-ttl.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug>  1556337 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <ignore>
@@ -2197,26 +2186,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1655572 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1718998 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-max-rules </tags>
         <tags> tc-max-rules-legacy </tags>
@@ -2227,6 +2196,22 @@
                 <test> test-tc-max-rules-legacy.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1556337 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <ignore>
