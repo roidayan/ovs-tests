@@ -38,11 +38,20 @@ import logging
 import commands
 import traceback
 from itertools import chain
+from argparse import ArgumentParser
 
 class DynamicObject(object):
     pass
 
 class SetupConfigure(object):
+
+    def ParseArgs(self, args):
+        self.Parser.add_argument('--skip_ovs_config', help='Skip openvswitch configuration', action='store_false')
+
+        (namespaces, args) = self.Parser.parse_known_args(args)
+
+        for key, value in vars(namespaces).items():
+            setattr(self, key, value)
 
     def Run(self):
         try:
@@ -56,6 +65,9 @@ class SetupConfigure(object):
             self.host.name = re.search('(\d+\.\d+\.\d+\.\d)',output.strip()).group(1)
 
             self.LoadPFInfo()
+            self.DestroyVFs()
+
+            self.UpdatePFInfo()
             self.CreateVFs()
             self.LoadVFInfo()
 
@@ -69,7 +81,8 @@ class SetupConfigure(object):
 
             self.EnableDevOffload()
 
-            self.ConfigureOVS()
+            if self.skip_ovs_config:
+                self.ConfigureOVS()
 
             self.AttachVFs()
             self.UpdateVFInfo()
@@ -91,6 +104,11 @@ class SetupConfigure(object):
             raise RuntimeError('Failed to query interface names\n%s' % (output))
 
         for PFName in set(output.strip().split()) - set(['lo']):
+            (rc, output) = commands.getstatusoutput('readlink /sys/class/net/%s/device' % PFName)
+
+            if rc:
+                continue
+
             (rc, output) = commands.getstatusoutput('readlink /sys/class/net/%s/device/physfn' % PFName)
 
             if not rc:
@@ -189,9 +207,9 @@ class SetupConfigure(object):
             if pfInfo:
                 pfInfo['vfs'][vfIndex]['rep'] = repName
 
-    def CreateVFs(self):
+    def DestroyVFs(self):
         for PFInfo in self.host.PNics:
-            self.Logger.info('Creating 2 VFs over %s' % PFInfo['name'])
+            self.Logger.info('Destroying VFs over %s' % PFInfo['name'])
 
             (rc, output) = commands.getstatusoutput('echo 0 > /sys/class/net/%s/device/sriov_numvfs' % PFInfo['name'])
 
@@ -199,6 +217,10 @@ class SetupConfigure(object):
                 raise RuntimeError('Failed to delete VFs over %s\n%s' % (PFInfo['name'], output))
 
             time.sleep(2)
+
+    def CreateVFs(self):
+        for PFInfo in self.host.PNics:
+            self.Logger.info('Creating 2 VFs over %s' % PFInfo['name'])
 
             (rc, output) = commands.getstatusoutput('echo 2 > /sys/class/net/%s/device/sriov_numvfs' % PFInfo['name'])
 
@@ -317,8 +339,16 @@ class SetupConfigure(object):
 
         return self.logger
 
+    def GetParser(self):
+        if not hasattr(self, 'parser'):
+            self.parser = ArgumentParser(prog=self.__class__.__name__)
+
+        return self.parser
+
     Logger = property(GetLogger)
+    Parser = property(GetParser)
 
 if __name__ == "__main__":
     setupConfigure = SetupConfigure()
+    setupConfigure.ParseArgs(sys.argv[1:])
     sys.exit(setupConfigure.Run())
