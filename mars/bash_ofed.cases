@@ -66,6 +66,60 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> eswitch-toggle-mode-nic-netdev-reload </tags>
+        <name> test-eswitch-toggle-mode-nic-netdev-reload.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-nic-netdev-reload.sh </test>
+            </params>
+        </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1977252 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-toggle-mode-nic-netdev-disable-sriov </tags>
+        <name> test-eswitch-toggle-mode-nic-netdev-disable-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-nic-netdev-disable-sriov.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> nic-netdev </tags>
+        <tags> all-eswitch-toggle-mode-nic-netdev </tags>
+        <tags> eswitch-toggle-mode-nic-netdev </tags>
+        <name> test-eswitch-toggle-mode-nic-netdev.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-nic-netdev.sh </test>
+            </params>
+        </cmd>
+    </case>
+     <case>
+        <tags> eswitch </tags>
+        <tags> nic-netdev </tags>
+        <tags> eswitch-nic-netdev-tx </tags>
+        <name> test-eswitch-nic-netdev-tx.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-nic-netdev-tx.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
         <tags> vf </tags>
         <tags> vf-rep-ping-change-mtu </tags>
         <name> test-vf-rep-ping-change-mtu.sh </name>
@@ -105,6 +159,18 @@
         <cmd>
             <params>
                 <test> test-vf-rep-udp-fragmented.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> vf </tags>
+        <tags> nic-netdev </tags>
+        <tags> all-vf-lag </tags>
+        <tags> vf-lag-nic-netdev </tags>
+        <name> test-vf-lag-nic-netdev.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-lag-nic-netdev.sh </test>
             </params>
         </cmd>
     </case>
@@ -812,6 +878,18 @@
         </cmd>
     </case>
     <case>
+        <tags> ovs </tags>
+        <tags> header_rewrite </tags>
+        <tags> ovs-header-rewrite </tags>
+        <tags> ovs-rewrite-tos-dscp </tags>
+        <name> test-ovs-rewrite-tos-dscp.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-rewrite-tos-dscp.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
@@ -883,6 +961,16 @@
                 </condition>
             </condition_group>
         </ignore>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> ovs-tc-rules-checker </tags>
+        <name> test-ovs-tc-rules-checker.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-tc-rules-checker.sh </test>
+            </params>
+        </cmd>
     </case>
     <case>
         <tags> ovs </tags>
@@ -1749,6 +1837,16 @@
         <cmd>
             <params>
                 <test> test-tc-vf-remote-mirror.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-insert-rules-vxlan </tags>
+        <name> test-tc-insert-rules-vxlan.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-vxlan.sh </test>
             </params>
         </cmd>
     </case>
