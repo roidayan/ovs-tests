@@ -322,7 +322,7 @@
     </case>
     <case>
         <tags> vf </tags>
-        <tags> vf-lag-all </tags>
+        <tags> all-vf-lag </tags>
         <tags> vf-lag </tags>
         <name> test-vf-lag.sh </name>
         <cmd>
@@ -333,7 +333,8 @@
     </case>
     <case>
         <tags> vf </tags>
-        <tags> vf-lag-all </tags>
+        <tags> nic-netdev </tags>
+        <tags> all-vf-lag </tags>
         <tags> vf-lag-nic-netdev </tags>
         <name> test-vf-lag-nic-netdev.sh </name>
         <cmd>
@@ -594,11 +595,37 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> nic-netdev </tags>
+        <tags> all-eswitch-toggle-mode-nic-netdev </tags>
         <tags> eswitch-toggle-mode-nic-netdev </tags>
         <name> test-eswitch-toggle-mode-nic-netdev.sh </name>
         <cmd>
             <params>
                 <test> test-eswitch-toggle-mode-nic-netdev.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> nic-netdev </tags>
+        <tags> all-eswitch-toggle-mode-nic-netdev </tags>
+        <tags> eswitch-toggle-mode-nic-netdev-reload </tags>
+        <name> test-eswitch-toggle-mode-nic-netdev-reload.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-nic-netdev-reload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> nic-netdev </tags>
+        <tags> all-eswitch-toggle-mode-nic-netdev </tags>
+        <tags> eswitch-toggle-mode-nic-netdev-disable-sriov </tags>
+        <name> test-eswitch-toggle-mode-nic-netdev-disable-sriov.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-nic-netdev-disable-sriov.sh </test>
             </params>
         </cmd>
     </case>
@@ -626,7 +653,7 @@
     <case>
         <tags> eswitch </tags>
         <tags> eswitch-toggle-mode-parallel </tags>
-        <tags> eswitch-toggle-mode-parallel-all </tags>
+        <tags> all-eswitch-toggle-mode-parallel </tags>
         <name> test-eswitch-toggle-mode-parallel.sh </name>
         <tout> 600 </tout>
         <cmd>
@@ -638,7 +665,7 @@
     <case>
         <tags> eswitch </tags>
         <tags> eswitch-toggle-mode-parallel2 </tags>
-        <tags> eswitch-toggle-mode-parallel-all </tags>
+        <tags> all-eswitch-toggle-mode-parallel </tags>
         <name> test-eswitch-toggle-mode-parallel2.sh </name>
         <tout> 600 </tout>
         <cmd>
@@ -661,7 +688,7 @@
         </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-toggle-mode-parallel3 </tags>
-        <tags> eswitch-toggle-mode-parallel-all </tags>
+        <tags> all-eswitch-toggle-mode-parallel </tags>
         <name> test-eswitch-toggle-mode-parallel3.sh </name>
         <tout> 600 </tout>
         <cmd>
@@ -681,6 +708,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1977943 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch-netdev-tx </tags>
         <name> test-eswitch-netdev-tx.sh </name>
@@ -692,6 +730,7 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> nic-netdev </tags>
         <tags> eswitch-nic-netdev-tx </tags>
         <name> test-eswitch-nic-netdev-tx.sh </name>
         <cmd>
@@ -1249,6 +1288,7 @@
     <case>
         <tags> ct </tags>
         <tags> ovs-ct </tags>
+        <tags> all-vf-lag </tags>
         <tags> ovs-ct-vxlan-vf-lag </tags>
         <name> test-ovs-ct-vxlan-vf-lag.sh </name>
         <cmd>
@@ -1631,6 +1671,7 @@
                 </condition_group>
         </ignore>
         <tags> ovs </tags>
+        <tags> all-vf-lag </tags>
         <tags> ovs-vf-lag </tags>
         <name> test-ovs-vf-lag.sh </name>
         <cmd>
@@ -1710,7 +1751,7 @@
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [FEDORA_27_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -1992,6 +2033,27 @@
         <cmd>
             <params>
                 <test> test-tc-insert-rules-frag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1975177 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_27_UPSTREAM_CX5, FEDORA_27_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-insert-rules-vxlan </tags>
+        <name> test-tc-insert-rules-vxlan.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-vxlan.sh </test>
             </params>
         </cmd>
     </case>
