@@ -45,17 +45,6 @@
         </cmd>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1818204 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> test-tc-par-add-del </tags>
         <name> test-tc-par-add-del.sh </name>
@@ -64,6 +53,27 @@
                 <test> test-tc-par-add-del.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1992660 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> tc </tags>
@@ -74,6 +84,27 @@
                 <test> test-tc-par-add-del-vxlan.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1992660 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_2, centos_7_4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> tc </tags>
@@ -85,19 +116,29 @@
                 <test> test-tc-par-add-del-vxlan-neigh-update.sh </test>
             </params>
         </cmd>
-    </case>
-    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1818204 </bug>
+                <bug> 1992660 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
+    </case>
+    <case>
         <tags> tc </tags>
         <tags> tc-par-add-dump-del </tags>
         <name> test-tc-par-add-dump-del.sh </name>
@@ -106,19 +147,29 @@
                 <test> test-tc-par-add-dump-del.sh </test>
             </params>
         </cmd>
-    </case>
-    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1818204 </bug>
+                <bug> 1992660 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
+    </case>
+    <case>
         <tags> tc </tags>
         <tags> tc-par-add-dup </tags>
         <name> test-tc-par-add-dup.sh </name>
@@ -127,6 +178,27 @@
                 <test> test-tc-par-add-dup.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1992660 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> eswitch </tags>
