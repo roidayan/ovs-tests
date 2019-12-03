@@ -133,7 +133,7 @@
                 <condition>
                     <key> OS </key>
                     <op> in </op>
-                    <value> [ centos_7_4 ] </value>
+                    <value> [ centos_7_2, centos_7_4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -164,7 +164,7 @@
                 <condition>
                     <key> OS </key>
                     <op> in </op>
-                    <value> [ centos_7_4 ] </value>
+                    <value> [ centos_7_2, centos_7_4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -195,7 +195,7 @@
                 <condition>
                     <key> OS </key>
                     <op> in </op>
-                    <value> [ centos_7_4 ] </value>
+                    <value> [ centos_7_2, centos_7_4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
