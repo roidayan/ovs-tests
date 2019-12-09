@@ -103,7 +103,7 @@ def deco(line, color):
 
 
 def strip_color(line):
-    return re.sub("\033\[[0-9 ;]*m", '', line)
+    return re.sub(r"\033\[[0-9 ;]*m", '', line)
 
 
 def print_result(res, out):
@@ -199,7 +199,7 @@ def update_skip_according_to_rm():
                     break
         data = ''.join(data)
         t = os.path.basename(t)
-        bugs = re.findall("#\s*Bug SW #([0-9]+):", data)
+        bugs = re.findall(r"#\s*Bug SW #([0-9]+):", data)
         for b in bugs:
             task = rm.get_issue(b)
             sys.stdout.write('.')
