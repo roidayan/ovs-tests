@@ -66,6 +66,26 @@
     </case>
     <case>
         <tags> eswitch </tags>
+        <tags> eswitch-par-actions </tags>
+        <name> test-eswitch-par-actions.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-par-actions.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-par-actions-devlink-compat </tags>
+        <name> test-eswitch-par-actions-devlink-compat.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-par-actions-devlink-compat.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
         <tags> eswitch-toggle-mode-nic-netdev-reload </tags>
         <name> test-eswitch-toggle-mode-nic-netdev-reload.sh </name>
         <cmd>
@@ -115,6 +135,36 @@
         <cmd>
             <params>
                 <test> test-eswitch-nic-netdev-tx.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-netdev-tx </tags>
+        <name> test-eswitch-netdev-tx.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-netdev-tx.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-switchdev-ndos </tags>
+        <name> test-eswitch-switchdev-ndos.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-switchdev-ndos.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> eswitch-trust-dscp </tags>
+        <name> test-eswitch-trust-dscp.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-trust-dscp.sh </test>
             </params>
         </cmd>
     </case>
