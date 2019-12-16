@@ -273,6 +273,11 @@ class SetupConfigure(object):
     def ConfigureOVS(self):
         self.Logger.info("Setting [hw-offload=true] configuration to OVS" )
 
+        (rc, output) = commands.getstatusoutput('systemctl restart openvswitch')
+
+        if rc:
+            raise RuntimeError('Failed to restart openvswitch service\n%s' % (output))
+
         (rc, output) = commands.getstatusoutput('ovs-vsctl set Open_vSwitch . other_config:hw-offload=true')
 
         if rc:
