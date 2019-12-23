@@ -1,7 +1,24 @@
 description:
-    This DB is for running basic tests for upstream CI (currently not supporting OVS)
+    This DB is for running basic tests for CI
 tests:
+    test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-eswitch-set-vf-mac.sh:
-    test-tc-groups-overlapping.sh:
-    test-vf-rep-ping.sh:
+    test-ovs-aging-tc-rules.sh:
+    test-ovs-icmp-offload.sh:
+    test-ovs-ipv4-match.sh:
+    test-ovs-multi-vxlan-bridge-ingress.sh:
+    test-ovs-overlap-rules.sh:
+    test-ovs-vf-mirror.sh:
+    test-ovs-vxlan-in-ns.sh:
+    test-tc-bad-egdev-rules.sh:
     test-tc-groups-multi-fgs.sh:
+    test-tc-groups-overlapping.sh:
+    test-tc-icmp-4-channels.sh:
+    test-tc-insert-rule-without-match.sh:
+    test-tc-insert-rules-pedit.sh:
+    test-tc-insert-rules.sh:
+    test-tc-vf-mirror.sh:
+    test-vf-rep-ping.sh:
+    test-vf-vf-ping.sh:
+    test-vxlan-neigh-update.sh:
+    test-vxlan-port-offload.sh:
