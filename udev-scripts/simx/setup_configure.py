@@ -34,6 +34,7 @@ import re
 import os
 import sys
 import time
+import socket
 import logging
 import commands
 import traceback
@@ -57,12 +58,7 @@ class SetupConfigure(object):
         try:
             self.host = DynamicObject()
 
-            (rc, output) = commands.getstatusoutput('hostname -i')
-
-            if rc:
-                raise RuntimeError('Failed to query trusted IP\n%s' % (output))
-
-            self.host.name = re.search('(\d+\.\d+\.\d+\.\d)',output.strip()).group(1)
+            self.host.name = socket.gethostbyname(socket.gethostname())
 
             self.LoadPFInfo()
             self.DestroyVFs()
