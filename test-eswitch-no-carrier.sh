@@ -26,19 +26,11 @@ sleep 1
 require_interfaces NIC VF
 ip link set dev $NIC up
 ip link set dev $VF up
+carrier=`cat /sys/class/net/$VF/carrier`
 
-timeout=5
-for i in $(seq $timeout); do
-    sleep 1
-    echo "sleep $i"
-    carrier=`cat /sys/class/net/$VF/carrier`
-    if [[ "$carrier" == "1" ]]; then
-        break
-    fi
-    if [[ "$carrier" == "0" && "$i" == "$timeout" ]]; then
-        ip link show dev $VF
-        err "VF $VF has no carrier"
-    fi
-done
+if [ "$carrier" == "0" ]; then
+    ip link show dev $VF
+    err "VF $VF has no carrier"
+fi
 
 test_done
