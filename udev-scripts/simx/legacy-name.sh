@@ -8,4 +8,4 @@ if [ -z "$ID_NET_NAME_PATH" ]; then
 	exit 0
 fi
 
-echo NAME=$ID_NET_NAME_PATH
+echo NAME="${ID_NET_NAME_PATH%%np[[:digit:]]}"
