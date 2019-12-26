@@ -1,0 +1,7 @@
+description:
+    This DB is for running basic tests for nic mode regression
+tests:
+    test-eswitch-nic-netdev-tx.sh:
+    test-eswitch-toggle-mode-nic-netdev.sh:
+    test-eswitch-toggle-mode-nic-netdev-disable-sriov.sh:
+    test-eswitch-toggle-mode-nic-netdev-reload.sh:

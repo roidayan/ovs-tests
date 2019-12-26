@@ -1,0 +1,4 @@
+description:
+    This DB is for running basic tests for dual servers setups
+tests:
+    test-ovs-vxlan.sh:
