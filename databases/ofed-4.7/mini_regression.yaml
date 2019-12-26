@@ -2,6 +2,7 @@ description:
     This DB is for running basic tests for CI
 tests:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
+        RM: [1655572]
     test-eswitch-set-vf-mac.sh:
     test-ovs-aging-tc-rules.sh:
     test-ovs-icmp-offload.sh:
