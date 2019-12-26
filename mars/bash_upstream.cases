@@ -740,6 +740,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 2037058 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5, FEDORA_30_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch_no_carrier </tags>
         <name> test-eswitch-no-carrier.sh </name>
