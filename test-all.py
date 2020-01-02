@@ -185,7 +185,7 @@ def update_skip_according_to_db(db_file):
     print
 
     if not test_will_run:
-        raise Exception('All Tests will be ignored !')
+        raise RuntimeError('All tests are ignored.')
 
 
 def update_skip_according_to_rm():
@@ -293,6 +293,9 @@ def main(args):
             update_skip_according_to_rm()
     except KeyboardInterrupt:
         print 'Interrupted'
+        return 1
+    except RuntimeError, e:
+        print "ERROR: %s" % e
         return 1
 
     print "%-54s %-8s %s" % ("Test", "Time", "Status")
