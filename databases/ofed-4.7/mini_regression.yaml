@@ -2,14 +2,16 @@ description:
     This DB is for running basic tests for CI
 tests:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
-        RM: [1655572]
+        ignore_kernel:
+            .*: [1655572]
     test-eswitch-set-vf-mac.sh:
     test-ovs-aging-tc-rules.sh:
     test-ovs-icmp-offload.sh:
     test-ovs-ipv4-match.sh:
     test-ovs-multi-vxlan-bridge-ingress.sh:
     test-ovs-vxlan-in-ns.sh:
-        RM: [1708975]
+        ignore_kernel:
+            .*: [1708975]
     test-tc-groups-multi-fgs.sh:
     test-tc-groups-overlapping.sh:
     test-tc-icmp-4-channels.sh:
