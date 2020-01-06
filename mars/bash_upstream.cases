@@ -1388,6 +1388,39 @@
     <case>
         <tags> ct </tags>
         <tags> ovs-ct </tags>
+        <tags> ovs-ct-tcp-label </tags>
+        <name> test-ovs-ct-tcp-label.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-tcp-label.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct </tags>
+        <tags> ovs-ct-tcp-label2 </tags>
+        <name> test-ovs-ct-tcp-label2.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-tcp-label2.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct </tags>
+        <tags> ovs-ct-tcp-label-reconfig </tags>
+        <name> test-ovs-ct-tcp-label-reconfig.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-ct-tcp-label-reconfig.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ct </tags>
+        <tags> ovs-ct </tags>
         <tags> ovs-ct-tcp-2ports </tags>
         <name> test-ovs-ct-tcp-2ports.sh </name>
         <cmd>
@@ -1854,6 +1887,16 @@
         <cmd>
             <params>
                 <test> test-tc-insert-rules.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-insert-rules-act-pass </tags>
+        <name> test-tc-insert-rules-act-pass.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-act-pass.sh </test>
             </params>
         </cmd>
     </case>
