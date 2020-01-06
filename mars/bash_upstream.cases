@@ -927,32 +927,11 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1748892 </bug>
+                    <bug> 2045562 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [FEDORA_30_UPSTREAM_CX5, FEDORA_30_NET_UPSTREAM_CX5] </value>
-                    </condition>
-                </condition_group>
-        </ignore>
-        <tags> ovs </tags>
-        <tags> ovs-replace-rule-hw </tags>
-        <name> test-ovs-replace-rule-hw.sh </name>
-        <cmd>
-            <params>
-                <test> test-ovs-replace-rule-hw.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
-        <ignore>
-                <condition_group>
-                    <operand> AND </operand>
-                    <bug> 1748892 </bug>
-                    <condition>
-                        <key> PROJECT </key>
-                        <op> in </op>
-                        <value> [FEDORA_30_UPSTREAM_CX5, FEDORA_30_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_30_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -962,6 +941,27 @@
         <cmd>
             <params>
                 <test> test-ovs-replace-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 2045562 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> ovs </tags>
+        <tags> ovs-replace-rule-hw </tags>
+        <name> test-ovs-replace-rule-hw.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-replace-rule-hw.sh </test>
             </params>
         </cmd>
     </case>
@@ -990,6 +990,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 2045540 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-dpctl-flows </tags>
         <name> test-ovs-dpctl-flows.sh </name>
@@ -1001,6 +1012,15 @@
     </case>
     <case>
         <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 2045540 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
                 <condition_group>
                     <operand> AND </operand>
                     <bug> 1601573 </bug>
@@ -1021,6 +1041,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 2045540 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> ovs </tags>
         <tags> ovs-dpctl-flows-enc_ttl-enc_tos </tags>
         <name> test-ovs-dpctl-flows-enc_ttl-enc_tos.sh </name>
@@ -1706,7 +1737,7 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1806091 </bug>
+                    <bug> 2043842 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
@@ -1945,7 +1976,7 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1909500 </bug>
+                    <bug> 2046895 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
