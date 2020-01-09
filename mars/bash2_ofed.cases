@@ -58,11 +58,21 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1955352 </bug>
+                <bug> 2053824 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
                     <value> [ MLNX_OFED-4 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4 ] </value>
                 </condition>
             </condition_group>
         </ignore>

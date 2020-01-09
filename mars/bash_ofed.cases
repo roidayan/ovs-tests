@@ -1218,16 +1218,11 @@
         <ignore>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 1707084 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [ MLNX_OFED-4 ] </value>
-                </condition>
+                <bug> 2053669 </bug>
                 <condition>
                     <key> OS </key>
                     <op> in </op>
-                    <value> [ centos_7_4 ] </value>
+                    <value> [ centos_7_4, centos_7_5, centos_7_6 ] </value>
                 </condition>
             </condition_group>
         </ignore>
@@ -1391,11 +1386,6 @@
             <condition_group>
                 <operand> AND </operand>
                 <bug> 1708975 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [ MLNX_OFED-4 ] </value>
-                </condition>
             </condition_group>
         </ignore>
     </case>
