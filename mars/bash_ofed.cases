@@ -158,6 +158,27 @@
                 <test> test-eswitch-nic-netdev-tx.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1996709 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4, MLNX_OFED-5 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4, centos_7_2 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> eswitch </tags>
@@ -796,17 +817,6 @@
         </ignore>
     </case>
     <case>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1794766 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_2_DEFAULT_KERNEL_OFED_4_6_CX5, CENTOS_7_2_KERNEL_4_9_OFED_4_6_CX5, CENTOS_7_4_OFED_4_6_CX5, CENTOS_7_5_OFED_4_6_CX5, CENTOS_7_6_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> eswitch </tags>
         <tags> eswitch_no_carrier </tags>
         <name> test-eswitch-no-carrier.sh </name>
@@ -815,6 +825,17 @@
                 <test> test-eswitch-no-carrier.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1794766 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [MLNX_OFED-4, MLNX_OFED-5] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> eswitch </tags>
@@ -1202,6 +1223,20 @@
                     <key> OS </key>
                     <op> in </op>
                     <value> [ centos_7_4 ] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 2053669 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4, MLNX_OFED-5 ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4, centos_7_5, centos_7_6] </value>
                 </condition>
             </condition_group>
         </ignore>
