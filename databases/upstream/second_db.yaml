@@ -1,0 +1,88 @@
+description:
+    This DB is for running remaining dev tests for upstream regression
+tests:
+    test-devlink-encap.sh:
+    test-devlink-inline-mode2.sh:
+    test-devlink-inline-mode.sh:
+    test-devlink-show-in-each-link-mode.sh:
+    test-ecmp-add-multipath-rule.sh:
+    test-ecmp-add-vxlan-encap-disable-sriov.sh:
+    test-ecmp-add-vxlan-rule.sh:
+    test-ecmp-failover-failback.sh:
+    test-ecmp-load-balance.sh:
+    test-ecmp-restore-rule.sh:
+    test-ecmp-route-events.sh:
+    test-ecmp-rule-stats.sh:
+    test-ethtool-basic.sh:
+        ignore_kernel:
+            .*: [1820000]
+    test-ethtool-steering.sh:
+        ignore_kernel:
+            .*: [1820000]
+    test-ifstat.sh:
+    test-ovs-aging-tc-rules.sh:
+    test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
+    test-ovs-dpctl-flows.sh:
+    test-ovs-dpctl-flows-ttl-tos.sh:
+    test-ovs-geneve-in-ns-ipv6.sh:
+    test-ovs-geneve-in-ns.sh:
+    test-ovs-gre-in-ns.sh:
+    test-ovs-icmp-frag.sh:
+    test-ovs-icmp-offload.sh:
+    test-ovs-ipv4-match.sh:
+    test-ovs-ipv6-match.sh:
+    test-ovs-multi-vxlan-bridge-ingress.sh:
+    test-ovs-no-implicit-rewrite-on-match.sh:
+    test-ovs-overlap-rules.sh:
+    test-ovs-persistent-data.sh:
+    test-ovs-qinq-1.sh:
+    test-ovs-qinq-2.sh:
+    test-ovs-replace-rule-hw.sh:
+    test-ovs-replace-rule.sh:
+    test-ovs-rewrite-ipv4-macs.sh:
+    test-ovs-rewrite-tos-dscp.sh:
+    test-ovs-tcp-offload.sh:
+    test-ovs-tc-rules-checker.sh:
+    test-ovs-udp-offload.sh:
+    test-ovs-vf-lag.sh:
+        ignore_kernel:
+            .*: [2043842]
+    test-ovs-vf-mirror.sh:
+    test-ovs-vxlan-flow-key.sh:
+    test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:
+    test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh:
+    test-ovs-vxlan-in-ns-dpctl.sh:
+    test-ovs-vxlan-in-ns-ipv6.sh:
+    test-ovs-vxlan-in-ns.sh:
+    test-ovs-vxlan-remove-tunnel-during-traffic.sh:
+    test-ovs-vxlan.sh:
+    test-vf-lag.sh:
+        ignore_kernel:
+            .*: [1892816]
+    test-vf-rep-change-mtu.sh:
+    test-vf-rep-iperf.sh:
+    test-vf-rep-ping-change-mtu.sh:
+    test-vf-rep-ping-fragmented.sh:
+    test-vf-rep-ping-reconfig-sriov.sh:
+    test-vf-rep-udp-fragmented.sh:
+    test-vf-veth-fwd.sh:
+    test-vf-vf-different-esw-ping.sh:
+    test-vf-vf-fwd-fl_classify.sh:
+        ignore_kernel:
+            .*: [1546760]
+    test-vf-vf-fwd-fl_delete.sh:
+    test-vf-vf-fwd.sh:
+    test-vf-vf-iperf-perf.sh:
+        ignore_kernel:
+            .*: [1251244]
+    test-vf-vf-ping.sh:
+    test-vf-vf-prio-tag-ping.sh:
+    test-vf-zero-header-raw.sh:
+    test-vxlan-inner-header-rewrite-icmp-v6.sh:
+    test-vxlan-neigh-update.sh:
+    test-vxlan-neigh-update-stack.sh:
+    test-vxlan-neigh-update-warn.sh:
+    test-vxlan-neigh-update-with-pedit.sh:
+    test-vxlan-port-del.sh:
+    test-vxlan-port-offload.sh:
+    test-vxlan-rx-vlan-push-offload.sh:
