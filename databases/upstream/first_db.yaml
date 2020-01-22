@@ -103,6 +103,8 @@ tests:
     test-tc-vlan-modify.sh:
     test-tc-vxlan-decap-inner-match-drop.sh:
     test-tc-vxlan-decap-in-skip-sw.sh:
+        ignore_kernel:
+            .*: [1360599]
     test-tc-vxlan-decap-key-port-only.sh:
     test-tc-vxlan-decap-not-properly-offloaded.sh:
     test-tc-vxlan-decap-proto-all.sh:
