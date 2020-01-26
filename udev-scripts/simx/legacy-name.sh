@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [ "$ID_NET_DRIVER" != "mlx5_core" ]; then
+    echo NAME=${ID_NET_NAME}
     exit 0
 fi
 
