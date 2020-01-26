@@ -1,7 +1,7 @@
 #!/usr/bin/env python2.7
 # Author:  Anton Metsner - Antonm@mellanox.com
 # --
-# Copyright (c) 2018-2019 Mellanox Technologies. All rights reserved.
+# Copyright (c) 2018-2020 Mellanox Technologies. All rights reserved.
 #
 # This software is available to you under a choice of one of two
 # licenses.  You may choose to be licensed under the terms of the GNU
@@ -67,10 +67,10 @@ class SetupConfigure(object):
             self.CreateVFs()
             self.LoadVFInfo()
 
-            self.SetVFMACs()
             self.UnbindVFs()
 
             self.ConfigurePF()
+            self.SetVFMACs()
 
             self.UpdatePFInfo()
             self.LoadRepInfo()
@@ -189,7 +189,9 @@ class SetupConfigure(object):
         if rc:
             raise RuntimeError('Failed to query interface names\n%s' % (output))
 
-        for repName in set(output.strip().split()) - set(['lo'] + map(lambda PFInfo: PFInfo['name'], self.host.PNics)):
+        DevInfos = list(chain.from_iterable(map(lambda PFInfo: PFInfo['vfs'], self.host.PNics))) + self.host.PNics
+
+        for repName in set(output.strip().split()) - set(['lo'] + map(lambda DevInfo: DevInfo['name'], DevInfos)):
             (rc0, switch_id) = commands.getstatusoutput('cat /sys/class/net/%s/phys_switch_id' % repName)
             (rc1, port_name) = commands.getstatusoutput('cat /sys/class/net/%s/phys_port_name' % repName)
 
