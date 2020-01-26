@@ -70,9 +70,9 @@ class SetupConfigure(object):
             self.UnbindVFs()
 
             self.ConfigurePF()
+            self.UpdatePFInfo()
             self.SetVFMACs()
 
-            self.UpdatePFInfo()
             self.LoadRepInfo()
 
             self.EnableDevOffload()
