@@ -81,7 +81,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ MLNX_OFED-4 ] </value>
+                    <value> [ MLNX_OFED-4, MLNX_OFED-5 ] </value>
                 </condition>
                 <condition>
                     <key> KERNEL </key>
@@ -112,7 +112,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ MLNX_OFED-4 ] </value>
+                    <value> [ MLNX_OFED-4, MLNX_OFED-5 ] </value>
                 </condition>
                 <condition>
                     <key> KERNEL </key>
@@ -144,7 +144,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ MLNX_OFED-4 ] </value>
+                    <value> [ MLNX_OFED-4, MLNX_OFED-5 ] </value>
                 </condition>
                 <condition>
                     <key> KERNEL </key>
@@ -175,7 +175,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ MLNX_OFED-4 ] </value>
+                    <value> [ MLNX_OFED-4, MLNX_OFED-5 ] </value>
                 </condition>
                 <condition>
                     <key> KERNEL </key>
@@ -206,7 +206,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ MLNX_OFED-4 ] </value>
+                    <value> [ MLNX_OFED-4, MLNX_OFED-5 ] </value>
                 </condition>
                 <condition>
                     <key> KERNEL </key>
@@ -248,7 +248,7 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [ MLNX_OFED-4 ] </value>
+                    <value> [ MLNX_OFED-4, MLNX_OFED-5 ] </value>
                 </condition>
             </condition_group>
         </ignore>
