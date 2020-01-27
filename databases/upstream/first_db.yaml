@@ -1,6 +1,7 @@
 description:
     This DB is for running eswitch and tc tests for upstream regression
 tests:
+    test-eswitch-ingress-rate-limit.sh:
     test-eswitch-127-reps.sh:
         ignore_kernel:
             .*: [2018217]
@@ -16,7 +17,6 @@ tests:
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
     test-eswitch-diff-vfs-per-port.sh:
-    test-eswitch-ingress-rate-limit.sh:
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
         ignore_kernel:
@@ -59,7 +59,6 @@ tests:
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-geneve.sh:
-    test-tc-insert-rules-goto.sh:
     test-tc-insert-rules-gre.sh:
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
