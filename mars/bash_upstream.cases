@@ -1923,6 +1923,16 @@
     </case>
     <case>
         <tags> tc </tags>
+        <tags> tc-insert-rules-goto </tags>
+        <name> test-tc-insert-rules-goto.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-insert-rules-goto.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
         <tags> tc-insert-rules-act-pass </tags>
         <name> test-tc-insert-rules-act-pass.sh </name>
         <cmd>
@@ -2432,6 +2442,27 @@
         <cmd>
             <params>
                 <test> test-tc-merged-esw-vf-vf.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 2053699 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5, FEDORA_30_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> tc </tags>
+        <tags> tc-merged-esw-pf-pf </tags>
+        <name> test-tc-merged-esw-pf-pf.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-merged-esw-pf-pf.sh </test>
             </params>
         </cmd>
     </case>
