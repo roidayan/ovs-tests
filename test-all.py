@@ -77,8 +77,8 @@ def parse_args():
     return parser.parse_args()
 
 
-def run_test(name, cmd, html=False):
-    logname = os.path.join(LOGDIR, name)
+def run_test(cmd, html=False):
+    logname = os.path.join(LOGDIR, os.path.basename(cmd))
     # piping stdout to file seems to miss stderr msgs to we use pipe
     # and write to file at the end.
     subp = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
@@ -357,9 +357,9 @@ def main(args):
             res = 'DRY'
         else:
             try:
-                test_summary['test_log'] = '%s.html' % name.replace('.sh','')
+                test_summary['test_log'] = '%s.html' % name
                 cmd = test + " " + TESTS_ARGS[name]
-                res = run_test(name.replace('.sh',''), cmd, args.html)
+                res = run_test(cmd, args.html)
             except ExecCmdFailed, e:
                 failed = True
                 res = 'FAILED'
