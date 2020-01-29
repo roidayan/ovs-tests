@@ -6,11 +6,15 @@ if [ "$ID_NET_DRIVER" != "mlx5_core" ]; then
 fi
 
 if [ -n "$ID_NET_NAME_SLOT" ]; then
-    echo NAME="${ID_NET_NAME_SLOT%%np[[:digit:]]}"
-    exit 0
+    NAME=$ID_NET_NAME_SLOT
+elif [ -n "$ID_NET_NAME_PATH" ]; then
+    NAME=$ID_NET_NAME_PATH
+else
+    NAME=${ID_NET_NAME}
 fi
 
-if [ -n "$ID_NET_NAME_PATH" ]; then
-    echo NAME="${ID_NET_NAME_PATH%%np[[:digit:]]}"
-    exit 0
-fi
+# strip npX even from middle of the name.
+# e.g. new kernels have vf name as ens0f0np1vf0
+NAME=`echo $NAME | sed 's/np[0-9]\+//'`
+echo NAME=$NAME
+exit 0
