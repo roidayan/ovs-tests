@@ -48,6 +48,7 @@ tests:
         ignore_kernel:
             .*: [2043842]
     test-ovs-vf-mirror.sh:
+    test-ovs-vlan.sh:
     test-ovs-vxlan-flow-key.sh:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:
         ignore_kernel:
@@ -58,6 +59,7 @@ tests:
     test-ovs-vxlan-in-ns.sh:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
     test-ovs-vxlan.sh:
+    test-ovs-vxlan-vf-lag.sh:
     test-vf-lag.sh:
         ignore_kernel:
             .*: [1892816]
