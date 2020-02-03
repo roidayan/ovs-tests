@@ -1105,12 +1105,33 @@
     </case>
     <case>
         <tags> ovs </tags>
+        <tags> ovs-vlan </tags>
+        <name> test-ovs-vlan.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vlan.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
         <tags> vxlan </tags>
         <tags> ovs-vxlan </tags>
         <name> test-ovs-vxlan.sh </name>
         <cmd>
             <params>
                 <test> test-ovs-vxlan.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> ovs </tags>
+        <tags> vxlan </tags>
+        <tags> ovs-vxlan-vf-lag </tags>
+        <name> test-ovs-vxlan-vf-lag.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-vxlan-vf-lag.sh </test>
             </params>
         </cmd>
     </case>
