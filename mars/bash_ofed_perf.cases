@@ -263,4 +263,56 @@
             </params>
         </cmd>
     </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-insertion-rate-sw </tags>
+        <name> test-tc-insertion-rate-sw.sh </name>
+        <tout> 1700 </tout>
+        <cmd>
+            <params>
+                <test> test-tc-insertion-rate-sw.sh </test>
+                <option> BASE_LINE_FILE=/.autodirect/sw_regression/linux/sw_ovs/conf/DEV_REG/[[conf:extra_info.setup_name]]/asap_perf/insertion-rate-sw-data.txt </option>
+            </params>
+        </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 2074368 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-5 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_2, centos_7_4 ] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 2074368 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-5 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ 5.2.0-mlnx ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_6 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
+    </case>
 </CASEDEF>
