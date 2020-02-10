@@ -863,6 +863,27 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 2064431 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5, FEDORA_30_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch-persist-mac </tags>
+        <name> test-eswitch-persist-mac.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-persist-mac.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> eswitch </tags>
         <tags> eswitch-par-actions </tags>
         <name> test-eswitch-par-actions.sh </name>
@@ -2443,6 +2464,16 @@
         <cmd>
             <params>
                 <test> test-tc-multi-prio-chains.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-multi-prio-chains-high </tags>
+        <name> test-tc-multi-prio-chains-high.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-multi-prio-chains-high.sh </test>
             </params>
         </cmd>
     </case>

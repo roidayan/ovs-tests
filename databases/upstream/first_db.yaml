@@ -25,6 +25,9 @@ tests:
         ignore_kernel:
             .*: [2037058]
     test-eswitch-par-actions.sh:
+    test-eswitch-persist-mac.sh:
+        ignore_kernel:
+            .*: [2064431]
     test-eswitch-reload-modules-different-state.sh:
     test-eswitch-reps-2ports.sh:
         ignore_kernel:
@@ -77,6 +80,7 @@ tests:
     test-tc-merged-esw-vf-vf.sh:
     test-tc-multi-masks-per-prio.sh:
     test-tc-multi-prio-chains.sh:
+    test-tc-multi-prio-chains-high.sh:
     test-tc-qinq-rules.sh:
     test-tc-reoffload.sh:
     test-tc-replace.sh:
