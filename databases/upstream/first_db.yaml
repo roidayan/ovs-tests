@@ -1,5 +1,5 @@
 description:
-    This DB is for running eswitch and tc tests for upstream regression
+    This DB is for running eswitch and tc tests for upstream regression.
 tests:
     test-eswitch-ingress-rate-limit.sh:
     test-eswitch-127-reps.sh:
