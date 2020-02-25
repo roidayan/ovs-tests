@@ -37,6 +37,9 @@ tests:
     test-ovs-replace-rule.sh:
     test-ovs-rewrite-ipv4-macs.sh:
     test-ovs-rewrite-tos-dscp.sh:
+    test-ovs-rewrite-header-reload.sh:
+        ignore_kernel:
+            .*: [1932655]
     test-ovs-tcp-offload.sh:
     test-ovs-tc-rules-checker.sh:
     test-ovs-udp-offload.sh:
