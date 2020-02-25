@@ -6,6 +6,8 @@ tests:
     test-ecmp-add-vxlan-rule.sh:
     test-ecmp-failover-failback.sh:
     test-ecmp-load-balance.sh:
+        ignore_kernel:
+            .*: [2090125]
     test-ecmp-restore-rule.sh:
     test-ecmp-route-events.sh:
     test-ecmp-rule-stats.sh:
