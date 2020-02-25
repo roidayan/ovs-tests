@@ -609,6 +609,18 @@
         <tags> eswitch </tags>
         <tags> nic-netdev </tags>
         <tags> all-eswitch-toggle-mode-nic-netdev </tags>
+        <tags> eswitch-toggle-mode-nic-netdev-chans </tags>
+        <name> test-eswitch-toggle-mode-nic-netdev-chans.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-toggle-mode-nic-netdev-chans.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> nic-netdev </tags>
+        <tags> all-eswitch-toggle-mode-nic-netdev </tags>
         <tags> eswitch-toggle-mode-nic-netdev-reload </tags>
         <name> test-eswitch-toggle-mode-nic-netdev-reload.sh </name>
         <cmd>
@@ -1007,6 +1019,29 @@
         <cmd>
             <params>
                 <test> test-ovs-rewrite-tos-dscp.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1932655 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5, FEDORA_30_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> ovs </tags>
+        <tags> header_rewrite </tags>
+        <tags> ovs-header-rewrite </tags>
+        <tags> ovs-rewrite-header-reload </tags>
+        <name> test-ovs-rewrite-header-reload.sh </name>
+        <cmd>
+            <params>
+                <test> test-ovs-rewrite-header-reload.sh </test>
             </params>
         </cmd>
     </case>
@@ -2683,6 +2718,42 @@
         <cmd>
             <params>
                 <test> test-tc-hairpin-disable-sriov.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-hairpin </tags>
+        <tags> tc-hairpin-esw-upl1 </tags>
+        <tags> tc-hairpin-esw-upl1-decap-esw-upl1 </tags>
+        <name> test-tc-hairpin-esw-upl1-decap-esw-upl1.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-hairpin-esw-upl1-decap-esw-upl1.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-hairpin </tags>
+        <tags> tc-hairpin-esw-upl1 </tags>
+        <tags> tc-hairpin-esw-upl1-encap-esw-upl1 </tags>
+        <name> test-tc-hairpin-esw-upl1-encap-esw-upl1.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-hairpin-esw-upl1-encap-esw-upl1.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-hairpin </tags>
+        <tags> tc-hairpin-esw-upl1 </tags>
+        <tags> tc-hairpin-esw-upl1-esw-upl1 </tags>
+        <name> test-tc-hairpin-esw-upl1-esw-upl1.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-hairpin-esw-upl1-esw-upl1.sh </test>
             </params>
         </cmd>
     </case>
