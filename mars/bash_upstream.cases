@@ -2032,11 +2032,11 @@
         <ignore>
                 <condition_group>
                     <operand> AND </operand>
-                    <bug> 1890635 </bug>
+                    <bug> 2094875 </bug>
                     <condition>
                         <key> PROJECT </key>
                         <op> in </op>
-                        <value> [FEDORA_30_UPSTREAM_CX5, FEDORA_30_NET_UPSTREAM_CX5] </value>
+                        <value> [FEDORA_30_UPSTREAM_CX5] </value>
                     </condition>
                 </condition_group>
         </ignore>
@@ -2240,6 +2240,17 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 2094890 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
         <tags> tc </tags>
         <tags> tc-insert-rule-rep-uplink-vlan </tags>
         <name> test-tc-insert-rule-rep-uplink-vlan.sh </name>
