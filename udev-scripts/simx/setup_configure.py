@@ -330,6 +330,25 @@ class SetupConfigure(object):
         conf += '\nREP=%s' % self.host.PNics[0]['vfs'][0]['rep']
         conf += '\nREP2=%s' % self.host.PNics[0]['vfs'][1]['rep']
 
+        cloud_player_1_ip = ''
+        cloud_player_2_ip = ''
+        try:
+            with open('/workspace/cloud_tools/.setup_info', 'r') as f:
+                for line in f.readlines():
+                    if 'CLOUD_PLAYER_1_IP' in line:
+                        cloud_player_1_ip = line.strip().split('=')[1]
+                    if 'CLOUD_PLAYER_2_IP' in line:
+                        cloud_player_2_ip = line.strip().split('=')[1]
+        except e:
+            self.Logger.debug('Failed to read cloud_tools/.setup_info')
+
+        if cloud_player_2_ip == self.host.name:
+            conf += '\nREMOTE_SERVER=%s' % cloud_player_1_ip
+        else:
+            conf += '\nREMOTE_SERVER=%s' % cloud_player_2_ip
+
+        conf += '\nREMOTE_NIC=%s' % self.host.PNics[0]['name']
+
         with open('/workspace/dev_reg_conf.sh', 'w+') as f:
             f.write(conf)
 
