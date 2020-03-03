@@ -17,6 +17,12 @@ tests:
     test-ethtool-steering.sh:
         ignore_kernel:
             .*: [1820000]
+    test-ethtool-steering-traffic-on-rule.sh:
+        ignore_kernel:
+            .*: [1820000]
+    test-ethtool-steering-traffic-spread.sh:
+        ignore_kernel:
+            .*: [1820000]
     test-ifstat.sh:
     test-ovs-aging-tc-rules.sh:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
@@ -72,6 +78,9 @@ tests:
     test-vf-lag.sh:
         ignore_kernel:
             .*: [1892816]
+    test-vf-lag-sriov-disable.sh:
+        ignore_kernel:
+            .*: [2035950]
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:
     test-vf-rep-ping-change-mtu.sh:

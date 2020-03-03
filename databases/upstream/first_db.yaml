@@ -47,6 +47,9 @@ tests:
             .*: [1944974]
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
+    test-eswitch-with-ipv4-ttl-modify-enabled.sh:
+        ignore_kernel:
+            .*: [2094097]
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
     test-tc-del-a-lot.sh:
