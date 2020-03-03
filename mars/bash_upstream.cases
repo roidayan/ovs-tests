@@ -66,6 +66,48 @@
         </cmd>
     </case>
     <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1820000 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5, FEDORA_30_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> ethtool </tags>
+        <tags> ethtool-steering-traffic-on-rule </tags>
+        <name> test-ethtool-steering-traffic-on-rule.sh </name>
+        <cmd>
+            <params>
+                <test> test-ethtool-steering-traffic-on-rule.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 1820000 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5, FEDORA_30_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> ethtool </tags>
+        <tags> ethtool-steering-traffic-spread </tags>
+        <name> test-ethtool-steering-traffic-spread.sh </name>
+        <cmd>
+            <params>
+                <test> test-ethtool-steering-traffic-spread.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> ifstat </tags>
         <name> test-ifstat.sh </name>
         <cmd>
@@ -328,6 +370,28 @@
         <cmd>
             <params>
                 <test> test-vf-lag.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 2035950 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5, FEDORA_30_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> vf </tags>
+        <tags> all-vf-lag </tags>
+        <tags> vf-lag-sriov-disable </tags>
+        <name> test-vf-lag-sriov-disable.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-lag-sriov-disable.sh </test>
             </params>
         </cmd>
     </case>
@@ -912,6 +976,27 @@
         <cmd>
             <params>
                 <test> test-eswitch-par-actions-devlink-compat.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <ignore>
+                <condition_group>
+                    <operand> AND </operand>
+                    <bug> 2094097 </bug>
+                    <condition>
+                        <key> PROJECT </key>
+                        <op> in </op>
+                        <value> [FEDORA_30_UPSTREAM_CX5, FEDORA_30_NET_UPSTREAM_CX5] </value>
+                    </condition>
+                </condition_group>
+        </ignore>
+        <tags> eswitch </tags>
+        <tags> eswitch-with-ipv4-ttl-modify-enabled </tags>
+        <name> test-eswitch-with-ipv4-ttl-modify-enabled.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-with-ipv4-ttl-modify-enabled.sh </test>
             </params>
         </cmd>
     </case>
@@ -2380,6 +2465,16 @@
         <cmd>
             <params>
                 <test> test-tc-reoffload.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> tc </tags>
+        <tags> tc-restore-after-miss </tags>
+        <name> test-tc-restore-after-miss.sh </name>
+        <cmd>
+            <params>
+                <test> test-tc-restore-after-miss.sh </test>
             </params>
         </cmd>
     </case>
