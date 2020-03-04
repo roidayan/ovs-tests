@@ -376,6 +376,16 @@
         </ignore>
     </case>
     <case>
+        <tags> vf </tags>
+        <tags> test-vf-lag-sriov-disable </tags>
+        <name> test-vf-lag-sriov-disable.sh </name>
+        <cmd>
+            <params>
+                <test> test-vf-lag-sriov-disable.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
         <tags> devlink </tags>
         <tags> devlink-encap </tags>
         <name> test-devlink-encap.sh </name>
@@ -1008,6 +1018,16 @@
         <cmd>
             <params>
                 <test> test-eswitch-reps-2ports.sh </test>
+            </params>
+        </cmd>
+    </case>
+    <case>
+        <tags> eswitch </tags>
+        <tags> test-eswitch-with-ipv4-ttl-modify-enabled </tags>
+        <name> test-eswitch-with-ipv4-ttl-modify-enabled.sh </name>
+        <cmd>
+            <params>
+                <test> test-eswitch-with-ipv4-ttl-modify-enabled.sh </test>
             </params>
         </cmd>
     </case>
