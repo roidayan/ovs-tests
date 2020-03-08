@@ -63,6 +63,15 @@
                     <value> [ centos_7_4 ] </value>
                 </condition>
             </condition_group>
+             <condition_group>
+                <operand> AND </operand>
+                <bug> 2103183 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-5 ] </value>
+                </condition>
+            </condition_group>
         </ignore>
     </case>
     <case>
