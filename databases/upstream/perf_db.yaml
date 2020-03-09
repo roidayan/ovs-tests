@@ -14,8 +14,3 @@ tests:
     test-eswitch-rep-up-time.sh:
         ignore_kernel:
             .*: [2018217]
-    test-tc-insertion-rate-fw-no_percpu.sh:
-    test-tc-insertion-rate-skip_hw-no_percpu.sh:
-    test-tc-insertion-rate-sw-no_percpu.sh:
-        ignore_kernel:
-            .*: [2061315]
