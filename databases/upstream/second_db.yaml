@@ -103,8 +103,8 @@ tests:
         ignore_kernel:
             .*: [2094052]
     test-devlink-show-in-each-link-mode.sh:
-        ignore_kernel:
-            .*: [2094052]
+        ignore_fw:
+            ^22.*: [2107070]
     test-devlink-encap.sh:
     test-devlink-inline-mode2.sh:
     test-devlink-inline-mode.sh:
