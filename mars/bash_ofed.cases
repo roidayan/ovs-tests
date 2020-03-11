@@ -2601,7 +2601,7 @@
             </condition_group>
             <condition_group>
                 <operand> AND </operand>
-                <bug> 2108148 </bug>
+                <bug> 1939639 </bug>
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
