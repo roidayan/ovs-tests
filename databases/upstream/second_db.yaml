@@ -101,7 +101,7 @@ tests:
     test-vf-vf-ping.sh:
     test-vf-vf-prio-tag-ping.sh:
         ignore_fw:
-            .*: [2094052]
+            ^16.*: [2094052]
     test-devlink-show-in-each-link-mode.sh:
         ignore_fw:
             ^22.*: [2107070]
