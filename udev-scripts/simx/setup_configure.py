@@ -352,6 +352,8 @@ class SetupConfigure(object):
         if len(self.host.PNics) > 1:
             conf += '\nREMOTE_NIC2=%s' % self.host.PNics[1]['name']
 
+        conf += '\nB2B=1'
+
         with open('/workspace/dev_reg_conf.sh', 'w+') as f:
             f.write(conf)
 
