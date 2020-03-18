@@ -3,7 +3,7 @@ description:
 tests:
     test-ct-icmp-frag.sh:
         ignore_kernel:
-            .*: [1774992]
+            .*: [1976103]
     test-ct-icmp-fwd.sh:
     test-ct-icmp.sh:
     test-ct-tcp-pedit.sh:
@@ -16,7 +16,7 @@ tests:
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
         ignore_kernel:
-            .*: [1774992]
+            .*: [1976103]
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
         ignore_kernel:
@@ -34,7 +34,7 @@ tests:
     test-ovs-ct-scapy-udp-jd-nat-reconfig-flows.sh:
     test-ovs-ct-scapy-udp-jd-nat.sh:
         ignore_kernel:
-            .*: [2114608]
+            .*: [2115017]
     test-ovs-ct-scapy-udp-nat-dnat.sh:
     test-ovs-ct-scapy-udp-nat-nop.sh:
         ignore_kernel:
@@ -57,7 +57,7 @@ tests:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-udp-frag.sh:
         ignore_kernel:
-            .*: [2114608]
+            .*: [1976103]
     test-ovs-ct-vxlan-2.sh:
     test-ovs-ct-vxlan-3.sh:
     test-ovs-ct-vxlan-many-conns.sh:
