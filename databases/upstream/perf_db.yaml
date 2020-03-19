@@ -4,6 +4,8 @@ tests:
     test-tc-par-add-ovr-del.sh:
     test-tc-par-add-del.sh:
     test-tc-par-add-del-vxlan.sh:
+        ignore_kernel:
+            .*: [2115887]
     test-tc-par-add-del-vxlan-neigh-update.sh:
     test-tc-par-add-dump-del.sh:
     test-tc-par-add-dup.sh:

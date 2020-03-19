@@ -9,6 +9,8 @@ tests:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-reload.sh:
     test-ct-tcp.sh:
+        ignore_kernel:
+            .*: [2115952]
     test-ct-tcp-vf-mirror-pedit.sh:
         ignore_kernel:
             .*: [1912698]
