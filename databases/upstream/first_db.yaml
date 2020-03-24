@@ -58,8 +58,18 @@ tests:
     test-tc-duplicate-hw-rules.sh:
     test-tc-groups-multi-fgs.sh:
     test-tc-groups-overlapping.sh:
+    test-tc-geneve.sh:
     test-tc-hairpin-disable-sriov.sh:
     test-tc-hairpin-rules.sh:
+    test-tc-hairpin-esw-upl1-esw-upl1.sh:
+        ignore_kernel:
+                ^.*for-linust.*: [2112205]
+    test-tc-hairpin-esw-upl1-encap-esw-upl1.sh:
+        ignore_kernel:
+                ^.*for-linust.*: [2112205]
+    test-tc-hairpin-esw-upl1-decap-esw-upl1.sh:
+        ignore_kernel:
+                ^.*for-linust.*: [2112205]
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rule-rep-uplink-vlan.sh:
@@ -81,6 +91,8 @@ tests:
     test-tc-insert-rules-port2.sh:
     test-tc-insert-rules.sh:
     test-tc-insert-rules-goto.sh:
+        ignore_kernel:
+                ^.*for-linust.*: [2112205]
     test-tc-insert-rules-vxlan.sh:
     test-tc-insert-rule-without-match.sh:
     test-tc-ip-tos-ip-ttl.sh:
@@ -94,6 +106,9 @@ tests:
     test-tc-qinq-rules.sh:
     test-tc-reoffload.sh:
     test-tc-replace.sh:
+    test-tc-restore-after-miss.sh:
+        ignore_kernel:
+            ^.*for-linust.*: [2112205]
     test-tc-rule-act-add.sh:
     test-tc-rule-add-null-qdisc.sh:
     test-tc-shuffle-2.sh:
@@ -110,7 +125,7 @@ tests:
     test-tc-traffic-qdisc-del.sh:
     test-tc-vf-mirror-pedit.sh:
         ignore_kernel:
-            .*: [1920771]
+            ^.*for-linust.*: [2112205]
     test-tc-vf-mirror.sh:
     test-tc-vf-remote-mirror.sh:
     test-tc-vlan-modify.sh:

@@ -30,6 +30,7 @@ tests:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
     test-ovs-dpctl-flows.sh:
     test-ovs-dpctl-flows-ttl-tos.sh:
+    test-ovs-geneve.sh:
     test-ovs-geneve-in-ns-ipv6.sh:
     test-ovs-geneve-in-ns.sh:
     test-ovs-gre-in-ns.sh:
@@ -80,9 +81,6 @@ tests:
     test-vf-lag.sh:
         ignore_kernel:
             .*: [1892816]
-    test-vf-lag-sriov-disable.sh:
-        ignore_kernel:
-            .*: [2035950]
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:
     test-vf-rep-ping-change-mtu.sh:
