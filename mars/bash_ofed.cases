@@ -376,16 +376,6 @@
         </ignore>
     </case>
     <case>
-        <tags> vf </tags>
-        <tags> test-vf-lag-sriov-disable </tags>
-        <name> test-vf-lag-sriov-disable.sh </name>
-        <cmd>
-            <params>
-                <test> test-vf-lag-sriov-disable.sh </test>
-            </params>
-        </cmd>
-    </case>
-    <case>
         <tags> devlink </tags>
         <tags> devlink-encap </tags>
         <name> test-devlink-encap.sh </name>
