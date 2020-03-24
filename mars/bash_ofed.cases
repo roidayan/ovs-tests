@@ -2864,27 +2864,6 @@
                 <test> test-tc-shuffle-2.sh </test>
             </params>
         </cmd>
-        <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 2111098 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [ MLNX_OFED-5 ] </value>
-                </condition>
-                <condition>
-                    <key> KERNEL </key>
-                    <op> in </op>
-                    <value> [ default ] </value>
-                </condition>
-                <condition>
-                    <key> OS </key>
-                    <op> in </op>
-                    <value> [ centos_7_4 ] </value>
-                </condition>
-            </condition_group>
-        </ignore>
     </case>
     <case>
         <tags> tc </tags>
@@ -2936,17 +2915,6 @@
         </ignore>
     </case>
     <case>
-       <ignore>
-            <condition_group>
-                <operand> AND </operand>
-                <bug> 1726617 </bug>
-                <condition>
-                    <key> PROJECT </key>
-                    <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
-                </condition>
-            </condition_group>
-        </ignore>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
         <tags> tc-shuffle-reload-mirred </tags>
@@ -2956,8 +2924,6 @@
                 <test> test-tc-shuffle-reload-mirred.sh </test>
             </params>
         </cmd>
-    </case>
-    <case>
         <ignore>
             <condition_group>
                 <operand> AND </operand>
@@ -2965,10 +2931,22 @@
                 <condition>
                     <key> PROJECT </key>
                     <op> in </op>
-                    <value> [CENTOS_7_4_OFED_4_6_CX5] </value>
+                    <value> [ MLNX_OFED-4, MLNX_OFED-5 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
+    </case>
+    <case>
         <tags> tc </tags>
         <tags> tc-shuffle </tags>
         <tags> tc-shuffle-reload-mirred-skip-hw </tags>
@@ -2978,6 +2956,27 @@
                 <test> test-tc-shuffle-reload-mirred-skip-hw.sh </test>
             </params>
         </cmd>
+        <ignore>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1726617 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4, MLNX_OFED-5 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4 ] </value>
+                </condition>
+            </condition_group>
+        </ignore>
     </case>
     <case>
         <tags> tc </tags>
@@ -3529,6 +3528,25 @@
                     <key> OS </key>
                     <op> in </op>
                     <value> [ centos_7_2 ] </value>
+                </condition>
+            </condition_group>
+            <condition_group>
+                <operand> AND </operand>
+                <bug> 1726617 </bug>
+                <condition>
+                    <key> PROJECT </key>
+                    <op> in </op>
+                    <value> [ MLNX_OFED-4, MLNX_OFED-5 ] </value>
+                </condition>
+                <condition>
+                    <key> KERNEL </key>
+                    <op> in </op>
+                    <value> [ default ] </value>
+                </condition>
+                <condition>
+                    <key> OS </key>
+                    <op> in </op>
+                    <value> [ centos_7_4 ] </value>
                 </condition>
             </condition_group>
         </ignore>
