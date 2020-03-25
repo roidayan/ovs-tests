@@ -1195,6 +1195,13 @@ function relevant_for_cx4() {
     fi
 }
 
+function relevant_for_cx5() {
+    if [ "$DEVICE_IS_CX5" != 1 ]; then
+        log "SKIP (Test relevant for ConnectX-5)"
+        exit 0
+    fi
+}
+
 function __load_config() {
     local conf
 
