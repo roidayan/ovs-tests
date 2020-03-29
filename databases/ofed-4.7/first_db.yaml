@@ -45,6 +45,7 @@ tests:
     test-tc-hairpin-disable-sriov.sh:
     test-tc-hairpin-rules.sh:
     test-tc-icmp-4-channels.sh:
+    test-tc-geneve.sh:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rule-rep-uplink-vlan.sh:
     test-tc-insert-rules-act-pass.sh:
