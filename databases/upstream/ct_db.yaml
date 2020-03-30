@@ -7,6 +7,9 @@ tests:
     test-ct-icmp-fwd.sh:
     test-ct-icmp.sh:
     test-ct-tcp-pedit.sh:
+    test-ct-tcp-pedit-ct-clear.sh:
+        ignore_kernel:
+            .*: [2122590]
     test-ct-tcp-reload.sh:
     test-ct-tcp.sh:
         ignore_kernel:

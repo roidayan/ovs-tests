@@ -74,6 +74,9 @@ tests:
         ignore_kernel:
             .*: [2094890]
     test-tc-insert-rules-act-pass.sh:
+    test-tc-insert-rules-hw-stats.sh:
+        ignore_kernel:
+                ^.*for-linust.*: [2112205]
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-geneve.sh:
