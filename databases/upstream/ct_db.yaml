@@ -24,16 +24,12 @@ tests:
             .*: [1976103]
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
-        ignore_kernel:
-            .*: [2114618]
     test-ovs-ct-scapy-udp-2ports.sh:
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
         ignore_kernel:
             .*: [2114634]
     test-ovs-ct-scapy-udp-ct-clear.sh:
-        ignore_kernel:
-            .*: [2114610]
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-jd-nat-reconfig-flows.sh:
@@ -42,8 +38,6 @@ tests:
             .*: [2115017]
     test-ovs-ct-scapy-udp-nat-dnat.sh:
     test-ovs-ct-scapy-udp-nat-nop.sh:
-        ignore_kernel:
-            .*: [2114608]
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-reload.sh:
     test-ovs-ct-scapy-udp.sh:
@@ -51,6 +45,8 @@ tests:
         ignore_kernel:
             .*: [1912698]
     test-ovs-ct-scapy-udp-flush.sh:
+        ignore_kernel:
+            .*: [2114608]
     test-ovs-ct-tcp-2ports.sh:
     test-ovs-ct-tcp-iperf3.sh:
     test-ovs-ct-tcp-ipv6.sh:
@@ -68,6 +64,8 @@ tests:
     test-ovs-ct-vxlan-2.sh:
     test-ovs-ct-vxlan-3.sh:
     test-ovs-ct-vxlan-many-conns.sh:
+        ignore_kernel:
+            .*: [2122933]
     test-ovs-ct-vxlan.sh:
     test-ovs-ct-vxlan-vf-lag.sh:
     test-ovs-ct-vxlan-vf-mirror.sh:
