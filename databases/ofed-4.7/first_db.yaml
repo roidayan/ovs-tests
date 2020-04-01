@@ -60,6 +60,8 @@ tests:
     test-tc-hairpin-rules.sh:
     test-tc-icmp-4-channels.sh:
     test-tc-geneve.sh:
+        ignore_kernel:
+          (?!.*5.4.0-mlnx|4.20.17+).*: [2119499]
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rule-rep-uplink-vlan.sh:
         ignore_kernel:
@@ -68,6 +70,8 @@ tests:
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-geneve.sh:
+        ignore_kernel:
+          (?!.*5.4.0-mlnx|4.20.17+).*: [2119499]
     test-tc-insert-rules-goto.sh:
     test-tc-insert-rules-gre.sh:
     test-tc-insert-rules-legacy.sh:
@@ -99,11 +103,16 @@ tests:
     test-tc-reoffload.sh:
     test-tc-replace.sh:
     test-tc-rule-act-add.sh:
+        ignore_kernel:
+          (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|4.19.36-wq|4.20.17+).*: [1552627]
     test-tc-rule-add-null-qdisc.sh:
     test-tc-shuffle-2.sh:
     test-tc-shuffle-3.sh:
     test-tc-shuffle-4.sh:
     test-tc-shuffle-cls_api.sh:
+        ignore_kernel:
+          (3.10.0-327.el7.x86_64).*: [1294281]
+          (4.9.0-mlnx).*: [2132519]
     test-tc-shuffle-reload-gact.sh:
     test-tc-shuffle-reload-mirred.sh:
     test-tc-shuffle-reload-mirred-skip-hw.sh:

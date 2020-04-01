@@ -31,8 +31,14 @@ tests:
         ignore_kernel:
           (?!.*3.10.0-327.el7.x86_64).*: [1716786]
     test-ovs-geneve.sh:
+        ignore_kernel:
+          (?!.*5.4.0-mlnx|4.20.17+).*: [2119499]
     test-ovs-geneve-in-ns-ipv6.sh:
+        ignore_kernel:
+          (?!.*5.4.0-mlnx|4.20.17+).*: [2119499]
     test-ovs-geneve-in-ns.sh:
+        ignore_kernel:
+          (?!.*5.4.0-mlnx|4.20.17+).*: [2119499]
     test-ovs-gre-in-ns.sh:
     test-ovs-icmp-frag.sh:
         ignore_kernel:
@@ -114,6 +120,8 @@ tests:
           (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [1583842]
     test-vf-vf-ping.sh:
     test-vf-vf-prio-tag-ping.sh:
+        ignore_kernel:
+             .*: [2131535]
     test-vf-zero-header-raw.sh:
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
     test-vxlan-neigh-update.sh:
