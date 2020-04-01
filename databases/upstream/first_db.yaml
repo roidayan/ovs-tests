@@ -43,8 +43,6 @@ tests:
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:
     test-eswitch-toggle-mode-parallel3.sh:
-        ignore_kernel:
-            .*: [1944974]
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:

@@ -51,6 +51,8 @@ tests:
     test-ovs-ct-tcp-iperf3.sh:
     test-ovs-ct-tcp-ipv6.sh:
     test-ovs-ct-tcp-label2.sh:
+        ignore_kernel:
+            .*: [2126941]
     test-ovs-ct-tcp-label-reconfig.sh:
     test-ovs-ct-tcp-label.sh:
     test-ovs-ct-tcp-mac-rewrite.sh:
