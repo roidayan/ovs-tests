@@ -11,6 +11,8 @@ tests:
         ignore_kernel:
             .*: [2122590]
     test-ct-tcp-reload.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2130620]
     test-ct-tcp.sh:
         ignore_kernel:
             .*: [2115952]
@@ -40,6 +42,8 @@ tests:
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-reload.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2130620]
     test-ovs-ct-scapy-udp.sh:
     test-ovs-ct-scapy-udp-vf-mirror.sh:
         ignore_kernel:

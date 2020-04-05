@@ -96,6 +96,8 @@ tests:
     test-tc-insert-rule-without-match.sh:
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2130644]
     test-tc-max-rules-legacy.sh:
     test-tc-max-rules.sh:
     test-tc-merged-esw-vf-vf.sh:
