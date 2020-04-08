@@ -99,6 +99,8 @@ tests:
     test-tc-merged-esw-vf-vf.sh:
     test-tc-multi-masks-per-prio.sh:
     test-tc-multi-prio-chains.sh:
+        ignore_kernel:
+          (4.14.0-mlnx).*: [2133423]
     test-tc-qinq-rules.sh:
     test-tc-reoffload.sh:
     test-tc-replace.sh:
