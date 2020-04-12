@@ -2,6 +2,8 @@ description:
     This DB is for running basic tests for CI
 tests:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2134648]
     test-eswitch-set-vf-mac.sh:
     test-ovs-aging-tc-rules.sh:
     test-ovs-icmp-offload.sh:
@@ -15,6 +17,8 @@ tests:
     test-tc-groups-overlapping.sh:
     test-tc-icmp-4-channels.sh:
     test-tc-insert-rule-without-match.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2134648]
     test-tc-insert-rules-pedit.sh:
     test-tc-insert-rules.sh:
     test-tc-vf-mirror.sh:
@@ -22,3 +26,5 @@ tests:
     test-vf-vf-ping.sh:
     test-vxlan-neigh-update.sh:
     test-vxlan-port-offload.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2130620]

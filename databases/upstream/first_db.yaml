@@ -10,12 +10,18 @@ tests:
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
     test-eswitch-add-flows-during-reload.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2130620]
     test-eswitch-add-in-mode1-del-in-mode2.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2134648]
     test-eswitch-change-hfunc.sh:
          ignore_kernel:
             .*: [1630228]
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2130620]
     test-eswitch-diff-vfs-per-port.sh:
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
@@ -29,6 +35,8 @@ tests:
         ignore_kernel:
             .*: [2064431]
     test-eswitch-reload-modules-different-state.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2130620]
     test-eswitch-reps-2ports.sh:
         ignore_kernel:
             .*: [2018217]
@@ -56,7 +64,11 @@ tests:
     test-tc-groups-overlapping.sh:
     test-tc-geneve.sh:
     test-tc-hairpin-disable-sriov.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2134648]
     test-tc-hairpin-rules.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2134648]
     test-tc-hairpin-esw-upl1-esw-upl1.sh:
         ignore_kernel:
                 ^.*for-linust.*: [2112205]
@@ -82,6 +94,8 @@ tests:
             .*: [2094875]
     test-tc-insert-rules-gre.sh:
     test-tc-insert-rules-legacy.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2134648]
     test-tc-insert-rules-matchall.sh:
     test-tc-insert-rules-mirror.sh:
     test-tc-insert-rules-pedit.sh:
@@ -94,6 +108,8 @@ tests:
                 ^.*for-linust.*: [2112205]
     test-tc-insert-rules-vxlan.sh:
     test-tc-insert-rule-without-match.sh:
+        ignore_kernel:
+                ^.*dbg.*: [2134648]
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
         ignore_kernel:
@@ -119,6 +135,8 @@ tests:
     test-tc-shuffle-reload-gact.sh:
     test-tc-shuffle-reload-mirred.sh:
     test-tc-shuffle-reload-mirred-skip-hw.sh:
+        ignore_kernel:
+            ^.*dbg.*: [2134635]
     test-tc-shuffle.sh:
     test-tc-traffic-chain-flush.sh:
     test-tc-traffic-filters-add-del.sh:
