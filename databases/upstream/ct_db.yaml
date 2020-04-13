@@ -43,7 +43,7 @@ tests:
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-reload.sh:
         ignore_kernel:
-                ^.*dbg.*: [2130620]
+            ^.*dbg.*: [2130620]
     test-ovs-ct-scapy-udp.sh:
     test-ovs-ct-scapy-udp-vf-mirror.sh:
         ignore_kernel:

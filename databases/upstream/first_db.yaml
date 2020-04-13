@@ -11,17 +11,17 @@ tests:
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
     test-eswitch-add-flows-during-reload.sh:
         ignore_kernel:
-                ^.*dbg.*: [2130620]
+            ^.*dbg.*: [2130620]
     test-eswitch-add-in-mode1-del-in-mode2.sh:
         ignore_kernel:
-                ^.*dbg.*: [2134648]
+            ^.*dbg.*: [2134648]
     test-eswitch-change-hfunc.sh:
          ignore_kernel:
             .*: [1630228]
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
         ignore_kernel:
-                ^.*dbg.*: [2130620]
+            ^.*dbg.*: [2130620]
     test-eswitch-diff-vfs-per-port.sh:
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
@@ -36,7 +36,7 @@ tests:
             .*: [2064431]
     test-eswitch-reload-modules-different-state.sh:
         ignore_kernel:
-                ^.*dbg.*: [2130620]
+            ^.*dbg.*: [2130620]
     test-eswitch-reps-2ports.sh:
         ignore_kernel:
             .*: [2018217]
@@ -65,19 +65,21 @@ tests:
     test-tc-geneve.sh:
     test-tc-hairpin-disable-sriov.sh:
         ignore_kernel:
-                ^.*dbg.*: [2134648]
+            ^.*dbg.*: [2134648]
     test-tc-hairpin-rules.sh:
         ignore_kernel:
-                ^.*dbg.*: [2134648]
+            .*: [2135081]
     test-tc-hairpin-esw-upl1-esw-upl1.sh:
         ignore_kernel:
-                ^.*for-linust.*: [2112205]
+            .*: [2135071]
+            ^.*for-linust.*: [2112205]
     test-tc-hairpin-esw-upl1-encap-esw-upl1.sh:
         ignore_kernel:
-                ^.*for-linust.*: [2112205]
+            ^.*for-linust.*: [2112205]
     test-tc-hairpin-esw-upl1-decap-esw-upl1.sh:
         ignore_kernel:
-                ^.*for-linust.*: [2112205]
+            .*: [2135071]
+            ^.*for-linust.*: [2112205]
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rule-rep-uplink-vlan.sh:
@@ -86,7 +88,7 @@ tests:
     test-tc-insert-rules-act-pass.sh:
     test-tc-insert-rules-hw-stats.sh:
         ignore_kernel:
-                ^.*for-linust.*: [2112205]
+            ^.*for-linust.*: [2112205]
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-geneve.sh:
@@ -95,7 +97,7 @@ tests:
     test-tc-insert-rules-gre.sh:
     test-tc-insert-rules-legacy.sh:
         ignore_kernel:
-                ^.*dbg.*: [2134648]
+            ^.*dbg.*: [2134648]
     test-tc-insert-rules-matchall.sh:
     test-tc-insert-rules-mirror.sh:
     test-tc-insert-rules-pedit.sh:
@@ -105,15 +107,15 @@ tests:
     test-tc-insert-rules.sh:
     test-tc-insert-rules-goto.sh:
         ignore_kernel:
-                ^.*for-linust.*: [2112205]
+            ^.*for-linust.*: [2112205]
     test-tc-insert-rules-vxlan.sh:
     test-tc-insert-rule-without-match.sh:
         ignore_kernel:
-                ^.*dbg.*: [2134648]
+            ^.*dbg.*: [2134648]
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
         ignore_kernel:
-                ^.*dbg.*: [2130644]
+            ^.*dbg.*: [2130644]
     test-tc-max-rules-legacy.sh:
     test-tc-max-rules.sh:
     test-tc-merged-esw-vf-vf.sh:
