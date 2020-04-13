@@ -82,6 +82,9 @@ tests:
             ^.*for-linust.*: [2112205]
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
+    test-tc-insert-mpls-rules.sh:
+        ignore_kernel:
+            .*: [2112205]
     test-tc-insert-rule-rep-uplink-vlan.sh:
         ignore_kernel:
             .*: [2094890]

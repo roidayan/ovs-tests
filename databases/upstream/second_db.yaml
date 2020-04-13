@@ -51,6 +51,7 @@ tests:
             .*: [2043842]
     test-ovs-vf-mirror.sh:
     test-ovs-vlan.sh:
+    test-ovs-vlan-implicit.sh:
     test-ovs-vxlan-flow-key.sh:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:
         ignore_kernel:

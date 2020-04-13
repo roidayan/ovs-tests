@@ -26,6 +26,7 @@ tests:
             .*: [1976103]
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
+    test-ovs-ct-scapy-hw-ovs-miss.sh:
     test-ovs-ct-scapy-udp-2ports.sh:
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
@@ -41,6 +42,9 @@ tests:
     test-ovs-ct-scapy-udp-nat-dnat.sh:
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
+    test-ovs-ct-scapy-udp-nat-ct2.sh:
+        ignore_kernel:
+            .*: [2132294]
     test-ovs-ct-scapy-udp-reload.sh:
         ignore_kernel:
             ^.*dbg.*: [2130620]
