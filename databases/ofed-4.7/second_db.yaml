@@ -93,6 +93,7 @@ tests:
         ignore_kernel:
              .*: [1610829]
     test-ovs-vxlan.sh:
+    test-ovs-vlan-implicit.sh:
     test-vf-lag.sh:
         ignore_kernel:
              .*: [1892816]

@@ -44,3 +44,6 @@ tests:
     test-ovs-ct-vxlan.sh:
     test-ovs-ct-vxlan-vf-lag.sh:
     test-ovs-ct-vxlan-vf-mirror.sh:
+    test-ct-tcp-pedit-ct-clear.sh:
+    test-ovs-ct-scapy-hw-ovs-miss.sh:
+    test-ovs-ct-scapy-udp-nat-ct2.sh:
