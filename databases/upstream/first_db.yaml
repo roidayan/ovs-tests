@@ -65,6 +65,7 @@ tests:
     test-tc-geneve.sh:
     test-tc-hairpin-disable-sriov.sh:
         ignore_kernel:
+            .*: [2135071]
             ^.*dbg.*: [2134648]
     test-tc-hairpin-rules.sh:
         ignore_kernel:
@@ -72,14 +73,12 @@ tests:
     test-tc-hairpin-esw-upl1-esw-upl1.sh:
         ignore_kernel:
             .*: [2135071]
-            ^.*for-linust.*: [2112205]
     test-tc-hairpin-esw-upl1-encap-esw-upl1.sh:
         ignore_kernel:
-            ^.*for-linust.*: [2112205]
+            .*: [2135071]
     test-tc-hairpin-esw-upl1-decap-esw-upl1.sh:
         ignore_kernel:
             .*: [2135071]
-            ^.*for-linust.*: [2112205]
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-mpls-rules.sh:
