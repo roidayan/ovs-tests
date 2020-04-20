@@ -74,6 +74,8 @@ tests:
           (?!.*5.4.0-mlnx|4.20.17+).*: [2119499]
     test-tc-insert-rules-goto.sh:
     test-tc-insert-rules-gre.sh:
+        ignore_kernel:
+          ^(?!(.*5.4.0-mlnx|.*4.14.0-mlnx|.*4.18.0-80.el8.x86_64)).*: [2142118]
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
     test-tc-insert-rules-mirror.sh:
