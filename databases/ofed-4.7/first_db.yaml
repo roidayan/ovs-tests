@@ -108,7 +108,7 @@ tests:
     test-tc-replace.sh:
     test-tc-rule-act-add.sh:
         ignore_kernel:
-          (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|4.19.36-wq|4.20.17+).*: [1552627]
+          (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|4.19.*|4.20.17+).*: [1552627]
     test-tc-rule-add-null-qdisc.sh:
     test-tc-shuffle-2.sh:
     test-tc-shuffle-3.sh:
