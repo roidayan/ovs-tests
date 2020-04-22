@@ -155,6 +155,6 @@ tests:
          ignore_kernel:
            (3.10.0-327.el7.x86_64).*: [1939639]
     test-tc-wrong-tunnel.sh:
-    test-tc-insert-mpls-rules.sh:
+    test-tc-insert-rules-mpls.sh:
         ignore_kernel:
             .*: [2135711]
