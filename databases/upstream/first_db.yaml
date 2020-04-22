@@ -81,7 +81,7 @@ tests:
             .*: [2135071]
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
-    test-tc-insert-mpls-rules.sh:
+    test-tc-insert-rules-mpls.sh:
         ignore_kernel:
             .*: [2137330]
     test-tc-insert-rule-rep-uplink-vlan.sh:
