@@ -6,24 +6,46 @@ tests:
     test-devlink-inline-mode.sh:
     test-devlink-show-in-each-link-mode.sh:
     test-ecmp-add-multipath-rule.sh:
+       ignore_kernel:
+          (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
+       ignore_kernel:
+          (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
     test-ecmp-add-vxlan-rule.sh:
+       ignore_kernel:
+          (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
     test-ecmp-failover-failback.sh:
+       ignore_kernel:
+          (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
+          (4.19.*|4.20.17+).*: [2145381]
     test-ecmp-load-balance.sh:
+       ignore_kernel:
+          (5.4.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|4.18.0-80.el8.x86_64|4.14.0-mlnx|4.19.*|4.20.17+).*: [1825745]
+          (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
     test-ecmp-restore-rule.sh:
+       ignore_kernel:
+          (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
+          (4.19.*|4.20.17+).*: [2145381]
     test-ecmp-route-events.sh:
+       ignore_kernel:
+          (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
     test-ecmp-rule-stats.sh:
+       ignore_kernel:
+          (5.4.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|4.18.0-80.el8.x86_64|4.14.0-mlnx).*: [1825745]
+          (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
     test-ethtool-basic.sh:
         ignore_kernel:
              .*: [1825751]
     test-ethtool-steering.sh:
+        ignore_kernel:
+          (3.10.0-327.el7.x86_64).*: [2145410]
     test-ifstat.sh:
         ignore_kernel:
-          (3.10.0-693.el7.x86_64).*: [1996366]
+          (4.9.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-862.el7.x86_64).*: [1996366]
     test-ovs-aging-tc-rules.sh:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
         ignore_kernel:
-          (3.10.0-693.el7.x86_64).*: [1716789]
+          (4.14.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-693.el7.x86_64).*: [1716789]
     test-ovs-dpctl-flows.sh:
         ignore_kernel:
           (3.10.0-693.el7.x86_64).*: [1716786]
@@ -41,11 +63,13 @@ tests:
           (?!.*5.4.0-mlnx|4.20.17+).*: [2119499]
     test-ovs-gre-in-ns.sh:
         ignore_kernel:
-          ^(?!(.*5.4.0-mlnx|.*4.14.0-mlnx|.*4.18.0-80.el8.x86_64)).*: [2142118]
+          (4.19.*|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|4.18.0-80.el8.x86_64).*: [2142118]
     test-ovs-icmp-frag.sh:
         ignore_kernel:
              .*: [1718182]
     test-ovs-icmp-offload.sh:
+        ignore_kernel:
+          (4.9.0-mlnx).*: [1830716]
     test-ovs-ipv4-match.sh:
     test-ovs-ipv6-match.sh:
         ignore_kernel:
@@ -60,8 +84,14 @@ tests:
         ignore_kernel:
              .*: [1670979]
     test-ovs-persistent-data.sh:
+       ignore_kernel:
+          (4.9.0-mlnx|3.10.0-327.el7.x86_64).*: [2145410]
     test-ovs-qinq-1.sh:
+        ignore_kernel:
+          (4.14.0-mlnx|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [2145311]
     test-ovs-qinq-2.sh:
+        ignore_kernel:
+          (4.14.0-mlnx|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [2145311]
     test-ovs-replace-rule-hw.sh:
         ignore_kernel:
           (3.10.0-693.el7.x86_64).*: [1755846]
@@ -73,9 +103,15 @@ tests:
           (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [1835651]
     test-ovs-rewrite-tos-dscp.sh:
     test-ovs-tcp-offload.sh:
+       ignore_kernel:
+          (3.10.0-327.el7.x86_64).*: [2145410]
     test-ovs-tc-rules-checker.sh:
+       ignore_kernel:
+          (4.9.0-mlnx|3.10.0-327.el7.x86_64).*: [1835651]
     test-ovs-udp-offload.sh:
     test-ovs-vf-lag.sh:
+       ignore_kernel:
+          .*: [1830683]
     test-ovs-vf-mirror.sh:
     test-ovs-vxlan-flow-key.sh:
         ignore_kernel:
@@ -88,9 +124,14 @@ tests:
              .*: [1708975]
     test-ovs-vxlan-in-ns-dpctl.sh:
         ignore_kernel:
+          .*: [2145401]
           (3.10.0-327.el7.x86_64).*: [1919896]
     test-ovs-vxlan-in-ns-ipv6.sh:
+        ignore_kernel:
+          .*: [2145401]
     test-ovs-vxlan-in-ns.sh:
+        ignore_kernel:
+          .*: [2145401]
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
         ignore_kernel:
              .*: [1610829]
@@ -140,3 +181,6 @@ tests:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [1939639]
     test-vxlan-rx-vlan-push-offload.sh:
+        ignore_kernel:
+          (3.10.0-327.el7.x86_64).*: [1939639]
+          (5.4.0-mlnx|4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|4.18.0-80.el8.x86_64|4.19.*|4.20.17+).*: [2145280]
