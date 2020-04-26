@@ -64,6 +64,7 @@ tests:
     test-ovs-gre-in-ns.sh:
         ignore_kernel:
           (4.9.0-mlnx|4.20.17+|4.19.*|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|4.18.0-80.el8.x86_64).*: [2142118]
+          (4.14.0-mlnx).*: [2148342]
     test-ovs-icmp-frag.sh:
         ignore_kernel:
              .*: [1718182]
@@ -154,12 +155,14 @@ tests:
     test-vf-vf-different-esw-ping.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [1825786]
+          (3.10.0-957.el7.x86_64).*: [2148279]
     test-vf-vf-fwd-fl_classify.sh:
         ignore_kernel:
              .*: [1593079]
     test-vf-vf-fwd-fl_delete.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [1726617]
+          (3.10.0-957.el7.x86_64).*: [2148287]
     test-vf-vf-fwd.sh:
     test-vf-vf-iperf-perf.sh:
         ignore_kernel:
@@ -185,4 +188,4 @@ tests:
     test-vxlan-rx-vlan-push-offload.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [1939639]
-          (5.4.0-mlnx|4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|4.18.0-80.el8.x86_64|4.19.*|4.20.17+).*: [2145280]
+          .*: [2145280]
