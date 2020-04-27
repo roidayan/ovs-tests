@@ -2,9 +2,6 @@ description:
     This DB is for running eswitch and tc tests for upstream regression.
 tests:
     test-eswitch-ingress-rate-limit.sh:
-    test-eswitch-127-reps.sh:
-        ignore_kernel:
-            .*: [2018217]
     test-eswitch-add-del-different-flows2.sh:
     test-eswitch-add-del-different-flows.sh:
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
@@ -37,16 +34,10 @@ tests:
     test-eswitch-reload-modules-different-state.sh:
         ignore_kernel:
             ^.*dbg.*: [2130620]
-    test-eswitch-reps-2ports.sh:
-        ignore_kernel:
-            .*: [2018217]
     test-eswitch-set-vf-mac.sh:
     test-eswitch-set-vf-rate.sh:
     test-eswitch-set-vf-vlan.sh:
     test-eswitch-sqn-overflow.sh:
-    test-eswitch-sriov-vf-up.sh:
-        ignore_kernel:
-            .*: [2018217]
     test-eswitch-switchdev-ndos.sh:
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:
