@@ -14,7 +14,7 @@ tests:
             ^.*dbg.*: [2134648]
     test-eswitch-change-hfunc.sh:
          ignore_kernel:
-            .*: [1630228]
+            .*: [1615952]
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
         ignore_kernel:
@@ -86,7 +86,7 @@ tests:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-geneve.sh:
         ignore_kernel:
-            .*: [2094875]
+           ^.*for-linust.*: [2148234]
     test-tc-insert-rules-gre.sh:
     test-tc-insert-rules-legacy.sh:
         ignore_kernel:
