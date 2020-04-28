@@ -1,0 +1,25 @@
+description:
+    This DB is for running vxlan only tests for ofed regression
+tests:
+    test-vxlan-port-del.sh:
+    test-vxlan-port-offload.sh:
+    test-vxlan-rx-vlan-push-offload.sh:
+    test-ovs-vxlan-flow-key.sh:
+    test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:
+    test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh:
+    test-ovs-vxlan-remove-tunnel-during-traffic.sh:
+        ignore_kernel:
+             .*: [1610829]
+    test-ovs-vxlan.sh:
+    test-ecmp-add-vxlan-encap-disable-sriov.sh:
+    test-ecmp-add-vxlan-rule.sh:
+    test-ovs-multi-vxlan-bridge-ingress.sh:
+    test-tc-vxlan-decap-inner-match-drop.sh:
+    test-tc-vxlan-decap-in-skip-sw.sh:
+    test-tc-vxlan-decap-key-port-only.sh:
+    test-tc-vxlan-decap-not-properly-offloaded.sh:
+    test-tc-vxlan-decap-proto-all.sh:
+    test-tc-vxlan-encap.sh:
+         ignore_kernel:
+            .*: [1706116]
+    test-tc-vxlan-outer-dst-mac.sh:
