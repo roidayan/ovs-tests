@@ -63,6 +63,8 @@ tests:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
     test-ovs-vxlan.sh:
     test-ovs-vxlan-vf-lag.sh:
+        ignore_fw:
+            ^22.*: [2150473]
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
     test-vxlan-neigh-update.sh:
     test-vxlan-neigh-update-stack.sh:

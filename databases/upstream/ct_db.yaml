@@ -77,7 +77,11 @@ tests:
         ignore_kernel:
             .*: [2122933]
     test-ovs-ct-vxlan.sh:
+        ignore_fw:
+            ^22.*: [2150473]
     test-ovs-ct-vxlan-vf-lag.sh:
+        ignore_fw:
+            ^22.*: [2150473]
     test-ovs-ct-vxlan-vf-mirror.sh:
         ignore_kernel:
             .*: [1912698]

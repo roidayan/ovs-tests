@@ -13,17 +13,13 @@ tests:
     test-tc-par-add-dup.sh:
     test-vf-rep-ping.sh:
     test-eswitch-rep-channels-time.sh:
-        ignore_kernel:
-            .*: [2018217]
     test-eswitch-rep-up-time.sh:
-        ignore_kernel:
-            .*: [2018217]
     test-eswitch-reps-2ports.sh:
         ignore_kernel:
-            .*: [2018217]
+            .*: [2150453]
     test-eswitch-sriov-vf-up.sh:
         ignore_kernel:
-            .*: [2018217]
+            .*: [2103982]
     test-eswitch-127-reps.sh:
         ignore_kernel:
-            .*: [2018217]
+            .*: [2103982]
