@@ -76,8 +76,7 @@ tests:
             ^.*dbg.*: [2130620]
     test-vxlan-rx-vlan-push-offload.sh:
     test-vf-lag.sh:
-        ignore_kernel:
-            .*: [1892816]
+    test-vf-rep-ping.sh:
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:
     test-vf-rep-ping-change-mtu.sh:

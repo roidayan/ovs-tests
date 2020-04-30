@@ -111,7 +111,11 @@ tests:
             ^.*dbg.*: [2130644]
     test-tc-max-rules-legacy.sh:
     test-tc-max-rules.sh:
+    test-tc-merged-esw-pf-pf.sh:
     test-tc-merged-esw-vf-vf.sh:
+    test-tc-merged-esw-vf-pf.sh:
+        ignore_kernel:
+            .*: [1799666]
     test-tc-multi-masks-per-prio.sh:
     test-tc-multi-prio-chains.sh:
     test-tc-multi-prio-chains-high.sh:
