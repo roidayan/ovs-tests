@@ -22,11 +22,16 @@ tests:
           (3.10.0-327.el7.x86_64).*: [1655572]
     test-eswitch-change-hfunc.sh:
     test-eswitch-del-flows-during-add.sh:
+        ignore_kernel:
+          (5.4.0-mlnx).*: [2153630]
     test-eswitch-del-flows-during-reload.sh:
         ignore_kernel:
             (3.10.0-327.el7.x86_64|4.9.0-mlnx).*: [2150419]
+             .*: [2153507]
     test-eswitch-diff-vfs-per-port.sh:
     test-eswitch-ingress-rate-limit.sh:
+        ignore_kernel:
+             .*: [2153635]
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
         ignore_kernel:
@@ -70,30 +75,37 @@ tests:
     test-tc-insert-rule-rep-uplink-vlan.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [2107052]
+          (?!.*5.4.0-mlnx).*: [2153648]
     test-tc-insert-rules-act-pass.sh:
+        ignore_kernel:
+          .*: [2153587]
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64|3.10.0-862.el7.x86_64|4.9.0-mlnx).*: [1716808]
     test-tc-insert-rules-geneve.sh:
         ignore_kernel:
-          (?!.*5.4.0-mlnx|4.20.17+).*: [2119499]
+          .*: [2153641]
     test-tc-insert-rules-goto.sh:
+        ignore_kernel:
+          (?!(4.19.*|4.20.17+)).*: [2153625]
     test-tc-insert-rules-gre.sh:
         ignore_kernel:
-          ^(?!(.*5.4.0-mlnx|.*4.14.0-mlnx)).*: [2142118]
+          (?!(.*5.4.0-mlnx|.*4.14.0-mlnx)).*: [2142118]
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
+        ignore_kernel:
+          .*: [2153487]
     test-tc-insert-rules-mirror.sh:
     test-tc-insert-rules-pedit.sh:
         ignore_kernel:
-          (4.9.0-mlnx3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [2150423]
+          (4.9.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [2150423]
     test-tc-insert-rules-pedit-ttl-ip.sh:
         ignore_kernel:
-          (4.9.0-mlnx3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [2150423]
+          (4.9.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [2150423]
     test-tc-insert-rules-pedit-ttl.sh:
         ignore_kernel:
-          (4.9.0-mlnx3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [2150423]
+          (4.9.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [2150423]
     test-tc-insert-rules-port2.sh:
     test-tc-insert-rules.sh:
         ignore_kernel:
@@ -143,7 +155,7 @@ tests:
     test-tc-shuffle-reload-mirred.sh:
     test-tc-shuffle-reload-mirred-skip-hw.sh:
          ignore_kernel:
-           (4.9.0-mlnx).*: [2150436]
+           (4.9.0-mlnx).*: [1726617]
     test-tc-shuffle.sh:
     test-tc-traffic-chain-flush.sh:
         ignore_kernel:
@@ -170,6 +182,7 @@ tests:
     test-tc-vxlan-decap-in-skip-sw.sh:
          ignore_kernel:
            (3.10.0-327.el7.x86_64|4.9.0-mlnx).*: [1939639]
+           .*: [2153600]
     test-tc-vxlan-decap-key-port-only.sh:
          ignore_kernel:
            (3.10.0-327.el7.x86_64|4.9.0-mlnx).*: [1939639]
