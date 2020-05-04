@@ -21,7 +21,6 @@ tests:
     test-ethtool-basic.sh:
         ignore_kernel:
             .*: [1615952]
-    test-ecmp-add-vxlan-rule.sh:
     test-eswitch-netdev-tx.sh:
     test-eswitch-set-vf-vlan.sh:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
