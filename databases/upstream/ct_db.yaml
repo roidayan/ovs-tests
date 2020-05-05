@@ -42,7 +42,10 @@ tests:
     test-ovs-ct-scapy-udp-nat-dnat.sh:
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
-    test-ovs-ct-scapy-udp-nat-ct2.sh:
+    test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
+        ignore_kernel:
+            .*: [2132294]
+    test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
         ignore_kernel:
             .*: [2132294]
     test-ovs-ct-scapy-udp-reload.sh:
