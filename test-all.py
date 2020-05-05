@@ -417,7 +417,7 @@ def get_tests():
         return False
 
 
-def main(args):
+def main():
     exclude = []
     ignore = False
 
@@ -509,7 +509,7 @@ if __name__ == "__main__":
     prepare_logdir()
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
-    rc = main(args)
+    rc = main()
     if args.html and not args.dry:
         save_summary_html()
     sys.exit(rc)
