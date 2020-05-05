@@ -27,7 +27,7 @@ tests:
     test-eswitch-del-flows-during-reload.sh:
         ignore_kernel:
             (3.10.0-327.el7.x86_64|4.9.0-mlnx).*: [2150419]
-             .*: [2153507]
+            .*: [2153507]
     test-eswitch-diff-vfs-per-port.sh:
     test-eswitch-ingress-rate-limit.sh:
         ignore_kernel:
