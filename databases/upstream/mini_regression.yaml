@@ -1,5 +1,5 @@
 description:
-    This DB is for running basic tests for CI
+    devtests CI
 tests:
     test-vf-vf-ping.sh:
     test-vf-rep-ping.sh:
