@@ -16,9 +16,6 @@ tests:
     test-tc-merged-esw-vf-vf.sh:
     test-tc-vxlan-decap-inner-match-drop.sh:
     test-vxlan-neigh-update.sh:
-    test-ethtool-basic.sh:
-        ignore_kernel:
-            .*: [1615952]
     test-eswitch-set-vf-vlan.sh:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-ovs-icmp-offload.sh:
