@@ -64,7 +64,7 @@ tests:
     test-ovs-vxlan.sh:
     test-ovs-vxlan-vf-lag.sh:
         ignore_fw:
-            ^22.*: [2150473]
+            ^22.*: [2149563]
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
     test-vxlan-neigh-update.sh:
     test-vxlan-neigh-update-stack.sh:
@@ -73,7 +73,7 @@ tests:
     test-vxlan-port-del.sh:
     test-vxlan-port-offload.sh:
         ignore_kernel:
-            ^.*dbg.*: [2130620]
+            ^.*debug.*: [2130620]
     test-vxlan-rx-vlan-push-offload.sh:
     test-vf-lag.sh:
     test-vf-rep-ping.sh:

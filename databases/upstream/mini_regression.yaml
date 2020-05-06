@@ -21,7 +21,5 @@ tests:
             .*: [1615952]
     test-eswitch-set-vf-vlan.sh:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
-        ignore_kernel:
-            .*dbg.*: [2134648]
     test-ovs-icmp-offload.sh:
     test-ct-tcp.sh:

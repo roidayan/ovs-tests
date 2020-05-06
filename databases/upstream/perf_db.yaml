@@ -3,19 +3,13 @@ description:
 tests:
     test-tc-par-add-ovr-del.sh:
     test-tc-par-add-del.sh:
-        ignore_kernel:
-            ^.*dbg.*: [2134625]
     test-tc-par-add-del-vxlan.sh:
     test-tc-par-add-del-vxlan-neigh-update.sh:
-        ignore_kernel:
-            .*: [2119445]
     test-tc-par-add-dump-del.sh:
     test-tc-par-add-dup.sh:
     test-eswitch-rep-channels-time.sh:
     test-eswitch-rep-up-time.sh:
     test-eswitch-reps-2ports.sh:
-        ignore_kernel:
-            .*: [2150453]
     test-eswitch-sriov-vf-up.sh:
         ignore_kernel:
             .*: [2103982]
