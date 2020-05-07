@@ -55,5 +55,5 @@ tests:
      ignore_kernel:
        (4.19.*).*: [2142704]
     test-ovs-ct-scapy-hw-ovs-miss.sh:
-    test-ovs-ct-scapy-udp-nat-ct2.sh:
+    test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
