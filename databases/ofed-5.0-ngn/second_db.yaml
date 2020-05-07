@@ -5,6 +5,7 @@ tests:
     test-devlink-inline-mode2.sh:
     test-devlink-inline-mode.sh:
     test-devlink-show-in-each-link-mode.sh:
+          (4.18.0-g5458cbf403b8-dirty).*: [2164290]
     test-ecmp-add-multipath-rule.sh:
        ignore_kernel:
           (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
@@ -20,7 +21,7 @@ tests:
           (4.19.*|4.20.17+).*: [2145381]
     test-ecmp-load-balance.sh:
        ignore_kernel:
-          (5.4.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|4.18.0-80.el8.x86_64|4.14.0-mlnx|4.19.*|4.20.17+).*: [1825745]
+          (5.4.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|4.18.0-g5458cbf403b8-dirty|4.14.0-mlnx|4.19.*|4.20.17+).*: [1825745]
           (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
     test-ecmp-restore-rule.sh:
        ignore_kernel:
@@ -31,7 +32,7 @@ tests:
           (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
     test-ecmp-rule-stats.sh:
        ignore_kernel:
-          (5.4.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|4.18.0-80.el8.x86_64|4.14.0-mlnx).*: [1825745]
+          (5.4.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|4.18.0-g5458cbf403b8-dirty|4.14.0-mlnx).*: [1825745]
           (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
     test-ethtool-basic.sh:
         ignore_kernel:
@@ -63,7 +64,7 @@ tests:
           (?!.*5.4.0-mlnx|4.20.17+).*: [2119499]
     test-ovs-gre-in-ns.sh:
         ignore_kernel:
-          (4.9.0-mlnx|4.20.17+|4.19.*|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|4.18.0-80.el8.x86_64).*: [2142118]
+          (4.9.0-mlnx|4.20.17+|4.19.*|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|4.18.0-g5458cbf403b8-dirty).*: [2142118]
           (4.14.0-mlnx).*: [2148342]
     test-ovs-icmp-frag.sh:
         ignore_kernel:
@@ -163,6 +164,7 @@ tests:
         ignore_kernel:
           (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [1726617]
           (3.10.0-957.el7.x86_64).*: [2148287]
+          (4.18.0-g5458cbf403b8-dirty).*: [2164340]
     test-vf-vf-fwd.sh:
     test-vf-vf-iperf-perf.sh:
         ignore_kernel:
