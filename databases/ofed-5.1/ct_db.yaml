@@ -81,3 +81,4 @@ tests:
     test-ovs-ct-scapy-udp-nat-ct2.sh:
       ignore_kernel:
         (4.19.*|4.20.17+).*: [1858134]
+    test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
