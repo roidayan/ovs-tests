@@ -78,7 +78,7 @@ tests:
     test-ovs-ct-vxlan-3.sh:
     test-ovs-ct-vxlan-many-conns.sh:
         ignore_kernel:
-            .*: [2122933]
+            .*: [2164217]
     test-ovs-ct-vxlan.sh:
         ignore_fw:
             ^22.*: [2149563]
