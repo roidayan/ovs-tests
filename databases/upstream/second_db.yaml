@@ -73,7 +73,7 @@ tests:
     test-vxlan-port-del.sh:
     test-vxlan-port-offload.sh:
         ignore_kernel:
-            ^.*debug.*: [2130620]
+            .*(debug|dbg).*: [2130620]
     test-vxlan-rx-vlan-push-offload.sh:
     test-vf-lag.sh:
     test-vf-rep-ping.sh:
