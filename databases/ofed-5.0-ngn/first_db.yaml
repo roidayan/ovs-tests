@@ -66,7 +66,11 @@ tests:
     test-tc-groups-multi-fgs.sh:
     test-tc-groups-overlapping.sh:
     test-tc-hairpin-disable-sriov.sh:
+        ignore_kernel:
+          (4.18.0-g5458cbf403b8-dirty).*: [2165565]
     test-tc-hairpin-rules.sh:
+        ignore_kernel:
+          (4.18.0-g5458cbf403b8-dirty).*: [2165565]
     test-tc-icmp-4-channels.sh:
     test-tc-geneve.sh:
         ignore_kernel:
@@ -200,7 +204,7 @@ tests:
            (3.10.0-327.el7.x86_64|4.9.0-mlnx).*: [1939639]
     test-tc-wrong-tunnel.sh:
         ignore_kernel:
-          (4.14.0-mlnx|4.9.0-mlnx|4.20.17+|4.19.*|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|4.18.0-80.el8.x86_64).*: [2150475]
+          (4.14.0-mlnx|4.9.0-mlnx|4.20.17+|4.19.*|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|4.18.0-g5458cbf403b8-dirty).*: [2150475]
     test-tc-insert-rules-mpls.sh:
         ignore_kernel:
             .*: [2135711]
