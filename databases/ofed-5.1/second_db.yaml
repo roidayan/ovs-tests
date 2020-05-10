@@ -20,7 +20,7 @@ tests:
           (4.19.*|4.20.17+).*: [2145381]
     test-ecmp-load-balance.sh:
        ignore_kernel:
-          (5.4.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|4.18.0-80.el8.x86_64|4.14.0-mlnx|4.19.*|4.20.17+).*: [1825745]
+          (5.6.0-mlnx|5.4.0-mlnx|3.10.0-957.el7.x86_64|3.10.0-862.el7.x86_64|4.18.0-80.el8.x86_64|4.14.0-mlnx|4.19.*|4.20.17+).*: [1825745]
           (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]
     test-ecmp-restore-rule.sh:
        ignore_kernel:
@@ -185,6 +185,7 @@ tests:
     test-vxlan-port-offload.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [1939639]
+          (5.6.0-mlnx).*: [2165634]
     test-vxlan-rx-vlan-push-offload.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [1939639]
