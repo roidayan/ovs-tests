@@ -24,7 +24,6 @@ tests:
     test-ovs-ct-miss-to-sw.sh:
     test-ovs-ct-scapy-udp-2ports.sh:
     test-ovs-ct-scapy-udp-aging-ovs.sh:
-    test-ovs-ct-scapy-udp-aging.sh:
     test-ovs-ct-scapy-udp-ct-clear.sh:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
     test-ovs-ct-scapy-udp-down-up.sh:
