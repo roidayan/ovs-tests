@@ -21,6 +21,8 @@ tests:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [1655572]
     test-eswitch-change-hfunc.sh:
+        ignore_kernel:
+          (5.6.0-mlnx).*: [1927267]
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
         ignore_kernel:
@@ -32,7 +34,7 @@ tests:
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
         ignore_kernel:
-          (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|3.10.0-862.el7.x86_64).*: [1996709]
+          (5.6.0-mlnx|3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|3.10.0-862.el7.x86_64).*: [1996709]
     test-eswitch-no-carrier.sh:
     test-eswitch-par-actions.sh:
     test-eswitch-reload-modules-different-state.sh:
@@ -82,6 +84,8 @@ tests:
         ignore_kernel:
           (?!.*5.4.0-mlnx|4.20.17+).*: [2119499]
     test-tc-insert-rules-goto.sh:
+        ignore_kernel:
+          (?!(4.19.*|4.20.17+)).*: [2153625]
     test-tc-insert-rules-gre.sh:
         ignore_kernel:
           ^(?!(.*5.4.0-mlnx|.*4.14.0-mlnx)).*: [2142118]
@@ -175,6 +179,7 @@ tests:
     test-tc-vxlan-decap-in-skip-sw.sh:
          ignore_kernel:
            (3.10.0-327.el7.x86_64|4.9.0-mlnx).*: [1939639]
+           .*: [2153600]
     test-tc-vxlan-decap-key-port-only.sh:
          ignore_kernel:
            (3.10.0-327.el7.x86_64|4.9.0-mlnx).*: [1939639]
