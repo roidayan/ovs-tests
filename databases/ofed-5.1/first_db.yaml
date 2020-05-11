@@ -27,6 +27,8 @@ tests:
             (3.10.0-327.el7.x86_64|4.9.0-mlnx).*: [2150419]
     test-eswitch-diff-vfs-per-port.sh:
     test-eswitch-ingress-rate-limit.sh:
+        ignore_kernel:
+          (5.6.0-mlnx).*: [2166474]
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
         ignore_kernel:
@@ -70,6 +72,7 @@ tests:
     test-tc-insert-rule-rep-uplink-vlan.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [2107052]
+          (5.6.0-mlnx).*: [2166483]
     test-tc-insert-rules-act-pass.sh:
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
@@ -84,6 +87,8 @@ tests:
           ^(?!(.*5.4.0-mlnx|.*4.14.0-mlnx)).*: [2142118]
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
+        ignore_kernel:
+          (5.6.0-mlnx).*: [2166489]
     test-tc-insert-rules-mirror.sh:
     test-tc-insert-rules-pedit.sh:
         ignore_kernel:
@@ -192,3 +197,5 @@ tests:
         ignore_kernel:
             .*: [2135711]
     test-tc-merged-esw-vf-pf.sh:
+        ignore_kernel:
+          (5.6.0-mlnx).*: [2166541]
