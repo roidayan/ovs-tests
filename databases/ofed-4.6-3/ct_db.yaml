@@ -23,6 +23,8 @@ tests:
     test-ovs-ct-icmp-frag.sh:
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
+     ignore_kernel:
+       (4.19.*).*: [2166555]
     test-ovs-ct-scapy-udp-2ports.sh:
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
@@ -32,6 +34,8 @@ tests:
     test-ovs-ct-scapy-udp-jd-nat-reconfig-flows.sh:
     test-ovs-ct-scapy-udp-jd-nat.sh:
     test-ovs-ct-scapy-udp-nat-dnat.sh:
+     ignore_kernel:
+       (4.19.*).*: [1858134]
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-reload.sh:
@@ -42,7 +46,7 @@ tests:
        (4.19.*).*: [2119519]
     test-ovs-ct-tcp-label2.sh:
      ignore_kernel:
-       (4.19.*).*: [2145419]
+       (4.19.*).*: [2166530]
     test-ovs-ct-tcp-label-reconfig.sh:
     test-ovs-ct-tcp-label.sh:
     test-ovs-ct-tcp-mac-rewrite.sh:
@@ -56,4 +60,8 @@ tests:
        (4.19.*).*: [2142704]
     test-ovs-ct-scapy-hw-ovs-miss.sh:
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
+     ignore_kernel:
+       (4.19.*).*: [1858134]
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
+     ignore_kernel:
+       (4.19.*).*: [2166565]

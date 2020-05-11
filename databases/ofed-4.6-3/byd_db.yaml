@@ -3,7 +3,7 @@ description:
 tests:
     test-eswitch-127-reps.sh:
         ignore_kernel:
-            .*: [2018217]
+            .*: [2150491]
     test-eswitch-add-del-different-flows2.sh:
     test-eswitch-add-del-different-flows.sh:
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
@@ -19,6 +19,8 @@ tests:
     test-eswitch-del-flows-during-reload.sh:
     test-eswitch-diff-vfs-per-port.sh:
     test-eswitch-ingress-rate-limit.sh:
+        ignore_kernel:
+             .*: [2153635]
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
     test-eswitch-no-carrier.sh:
@@ -35,7 +37,7 @@ tests:
     test-eswitch-sqn-overflow.sh:
     test-eswitch-sriov-vf-up.sh:
         ignore_kernel:
-            .*: [2018217]
+            .*: [2150491]
     test-eswitch-switchdev-ndos.sh:
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:
@@ -59,12 +61,18 @@ tests:
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rule-rep-uplink-vlan.sh:
+        ignore_kernel:
+          (4.19.*).*: [2153648]
     test-tc-insert-rules-act-pass.sh:
+       ignore_kernel:
+          (4.19.*).*: [2153587]
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-goto.sh:
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
+        ignore_kernel:
+          .*: [2153487]
     test-tc-insert-rules-mirror.sh:
     test-tc-insert-rules-pedit.sh:
     test-tc-insert-rules-pedit-ttl-ip.sh:
@@ -72,6 +80,8 @@ tests:
     test-tc-insert-rules-port2.sh:
     test-tc-insert-rules-macvlan.sh:
     test-tc-insert-rules.sh:
+        ignore_kernel:
+          (4.19.*).*: [1716797]
     test-tc-insert-rule-without-match.sh:
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
@@ -103,6 +113,8 @@ tests:
     test-tc-traffic-qdisc-del.sh:
     test-tc-vlan-modify.sh:
     test-tc-wrong-tunnel.sh:
+       ignore_kernel:
+          (4.19.*).*: [2150475]
     test-tc-insert-rules-mpls.sh:
         ignore_kernel:
             .*: [2135711]
@@ -126,6 +138,8 @@ tests:
        ignore_kernel:
           (4.19.*).*: [2163387]
     test-ecmp-rule-stats.sh:
+       ignore_kernel:
+          (4.19.*).*: [1825745]
     test-ethtool-basic.sh:
         ignore_kernel:
              .*: [1825751]
@@ -135,6 +149,8 @@ tests:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
     test-ovs-dpctl-flows.sh:
     test-ovs-dpctl-flows-ttl-tos.sh:
+       ignore_kernel:
+          (4.19.*).*: [1716786]
     test-ovs-icmp-frag.sh:
         ignore_kernel:
              .*: [1718182]
