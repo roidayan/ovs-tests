@@ -37,6 +37,8 @@ tests:
         ignore_kernel:
           (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64|3.10.0-862.el7.x86_64).*: [1996709]
     test-eswitch-no-carrier.sh:
+        ignore_kernel:
+          (4.18.0-g5458cbf403b8-dirty).*: [2166987]
     test-eswitch-par-actions.sh:
     test-eswitch-reload-modules-different-state.sh:
     test-eswitch-reps-2ports.sh:

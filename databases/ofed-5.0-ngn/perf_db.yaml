@@ -30,4 +30,4 @@ tests:
             .*: [2018217]
     test-eswitch-rep-up-time.sh:
         ignore_kernel:
-            .*: [2018217]
+          (4.18.0-g5458cbf403b8-dirty).*: [2167151]
