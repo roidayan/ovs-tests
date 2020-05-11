@@ -30,7 +30,7 @@ tests:
     test-eswitch-diff-vfs-per-port.sh:
     test-eswitch-ingress-rate-limit.sh:
         ignore_kernel:
-          (5.6.0-mlnx).*: [2166474]
+          (5.6.0-mlnx).*: [2166489]
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
         ignore_kernel:
