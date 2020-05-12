@@ -15,6 +15,8 @@ tests:
     test-eswitch-add-flows-during-reload.sh:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-eswitch-change-hfunc.sh:
+        ignore_kernel:
+          (4.19.*).*: [1927267]
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
     test-eswitch-diff-vfs-per-port.sh:
@@ -24,11 +26,13 @@ tests:
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
     test-eswitch-no-carrier.sh:
+        ignore_kernel:
+          (4.19.*).*: [1794766]
     test-eswitch-par-actions.sh:
     test-eswitch-reload-modules-different-state.sh:
     test-eswitch-reps-2ports.sh:
         ignore_kernel:
-            .*: [2018217]
+            .*: [2150491]
     test-eswitch-set-vf-mac.sh:
     test-eswitch-set-vf-rate.sh:
         ignore_kernel:
@@ -67,6 +71,8 @@ tests:
        ignore_kernel:
           (4.19.*).*: [2153587]
     test-tc-insert-rules-duplicates.sh:
+       ignore_kernel:
+          (4.19.*).*: [1610862]
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-goto.sh:
     test-tc-insert-rules-legacy.sh:
@@ -74,6 +80,8 @@ tests:
         ignore_kernel:
           .*: [2153487]
     test-tc-insert-rules-mirror.sh:
+       ignore_kernel:
+          (4.19.*).*: [2169704]
     test-tc-insert-rules-pedit.sh:
     test-tc-insert-rules-pedit-ttl-ip.sh:
     test-tc-insert-rules-pedit-ttl.sh:
@@ -92,8 +100,12 @@ tests:
     test-tc-merged-esw-vf-vf.sh:
     test-tc-multi-masks-per-prio.sh:
     test-tc-multi-prio-chains.sh:
+        ignore_kernel:
+          (4.19.*).*: [2169683]
     test-tc-qinq-rules.sh:
     test-tc-reoffload.sh:
+        ignore_kernel:
+          (4.19.*).*: [2169607]
     test-tc-replace.sh:
     test-tc-rule-act-add.sh:
         ignore_kernel:
@@ -144,6 +156,8 @@ tests:
         ignore_kernel:
              .*: [1825751]
     test-ethtool-steering.sh:
+       ignore_kernel:
+          (4.19.*).*: [2169689]
     test-ifstat.sh:
     test-ovs-aging-tc-rules.sh:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
@@ -175,7 +189,11 @@ tests:
     test-ovs-tc-rules-checker.sh:
     test-ovs-udp-offload.sh:
     test-ovs-vf-mirror.sh:
+        ignore_kernel:
+          (4.19.*).*: [2169671]
     test-ovs-vlan-implicit.sh:
+        ignore_kernel:
+          (4.19.*).*: [2169671]
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:
     test-vf-rep-ping-change-mtu.sh:
