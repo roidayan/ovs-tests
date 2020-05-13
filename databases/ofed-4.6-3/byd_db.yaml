@@ -134,6 +134,8 @@ tests:
     test-devlink-inline-mode2.sh:
     test-devlink-inline-mode.sh:
     test-devlink-show-in-each-link-mode.sh:
+        ignore_kernel:
+          (4.19.*).*: [2170746]
     test-ecmp-add-multipath-rule.sh:
        ignore_kernel:
           (4.19.*).*: [2163715]
