@@ -26,6 +26,7 @@ tests:
     test-tc-insert-rules.sh:
         ignore_kernel:
             (3.10.0-327.el7.x86_64).*: [1716797]
+            (3.10.0-957.el7.x86_64).*: [2170718]
     test-vf-rep-ping.sh:
     test-vf-vf-ping.sh:
     test-vxlan-neigh-update.sh:
