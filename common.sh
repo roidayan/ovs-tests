@@ -690,7 +690,7 @@ function require_multipath_support() {
 
     if [ "$m" == "" ]; then
         log "SKIP (Require multipath support)"
-	exit 0
+        exit 0
     fi
 }
 
