@@ -152,7 +152,7 @@ tests:
     test-tc-shuffle-reload-mirred.sh:
     test-tc-shuffle-reload-mirred-skip-hw.sh:
          ignore_kernel:
-           (4.9.0-mlnx).*: [2150436]
+           (4.9.0-mlnx).*: [1726617]
     test-tc-shuffle.sh:
     test-tc-traffic-chain-flush.sh:
         ignore_kernel:

@@ -117,7 +117,7 @@ tests:
           .*: [1830683]
     test-ovs-vf-mirror.sh:
         ignore_kernel:
-             (5.6.0-mlnx).*: [2169747]
+             (5.6.0-mlnx).*: [2166483]
     test-ovs-vxlan-flow-key.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [2003562]
@@ -143,7 +143,7 @@ tests:
     test-ovs-vxlan.sh:
     test-ovs-vlan-implicit.sh:
         ignore_kernel:
-             (5.6.0-mlnx).*: [2169747]
+             (5.6.0-mlnx).*: [2166483]
     test-vf-lag.sh:
         ignore_kernel:
              .*: [1892816]
