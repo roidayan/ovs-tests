@@ -71,6 +71,12 @@ tests:
     test-ovs-ct-tcp-nat-mark-ipv6.sh:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp-nat-restore.sh:
+    test-ovs-ct-tcp-testpmd.sh:
+        ignore_kernel:
+            .*: [2176088]
+    test-ovs-ct-tcp-testpmd-remote.sh:
+        ignore_kernel:
+            .*: [2176088]
     test-ovs-ct-tcp.sh:
     test-ovs-ct-udp-frag.sh:
         ignore_kernel:
@@ -90,3 +96,6 @@ tests:
         ignore_kernel:
             .*: [1912698]
     test-ovs-ct-vxlan-ipv6.sh:
+        ignore_kernel:
+            .*: [2176032]
+            .*: [2176049]
