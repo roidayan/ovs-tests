@@ -3,7 +3,6 @@ description:
 tests:
     test-vf-vf-ping.sh:
     test-vf-rep-ping.sh:
-    test-vf-lag.sh:
     test-tc-groups-overlapping.sh:
     test-tc-groups-multi-fgs.sh:
     test-tc-vf-mirror.sh:
