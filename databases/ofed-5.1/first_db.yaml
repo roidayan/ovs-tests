@@ -20,6 +20,7 @@ tests:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [1655572]
+          (5.6.0-mlnx).*: [2178181]
     test-eswitch-change-hfunc.sh:
         ignore_kernel:
           (5.6.0-mlnx).*: [1927267]
@@ -38,6 +39,8 @@ tests:
     test-eswitch-no-carrier.sh:
     test-eswitch-par-actions.sh:
     test-eswitch-reload-modules-different-state.sh:
+        ignore_kernel:
+          (5.6.0-mlnx).*: [2178181]
     test-eswitch-reps-2ports.sh:
     test-eswitch-set-vf-mac.sh:
     test-eswitch-set-vf-rate.sh:
@@ -65,7 +68,11 @@ tests:
     test-tc-groups-multi-fgs.sh:
     test-tc-groups-overlapping.sh:
     test-tc-hairpin-disable-sriov.sh:
+        ignore_kernel:
+          (5.6.0-mlnx).*: [2178181]
     test-tc-hairpin-rules.sh:
+        ignore_kernel:
+          (5.6.0-mlnx).*: [2178181]
     test-tc-icmp-4-channels.sh:
     test-tc-geneve.sh:
         ignore_kernel:
@@ -76,6 +83,8 @@ tests:
           (3.10.0-327.el7.x86_64).*: [2107052]
           (5.6.0-mlnx).*: [2166483]
     test-tc-insert-rules-act-pass.sh:
+        ignore_kernel:
+          (5.6.0-mlnx).*: [2178181]
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
         ignore_kernel:
@@ -90,6 +99,8 @@ tests:
         ignore_kernel:
           ^(?!(.*5.4.0-mlnx|.*4.14.0-mlnx)).*: [2142118]
     test-tc-insert-rules-legacy.sh:
+        ignore_kernel:
+          (5.6.0-mlnx).*: [2178181]
     test-tc-insert-rules-matchall.sh:
         ignore_kernel:
           (5.6.0-mlnx).*: [2166489]
@@ -111,6 +122,8 @@ tests:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [1939639]
     test-tc-insert-rule-without-match.sh:
+        ignore_kernel:
+          (5.6.0-mlnx).*: [2178181]
     test-tc-ip-tos-ip-ttl.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [1939639]
@@ -121,6 +134,7 @@ tests:
     test-tc-max-rules.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [2150483]
+          (5.6.0-mlnx).*: [2178181]
     test-tc-merged-esw-vf-vf.sh:
         ignore_kernel:
           .*: [2150471]
