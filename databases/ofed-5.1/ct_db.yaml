@@ -82,3 +82,5 @@ tests:
       ignore_kernel:
         (4.19.*|4.20.17+).*: [1858134]
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
+    test-ovs-ct-vxlan-ipv6.sh:
+    test-ovs-ct-tcp-ipv6-2.sh:
