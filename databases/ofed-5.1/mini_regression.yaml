@@ -18,4 +18,3 @@ tests:
     test-eswitch-set-vf-vlan.sh:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-ovs-icmp-offload.sh:
-    test-ct-tcp.sh:
