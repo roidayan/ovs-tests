@@ -5,7 +5,8 @@ tests:
     test-devlink-inline-mode2.sh:
     test-devlink-inline-mode.sh:
     test-devlink-show-in-each-link-mode.sh:
-         (4.18.0-g5458cbf403b8-dirty).*: [2164290]
+       ignore_kernel:
+          (4.18.0-g5458cbf403b8-dirty).*: [2164290]
     test-ecmp-add-multipath-rule.sh:
        ignore_kernel:
           (4.9.0-mlnx|3.10.0-693.el7.x86_64|3.10.0-327.el7.x86_64).*: [2144905]

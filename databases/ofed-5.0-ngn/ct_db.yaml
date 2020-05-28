@@ -2,64 +2,54 @@ description:
     This DB is for running connection tracking tests for ofed regression
 tests:
     test-ct-icmp-fwd.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ct-icmp.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ct-tcp-pedit.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ct-tcp-reload.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ct-tcp.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ovs-ct-geneve.sh:
-      ignore_kernel:
-        (4.19.*).*: [2119499]
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
     test-ovs-ct-scapy-udp-2ports.sh:
+      ignore_kernel:
+         (4.18.0-g5458cbf403b8-dirty).*: [2183778]
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-ct-clear.sh:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-nat-dnat.sh:
       ignore_kernel:
-         (4.19.*|4.20.17+).*: [1858134]
+         (4.18.0-g5458cbf403b8-dirty).*: [2183778]
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-reload.sh:
     test-ovs-ct-scapy-udp.sh:
     test-ovs-ct-tcp-2ports.sh:
     test-ovs-ct-tcp-iperf3.sh:
+      ignore_kernel:
+         (4.18.0-g5458cbf403b8-dirty).*: [2183778]
     test-ovs-ct-tcp-ipv6.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2119519]
     test-ovs-ct-tcp-label2.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2145419]
     test-ovs-ct-tcp-label-reconfig.sh:
     test-ovs-ct-tcp-label.sh:
+      ignore_kernel:
+         (4.18.0-g5458cbf403b8-dirty).*: [2183778]
     test-ovs-ct-tcp-mac-rewrite.sh:
     test-ovs-ct-tcp-nat-mark-ipv6.sh:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-vxlan-2.sh:
-     ignore_kernel:
-       (4.19.*).*: [2150410]
     test-ovs-ct-vxlan-3.sh:
     test-ovs-ct-vxlan-many-conns.sh:
     test-ovs-ct-vxlan.sh:
+      ignore_kernel:
+         (4.18.0-g5458cbf403b8-dirty).*: [2183778]
     test-ovs-ct-vxlan-vf-lag.sh:
     test-ct-tcp-pedit-ct-clear.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ovs-ct-scapy-hw-ovs-miss.sh:
+      ignore_kernel:
+         (4.18.0-g5458cbf403b8-dirty).*: [2183778]
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
       ignore_kernel:
-        (4.19.*|4.20.17+).*: [1858134]
+         (4.18.0-g5458cbf403b8-dirty).*: [2183778]
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
