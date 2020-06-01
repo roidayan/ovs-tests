@@ -17,17 +17,20 @@ tests:
         ignore_kernel:
           (?!.*5.4.0-mlnx).*: [1928565]
     test-eswitch-add-flows-during-reload.sh:
+        ignore_kernel:
+          (5.6.0-mlnx|5.2.0-mlnx).*: [2186754]
     test-eswitch-add-in-mode1-del-in-mode2.sh:
         ignore_kernel:
           (3.10.0-327.el7.x86_64).*: [1655572]
           (5.6.0-mlnx).*: [2178181]
     test-eswitch-change-hfunc.sh:
         ignore_kernel:
-          (5.6.0-mlnx).*: [1927267]
+          (5.6.0-mlnx|5.2.0-mlnx).*: [1915656]
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
         ignore_kernel:
-            (3.10.0-327.el7.x86_64|4.9.0-mlnx).*: [2150419]
+          (3.10.0-327.el7.x86_64|4.9.0-mlnx).*: [2150419]
+          (5.6.0-mlnx|5.2.0-mlnx).*: [2186754]
     test-eswitch-diff-vfs-per-port.sh:
     test-eswitch-ingress-rate-limit.sh:
         ignore_kernel:
@@ -103,7 +106,7 @@ tests:
           (5.6.0-mlnx).*: [2178181]
     test-tc-insert-rules-matchall.sh:
         ignore_kernel:
-          (5.6.0-mlnx).*: [2166489]
+          (5.6.0-mlnx|5.2.0-mlnx).*: [2166489]
     test-tc-insert-rules-mirror.sh:
     test-tc-insert-rules-pedit.sh:
         ignore_kernel:
