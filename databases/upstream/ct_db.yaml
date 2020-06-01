@@ -58,6 +58,7 @@ tests:
     test-ovs-ct-scapy-udp-flush.sh:
         ignore_kernel:
             .*: [2114608]
+    test-ovs-ct-tcp-snat.sh:
     test-ovs-ct-tcp-2ports.sh:
     test-ovs-ct-tcp-iperf3.sh:
     test-ovs-ct-tcp-ipv6.sh:
