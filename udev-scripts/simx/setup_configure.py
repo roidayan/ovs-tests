@@ -330,7 +330,9 @@ class SetupConfigure(object):
                 raise RuntimeError('Failed to bind %s\n%s' % (VFInfo['bus'], output))
 
     def CreateConfFile(self):
-        conf = 'NIC=%s' % self.host.PNics[0]['name']
+        conf = 'PATH="%s:$PATH"' % self.MLNXToolsPath
+        conf += '\nNIC=%s' % self.host.PNics[0]['name']
+
         if len(self.host.PNics) > 1:
             conf += '\nNIC2=%s' % self.host.PNics[1]['name']
 
