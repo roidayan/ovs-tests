@@ -46,7 +46,7 @@ class DynamicObject(object):
 
 class SetupConfigure(object):
 
-    MLNXToolsPath = '/opt/mellanox/ethtool/sbin:/opt/mellanox/iproute2/sbin:/opt/verutils/bin/:'
+    MLNXToolsPath = '/opt/mellanox/ethtool/sbin:/opt/mellanox/iproute2/sbin:/opt/verutils/bin/'
 
     def ParseArgs(self, args):
         self.Parser.add_argument('--skip_ovs_config', help='Skip openvswitch configuration', action='store_false')
@@ -98,9 +98,11 @@ class SetupConfigure(object):
         return 0
 
     def UpdatePATHEnvironmentVariable(self):
-        os.environ['PATH'] = self.MLNXToolsPath + os.environ.get('PATH')
-
-        return 0
+        os.environ['PATH'] = self.MLNXToolsPath + os.pathsep + os.environ.get('PATH')
+        with open('/etc/profile.d/zz_dev_reg_env.sh', 'w') as f:
+            f.write('if [[ ! "$PATH" =~ "/opt/mellanox" ]]; then\n')
+            f.write('    PATH="%s:$PATH"\n' % self.MLNXToolsPath)
+            f.write('fi\n')
 
     def LoadPFInfo(self):
         (rc, output) = commands.getstatusoutput('ls /sys/class/net/')
@@ -328,9 +330,7 @@ class SetupConfigure(object):
                 raise RuntimeError('Failed to bind %s\n%s' % (VFInfo['bus'], output))
 
     def CreateConfFile(self):
-        conf = 'PATH="%s$PATH"' % self.MLNXToolsPath
-        conf += '\nNIC=%s' % self.host.PNics[0]['name']
-
+        conf = 'NIC=%s' % self.host.PNics[0]['name']
         if len(self.host.PNics) > 1:
             conf += '\nNIC2=%s' % self.host.PNics[1]['name']
 
