@@ -50,6 +50,7 @@ class SetupConfigure(object):
 
     def ParseArgs(self, args):
         self.Parser.add_argument('--skip_ovs_config', help='Skip openvswitch configuration', action='store_true')
+        self.Parser.add_argument('--second-server', help='Second server config', action='store_true')
 
         (namespaces, args) = self.Parser.parse_known_args(args)
 
@@ -88,6 +89,9 @@ class SetupConfigure(object):
             self.UpdateVFInfo()
 
             self.BringUpDevices()
+
+            if self.second_server:
+                return
 
             self.CreateConfFile()
 
