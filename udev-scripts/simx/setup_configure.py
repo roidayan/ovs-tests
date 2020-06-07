@@ -49,7 +49,7 @@ class SetupConfigure(object):
     MLNXToolsPath = '/opt/mellanox/ethtool/sbin:/opt/mellanox/iproute2/sbin:/opt/verutils/bin/'
 
     def ParseArgs(self, args):
-        self.Parser.add_argument('--skip_ovs_config', help='Skip openvswitch configuration', action='store_false')
+        self.Parser.add_argument('--skip_ovs_config', help='Skip openvswitch configuration', action='store_true')
 
         (namespaces, args) = self.Parser.parse_known_args(args)
 
@@ -81,7 +81,7 @@ class SetupConfigure(object):
 
             self.EnableDevOffload()
 
-            if self.skip_ovs_config:
+            if not self.skip_ovs_config:
                 self.ConfigureOVS()
 
             self.AttachVFs()
