@@ -2,32 +2,29 @@ description:
     This DB is for running perf tests for ofed regression. Should run only over perf kernel.
 tests:
     test-tc-par-add-ovr-del.sh:
-        ignore_kernel:
-            .*: [2103183]
+      ignore_kernel:
+        .*: [2103183]
     test-tc-par-add-del.sh:
-        ignore_kernel:
-          (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [1992660]
-          (4.9.0-mlnx).*: [2127677]
+      ignore_kernel:
+        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1992660]
+        (4.9.0.*): [2127677]
     test-tc-par-add-del-vxlan.sh:
-        ignore_kernel:
-          (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [1992660]
-          (4.9.0-mlnx).*: [2127677]
+      ignore_kernel:
+        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1992660]
+        (4.9.0.*): [2127677]
     test-tc-par-add-del-vxlan-neigh-update.sh:
-        ignore_kernel:
-          (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [1992660]
-          (4.9.0-mlnx).*: [2127677]
+      ignore_kernel:
+        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1992660]
+        (4.9.0.*): [2127677]
     test-tc-par-add-dump-del.sh:
-        ignore_kernel:
-          (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [1992660]
-          (4.9.0-mlnx).*: [2127677]
+      ignore_kernel:
+        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1992660]
+        (4.9.0.*): [2127677]
     test-tc-par-add-dup.sh:
-        ignore_kernel:
-          (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64).*: [1992660]
-          (4.9.0-mlnx).*: [2127677]
+      ignore_kernel:
+        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1992660]
+        (4.9.0.*): [2127677]
     test-vf-rep-ping.sh:
     test-eswitch-rep-channels-time.sh:
-        ignore_kernel:
-            .*: [2018217]
     test-eswitch-rep-up-time.sh:
-        ignore_kernel:
-            .*: [2018217]
+

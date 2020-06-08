@@ -2,29 +2,17 @@ description:
     This DB is for running connection tracking tests for ofed regression
 tests:
     test-ct-icmp-frag.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ct-icmp-fwd.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ct-icmp.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ct-tcp-pedit.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ct-tcp-reload.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ct-tcp.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ct-tcp-vf-mirror-pedit.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704,2142805]
+      ignore_kernel:
+        .*: [2142805]
     test-ovs-ct-geneve.sh:
       ignore_kernel:
-        (4.19.*).*: [2119499]
+        (4.19.*): [2119499]
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
     test-ovs-ct-icmp.sh:
@@ -38,23 +26,17 @@ tests:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
     test-ovs-ct-scapy-udp-pedit-nat.sh:
     test-ovs-ct-scapy-udp-nat-dnat.sh:
-      ignore_kernel:
-         (4.19.*|4.20.17+).*: [1858134]
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-reload.sh:
     test-ovs-ct-scapy-udp.sh:
     test-ovs-ct-scapy-udp-vf-mirror.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142805]
+      ignore_kernel:
+        .*: [2142805]
     test-ovs-ct-tcp-2ports.sh:
     test-ovs-ct-tcp-iperf3.sh:
     test-ovs-ct-tcp-ipv6.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2119519]
     test-ovs-ct-tcp-label2.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2145419]
     test-ovs-ct-tcp-label-reconfig.sh:
     test-ovs-ct-tcp-label.sh:
     test-ovs-ct-tcp-mac-rewrite.sh:
@@ -62,25 +44,19 @@ tests:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-udp-frag.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142768]
+      ignore_kernel:
+        .*: [2142768]
     test-ovs-ct-vxlan-2.sh:
-     ignore_kernel:
-       (4.19.*).*: [2150410]
     test-ovs-ct-vxlan-3.sh:
     test-ovs-ct-vxlan-many-conns.sh:
     test-ovs-ct-vxlan.sh:
     test-ovs-ct-vxlan-vf-lag.sh:
     test-ovs-ct-vxlan-vf-mirror.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142805]
+      ignore_kernel:
+        .*: [2142805]
     test-ct-tcp-pedit-ct-clear.sh:
-     ignore_kernel:
-       (4.19.*|4.20.17+).*: [2142704]
     test-ovs-ct-scapy-hw-ovs-miss.sh:
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
-      ignore_kernel:
-        (4.19.*|4.20.17+).*: [1858134]
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
     test-ovs-ct-vxlan-ipv6.sh:
     test-ovs-ct-tcp-ipv6-2.sh:
