@@ -1212,21 +1212,21 @@
     </case>
     <case>
         <tags> ct </tags>
-        <tags> ovs-ct-scapy-udp-jd-nat </tags>
-        <name> test-ovs-ct-scapy-udp-jd-nat.sh </name>
+        <tags> ovs-ct-scapy-udp-pedit-nat </tags>
+        <name> test-ovs-ct-scapy-udp-pedit-nat.sh </name>
         <cmd>
             <params>
-                <test> test-ovs-ct-scapy-udp-jd-nat.sh </test>
+                <test> test-ovs-ct-scapy-udp-pedit-nat.sh </test>
             </params>
         </cmd>
     </case>
     <case>
         <tags> ct </tags>
-        <tags> ovs-ct-scapy-udp-jd-nat-reconfig-flows </tags>
-        <name> test-ovs-ct-scapy-udp-jd-nat-reconfig-flows.sh </name>
+        <tags> ovs-ct-scapy-udp-pedit-nat-reconfig-flows </tags>
+        <name> test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh </name>
         <cmd>
             <params>
-                <test> test-ovs-ct-scapy-udp-jd-nat-reconfig-flows.sh </test>
+                <test> test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh </test>
             </params>
         </cmd>
     </case>
