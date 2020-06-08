@@ -137,8 +137,6 @@ tests:
           (3.10.0-327.el7.x86_64).*: [2150483]
           (5.6.0-mlnx).*: [2178181]
     test-tc-merged-esw-vf-vf.sh:
-        ignore_kernel:
-          .*: [2150471]
     test-tc-multi-masks-per-prio.sh:
         ignore_kernel:
           (4.14.0-mlnx|4.9.0-mlnx).*: [2150470]
