@@ -56,8 +56,6 @@ tests:
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:
     test-eswitch-toggle-mode-parallel3.sh:
-        ignore_kernel:
-             .*: [1955352]
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-tc-bad-egdev-rules.sh:
@@ -181,8 +179,6 @@ tests:
         ignore_kernel:
             (3.10.0-327.el7.x86_64|4.9.0-mlnx).*: [2150481]
     test-tc-vf-mirror-pedit.sh:
-        ignore_kernel:
-            .*: [1901131]
     test-tc-vf-mirror.sh:
     test-tc-vf-remote-mirror.sh:
         ignore_kernel:
