@@ -20,6 +20,8 @@ tests:
         ignore_kernel:
             .*: [1912698]
     test-ovs-ct-geneve.sh:
+        ignore_kernel:
+            .*for-upstream.*: [2200657]
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
         ignore_kernel:
@@ -83,16 +85,24 @@ tests:
         ignore_kernel:
             .*: [1976103]
     test-ovs-ct-vxlan-2.sh:
+        ignore_kernel:
+            .*for-upstream.*: [2200657]
     test-ovs-ct-vxlan-3.sh:
+        ignore_kernel:
+            .*for-upstream.*: [2200657]
     test-ovs-ct-vxlan-many-conns.sh:
         ignore_kernel:
             .*: [2164217]
     test-ovs-ct-vxlan.sh:
         ignore_fw:
             ^22.*: [2149563]
+        ignore_kernel:
+            .*for-upstream.*: [2200657]
     test-ovs-ct-vxlan-vf-lag.sh:
         ignore_fw:
             ^22.*: [2149563]
+        ignore_kernel:
+            .*for-upstream.*: [2200657]
     test-ovs-ct-vxlan-vf-mirror.sh:
         ignore_kernel:
             .*: [1912698]

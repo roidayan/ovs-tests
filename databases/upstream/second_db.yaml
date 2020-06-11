@@ -23,6 +23,8 @@ tests:
     test-ovs-dpctl-flows.sh:
     test-ovs-dpctl-flows-ttl-tos.sh:
     test-ovs-geneve.sh:
+        ignore_kernel:
+            .*for-upstream.*: [2200657]
     test-ovs-geneve-in-ns-ipv6.sh:
     test-ovs-geneve-in-ns.sh:
     test-ovs-gre-in-ns.sh:
@@ -63,9 +65,13 @@ tests:
     test-ovs-vxlan-in-ns.sh:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
     test-ovs-vxlan.sh:
+        ignore_kernel:
+            .*for-upstream.*: [2200657]
     test-ovs-vxlan-vf-lag.sh:
         ignore_fw:
             ^22.*: [2149563]
+        ignore_kernel:
+            .*for-upstream.*: [2200657]
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
     test-vxlan-neigh-update.sh:
     test-vxlan-neigh-update-stack.sh:
