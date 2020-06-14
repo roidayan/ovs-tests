@@ -6,6 +6,8 @@ tests:
     test-eswitch-add-del-different-flows.sh:
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
+         ignore_kernel:
+            .*for_linust.*: [2202627]
     test-eswitch-add-flows-during-reload.sh:
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
@@ -72,19 +74,19 @@ tests:
     test-tc-insert-rules-mpls.sh:
         ignore_kernel:
             .*: [2137330]
-            .*for-linust.*: [2165910]
+            .*for_linust.*: [2165910]
     test-tc-insert-rule-rep-uplink-vlan.sh:
         ignore_kernel:
             .*: [2094890]
     test-tc-insert-rules-act-pass.sh:
     test-tc-insert-rules-hw-stats.sh:
         ignore_kernel:
-            .*for-linust.*: [2112205]
+            .*for_linust.*: [2112205]
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-geneve.sh:
         ignore_kernel:
-            .*for-linust.*: [2165910]
+            .*for_linust.*: [2165910]
     test-tc-insert-rules-gre.sh:
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
@@ -96,7 +98,7 @@ tests:
     test-tc-insert-rules.sh:
     test-tc-insert-rules-goto.sh:
         ignore_kernel:
-            .*for-linust.*: [2112205]
+            .*for_linust.*: [2112205]
     test-tc-insert-rules-vxlan.sh:
     test-tc-insert-rule-without-match.sh:
     test-tc-ip-tos-ip-ttl.sh:
@@ -118,7 +120,7 @@ tests:
     test-tc-replace.sh:
     test-tc-restore-after-miss.sh:
         ignore_kernel:
-            .*for-linust.*: [2112205]
+            .*for_linust.*: [2112205]
     test-tc-rule-act-add.sh:
     test-tc-rule-add-null-qdisc.sh:
     test-tc-shuffle-2.sh:
@@ -137,7 +139,7 @@ tests:
     test-tc-traffic-qdisc-del.sh:
     test-tc-vf-mirror-pedit.sh:
         ignore_kernel:
-            .*for-linust.*: [2112205]
+            .*for_linust.*: [2112205]
     test-tc-vf-mirror.sh:
     test-tc-vf-remote-mirror.sh:
     test-tc-vlan-modify.sh:

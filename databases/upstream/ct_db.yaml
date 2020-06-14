@@ -21,7 +21,7 @@ tests:
             .*: [1912698]
     test-ovs-ct-geneve.sh:
         ignore_kernel:
-            .*for-upstream.*: [2200657]
+            .*: [2200657]
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
         ignore_kernel:
@@ -46,10 +46,10 @@ tests:
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
         ignore_kernel:
-            .*for-linust.*: [2165910]
+            .*for_linust.*: [2165910]
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
         ignore_kernel:
-            .*for-linust.*: [2165910]
+            .*for_linust.*: [2165910]
     test-ovs-ct-scapy-udp-reload.sh:
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
@@ -86,10 +86,10 @@ tests:
             .*: [1976103]
     test-ovs-ct-vxlan-2.sh:
         ignore_kernel:
-            .*for-upstream.*: [2200657]
+            .*: [2200657]
     test-ovs-ct-vxlan-3.sh:
         ignore_kernel:
-            .*for-upstream.*: [2200657]
+            .*: [2200657]
     test-ovs-ct-vxlan-many-conns.sh:
         ignore_kernel:
             .*: [2164217]
@@ -97,12 +97,12 @@ tests:
         ignore_fw:
             ^22.*: [2149563]
         ignore_kernel:
-            .*for-upstream.*: [2200657]
+            .*: [2200657]
     test-ovs-ct-vxlan-vf-lag.sh:
         ignore_fw:
             ^22.*: [2149563]
         ignore_kernel:
-            .*for-upstream.*: [2200657]
+            .*: [2200657]
     test-ovs-ct-vxlan-vf-mirror.sh:
         ignore_kernel:
             .*: [1912698]

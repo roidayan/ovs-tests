@@ -4,6 +4,8 @@ tests:
     test-ecmp-add-multipath-rule.sh:
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
     test-ecmp-add-vxlan-rule.sh:
+        ignore_kernel:
+            .*for_upstream.*: [2202600]
     test-ecmp-failover-failback.sh:
     test-ecmp-load-balance.sh:
         ignore_kernel:
@@ -24,7 +26,7 @@ tests:
     test-ovs-dpctl-flows-ttl-tos.sh:
     test-ovs-geneve.sh:
         ignore_kernel:
-            .*for-upstream.*: [2200657]
+            .*: [2200657]
     test-ovs-geneve-in-ns-ipv6.sh:
     test-ovs-geneve-in-ns.sh:
     test-ovs-gre-in-ns.sh:
@@ -66,12 +68,12 @@ tests:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
     test-ovs-vxlan.sh:
         ignore_kernel:
-            .*for-upstream.*: [2200657]
+            .*: [2200657]
     test-ovs-vxlan-vf-lag.sh:
         ignore_fw:
             ^22.*: [2149563]
         ignore_kernel:
-            .*for-upstream.*: [2200657]
+            .*: [2200657]
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
     test-vxlan-neigh-update.sh:
     test-vxlan-neigh-update-stack.sh:
