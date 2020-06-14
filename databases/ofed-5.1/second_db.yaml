@@ -17,41 +17,57 @@ tests:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
+      ignore_kernel:
+        (5.4.31+): [2202836]
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
+      ignore_kernel:
+        (5.4.31+): [2202836]
     test-ecmp-add-vxlan-rule.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
+      ignore_kernel:
+        (5.4.31+): [2202836]
     test-ecmp-failover-failback.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
+      ignore_kernel:
+        (5.4.31+): [2202836]
     test-ecmp-load-balance.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
+      ignore_kernel:
+        (5.4.31+): [2202836]
     test-ecmp-restore-rule.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
+      ignore_kernel:
+        (5.4.31+): [2202836]
     test-ecmp-route-events.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
+      ignore_kernel:
+        (5.4.31+): [2202836]
     test-ecmp-rule-stats.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
+      ignore_kernel:
+        (5.4.31+): [2202836]
     test-ethtool-basic.sh:
     test-ethtool-steering.sh:
       ignore_kernel:
@@ -215,7 +231,7 @@ tests:
     test-vxlan-port-offload.sh:
       ignore_kernel:
         (3.10.0-327.el7.x86_64): [1939639]
-        (5.6.0.*): [2165634]
+        (5.6.0.*|4.14.0.*): [2165634]
     test-vxlan-rx-vlan-push-offload.sh:
       ignore_kernel:
         (3.10.0-327.el7.x86_64): [1939639]

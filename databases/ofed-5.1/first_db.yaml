@@ -20,6 +20,8 @@ tests:
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
     test-eswitch-add-flows-during-reload.sh:
+      ignore_kernel:
+        (4.14.0.*): [2202773]
     test-eswitch-add-in-mode1-del-in-mode2.sh:
       ignore_kernel:
         (3.10.0-327.el7.x86_64): [1655572]
@@ -39,6 +41,7 @@ tests:
         - 3.10.0-327.el7.x86_64
         - 3.10.0-693.el7.x86_64
         - 3.10.0-862.el7.x86_64
+        - 4.14.0.*
     test-eswitch-no-carrier.sh:
     test-eswitch-par-actions.sh:
     test-eswitch-reload-modules-different-state.sh:
@@ -54,10 +57,14 @@ tests:
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:
     test-eswitch-toggle-mode-parallel3.sh:
+      ignore_kernel:
+        .*: [2202767]
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
+      ignore_kernel:
+        (4.14.0.*): [2202781]
     test-tc-del-a-lot.sh:
     test-tc-duplicate-hw-rules.sh:
     test-tc-groups-multi-fgs.sh:
@@ -71,11 +78,16 @@ tests:
       ignore_kernel:
         (4.19.36.*|4.14.*): [2119499]
     test-tc-insert-fail-hw.sh:
+      ignore_kernel:
+        .*: [1688886]
     test-tc-insert-rule-rep-uplink-vlan.sh:
       ignore_kernel:
         (3.10.0-327.el7.x86_64): [2107052]
+        (4.14.0.*): [2202756]
     test-tc-insert-rules-act-pass.sh:
     test-tc-insert-rules-duplicates.sh:
+      ignore_kernel:
+        (4.14.0.*): [2202774]
     test-tc-insert-rules-frag.sh:
       1716808:
         - 3.10.0-327.el7.x86_64
@@ -99,8 +111,10 @@ tests:
         (4.20.17.*|4.19.36.*): [2142118]
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
-      ignore_kernel:
-        (5.6.0.*|5.2.0.*): [2166489]
+      2166489:
+        - 5.6.0.*
+        - 5.2.0.*
+        - 4.14.0.*
     test-tc-insert-rules-mirror.sh:
     test-tc-insert-rules-pedit.sh:
       2150423:
@@ -148,6 +162,8 @@ tests:
         (4.14.0.*): [2199274]
     test-tc-qinq-rules.sh:
     test-tc-reoffload.sh:
+      ignore_kernel:
+        (4.14.0.*): [2202775]
     test-tc-replace.sh:
     test-tc-rule-act-add.sh:
       ignore_kernel:
@@ -187,8 +203,11 @@ tests:
       ignore_kernel:
         (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [2065236]
     test-tc-vxlan-decap-inner-match-drop.sh:
-      #1835642
       min_kernel: 5.0
+      1835642:
+        - 4.20.17.*
+        - 4.19.36.*
+        - 4.14.*
     test-tc-vxlan-decap-in-skip-sw.sh:
       ignore_kernel:
         .*: [2153600]

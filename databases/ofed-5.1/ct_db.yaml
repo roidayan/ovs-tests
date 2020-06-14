@@ -59,4 +59,6 @@ tests:
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
     test-ovs-ct-vxlan-ipv6.sh:
+      ignore_kernel:
+        (5.4.31+): [2200967]
     test-ovs-ct-tcp-ipv6-2.sh:
