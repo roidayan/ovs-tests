@@ -2,10 +2,11 @@ description:
     This DB is for running eswitch and tc tests for ofed regression
 
 custom_kernels:
-  - 4.18.0-g5458cbf403b8-dirty #NGN kernel
-  - 4.20.17.* #BF
-  - 4.19.36.* #ByD
-  - 4.14.* #Ucloud
+  ngn: 4.18.0-g5458cbf403b8-dirty
+  bf1: 4.20.17.*
+  bf2: 5.4.31+.*
+  byd: 4.19.36.*
+  ucloud: 4.14.0.*
 
 tests:
     test-eswitch-127-reps.sh:
@@ -75,8 +76,9 @@ tests:
     test-tc-geneve.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
-      ignore_kernel:
-        (4.19.36.*|4.14.*): [2119499]
+      2119499:
+        - ucloud
+        - byd
     test-tc-insert-fail-hw.sh:
       ignore_kernel:
         .*: [1688886]
@@ -96,19 +98,20 @@ tests:
     test-tc-insert-rules-geneve.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
-      ignore_kernel:
-        (4.19.36.*|4.14.*): [2119499]
+      2119499:
+        - ucloud
+        - byd
     test-tc-insert-rules-goto.sh:
-      #2153625
       min_kernel: 5.4
       min_kernel_rhel: 3.10.0-1127
-      ignore_kernel:
-        (4.14.*): [2153625]
+      2153625:
+        - ucloud
     test-tc-insert-rules-gre.sh:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
-      ignore_kernel:
-        (4.20.17.*|4.19.36.*): [2142118]
+      2142118:
+        - bf1
+        - byd
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
       2166489:
@@ -158,8 +161,10 @@ tests:
       ignore_kernel:
         (4.14.0.*|4.9.0.*): [2150470]
     test-tc-multi-prio-chains.sh:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-1127
       ignore_kernel:
-        (4.14.0.*): [2199274]
+        (4.14.0.*): [2203794]
     test-tc-qinq-rules.sh:
     test-tc-reoffload.sh:
       ignore_kernel:
@@ -205,9 +210,9 @@ tests:
     test-tc-vxlan-decap-inner-match-drop.sh:
       min_kernel: 5.0
       1835642:
-        - 4.20.17.*
-        - 4.19.36.*
-        - 4.14.*
+        - bf1
+        - byd
+        - ucloud
     test-tc-vxlan-decap-in-skip-sw.sh:
       ignore_kernel:
         .*: [2153600]

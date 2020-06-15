@@ -2,10 +2,11 @@ description:
     This DB is for running remaining dev tests for ofed regression
 
 custom_kernels:
-  - 4.18.0-g5458cbf403b8-dirty #NGN kernel
-  - 4.20.17.* #BF
-  - 4.19.36.* #ByD
-  - 4.14.* #Ucloud
+  ngn: 4.18.0-g5458cbf403b8-dirty
+  bf1: 4.20.17.*
+  bf2: 5.4.31+.*
+  byd: 4.19.36.*
+  ucloud: 4.14.0.*
 
 tests:
     test-devlink-encap.sh:
@@ -17,57 +18,41 @@ tests:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
-      ignore_kernel:
-        (5.4.31+): [2202836]
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
-      ignore_kernel:
-        (5.4.31+): [2202836]
     test-ecmp-add-vxlan-rule.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
-      ignore_kernel:
-        (5.4.31+): [2202836]
     test-ecmp-failover-failback.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
-      ignore_kernel:
-        (5.4.31+): [2202836]
     test-ecmp-load-balance.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
-      ignore_kernel:
-        (5.4.31+): [2202836]
     test-ecmp-restore-rule.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
-      ignore_kernel:
-        (5.4.31+): [2202836]
     test-ecmp-route-events.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
-      ignore_kernel:
-        (5.4.31+): [2202836]
     test-ecmp-rule-stats.sh:
       2144905:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
-      ignore_kernel:
-        (5.4.31+): [2202836]
     test-ethtool-basic.sh:
     test-ethtool-steering.sh:
       ignore_kernel:
@@ -96,24 +81,29 @@ tests:
     test-ovs-geneve.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
-      ignore_kernel:
-        (4.19.36.*|4.14.*): [2119499]
+      2119499:
+        - byd
+        - ucloud
     test-ovs-geneve-in-ns-ipv6.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
-      ignore_kernel:
-        (4.19.36.*|4.14.*): [2119499]
+      2119499:
+        - byd
+        - ucloud
     test-ovs-geneve-in-ns.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
-      ignore_kernel:
-        (4.19.36.*|4.14.*): [2119499]
+      2119499:
+        - byd
+        - ucloud
     test-ovs-gre-in-ns.sh:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
-      ignore_kernel:
-        (4.20.17.*|4.19.36.*): [2142118]
-        (4.14.0.*): [2148342]
+      2142118:
+        - bf1
+        - byd
+      2148342:
+        - ucloud
     test-ovs-icmp-frag.sh:
     test-ovs-icmp-offload.sh:
       ignore_kernel:
