@@ -45,11 +45,9 @@ tests:
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
-        ignore_kernel:
-            .*for_linust.*: [2165910]
+        ignore_for_linust: 1
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
-        ignore_kernel:
-            .*for_linust.*: [2165910]
+        ignore_for_linust: 1
     test-ovs-ct-scapy-udp-reload.sh:
         ignore_kernel:
             .*(debug|dbg).*: [2130620]

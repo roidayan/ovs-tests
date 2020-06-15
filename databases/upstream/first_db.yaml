@@ -74,7 +74,7 @@ tests:
     test-tc-insert-rules-mpls.sh:
         ignore_kernel:
             .*: [2203983]
-            .*for_linust.*: [2165910]
+        ignore_for_linust: 1
     test-tc-insert-rule-rep-uplink-vlan.sh:
         ignore_kernel:
             .*: [2094890]
@@ -85,8 +85,7 @@ tests:
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-geneve.sh:
-        ignore_kernel:
-            .*for_linust.*: [2165910]
+        ignore_for_linust: 1
     test-tc-insert-rules-gre.sh:
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
