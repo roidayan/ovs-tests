@@ -6,6 +6,9 @@ tests:
             .*: [1976103]
     test-ct-icmp-fwd.sh:
     test-ct-icmp.sh:
+    test-ct-nat-tcp.sh:
+    test-ct-nat-tcp-ipv6.sh:
+    test-ct-tcp-ipv6.sh:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-pedit-ct-clear.sh:
         ignore_kernel:

@@ -38,6 +38,7 @@ tests:
     test-ovs-no-implicit-rewrite-on-match.sh:
     test-ovs-overlap-rules.sh:
     test-ovs-persistent-data.sh:
+    test-ovs-probe.sh:
     test-ovs-qinq-1.sh:
     test-ovs-qinq-2.sh:
     test-ovs-replace-rule-hw.sh:
