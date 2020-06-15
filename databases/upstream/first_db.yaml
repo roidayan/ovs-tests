@@ -73,7 +73,7 @@ tests:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rules-mpls.sh:
         ignore_kernel:
-            .*: [2137330]
+            .*: [2203983]
             .*for_linust.*: [2165910]
     test-tc-insert-rule-rep-uplink-vlan.sh:
         ignore_kernel:
