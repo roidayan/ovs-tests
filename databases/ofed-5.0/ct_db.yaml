@@ -13,6 +13,7 @@ tests:
     test-ct-tcp-pedit.sh:
      ignore_kernel:
        (4.19.*|4.20.17+).*: [2142704]
+       (5.4.19).* : [2198393]
     test-ct-tcp-reload.sh:
      ignore_kernel:
        (4.19.*|4.20.17+).*: [2142704]
@@ -22,17 +23,22 @@ tests:
     test-ct-tcp-vf-mirror-pedit.sh:
      ignore_kernel:
        (4.19.*|4.20.17+).*: [2142704,2142805]
+       (5.4.19).* : [2198393]
     test-ovs-ct-geneve.sh:
       ignore_kernel:
         (4.19.*).*: [2119499]
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
+      ignore_kernel:
+        (5.4.19).* : [2198393]
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
     test-ovs-ct-scapy-udp-2ports.sh:
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
     test-ovs-ct-scapy-udp-ct-clear.sh:
+      ignore_kernel:
+        (5.4.19).* : [2198705]
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
