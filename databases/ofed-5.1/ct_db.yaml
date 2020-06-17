@@ -2,19 +2,18 @@ description:
     This DB is for running connection tracking tests for ofed regression
 tests:
     test-ct-icmp-frag.sh:
+      ignore_not_supported: true
     test-ct-icmp-fwd.sh:
     test-ct-icmp.sh:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-reload.sh:
     test-ct-tcp.sh:
     test-ct-tcp-vf-mirror-pedit.sh:
-      ignore_kernel:
-        .*: [2142805]
+      ignore_not_supported: true
     test-ovs-ct-geneve.sh:
-      ignore_kernel:
-        (4.19.*): [2119499]
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
+      ignore_not_supported: true
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
     test-ovs-ct-scapy-udp-2ports.sh:
@@ -31,8 +30,7 @@ tests:
     test-ovs-ct-scapy-udp-reload.sh:
     test-ovs-ct-scapy-udp.sh:
     test-ovs-ct-scapy-udp-vf-mirror.sh:
-      ignore_kernel:
-        .*: [2142805]
+      ignore_not_supported: true
     test-ovs-ct-tcp-2ports.sh:
     test-ovs-ct-tcp-iperf3.sh:
     test-ovs-ct-tcp-ipv6.sh:
@@ -44,16 +42,14 @@ tests:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-udp-frag.sh:
-      ignore_kernel:
-        .*: [2142768]
+      ignore_not_supported: true
     test-ovs-ct-vxlan-2.sh:
     test-ovs-ct-vxlan-3.sh:
     test-ovs-ct-vxlan-many-conns.sh:
     test-ovs-ct-vxlan.sh:
     test-ovs-ct-vxlan-vf-lag.sh:
     test-ovs-ct-vxlan-vf-mirror.sh:
-      ignore_kernel:
-        .*: [2142805]
+      ignore_not_supported: true
     test-ct-tcp-pedit-ct-clear.sh:
     test-ovs-ct-scapy-hw-ovs-miss.sh:
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
