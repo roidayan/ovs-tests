@@ -139,16 +139,22 @@ class SetupConfigure(object):
                           'bus'    : re.search('bus-info: (.*)', output, re.MULTILINE).group(1),
                          }
 
+                if not PFInfo['bus']:
+                    continue
                 self.host.PNics = sorted(getattr(self.host, 'PNics', []) + [PFInfo], key=lambda k: k['bus'])
 
     def UpdatePFInfo(self):
         for PFInfo in self.host.PNics:
-            (rc, output) = commands.getstatusoutput('readlink /sys/class/net/* | grep %s' % PFInfo['bus'])
+            if not PFInfo['bus']:
+                continue
+            (rc, output) = commands.getstatusoutput('readlink /sys/class/net/* | grep -m1 %s' % PFInfo['bus'])
 
             if rc:
                 raise RuntimeError('Failed to query interface names\n%s' % (output))
 
-            PFInfo['name'] = output.strip().split('/')[-1]
+            new_name = os.path.basename(output.strip())
+            self.Logger.info("Update PF name %s -> %s", PFInfo['name'], new_name)
+            PFInfo['name'] = new_name
 
     def LoadVFInfo(self):
         for PFInfo in self.host.PNics:
@@ -222,8 +228,10 @@ class SetupConfigure(object):
 
     def DestroyVFs(self):
         for PFInfo in self.host.PNics:
-            self.Logger.info('Destroying VFs over %s' % PFInfo['name'])
+            if not os.path.exists("/sys/class/net/%s/device/sriov_numvfs" % PFInfo['name']):
+                continue
 
+            self.Logger.info('Destroying VFs over %s' % PFInfo['name'])
             (rc, output) = commands.getstatusoutput('echo 0 > /sys/class/net/%s/device/sriov_numvfs' % PFInfo['name'])
 
             if rc:
@@ -251,6 +259,7 @@ class SetupConfigure(object):
                 command       = 'ip link set %s vf %d mac %s' % (PFInfo['name'], PFInfo['vfs'].index(VFInfo), VFInfo['mac'])
 
                 self.Logger.info('Setting MAC %s to %s' % (VFInfo['mac'], VFInfo['bus']))
+                self.Logger.info('command: %s' % command)
                 (rc, output) = commands.getstatusoutput(command)
 
                 if rc:
