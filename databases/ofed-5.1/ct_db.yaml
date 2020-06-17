@@ -62,3 +62,6 @@ tests:
       ignore_kernel:
         (5.4.31+): [2200967]
     test-ovs-ct-tcp-ipv6-2.sh:
+    test-ct-nat-tcp-ipv6.sh:
+    test-ct-nat-tcp.sh:
+    test-ct-tcp-ipv6.sh:
