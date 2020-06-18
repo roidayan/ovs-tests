@@ -12,7 +12,7 @@ TUN_DST_V4=20.1.183.1
 VM_DST_MAC=e4:11:22:33:44:70
 
 config_sriov 2 $NIC
-enable_switchdev_if_no_rep $REP
+enable_switchdev
 bind_vfs
 ethtool -K $REP hw-tc-offload on
 
