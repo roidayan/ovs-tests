@@ -219,7 +219,7 @@ class SetupConfigure(object):
             if rc0 or rc1:
                 continue
 
-            self.Logger.info("Load rep info %s rc %d %d" % repName)
+            self.Logger.info("Load rep info %s" % repName)
             pfName  = int(re.search('pf(\d+)vf\d+', port_name).group(1)) & 0x7
             vfIndex = int(re.search('(?:pf\d+vf)?(\d+)', port_name).group(1))
             pfInfo  = next(iter(filter(lambda PNic: PNic['sw_id'] == switch_id.strip() and PNic['port_index'] == pfName, self.host.PNics)), None)
