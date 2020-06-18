@@ -353,8 +353,12 @@ class SetupConfigure(object):
         conf += '\nVF=%s' % self.host.PNics[0]['vfs'][0]['name']
         conf += '\nVF1=%s' % self.host.PNics[0]['vfs'][0]['name']
         conf += '\nVF2=%s' % self.host.PNics[0]['vfs'][1]['name']
-        conf += '\nREP=%s' % self.host.PNics[0]['vfs'][0]['rep']
-        conf += '\nREP2=%s' % self.host.PNics[0]['vfs'][1]['rep']
+        rep = self.host.PNics[0]['vfs'][0]['rep']
+        rep2 = self.host.PNics[0]['vfs'][1]['rep']
+        if not rep or not rep2:
+            raise RuntimeError('Cannot find representors')
+        conf += '\nREP=%s' % rep
+        conf += '\nREP2=%s' % rep2
 
         cloud_player_1_ip = ''
         cloud_player_2_ip = ''
