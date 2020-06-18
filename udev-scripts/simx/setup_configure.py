@@ -59,6 +59,8 @@ class SetupConfigure(object):
 
     def Run(self):
         try:
+            self.ReloadModules()
+
             self.host = DynamicObject()
 
             self.host.name = socket.gethostbyname(socket.gethostname())
@@ -100,6 +102,16 @@ class SetupConfigure(object):
             return 1
 
         return 0
+
+    def ReloadModules(self):
+        # workaround because udev rules changed in jenkins script but didn't take affect
+        commands.getstatusoutput('modprobe -rq act_ct')
+        commands.getstatusoutput('modprobe -rq cls_flower')
+        commands.getstatusoutput('modprobe -rq mlx5_fpga_tools')
+        commands.getstatusoutput('modprobe -rq mlx5_ib')
+        commands.getstatusoutput('modprobe -rq mlx5_core')
+        # load mlx5_core
+        commands.getstatusoutput('modprobe -q mlx5_core')
 
     def UpdatePATHEnvironmentVariable(self):
         os.environ['PATH'] = self.MLNXToolsPath + os.pathsep + os.environ.get('PATH')
