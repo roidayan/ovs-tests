@@ -124,44 +124,39 @@ class SetupConfigure(object):
             f.write('fi\n')
 
     def LoadPFInfo(self):
-        (rc, output) = commands.getstatusoutput('ls /sys/class/net/')
+        for net in sorted(glob('/sys/class/net/*')):
+            device = os.path.join(net, 'device')
 
-        if rc:
-            raise RuntimeError('Failed to query interface names\n%s' % (output))
-
-        for PFName in set(output.strip().split()) - set(['lo']):
-            (rc, output) = commands.getstatusoutput('readlink /sys/class/net/%s/device' % PFName)
-
-            if rc:
+            if not os.path.exists(device):
                 continue
 
-            (rc, output) = commands.getstatusoutput('readlink /sys/class/net/%s/device/physfn' % PFName)
-
-            if not rc:
+            # if physfn exists its a VF
+            if os.path.exists(os.path.join(device, 'physfn')):
                 continue
 
-            (rc, output) = commands.getstatusoutput('ethtool -i %s' % PFName)
+            driver = os.path.basename(os.readlink(os.path.join(device, 'driver')))
+            if 'mlx5' not in driver:
+                continue
 
-            if rc and 'Operation not supported' not in output and 'No such device' not in output:
-                raise RuntimeError('Failed to query %s info\n%s' % (PFName, output))
+            bus = os.path.basename(os.readlink(device))
+            if not bus:
+                continue
 
-            if 'mlx5' in output:
-                PFInfo = {
-                          'vfs'    : [],
-                          'sw_id'  : None,
-                          'topoID' : None,
-                          'name'   : PFName,
-                          'bus'    : re.search('bus-info: (.*)', output, re.MULTILINE).group(1),
-                         }
+            PFName = os.path.basename(net)
 
-                if not PFInfo['bus']:
-                    continue
-                self.host.PNics = sorted(getattr(self.host, 'PNics', []) + [PFInfo], key=lambda k: k['bus'])
+            PFInfo = {
+                      'vfs'    : [],
+                      'sw_id'  : None,
+                      'topoID' : None,
+                      'name'   : PFName,
+                      'bus'    : bus,
+                     }
+
+            self.Logger.info("Found PF %s", PFName)
+            self.host.PNics = sorted(getattr(self.host, 'PNics', []) + [PFInfo], key=lambda k: k['bus'])
 
     def UpdatePFInfo(self):
         for PFInfo in self.host.PNics:
-            if not PFInfo['bus']:
-                continue
             (rc, output) = commands.getstatusoutput('readlink /sys/class/net/* | grep -m1 %s' % PFInfo['bus'])
 
             if rc:
