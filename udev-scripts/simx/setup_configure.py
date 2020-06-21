@@ -189,43 +189,56 @@ class SetupConfigure(object):
         self.LoadVFInfo()
         self.LoadRepInfo()
 
+    def get_port_info(self, port):
+        try:
+            with open('/sys/class/net/%s/phys_switch_id' % port, 'r') as f:
+                sw_id = f.read().strip()
+            with open('/sys/class/net/%s/phys_port_name' % port, 'r') as f:
+                port_name = f.read().strip()
+        except IOError:
+            sw_id = ''
+            port_name = ''
+        return (sw_id, port_name)
+
+    def get_pf_info(self, sw_id, port_index):
+        for PNic in self.host.PNics:
+            if PNic['sw_id'] == sw_id and PNic['port_index'] == port_index:
+                return PNic
+        return None
+
     def LoadRepInfo(self):
         for PFInfo in self.host.PNics:
-            (rc, output) = commands.getstatusoutput('cat /sys/class/net/%s/phys_switch_id' % PFInfo['name'])
+            (sw_id, port_name) = self.get_port_info(PFInfo['name'])
 
-            if rc:
-                raise RuntimeError('Failed to query %s phys_switch_id\n%s' % (PFInfo['name'], output))
+            if not sw_id or not port_name:
+                raise RuntimeError('Failed get phys switch id or port name for %s' % PFInfo['name'])
 
-            PFInfo['sw_id'] = output.strip()
+            PFInfo['sw_id'] = sw_id
+            PFInfo['port_index'] = int(re.search('p(\d+)', port_name).group(1))
 
-            (rc, output) = commands.getstatusoutput('cat /sys/class/net/%s/phys_port_name' % PFInfo['name'])
+        devinfos = []
+        for pnic in self.host.PNics:
+            devinfos.append(pnic['name'])
+            devinfos += [vf['name'] for vf in pnic['vfs']]
 
-            if rc:
-                raise RuntimeError('Failed to query %s phys_port_name\n%s' % (PFInfo['name'], output))
-
-            PFInfo['port_index'] = int(re.search('p(\d+)', output.strip()).group(1))
-
-        (rc, output) = commands.getstatusoutput('ls /sys/class/net/')
-
-        if rc:
-            raise RuntimeError('Failed to query interface names\n%s' % (output))
-
-        DevInfos = list(chain.from_iterable(map(lambda PFInfo: PFInfo['vfs'], self.host.PNics))) + self.host.PNics
-
-        for repName in set(output.strip().split()) - set(['lo'] + map(lambda DevInfo: DevInfo['name'], DevInfos)):
-            (rc0, switch_id) = commands.getstatusoutput('cat /sys/class/net/%s/phys_switch_id' % repName)
-            (rc1, port_name) = commands.getstatusoutput('cat /sys/class/net/%s/phys_port_name' % repName)
-
-            if rc0 or rc1:
+        for net in sorted(glob('/sys/class/net/*')):
+            repName = os.path.basename(net)
+            if repName in devinfos:
                 continue
 
-            self.Logger.info("Load rep info %s" % repName)
-            pfName  = int(re.search('pf(\d+)vf\d+', port_name).group(1)) & 0x7
-            vfIndex = int(re.search('(?:pf\d+vf)?(\d+)', port_name).group(1))
-            pfInfo  = next(iter(filter(lambda PNic: PNic['sw_id'] == switch_id.strip() and PNic['port_index'] == pfName, self.host.PNics)), None)
+            (sw_id, port_name) = self.get_port_info(repName)
+            if not sw_id or not port_name:
+                continue
 
-            if pfInfo:
-                pfInfo['vfs'][vfIndex]['rep'] = repName
+            self.Logger.info("Load rep info PF %s rep %s", PFInfo['name'], repName)
+
+            pfIndex  = int(re.search('pf(\d+)vf\d+', port_name).group(1)) & 0x7
+            vfIndex = int(re.search('(?:pf\d+vf)?(\d+)', port_name).group(1))
+            PFInfo = self.get_pf_info(sw_id, pfIndex)
+            if not PFInfo:
+                continue
+
+            PFInfo['vfs'][vfIndex]['rep'] = repName
 
     def DestroyVFs(self):
         for PFInfo in self.host.PNics:
@@ -257,10 +270,11 @@ class SetupConfigure(object):
                 splitedBus    = map(lambda x: int(x, 16), VFInfo['bus'].replace('.', ':').split(':')[1:])
                 splitedIP     = map(lambda x: int(x), self.host.name.split('.'))[-2:]
                 VFInfo['mac'] = 'e4:%02x:%02x:%02x:%02x:%02x' % tuple(splitedIP + splitedBus)
-                command       = 'ip link set %s vf %d mac %s' % (PFInfo['name'], PFInfo['vfs'].index(VFInfo), VFInfo['mac'])
+                vfIndex = PFInfo['vfs'].index(VFInfo)
 
-                self.Logger.info('Setting MAC %s to %s' % (VFInfo['mac'], VFInfo['bus']))
-                self.Logger.info('command: %s' % command)
+                self.Logger.info('Setting MAC %s on %s vf %d (bus %s)' % (VFInfo['mac'], PFInfo['name'], vfIndex, VFInfo['bus']))
+
+                command = 'ip link set %s vf %d mac %s' % (PFInfo['name'], vfIndex, VFInfo['mac'])
                 (rc, output) = commands.getstatusoutput(command)
 
                 if rc:
