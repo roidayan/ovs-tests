@@ -112,6 +112,7 @@ class SetupConfigure(object):
         commands.getstatusoutput('modprobe -rq mlx5_core')
         # load mlx5_core
         commands.getstatusoutput('modprobe -q mlx5_core')
+        time.sleep(5)
 
     def UpdatePATHEnvironmentVariable(self):
         os.environ['PATH'] = self.MLNXToolsPath + os.pathsep + os.environ.get('PATH')
