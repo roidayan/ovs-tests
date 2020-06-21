@@ -38,6 +38,7 @@ import socket
 import logging
 import commands
 import traceback
+from glob import glob
 from itertools import chain
 from argparse import ArgumentParser
 
@@ -172,28 +173,18 @@ class SetupConfigure(object):
 
     def LoadVFInfo(self):
         for PFInfo in self.host.PNics:
-            (rc, output) = commands.getstatusoutput('ls /sys/class/net/%s/device/ | grep virt' % PFInfo['name'])
+            for vfID in sorted(glob('/sys/class/net/%s/device/virtfn*/net/*' % PFInfo['name'])):
+                nameOutput = os.path.basename(vfID)
+                device = os.path.join(vfID, 'device')
+                busOutput = os.path.basename(os.readlink(device))
 
-            if rc:
-                raise RuntimeError('Failed to query %s VF IDs\n%s' % (PFInfo['name'], output))
+                VFInfo = {
+                            'rep'  : None,
+                            'name' : nameOutput,
+                            'bus'  : busOutput,
+                        }
 
-            for vfID in sorted(output.strip().split()):
-                (rc, nameOutput) = commands.getstatusoutput('ls /sys/class/net/%s/device/%s/net/' % (PFInfo['name'], vfID))
-
-                if rc:
-                    raise RuntimeError('Failed to query %s VF name\n%s' % (PFInfo['name'], nameOutput))
-
-                (rc, busOutput) = commands.getstatusoutput('basename `readlink /sys/class/net/%s/device/%s`' % (PFInfo['name'], vfID))
-
-                if rc:
-                    raise RuntimeError('Failed to query %s VF Bus address\n%s' % (PFInfo['name'], busOutput))
-
-                VFInfo        = {
-                                 'rep'  : None,
-                                 'name' : nameOutput.strip(),
-                                 'bus'  : busOutput.strip(),
-                                }
-
+                self.Logger.info('PF %s VF %s', PFInfo['name'], nameOutput)
                 PFInfo['vfs'] = sorted(PFInfo['vfs'] + [VFInfo], key=lambda k: k['bus'])
 
     def UpdateVFInfo(self):
