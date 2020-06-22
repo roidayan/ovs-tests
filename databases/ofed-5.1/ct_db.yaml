@@ -48,6 +48,8 @@ tests:
     test-ovs-ct-vxlan-many-conns.sh:
     test-ovs-ct-vxlan.sh:
     test-ovs-ct-vxlan-vf-lag.sh:
+      ignore_kernel:
+        (4.18.0-g5458cbf403b8-dirty): [2211318]
     test-ovs-ct-vxlan-vf-mirror.sh:
       ignore_not_supported: true
     test-ct-tcp-pedit-ct-clear.sh:
