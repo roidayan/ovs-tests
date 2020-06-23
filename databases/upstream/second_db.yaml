@@ -19,7 +19,10 @@ tests:
     test-ethtool-steering.sh:
     test-ethtool-steering-traffic-on-rule.sh:
     test-ethtool-steering-traffic-spread.sh:
+    test-ethtool-nic-mode.sh:
+    test-mod-depends.sh:
     test-ifstat.sh:
+    test-ovs-100-diff-masks.sh:
     test-ovs-aging-tc-rules.sh:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
     test-ovs-dpctl-flows.sh:
@@ -86,6 +89,7 @@ tests:
             .*(debug|dbg).*: [2130620]
     test-vxlan-rx-vlan-push-offload.sh:
     test-vf-lag.sh:
+    test-vf-lag-nic-tc-rule.sh:
     test-vf-rep-ping.sh:
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:
