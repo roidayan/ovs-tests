@@ -7,6 +7,8 @@ tests:
     test-ct-icmp.sh:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-reload.sh:
+      ignore_kernel:
+        (5.4.31+.*): [2211704]
     test-ct-tcp.sh:
     test-ct-tcp-vf-mirror-pedit.sh:
       ignore_not_supported: true
@@ -19,15 +21,20 @@ tests:
     test-ovs-ct-scapy-udp-2ports.sh:
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
+      ignore_not_supported: true
     test-ovs-ct-scapy-udp-ct-clear.sh:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
     test-ovs-ct-scapy-udp-pedit-nat.sh:
+      ignore_kernel:
+        (5.4.31+.*): [2211721]
     test-ovs-ct-scapy-udp-nat-dnat.sh:
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-reload.sh:
+      ignore_kernel:
+        (5.4.31+.*): [2211704]
     test-ovs-ct-scapy-udp.sh:
     test-ovs-ct-scapy-udp-vf-mirror.sh:
       ignore_not_supported: true
@@ -54,11 +61,13 @@ tests:
       ignore_not_supported: true
     test-ct-tcp-pedit-ct-clear.sh:
     test-ovs-ct-scapy-hw-ovs-miss.sh:
+      ignore_kernel:
+        (5.4.31+.*): [2211695]
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
     test-ovs-ct-vxlan-ipv6.sh:
       ignore_kernel:
-        (5.4.31+): [2200967]
+        (5.4.31+.*): [2200967]
     test-ovs-ct-tcp-ipv6-2.sh:
     test-ct-nat-tcp-ipv6.sh:
     test-ct-nat-tcp.sh:

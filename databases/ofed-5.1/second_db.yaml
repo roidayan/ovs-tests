@@ -40,6 +40,8 @@ tests:
         - 4.9.0.*
         - 3.10.0-693.el7.x86_64
         - 3.10.0-327.el7.x86_64
+      ignore_kernel:
+        .*: [2090125]
     test-ecmp-restore-rule.sh:
       2144905:
         - 4.9.0.*
@@ -98,6 +100,8 @@ tests:
       2119499:
         - byd
         - ucloud
+      2211681:
+        - 5.4.19.*
     test-ovs-gre-in-ns.sh:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
@@ -118,6 +122,8 @@ tests:
       ignore_kernel:
         (3.10.0-327.el7.x86_64): [1706984]
     test-ovs-no-implicit-rewrite-on-match.sh:
+      ignore_kernel:
+        (4.14.0.*|5.2.0.*): [2211276]
     test-ovs-overlap-rules.sh:
     test-ovs-persistent-data.sh:
       ignore_kernel:
@@ -225,7 +231,11 @@ tests:
     test-vxlan-port-offload.sh:
       ignore_kernel:
         (3.10.0-327.el7.x86_64): [1939639]
-        (5.6.0.*|4.14.0.*): [2165634]
+      2210893:
+        - ucloud
+        - bf2
+        - 5.2.0.*
+        - 5.4.19.*
     test-vxlan-rx-vlan-push-offload.sh:
       ignore_kernel:
         (3.10.0-327.el7.x86_64): [1939639]
@@ -254,4 +264,6 @@ tests:
         (4.9.0.*): [2127677]
     test-vf-rep-ping.sh:
     test-eswitch-rep-channels-time.sh:
+      ignore_kernel:
+        .*: [2211639]
     test-eswitch-rep-up-time.sh:

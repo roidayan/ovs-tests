@@ -19,7 +19,11 @@ tests:
       ignore_kernel:
         (3.10.0-327.el7.x86_64|4.9.0.*): [2150465]
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
+      ignore_kernel:
+        (4.14.0.*): [2211600]
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
+      ignore_kernel:
+        (4.14.0.*): [2211600]
     test-eswitch-add-flows-during-reload.sh:
       ignore_kernel:
         (4.14.0.*): [2202773]
@@ -71,7 +75,7 @@ tests:
         (4.14.0.*): [2211344]
     test-tc-bad-indr-vlan-rule.sh:
       ignore_kernel:
-        (4.14.0.*): [2202781]
+        (4.14.0.*): [2202756]
         (3.10.0-1127.el7.x86_64): [2211315]
     test-tc-del-a-lot.sh:
     test-tc-duplicate-hw-rules.sh:
