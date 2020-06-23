@@ -51,6 +51,7 @@ class SetupConfigure(object):
     def ParseArgs(self, args):
         self.Parser.add_argument('--skip_ovs_config', help='Skip openvswitch configuration', action='store_true')
         self.Parser.add_argument('--second-server', help='Second server config', action='store_true')
+        self.Parser.add_argument('--dpdk', help='Add DPDK=1 to configuration file', action='store_true')
 
         (namespaces, args) = self.Parser.parse_known_args(args)
 
@@ -396,6 +397,9 @@ class SetupConfigure(object):
             conf += '\nREMOTE_NIC2=%s' % self.host.PNics[1]['name']
 
         conf += '\nB2B=1'
+
+        if self.dpdk:
+            conf += '\nDPDK=1'
 
         with open('/workspace/dev_reg_conf.sh', 'w+') as f:
             f.write(conf)
