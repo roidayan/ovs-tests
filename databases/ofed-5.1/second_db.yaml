@@ -122,8 +122,6 @@ tests:
       ignore_kernel:
         (3.10.0-327.el7.x86_64): [1706984]
     test-ovs-no-implicit-rewrite-on-match.sh:
-      ignore_kernel:
-        (4.14.0.*|5.2.0.*): [2211276]
     test-ovs-overlap-rules.sh:
     test-ovs-persistent-data.sh:
       ignore_kernel:

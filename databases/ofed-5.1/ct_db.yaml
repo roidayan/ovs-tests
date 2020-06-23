@@ -53,6 +53,8 @@ tests:
     test-ovs-ct-vxlan-2.sh:
     test-ovs-ct-vxlan-3.sh:
     test-ovs-ct-vxlan-many-conns.sh:
+      ignore_kernel:
+        .*: [2164217]
     test-ovs-ct-vxlan.sh:
     test-ovs-ct-vxlan-vf-lag.sh:
       ignore_kernel:
