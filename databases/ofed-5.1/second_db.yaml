@@ -8,6 +8,10 @@ custom_kernels:
   byd: 4.19.36.*
   ucloud: 4.14.0.*
 
+ignore:
+   - test-ecmp*
+   - test*-lag*
+
 tests:
     test-devlink-encap.sh:
     test-devlink-inline-mode2.sh:
@@ -61,6 +65,7 @@ tests:
     test-ethtool-steering.sh:
       ignore_kernel:
         (3.10.0-327.el7.x86_64): [2145410]
+        .*: [2214966]
     test-ifstat.sh:
       1996366:
         - 4.9.0.*

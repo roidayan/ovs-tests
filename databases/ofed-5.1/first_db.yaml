@@ -18,12 +18,11 @@ tests:
     test-eswitch-add-del-different-flows.sh:
       ignore_kernel:
         (3.10.0-327.el7.x86_64|4.9.0.*): [2150465]
+    test-eswitch-add-del-flows-during-flows-cleanup3.sh:
+      ignore_kernel:
+        .*: [2214922]
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
-      ignore_kernel:
-        (4.14.0.*): [2211600]
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
-      ignore_kernel:
-        (4.14.0.*): [2211600]
     test-eswitch-add-flows-during-reload.sh:
       ignore_kernel:
         (4.14.0.*): [2202773]
@@ -170,9 +169,8 @@ tests:
       ignore_kernel:
         (3.10.0-327.el7.x86_64): [1939639]
     test-tc-max-rules-1M-rules.sh:
-      2211328:
-        - bf2
-        - ngn
+      ignore_kernel:
+        .*: [2211328]
     test-tc-max-rules-legacy.sh:
     test-tc-max-rules.sh:
       ignore_kernel:
