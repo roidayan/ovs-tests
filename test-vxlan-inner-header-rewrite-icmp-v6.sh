@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Test to verify if we can add vxlan decap + rewrite ipv6 icmp inner rule
-# Bug SW #1585031] [upstream][nuage] encapsulated ipv6 rules with header rewrite and decap is offloaded not as expected.
+# SW #1585031 encapsulated ipv6 rules with header rewrite and decap is offloaded not as expected.
 
 my_dir="$(dirname "$0")"
 . $my_dir/common.sh
