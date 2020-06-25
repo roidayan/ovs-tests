@@ -242,6 +242,7 @@ tests:
     test-vxlan-rx-vlan-push-offload.sh:
       ignore_kernel:
         (3.10.0-327.el7.x86_64): [1939639]
+        .*: [2211315]
     test-tc-par-add-ovr-del.sh:
       ignore_kernel:
         .*: [2103183]
