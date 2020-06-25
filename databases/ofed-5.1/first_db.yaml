@@ -229,6 +229,7 @@ tests:
         (3.10.0-1127.el7.x86_64): [2211315]
     test-tc-vxlan-decap-inner-match-drop.sh:
       min_kernel: 5.0
+      min_kernel_rhel: 3.10.0-1127
       1835642:
         - bf1
         - byd
