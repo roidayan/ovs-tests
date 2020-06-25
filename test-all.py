@@ -473,7 +473,7 @@ def prepare_logdir():
         print("Log dir: " + LOGDIR)
 
 
-def merge_data(out, data):
+def merge_data(data, out):
     for key in data:
         if key not in out:
             out[key] = data[key]
@@ -501,7 +501,7 @@ def read_db():
         with open(db) as yaml_data:
             data = yaml.safe_load(yaml_data)
             print("Description: %s" % data.get("description", "Empty"))
-            merge_data(out, data)
+            merge_data(data, out)
     return out
 
 
