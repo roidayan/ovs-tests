@@ -1,0 +1,69 @@
+description:
+    This DB is for running connection tracking tests for inbox regression
+tests:
+    test-ct-icmp-frag.sh:
+      ignore_not_supported: true
+    test-ct-icmp-fwd.sh:
+    test-ct-icmp.sh:
+    test-ct-nat-tcp.sh:
+    test-ct-nat-tcp-ipv6.sh:
+    test-ct-tcp-ipv6.sh:
+    test-ct-tcp-pedit.sh:
+    test-ct-tcp-pedit-ct-clear.sh:
+    test-ct-tcp-reload.sh:
+    test-ct-tcp.sh:
+    test-ct-tcp-vf-mirror-pedit.sh:
+      ignore_not_supported: true
+    test-ovs-ct-geneve.sh:
+    test-ovs-ct-icmp-cycle-esw-modes.sh:
+    test-ovs-ct-icmp-frag.sh:
+      ignore_not_supported: true
+    test-ovs-ct-icmp.sh:
+    test-ovs-ct-miss-to-sw.sh:
+    test-ovs-ct-scapy-hw-ovs-miss.sh:
+    test-ovs-ct-scapy-udp-2ports.sh:
+    test-ovs-ct-scapy-udp-aging-ovs.sh:
+      ignore_not_supported: true
+    test-ovs-ct-scapy-udp-aging.sh:
+    test-ovs-ct-scapy-udp-ct-clear.sh:
+    test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
+    test-ovs-ct-scapy-udp-down-up.sh:
+    test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
+    test-ovs-ct-scapy-udp-pedit-nat.sh:
+      ignore_not_supported: true
+    test-ovs-ct-scapy-udp-nat-dnat.sh:
+    test-ovs-ct-scapy-udp-nat-nop.sh:
+    test-ovs-ct-scapy-udp-nat-snat.sh:
+    test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
+    test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
+    test-ovs-ct-scapy-udp-reload.sh:
+    test-ovs-ct-scapy-udp.sh:
+    test-ovs-ct-scapy-udp-vf-mirror.sh:
+      ignore_not_supported: true
+    test-ovs-ct-scapy-udp-flush.sh:
+    test-ovs-ct-tcp-snat.sh:
+    test-ovs-ct-tcp-2ports.sh:
+    test-ovs-ct-tcp-iperf3.sh:
+    test-ovs-ct-tcp-ipv6.sh:
+    test-ovs-ct-tcp-ipv6-2.sh:
+    test-ovs-ct-tcp-label2.sh:
+    test-ovs-ct-tcp-label-reconfig.sh:
+    test-ovs-ct-tcp-label.sh:
+    test-ovs-ct-tcp-mac-rewrite.sh:
+    test-ovs-ct-tcp-nat-mark-ipv6.sh:
+    test-ovs-ct-tcp-nat-mark.sh:
+    test-ovs-ct-tcp-nat-restore.sh:
+    test-ovs-ct-tcp.sh:
+    test-ovs-ct-udp-frag.sh:
+      ignore_not_supported: true
+    test-ovs-ct-vxlan-2.sh:
+    test-ovs-ct-vxlan-3.sh:
+    test-ovs-ct-vxlan-many-conns.sh:
+      ignore_kernel:
+        .*: [2164217]
+    test-ovs-ct-vxlan.sh:
+    test-ovs-ct-vxlan-vf-lag.sh:
+    test-ovs-ct-vxlan-vf-mirror.sh:
+      ignore_not_supported: true
+    test-ovs-ct-vxlan-ipv6.sh:
+      ignore_not_supported: true
