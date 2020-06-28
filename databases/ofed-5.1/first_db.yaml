@@ -40,16 +40,6 @@ tests:
         (5.6.0.*|4.14.0.*|5.4.19.*|5.2.0.*): [2166489]
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
-      1996709:
-        - 5.6.0.*
-        - 3.10.0-327.el7.x86_64
-        - 3.10.0-693.el7.x86_64
-        - 3.10.0-862.el7.x86_64
-        - 4.14.0.*
-        - 5.4.31+.*
-        - 5.2.0.*
-        - 4.18.0-g5458cbf403b8-dirty
-        - 5.4.19.*
     test-eswitch-no-carrier.sh:
     test-eswitch-par-actions.sh:
     test-eswitch-reload-modules-different-state.sh:
