@@ -21,72 +21,43 @@ tests:
         .*: [2204918]
     test-ecmp-add-multipath-rule.sh:
       2144905:
-        - 4.9.0.*
         - 3.10.0-693.el7.x86_64
-        - 3.10.0-327.el7.x86_64
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
       2144905:
-        - 4.9.0.*
         - 3.10.0-693.el7.x86_64
-        - 3.10.0-327.el7.x86_64
     test-ecmp-add-vxlan-rule.sh:
       2144905:
-        - 4.9.0.*
         - 3.10.0-693.el7.x86_64
-        - 3.10.0-327.el7.x86_64
     test-ecmp-failover-failback.sh:
       2144905:
-        - 4.9.0.*
         - 3.10.0-693.el7.x86_64
-        - 3.10.0-327.el7.x86_64
     test-ecmp-load-balance.sh:
       2144905:
-        - 4.9.0.*
         - 3.10.0-693.el7.x86_64
-        - 3.10.0-327.el7.x86_64
       ignore_kernel:
         .*: [2090125]
     test-ecmp-restore-rule.sh:
       2144905:
-        - 4.9.0.*
         - 3.10.0-693.el7.x86_64
-        - 3.10.0-327.el7.x86_64
     test-ecmp-route-events.sh:
       2144905:
-        - 4.9.0.*
         - 3.10.0-693.el7.x86_64
-        - 3.10.0-327.el7.x86_64
     test-ecmp-rule-stats.sh:
       2144905:
-        - 4.9.0.*
         - 3.10.0-693.el7.x86_64
-        - 3.10.0-327.el7.x86_64
     test-ethtool-basic.sh:
     test-ethtool-steering.sh:
       ignore_kernel:
-        (3.10.0-327.el7.x86_64): [2145410]
         .*: [2214966]
     test-ifstat.sh:
-      1996366:
-        - 4.9.0.*
-        - 3.10.0-957.el7.x86_64
-        - 3.10.0-327.el7.x86_64
-        - 3.10.0-862.el7.x86_64
-        - 3.10.0-693.el7.x86_64
     test-ovs-aging-tc-rules.sh:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
-      1716789:
-        - 4.9.0.*
-        - 4.14.0.*
-        - 3.10.0-957.el7.x86_64
-        - 3.10.0-862.el7.x86_64
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-1127
     test-ovs-dpctl-flows.sh:
       ignore_kernel:
         (3.10.0-693.el7.x86_64): [1716786]
     test-ovs-dpctl-flows-ttl-tos.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1716786]
     test-ovs-geneve.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
@@ -117,57 +88,30 @@ tests:
         - ucloud
     test-ovs-icmp-frag.sh:
     test-ovs-icmp-offload.sh:
-      ignore_kernel:
-        (4.9.0.*): [1830716]
     test-ovs-ipv4-match.sh:
     test-ovs-ipv6-match.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [2064213]
     test-ovs-multi-vxlan-bridge-ingress.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1706984]
     test-ovs-no-implicit-rewrite-on-match.sh:
     test-ovs-overlap-rules.sh:
     test-ovs-persistent-data.sh:
-      ignore_kernel:
-        (4.9.0.*|3.10.0-327.el7.x86_64): [2145410]
     test-ovs-qinq-1.sh:
+      min_kernel: 4.18
+      min_kernel_rhel: 3.10.0-957
       2145311:
-        - 4.9.0.*
-        - 4.14.0.*
-        - 3.10.0-327.el7.x86_64
-        - 3.10.0-693.el7.x86_64
-        - 3.10.0-862.el7.x86_64
+        - ucloud
     test-ovs-qinq-2.sh:
+      min_kernel: 4.18
+      min_kernel_rhel: 3.10.0-957
       2145311:
-        - 4.9.0.*
-        - 4.14.0.*
-        - 3.10.0-327.el7.x86_64
-        - 3.10.0-693.el7.x86_64
-        - 3.10.0-862.el7.x86_64
+        - ucloud
     test-ovs-replace-rule-hw.sh:
-      ignore_kernel:
-        (3.10.0-693.el7.x86_64): [1755846]
     test-ovs-replace-rule.sh:
-      ignore_kernel:
-        (3.10.0-693.el7.x86_64): [1755846]
     test-ovs-rewrite-ipv4-macs.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1835651]
     test-ovs-rewrite-tos-dscp.sh:
-      2146576:
-        - 4.9.0.*
-        - 4.14.0.*
-        - 3.10.0-327.el7.x86_64
-        - 3.10.0-693.el7.x86_64
-        - 3.10.0-862.el7.x86_64
-        - 4.19.*
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
     test-ovs-tcp-offload.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [2145410]
     test-ovs-tc-rules-checker.sh:
-      ignore_kernel:
-        (4.9.0.*|3.10.0-327.el7.x86_64): [1835651]
     test-ovs-udp-offload.sh:
     test-ovs-vf-lag.sh:
     test-ovs-vf-lag2.sh:
@@ -175,8 +119,6 @@ tests:
         .*: [1830683]
     test-ovs-vf-mirror.sh:
     test-ovs-vxlan-flow-key.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [2003562]
     test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:
       ignore_kernel:
         .*: [1708975]
@@ -202,21 +144,14 @@ tests:
     test-vf-rep-ping-reconfig-sriov.sh:
     test-vf-rep-udp-fragmented.sh:
     test-vf-veth-fwd.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [2057335]
     test-vf-vf-different-esw-ping.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1825786]
     test-vf-vf-fwd-fl_classify.sh:
+      ignore_kernel:
+        (3.10.0-1127.el7.x86_64): [2223619]
     test-vf-vf-fwd-fl_delete.sh:
       ignore_kernel:
-        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1726617]
         (3.10.0-957.el7.x86_64): [2148287]
     test-vf-vf-fwd.sh:
-    test-vf-vf-iperf-perf.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1583842]
-        .*: [2216452]
     test-vf-vf-ping.sh:
     test-vf-vf-prio-tag-ping.sh:
       ignore_kernel:
@@ -225,16 +160,10 @@ tests:
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
     test-vxlan-neigh-update.sh:
     test-vxlan-neigh-update-stack.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1939639]
     test-vxlan-neigh-update-warn.sh:
     test-vxlan-neigh-update-with-pedit.sh:
     test-vxlan-port-del.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1939639]
     test-vxlan-port-offload.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1939639]
       2210893:
         - ucloud
         - bf2
@@ -242,31 +171,25 @@ tests:
         - 5.4.19.*
     test-vxlan-rx-vlan-push-offload.sh:
       ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1939639]
-        .*: [2211315]
+        .*: [2225000]
     test-tc-par-add-ovr-del.sh:
       ignore_kernel:
         .*: [2103183]
     test-tc-par-add-del.sh:
       ignore_kernel:
-        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1992660]
-        (4.9.0.*): [2127677]
+        (3.10.0-693.el7.x86_64): [1992660]
     test-tc-par-add-del-vxlan.sh:
       ignore_kernel:
-        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1992660]
-        (4.9.0.*): [2127677]
+        (3.10.0-693.el7.x86_64): [1992660]
     test-tc-par-add-del-vxlan-neigh-update.sh:
       ignore_kernel:
-        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1992660]
-        (4.9.0.*): [2127677]
+        (3.10.0-693.el7.x86_64): [1992660]
     test-tc-par-add-dump-del.sh:
       ignore_kernel:
-        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1992660]
-        (4.9.0.*): [2127677]
+        (3.10.0-693.el7.x86_64): [1992660]
     test-tc-par-add-dup.sh:
       ignore_kernel:
-        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1992660]
-        (4.9.0.*): [2127677]
+        (3.10.0-693.el7.x86_64): [1992660]
     test-vf-rep-ping.sh:
     test-eswitch-rep-channels-time.sh:
       ignore_kernel:

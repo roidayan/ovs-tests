@@ -13,11 +13,7 @@ tests:
       ignore_kernel:
         .*: [2150491]
     test-eswitch-add-del-different-flows2.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|4.9.0.*): [2150465]
     test-eswitch-add-del-different-flows.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|4.9.0.*): [2150465]
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
       ignore_kernel:
         .*: [2214922]
@@ -27,19 +23,22 @@ tests:
       ignore_kernel:
         (4.14.0.*): [2202773]
     test-eswitch-add-in-mode1-del-in-mode2.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1655572]
     test-eswitch-change-hfunc.sh:
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|4.9.0.*): [2150419]
     test-eswitch-diff-vfs-per-port.sh:
     test-eswitch-ingress-rate-limit.sh:
-      ignore_kernel:
-        (5.6.0.*|4.14.0.*|5.4.19.*|5.2.0.*): [2166489]
+      min_kernel: 5.6
+      min_kernel_rhel: 3.10.0-1127
+      2224914:
+        - 3.10.0-1127.el7.x86_64
+        - ucloud
+        - byd
+        - bf1
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
+      ignore_kernel:
+        .*: [2224579]
     test-eswitch-no-carrier.sh:
     test-eswitch-par-actions.sh:
     test-eswitch-reload-modules-different-state.sh:
@@ -84,7 +83,6 @@ tests:
         .*: [1688886]
     test-tc-insert-rule-rep-uplink-vlan.sh:
       ignore_kernel:
-        (3.10.0-327.el7.x86_64): [2107052]
         (4.14.0.*): [2202756]
         (3.10.0-1127.el7.x86_64): [2211315]
     test-tc-insert-rules-act-pass.sh:
@@ -93,10 +91,8 @@ tests:
         (4.14.0.*): [2202774]
         (5.4.31+.*|5.4.19.*): [2211334]
     test-tc-insert-rules-frag.sh:
-      1716808:
-        - 3.10.0-327.el7.x86_64
-        - 3.10.0-862.el7.x86_64
-        - 4.9.0.*
+      min_kernel: 4.17
+      min_kernel_rhel: 3.10.0-1127
     test-tc-insert-rules-geneve.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
@@ -121,50 +117,33 @@ tests:
         - byd
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
-      2166489:
-        - 5.6.0.*
-        - 5.2.0.*
-        - 4.14.0.*
+      min_kernel: 5.6
+      min_kernel_rhel: 3.10.0-1127
+      2224914:
+        - 3.10.0-1127.el7.x86_64
+        - ucloud
+        - byd
+        - bf1
     test-tc-insert-rules-mirror.sh:
     test-tc-insert-rules-pedit.sh:
-      2150423:
-        - 4.9.0.*
-        - 3.10.0-957.el7.x86_64
-        - 3.10.0-862.el7.x86_64
-        - 3.10.0-327.el7.x86_64
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
     test-tc-insert-rules-pedit-ttl-ip.sh:
-      2150423:
-        - 4.9.0.*
-        - 3.10.0-957.el7.x86_64
-        - 3.10.0-862.el7.x86_64
-        - 3.10.0-327.el7.x86_64
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
     test-tc-insert-rules-pedit-ttl.sh:
-      2150423:
-        - 4.9.0.*
-        - 3.10.0-957.el7.x86_64
-        - 3.10.0-862.el7.x86_64
-        - 3.10.0-327.el7.x86_64
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
     test-tc-insert-rules-port2.sh:
     test-tc-insert-rules.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1716797]
     test-tc-insert-rules-vxlan.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1939639]
     test-tc-insert-rule-without-match.sh:
     test-tc-ip-tos-ip-ttl.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1939639]
     test-tc-max-rules-1M-rules.sh:
       ignore_kernel:
         .*: [2211328]
     test-tc-max-rules-legacy.sh:
     test-tc-max-rules.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [2150483]
     test-tc-merged-esw-vf-vf.sh:
     test-tc-multi-masks-per-prio.sh:
       ignore_kernel:
@@ -179,43 +158,27 @@ tests:
       ignore_kernel:
         (4.14.0.*): [2202775]
     test-tc-replace.sh:
-    test-tc-rule-act-add.sh:
-      ignore_kernel:
-        .*: [2174968]
-    test-tc-rule-add-null-qdisc.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1709735]
     test-tc-shuffle-2.sh:
     test-tc-shuffle-3.sh:
     test-tc-shuffle-4.sh:
     test-tc-shuffle-cls_api.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1294281]
-        (4.9.0.*): [2132519]
     test-tc-shuffle-reload-gact.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [1726617]
     test-tc-shuffle-reload-mirred.sh:
     test-tc-shuffle-reload-mirred-skip-hw.sh:
-      ignore_kernel:
-        (4.9.0.*): [1726617]
     test-tc-shuffle.sh:
     test-tc-traffic-chain-flush.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [2150476]
     test-tc-traffic-filters-add-del.sh:
     test-tc-traffic-proto-add-del.sh:
     test-tc-traffic-qdisc-del.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|4.9.0.*): [2150481]
     test-tc-vf-mirror-pedit.sh:
     test-tc-vf-mirror.sh:
+      ignore_kernel:
+        (3.10.0-1127.el7.x86_64): [2224090]
     test-tc-vf-remote-mirror.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64): [1939639]
     test-tc-vlan-modify.sh:
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-862
       ignore_kernel:
-        (3.10.0-327.el7.x86_64|3.10.0-693.el7.x86_64): [2065236]
         (3.10.0-1127.el7.x86_64): [2211315]
     test-tc-vxlan-decap-inner-match-drop.sh:
       min_kernel: 5.0
@@ -228,20 +191,12 @@ tests:
       ignore_kernel:
         .*: [2153600]
     test-tc-vxlan-decap-key-port-only.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|4.9.0.*): [1939639]
     test-tc-vxlan-decap-not-properly-offloaded.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|4.9.0.*): [1939639]
     test-tc-vxlan-decap-proto-all.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|4.9.0.*): [1939639]
     test-tc-vxlan-encap.sh:
       ignore_kernel:
         .*: [1706116]
     test-tc-vxlan-outer-dst-mac.sh:
-      ignore_kernel:
-        (3.10.0-327.el7.x86_64|4.9.0.*): [1939639]
     test-tc-wrong-tunnel.sh:
     test-tc-insert-rules-mpls.sh:
       ignore_kernel:

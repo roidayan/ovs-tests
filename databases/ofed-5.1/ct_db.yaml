@@ -27,8 +27,7 @@ tests:
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
     test-ovs-ct-scapy-udp-pedit-nat.sh:
-      ignore_kernel:
-        (5.4.31+.*|4.18.0-g5458cbf403b8-dirty): [2211721]
+      ignore_not_supported: true
     test-ovs-ct-scapy-udp-nat-dnat.sh:
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
@@ -39,6 +38,8 @@ tests:
     test-ovs-ct-scapy-udp-vf-mirror.sh:
       ignore_not_supported: true
     test-ovs-ct-tcp-2ports.sh:
+      ignore_kernel:
+        (5.4.31+.*): [2225102]
     test-ovs-ct-tcp-iperf3.sh:
     test-ovs-ct-tcp-ipv6.sh:
     test-ovs-ct-tcp-label2.sh:
