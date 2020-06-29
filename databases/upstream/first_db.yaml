@@ -4,10 +4,11 @@ tests:
     test-eswitch-ingress-rate-limit.sh:
     test-eswitch-add-del-different-flows2.sh:
     test-eswitch-add-del-different-flows.sh:
-    test-eswitch-add-del-flows-during-flows-cleanup2.sh:
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
          ignore_kernel:
             .*linust.*: [2202627]
+    test-eswitch-add-del-flows-during-flows-cleanup2.sh:
+    test-eswitch-add-del-flows-during-flows-cleanup3.sh:
     test-eswitch-add-flows-during-reload.sh:
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
@@ -31,6 +32,7 @@ tests:
     test-eswitch-persist-mac.sh:
         ignore_kernel:
             .*: [2064431]
+    test-eswitch-reload-modules.sh:
     test-eswitch-reload-modules-different-state.sh:
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
@@ -47,6 +49,7 @@ tests:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
         ignore_kernel:
             .*linust.*: [2204619]
+    test-eswitch-hw-tc-offload.sh:
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
     test-tc-del-a-lot.sh:
@@ -96,6 +99,7 @@ tests:
     test-tc-insert-rules-goto.sh:
         ignore_kernel:
             .*linust.*: [2112205]
+    test-tc-insert-rules-goto2.sh:
     test-tc-insert-rules-vxlan.sh:
     test-tc-insert-rule-without-match.sh:
     test-tc-ip-tos-ip-ttl.sh:
@@ -120,6 +124,9 @@ tests:
             .*linust.*: [2112205]
     test-tc-rule-act-add.sh:
     test-tc-rule-add-null-qdisc.sh:
+    test-tc-sample.sh:
+        ignore_for_linust: 1
+        ignore_for_upstream: 1
     test-tc-shuffle-2.sh:
     test-tc-shuffle-3.sh:
     test-tc-shuffle-4.sh:

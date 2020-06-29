@@ -64,6 +64,9 @@ tests:
     test-ovs-ct-tcp-iperf3.sh:
     test-ovs-ct-tcp-ipv6.sh:
     test-ovs-ct-tcp-ipv6-2.sh:
+    test-ovs-ct-tcp-label-128.sh:
+        ignore_for_linust: 1
+        ignore_for_upstream: 1
     test-ovs-ct-tcp-label2.sh:
         ignore_kernel:
             .*: [2126941]
@@ -80,6 +83,7 @@ tests:
         ignore_kernel:
             .*: [2176088]
     test-ovs-ct-tcp.sh:
+    test-ovs-ct-tcp-2.sh:
     test-ovs-ct-udp-frag.sh:
         ignore_kernel:
             .*: [1976103]
