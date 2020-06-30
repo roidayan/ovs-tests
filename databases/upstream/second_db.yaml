@@ -91,6 +91,8 @@ tests:
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
     test-vxlan-rx-vlan-push-offload.sh:
+        ignore_kernel:
+            .*: [2210791]
     test-vf-lag.sh:
     test-vf-lag-nic-tc-rule.sh:
     test-vf-rep-ping.sh:
