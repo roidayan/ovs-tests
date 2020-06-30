@@ -54,6 +54,8 @@ tests:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-1127
+      1716789:
+        - ucloud
     test-ovs-dpctl-flows.sh:
       ignore_kernel:
         (3.10.0-693.el7.x86_64): [1716786]

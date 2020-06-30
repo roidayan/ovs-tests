@@ -157,6 +157,7 @@ tests:
     test-tc-reoffload.sh:
       ignore_kernel:
         (4.14.0.*): [2202775]
+        (3.10.0-1127.el7.x86_64): [2225899]
     test-tc-replace.sh:
     test-tc-shuffle-2.sh:
     test-tc-shuffle-3.sh:
