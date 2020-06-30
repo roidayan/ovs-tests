@@ -49,6 +49,7 @@ tests:
     test-ovs-ct-tcp-nat-mark-ipv6.sh:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp.sh:
+    test-ovs-ct-tcp-2.sh:
     test-ovs-ct-udp-frag.sh:
       ignore_not_supported: true
     test-ovs-ct-vxlan-2.sh:

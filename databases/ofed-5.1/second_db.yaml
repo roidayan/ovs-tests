@@ -46,6 +46,7 @@ tests:
       2144905:
         - 3.10.0-693.el7.x86_64
     test-ethtool-basic.sh:
+    test-ethtool-nic-mode.sh:
     test-ethtool-steering.sh:
       ignore_kernel:
         .*: [2214966]

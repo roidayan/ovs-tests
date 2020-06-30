@@ -7,4 +7,5 @@ tests:
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-reps-2ports.sh:
+    test-eswitch-reload-modules.sh:
 

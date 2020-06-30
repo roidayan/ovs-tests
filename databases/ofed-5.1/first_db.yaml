@@ -58,6 +58,8 @@ tests:
         .*: [2202767]
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
+    test-eswitch-hw-tc-offload.sh:
+    test-eswitch-reload-modules.sh:
     test-tc-bad-egdev-rules.sh:
       ignore_kernel:
         (4.14.0.*): [2211344]
@@ -109,6 +111,7 @@ tests:
       min_kernel_rhel: 3.10.0-1127
       2153625:
         - ucloud
+    test-tc-insert-rules-goto2.sh:
     test-tc-insert-rules-gre.sh:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
@@ -203,3 +206,4 @@ tests:
       ignore_kernel:
         .*: [2135711]
     test-tc-merged-esw-vf-pf.sh:
+    test-vf-lag-nic-tc-rule.sh:
