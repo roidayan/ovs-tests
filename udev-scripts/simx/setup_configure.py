@@ -356,6 +356,8 @@ class SetupConfigure(object):
 
             if rc:
                 raise RuntimeError('Failed to bind %s\n%s' % (VFInfo['bus'], output))
+        # might need a second to let udev rename
+        sleep(1)
 
     def CreateConfFile(self):
         conf = 'PATH="%s:$PATH"' % self.MLNXToolsPath
