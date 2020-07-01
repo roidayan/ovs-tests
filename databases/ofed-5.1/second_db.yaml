@@ -8,10 +8,6 @@ custom_kernels:
   byd: 4.19.36.*
   ucloud: 4.14.0.*
 
-ignore:
-   - test-ecmp*
-   - test*-lag*
-
 tests:
     test-devlink-encap.sh:
     test-devlink-inline-mode2.sh:
@@ -25,6 +21,8 @@ tests:
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
       2144905:
         - 3.10.0-693.el7.x86_64
+      ignore_kernel:
+        .*: [2228493]
     test-ecmp-add-vxlan-rule.sh:
       2144905:
         - 3.10.0-693.el7.x86_64
@@ -89,12 +87,18 @@ tests:
         - byd
       2148342:
         - ucloud
+      2227577:
+        - ngn
     test-ovs-icmp-frag.sh:
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-862
     test-ovs-icmp-offload.sh:
     test-ovs-ipv4-match.sh:
     test-ovs-ipv6-match.sh:
     test-ovs-multi-vxlan-bridge-ingress.sh:
     test-ovs-no-implicit-rewrite-on-match.sh:
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
     test-ovs-overlap-rules.sh:
     test-ovs-persistent-data.sh:
     test-ovs-qinq-1.sh:
@@ -110,6 +114,8 @@ tests:
     test-ovs-replace-rule-hw.sh:
     test-ovs-replace-rule.sh:
     test-ovs-rewrite-ipv4-macs.sh:
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
     test-ovs-rewrite-tos-dscp.sh:
       min_kernel: 4.14
       min_kernel_rhel: 3.10.0-862
@@ -126,6 +132,8 @@ tests:
       ignore_kernel:
         .*: [1708975]
     test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh:
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
     test-ovs-vxlan-in-ns-dpctl.sh:
       ignore_kernel:
         .*: [2145401]
@@ -138,8 +146,11 @@ tests:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
       ignore_kernel:
         (4.14.0.*): [2205650]
+        (3.10.0-693.el7.x86_64): [2228009]
     test-ovs-vxlan.sh:
     test-ovs-vlan-implicit.sh:
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:
     test-vf-rep-ping-change-mtu.sh:
@@ -161,6 +172,8 @@ tests:
         .*: [2204918]
     test-vf-zero-header-raw.sh:
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
     test-vxlan-neigh-update.sh:
     test-vxlan-neigh-update-stack.sh:
     test-vxlan-neigh-update-warn.sh:

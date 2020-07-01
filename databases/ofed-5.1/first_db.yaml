@@ -16,7 +16,7 @@ tests:
     test-eswitch-add-del-different-flows.sh:
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
       ignore_kernel:
-        .*: [2214922]
+        (4.18.0-193.el8.x86_64): [2228422]
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
     test-eswitch-add-flows-during-reload.sh:
@@ -42,6 +42,8 @@ tests:
     test-eswitch-no-carrier.sh:
     test-eswitch-par-actions.sh:
     test-eswitch-reload-modules-different-state.sh:
+      ignore_kernel:
+        (3.10.0-693.el7.x86_64): [2228024]
     test-eswitch-reps-2ports.sh:
     test-eswitch-set-vf-mac.sh:
     test-eswitch-set-vf-rate.sh:
@@ -64,9 +66,10 @@ tests:
       ignore_kernel:
         (4.14.0.*): [2211344]
     test-tc-bad-indr-vlan-rule.sh:
+      min_kernel: 5.0
+      min_kernel_rhel: 4.18.0-193
       ignore_kernel:
         (4.14.0.*): [2202756]
-        (3.10.0-1127.el7.x86_64): [2211315]
     test-tc-del-a-lot.sh:
     test-tc-duplicate-hw-rules.sh:
     test-tc-groups-multi-fgs.sh:
