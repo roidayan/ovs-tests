@@ -33,12 +33,12 @@
 import re
 import os
 import sys
-import time
 import socket
 import logging
 import commands
 import traceback
 from glob import glob
+from time import sleep
 from itertools import chain
 from argparse import ArgumentParser
 
@@ -114,7 +114,7 @@ class SetupConfigure(object):
         commands.getstatusoutput('modprobe -rq mlx5_core')
         # load mlx5_core
         commands.getstatusoutput('modprobe -q mlx5_core')
-        time.sleep(5)
+        sleep(5)
 
     def UpdatePATHEnvironmentVariable(self):
         os.environ['PATH'] = self.MLNXToolsPath + os.pathsep + os.environ.get('PATH')
@@ -251,7 +251,7 @@ class SetupConfigure(object):
             if rc:
                 raise RuntimeError('Failed to delete VFs over %s\n%s' % (PFInfo['name'], output))
 
-            time.sleep(2)
+            sleep(2)
 
     def CreateVFs(self):
         for PFInfo in self.host.PNics:
@@ -262,7 +262,7 @@ class SetupConfigure(object):
             if rc:
                 raise RuntimeError('Failed to configure VFs over %s\n%s' % (PFInfo['name'], output))
 
-            time.sleep(2)
+            sleep(2)
 
     def SetVFMACs(self):
         for PFInfo in self.host.PNics:
@@ -305,7 +305,7 @@ class SetupConfigure(object):
             if rc:
                 raise RuntimeError('Failed to change %s mode to switchdev\n%s' % (PFInfo['name'], output))
 
-        time.sleep(5)
+        sleep(5)
 
     def ConfigureOVS(self):
         self.Logger.info("Setting [hw-offload=true] configuration to OVS" )
