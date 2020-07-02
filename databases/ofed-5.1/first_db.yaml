@@ -53,6 +53,8 @@ tests:
       ignore_kernel:
         .*: [2150491]
     test-eswitch-switchdev-ndos.sh:
+      ignore_kernel:
+        .*: [2226688]
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:
     test-eswitch-toggle-mode-parallel3.sh:
