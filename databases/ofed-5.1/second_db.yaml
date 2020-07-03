@@ -9,9 +9,6 @@ custom_kernels:
   ucloud: 4.14.0.*
 
 tests:
-    test-devlink-encap.sh:
-    test-devlink-inline-mode2.sh:
-    test-devlink-inline-mode.sh:
     test-devlink-show-in-each-link-mode.sh:
       ignore_kernel:
         .*: [2204918]
