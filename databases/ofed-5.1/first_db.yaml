@@ -208,7 +208,6 @@ tests:
     test-tc-vxlan-outer-dst-mac.sh:
     test-tc-wrong-tunnel.sh:
     test-tc-insert-rules-mpls.sh:
-      ignore_kernel:
-        .*: [2135711]
+      ignore_not_supported: true
     test-tc-merged-esw-vf-pf.sh:
     test-vf-lag-nic-tc-rule.sh:

@@ -127,9 +127,6 @@ tests:
     test-tc-wrong-tunnel.sh:
        ignore_kernel:
           (4.19.*).*: [2150475]
-    test-tc-insert-rules-mpls.sh:
-        ignore_kernel:
-            .*: [2135711]
     test-devlink-encap.sh:
     test-devlink-inline-mode2.sh:
     test-devlink-inline-mode.sh:

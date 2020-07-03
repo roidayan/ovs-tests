@@ -43,7 +43,6 @@ tests:
     test-tc-hairpin-esw-upl1-decap-esw-upl1.sh:
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
-    test-tc-insert-rules-mpls.sh:
     test-tc-insert-rule-rep-uplink-vlan.sh:
     test-tc-insert-rules-act-pass.sh:
     test-tc-insert-rules-hw-stats.sh:
