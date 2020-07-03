@@ -86,8 +86,6 @@ tests:
         - ucloud
         - byd
     test-tc-insert-fail-hw.sh:
-      ignore_kernel:
-        .*: [1688886]
     test-tc-insert-rule-rep-uplink-vlan.sh:
       ignore_kernel:
         (4.14.0.*): [2202756]
