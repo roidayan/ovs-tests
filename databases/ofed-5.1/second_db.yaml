@@ -62,6 +62,8 @@ tests:
       2119499:
         - byd
         - ucloud
+      2231386:
+        - 3.10.0-693.el7.x86_64
     test-ovs-geneve-in-ns-ipv6.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
@@ -97,6 +99,8 @@ tests:
       min_kernel: 4.14
       min_kernel_rhel: 3.10.0-862
     test-ovs-overlap-rules.sh:
+      min_kernel: 4.17
+      min_kernel_rhel: 3.10.0-1127
     test-ovs-persistent-data.sh:
     test-ovs-qinq-1.sh:
       min_kernel: 4.18
@@ -120,9 +124,14 @@ tests:
     test-ovs-tc-rules-checker.sh:
     test-ovs-udp-offload.sh:
     test-ovs-vf-lag.sh:
+      min_kernel: 4.18
+      min_kernel_rhel: 3.10.0-957
     test-ovs-vf-lag2.sh:
       ignore_kernel:
         .*: [1830683]
+    test-vf-lag-nic-tc-rule.sh:
+      ignore_kernel:
+        .*: [2231166]
     test-ovs-vf-mirror.sh:
     test-ovs-vxlan-flow-key.sh:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:
@@ -157,9 +166,13 @@ tests:
     test-vf-veth-fwd.sh:
     test-vf-vf-different-esw-ping.sh:
     test-vf-vf-fwd-fl_classify.sh:
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-1127
       ignore_kernel:
         (3.10.0-1127.el7.x86_64): [2223619]
     test-vf-vf-fwd-fl_delete.sh:
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-1127
       ignore_kernel:
         (3.10.0-957.el7.x86_64): [2148287]
     test-vf-vf-fwd.sh:
