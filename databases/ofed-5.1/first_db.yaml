@@ -35,6 +35,8 @@ tests:
         - ucloud
         - byd
         - bf1
+      ignore_kernel:
+        .*: [2231572]
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
       ignore_kernel:
