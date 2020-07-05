@@ -14,8 +14,6 @@ tests:
             .*(debug|dbg).*: [2130620]
     test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-eswitch-change-hfunc.sh:
-         ignore_kernel:
-            .*: [1615952]
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
         ignore_kernel:
@@ -23,15 +21,11 @@ tests:
     test-eswitch-diff-vfs-per-port.sh:
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
-        ignore_kernel:
-            .*: [1977943]
     test-eswitch-no-carrier.sh:
         ignore_kernel:
             .*: [2037058]
     test-eswitch-par-actions.sh:
     test-eswitch-persist-mac.sh:
-        ignore_kernel:
-            .*: [2064431]
     test-eswitch-reload-modules.sh:
     test-eswitch-reload-modules-different-state.sh:
         ignore_kernel:
@@ -47,8 +41,6 @@ tests:
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
-        ignore_kernel:
-            .*linust.*: [2204619]
     test-eswitch-hw-tc-offload.sh:
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
@@ -58,20 +50,10 @@ tests:
     test-tc-groups-overlapping.sh:
     test-tc-geneve.sh:
     test-tc-hairpin-disable-sriov.sh:
-        ignore_kernel:
-            .*: [2135071]
     test-tc-hairpin-rules.sh:
-        ignore_kernel:
-            .*: [2135081]
     test-tc-hairpin-esw-upl1-esw-upl1.sh:
-        ignore_kernel:
-            .*: [2135071]
     test-tc-hairpin-esw-upl1-encap-esw-upl1.sh:
-        ignore_kernel:
-            .*: [2135071]
     test-tc-hairpin-esw-upl1-decap-esw-upl1.sh:
-        ignore_kernel:
-            .*: [2135071]
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rules-mpls.sh:
@@ -82,8 +64,6 @@ tests:
             .*: [2094890]
     test-tc-insert-rules-act-pass.sh:
     test-tc-insert-rules-hw-stats.sh:
-        ignore_kernel:
-            .*linust.*: [2112205]
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-geneve.sh:
@@ -97,8 +77,6 @@ tests:
     test-tc-insert-rules-port2.sh:
     test-tc-insert-rules.sh:
     test-tc-insert-rules-goto.sh:
-        ignore_kernel:
-            .*linust.*: [2112205]
     test-tc-insert-rules-goto2.sh:
     test-tc-insert-rules-vxlan.sh:
     test-tc-insert-rule-without-match.sh:
@@ -111,8 +89,6 @@ tests:
     test-tc-merged-esw-pf-pf.sh:
     test-tc-merged-esw-vf-vf.sh:
     test-tc-merged-esw-vf-pf.sh:
-        ignore_kernel:
-            .*: [1799666]
     test-tc-multi-masks-per-prio.sh:
     test-tc-multi-prio-chains.sh:
     test-tc-multi-prio-chains-high.sh:
@@ -120,8 +96,6 @@ tests:
     test-tc-reoffload.sh:
     test-tc-replace.sh:
     test-tc-restore-after-miss.sh:
-        ignore_kernel:
-            .*linust.*: [2112205]
     test-tc-rule-act-add.sh:
     test-tc-rule-add-null-qdisc.sh:
     test-tc-sample.sh:
@@ -134,16 +108,12 @@ tests:
     test-tc-shuffle-reload-gact.sh:
     test-tc-shuffle-reload-mirred.sh:
     test-tc-shuffle-reload-mirred-skip-hw.sh:
-        ignore_kernel:
-            .*(debug|dbg).*: [2134635]
     test-tc-shuffle.sh:
     test-tc-traffic-chain-flush.sh:
     test-tc-traffic-filters-add-del.sh:
     test-tc-traffic-proto-add-del.sh:
     test-tc-traffic-qdisc-del.sh:
     test-tc-vf-mirror-pedit.sh:
-        ignore_kernel:
-            .*linust.*: [2112205]
     test-tc-vf-mirror.sh:
     test-tc-vf-remote-mirror.sh:
     test-tc-vlan-modify.sh:

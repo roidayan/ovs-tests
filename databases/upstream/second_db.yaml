@@ -14,8 +14,6 @@ tests:
     test-ecmp-route-events.sh:
     test-ecmp-rule-stats.sh:
     test-ethtool-basic.sh:
-        ignore_kernel:
-            .*: [1615952]
     test-ethtool-steering.sh:
     test-ethtool-steering-traffic-on-rule.sh:
     test-ethtool-steering-traffic-spread.sh:
@@ -28,8 +26,6 @@ tests:
     test-ovs-dpctl-flows.sh:
     test-ovs-dpctl-flows-ttl-tos.sh:
     test-ovs-geneve.sh:
-        ignore_kernel:
-            .*: [2200657]
     test-ovs-geneve-in-ns-ipv6.sh:
     test-ovs-geneve-in-ns.sh:
     test-ovs-gre-in-ns.sh:
@@ -71,13 +67,7 @@ tests:
     test-ovs-vxlan-in-ns.sh:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
     test-ovs-vxlan.sh:
-        ignore_kernel:
-            .*: [2200657]
     test-ovs-vxlan-vf-lag.sh:
-        ignore_fw:
-            ^22.*: [2149563]
-        ignore_kernel:
-            .*: [2200657]
     test-ovs-sflow.sh:
         ignore_for_linust: 1
         ignore_for_upstream: 1
@@ -114,13 +104,9 @@ tests:
     test-vf-vf-prio-tag-ping.sh:
         ignore_fw:
             ^22.*: [2120288]
-        ignore_kernel:
-            .*linust.*: [2204619]
     test-devlink-show-in-each-link-mode.sh:
         ignore_fw:
             ^22.*: [2107070]
-        ignore_kernel:
-            .*linust.*: [2204619]
     test-devlink-encap.sh:
     test-devlink-inline-mode2.sh:
     test-devlink-inline-mode.sh:
