@@ -183,8 +183,7 @@ tests:
         - 5.2.0.*
         - 5.4.19.*
     test-vxlan-rx-vlan-push-offload.sh:
-      ignore_kernel:
-        .*: [2225000]
+      ignore_not_supported: true
     test-tc-par-add-ovr-del.sh:
       ignore_kernel:
         .*: [2103183]
