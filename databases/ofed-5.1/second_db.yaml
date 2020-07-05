@@ -157,6 +157,9 @@ tests:
     test-ovs-vlan-implicit.sh:
       min_kernel: 4.14
       min_kernel_rhel: 3.10.0-862
+    test-ovs-100-diff-masks.sh:
+      ignore_kernel:
+        .*: [2231462]
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:
     test-vf-rep-ping-change-mtu.sh:
@@ -220,3 +223,4 @@ tests:
       ignore_kernel:
         .*: [2211639]
     test-eswitch-rep-up-time.sh:
+    test-mod-depends.sh:
