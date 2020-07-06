@@ -56,6 +56,8 @@ tests:
       ignore_kernel:
         (3.10.0-693.el7.x86_64): [1716786]
     test-ovs-dpctl-flows-ttl-tos.sh:
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
     test-ovs-geneve.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
@@ -82,7 +84,6 @@ tests:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
       2142118:
-        - bf1
         - byd
       2148342:
         - ucloud
@@ -126,12 +127,14 @@ tests:
     test-ovs-vf-lag.sh:
       min_kernel: 4.18
       min_kernel_rhel: 3.10.0-957
+      ignore_not_supported:
+        - ucloud
     test-ovs-vf-lag2.sh:
       ignore_kernel:
         .*: [1830683]
     test-vf-lag-nic-tc-rule.sh:
       ignore_kernel:
-        .*: [2231166]
+        .*: [2232232]
     test-ovs-vf-mirror.sh:
     test-ovs-vxlan-flow-key.sh:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:
@@ -193,11 +196,6 @@ tests:
     test-vxlan-neigh-update-with-pedit.sh:
     test-vxlan-port-del.sh:
     test-vxlan-port-offload.sh:
-      2210893:
-        - ucloud
-        - bf2
-        - 5.2.0.*
-        - 5.4.19.*
     test-vxlan-rx-vlan-push-offload.sh:
       ignore_not_supported: true
     test-tc-par-add-ovr-del.sh:

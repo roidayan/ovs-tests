@@ -34,13 +34,13 @@ tests:
         - 3.10.0-1127.el7.x86_64
         - ucloud
         - byd
-        - bf1
       ignore_kernel:
         .*: [2231572]
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
       ignore_kernel:
         .*: [2224579]
+        (3.10.0-693.el7.x86_64): [2231864]
     test-eswitch-no-carrier.sh:
     test-eswitch-par-actions.sh:
     test-eswitch-reload-modules-different-state.sh:
@@ -91,6 +91,8 @@ tests:
         - ucloud
         - byd
     test-tc-insert-fail-hw.sh:
+      min_kernel: 5.0
+      min_kernel_rhel: 4.18.0-193
     test-tc-insert-rule-rep-uplink-vlan.sh:
       min_kernel: 5.4
       min_kernel_rhel: 3.10.0-1127
@@ -116,28 +118,27 @@ tests:
         - ngn
         - 5.4.19.*
     test-tc-insert-rules-goto.sh:
-      min_kernel: 5.4
-      min_kernel_rhel: 3.10.0-1127
-      2153625:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-957
+      ignore_not_supported:
         - ucloud
     test-tc-insert-rules-goto2.sh:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-957
+      ignore_not_supported:
+        - ucloud
     test-tc-insert-rules-gre.sh:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
       2142118:
-        - bf1
         - byd
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
       min_kernel: 5.6
-      min_kernel_rhel: 3.10.0-1127
+      min_kernel_rhel: 4.18.0-193
       2224914:
-        - 3.10.0-1127.el7.x86_64
         - ucloud
         - byd
-        - bf1
     test-tc-insert-rules-mirror.sh:
     test-tc-insert-rules-pedit.sh:
       min_kernel: 4.14
@@ -211,7 +212,6 @@ tests:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
       1835642:
-        - bf1
         - byd
         - ucloud
     test-tc-vxlan-decap-in-skip-sw.sh:
