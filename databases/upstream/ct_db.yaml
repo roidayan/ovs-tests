@@ -39,6 +39,8 @@ tests:
         ignore_kernel:
             .*: [2115017]
     test-ovs-ct-scapy-udp-nat-dnat.sh:
+        ignore_kernel:
+            .*upstream.*: [2231285]
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
@@ -71,11 +73,11 @@ tests:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp-nat-restore.sh:
     test-ovs-ct-tcp-testpmd.sh:
-        ignore_kernel:
-            .*: [2176088]
+        ignore_for_linust: 1
+        ignore_for_upstream: 1
     test-ovs-ct-tcp-testpmd-remote.sh:
-        ignore_kernel:
-            .*: [2176088]
+        ignore_for_linust: 1
+        ignore_for_upstream: 1
     test-ovs-ct-tcp.sh:
     test-ovs-ct-tcp-2.sh:
     test-ovs-ct-udp-frag.sh:
