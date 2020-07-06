@@ -328,15 +328,8 @@ class SetupConfigure(object):
     def EnableDevOffload(self):
         for PFInfo in self.host.PNics:
             for devName in [PFInfo['name']] + map(lambda VFInfo: VFInfo['rep'], PFInfo['vfs']):
-                if commands.getstatusoutput('ethtool -k %s | grep hw-tc-offload' % devName)[0]:
-                    continue
-
                 self.Logger.info("Enabling hw-tc-offload for %s" % (devName))
-
-                (rc, output) = commands.getstatusoutput('ethtool -K %s hw-tc-offload on' % devName)
-
-                if rc:
-                    raise RuntimeError('Failed to enable hw-tc-offload for %s:\n%s' % (devName, output))
+                commands.getstatusoutput('ethtool -K %s hw-tc-offload on' % devName)
 
     def BringUpDevices(self):
         PFNames  = map(lambda pfInfo: pfInfo['name'], self.host.PNics)
