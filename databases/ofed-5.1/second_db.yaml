@@ -15,6 +15,8 @@ tests:
     test-ecmp-add-multipath-rule.sh:
       2144905:
         - 3.10.0-693.el7.x86_64
+      ignore_kernel:
+        .*: [2231097]
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
       2144905:
         - 3.10.0-693.el7.x86_64
