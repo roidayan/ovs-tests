@@ -39,8 +39,11 @@ tests:
     test-tc-hairpin-disable-sriov.sh:
     test-tc-hairpin-rules.sh:
     test-tc-hairpin-esw-upl1-esw-upl1.sh:
+      ignore_not_supported: true
     test-tc-hairpin-esw-upl1-encap-esw-upl1.sh:
+      ignore_not_supported: true
     test-tc-hairpin-esw-upl1-decap-esw-upl1.sh:
+      ignore_not_supported: true
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rule-rep-uplink-vlan.sh:
@@ -99,5 +102,7 @@ tests:
     test-tc-vxlan-decap-not-properly-offloaded.sh:
     test-tc-vxlan-decap-proto-all.sh:
     test-tc-vxlan-encap.sh:
+        ignore_kernel:
+            .*: [2232297]
     test-tc-vxlan-outer-dst-mac.sh:
     test-tc-wrong-tunnel.sh:

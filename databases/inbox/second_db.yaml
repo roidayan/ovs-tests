@@ -6,6 +6,8 @@ tests:
     test-ecmp-add-vxlan-rule.sh:
     test-ecmp-failover-failback.sh:
     test-ecmp-load-balance.sh:
+        ignore_kernel:
+            .*: [2090125]
     test-ecmp-restore-rule.sh:
     test-ecmp-route-events.sh:
     test-ecmp-rule-stats.sh:
@@ -37,16 +39,22 @@ tests:
     test-ovs-rewrite-ipv4-macs.sh:
     test-ovs-rewrite-tos-dscp.sh:
     test-ovs-rewrite-header-reload.sh:
+        ignore_kernel:
+            .*: [1932655]
     test-ovs-tcp-offload.sh:
     test-ovs-tc-rules-checker.sh:
     test-ovs-udp-offload.sh:
     test-ovs-vf-lag.sh:
     test-ovs-vf-lag2.sh:
+        ignore_kernel:
+            .*: [2232321]
     test-ovs-vf-mirror.sh:
     test-ovs-vlan.sh:
     test-ovs-vlan-implicit.sh:
     test-ovs-vxlan-flow-key.sh:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:
+        ignore_kernel:
+            .*: [1658441]
     test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh:
     test-ovs-vxlan-in-ns-dpctl.sh:
     test-ovs-vxlan-in-ns-ipv6.sh:
