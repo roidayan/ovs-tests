@@ -337,10 +337,7 @@ class SetupConfigure(object):
 
         for devName in PFNames + RepNames:
             self.Logger.info("Bringing up %s " % devName)
-            (rc, output) = commands.getstatusoutput('ip link set dev %s up' % devName)
-
-            if rc:
-                raise RuntimeError('Failed to bring up %s\n%s' % (devName, output))
+            commands.getstatusoutput('ip link set dev %s up' % devName)
 
     def AttachVFs(self):
         for VFInfo in chain.from_iterable(map(lambda PFInfo: PFInfo['vfs'], self.host.PNics)):
