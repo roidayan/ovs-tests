@@ -49,12 +49,13 @@ class SetupConfigure(object):
 
     MLNXToolsPath = '/opt/mellanox/ethtool/sbin:/opt/mellanox/iproute2/sbin:/opt/verutils/bin/'
 
-    def ParseArgs(self, args):
-        self.Parser.add_argument('--skip_ovs_config', help='Skip openvswitch configuration', action='store_true')
-        self.Parser.add_argument('--second-server', help='Second server config', action='store_true')
-        self.Parser.add_argument('--dpdk', help='Add DPDK=1 to configuration file', action='store_true')
+    def ParseArgs(self):
+        parser = ArgumentParser(prog=self.__class__.__name__)
+        parser.add_argument('--skip_ovs_config', help='Skip openvswitch configuration', action='store_true')
+        parser.add_argument('--second-server', help='Second server config', action='store_true')
+        parser.add_argument('--dpdk', help='Add DPDK=1 to configuration file', action='store_true')
 
-        (namespaces, args) = self.Parser.parse_known_args(args)
+        (namespaces, args) = parser.parse_known_args()
 
         for key, value in vars(namespaces).items():
             setattr(self, key, value)
@@ -402,15 +403,8 @@ class SetupConfigure(object):
 
         return self.logger
 
-    @property
-    def Parser(self):
-        if not hasattr(self, 'parser'):
-            self.parser = ArgumentParser(prog=self.__class__.__name__)
-
-        return self.parser
-
 
 if __name__ == "__main__":
     setupConfigure = SetupConfigure()
-    setupConfigure.ParseArgs(sys.argv[1:])
+    setupConfigure.ParseArgs()
     sys.exit(setupConfigure.Run())
