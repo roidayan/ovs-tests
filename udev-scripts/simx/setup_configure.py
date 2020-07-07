@@ -106,6 +106,7 @@ class SetupConfigure(object):
         return 0
 
     def ReloadModules(self):
+        self.Logger.info("Reload modules")
         # workaround because udev rules changed in jenkins script but didn't take affect
         commands.getstatusoutput('modprobe -rq act_ct')
         commands.getstatusoutput('modprobe -rq cls_flower')
@@ -396,9 +397,8 @@ class SetupConfigure(object):
     def Logger(self):
         if not hasattr(self, 'logger'):
             self.logger = logging
-
             self.logger.getLogger().setLevel(logging.INFO)
-            self.logger.basicConfig(format='%(levelname)s     : %(message)s')
+            self.logger.basicConfig(format='%(levelname)-7s: %(message)s')
 
         return self.logger
 
