@@ -42,11 +42,12 @@ from time import sleep
 from itertools import chain
 from argparse import ArgumentParser
 
+
 class DynamicObject(object):
     pass
 
-class SetupConfigure(object):
 
+class SetupConfigure(object):
     MLNXToolsPath = '/opt/mellanox/ethtool/sbin:/opt/mellanox/iproute2/sbin:/opt/verutils/bin/'
 
     def ParseArgs(self):
