@@ -374,7 +374,7 @@ class SetupConfigure(object):
                         cloud_player_1_ip = line.strip().split('=')[1]
                     if 'CLOUD_PLAYER_2_IP' in line:
                         cloud_player_2_ip = line.strip().split('=')[1]
-        except e:
+        except IOError:
             self.Logger.debug('Failed to read cloud_tools/.setup_info')
 
         if cloud_player_2_ip == self.host.name:
