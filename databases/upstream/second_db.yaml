@@ -57,6 +57,7 @@ tests:
         ignore_kernel:
             .*: [2043842]
     test-ovs-vf-mirror.sh:
+    test-ovs-vf-tunnel.sh:
     test-ovs-vlan.sh:
     test-ovs-vlan-implicit.sh:
     test-ovs-vxlan-flow-key.sh:
