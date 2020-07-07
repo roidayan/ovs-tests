@@ -55,6 +55,7 @@ class SetupConfigure(object):
         parser.add_argument('--skip_ovs_config', help='Skip openvswitch configuration', action='store_true')
         parser.add_argument('--second-server', help='Second server config', action='store_true')
         parser.add_argument('--dpdk', help='Add DPDK=1 to configuration file', action='store_true')
+        parser.add_argument('--sw-steering-mode', help='Configure software steering mode', action='store_true')
 
         (namespaces, args) = parser.parse_known_args()
 
@@ -80,6 +81,7 @@ class SetupConfigure(object):
 
             self.UnbindVFs()
 
+            self.ConfigureSWSteering()
             self.ConfigurePF()
             self.UpdatePFInfo()
             self.SetVFMACs()
@@ -292,6 +294,21 @@ class SetupConfigure(object):
                 if rc:
                     raise RuntimeError('Failed to unbind %s\n%s' % (VFBus, output))
 
+    def ConfigureSWSteering(self):
+        for PFInfo in self.host.PNics:
+            self.Logger.info("Setting %s steering mode to %s steering" % (PFInfo['name'], 'software' if self.sw_steering_mode else 'firmware'))
+
+            mode = 'smfs' if self.sw_steering_mode else 'dmfs'
+
+            if os.path.exists('/sys/class/net/%s/compat/devlink/steering_mode' % PFInfo['name']):
+                (rc, output) = commands.getstatusoutput("echo %s > /sys/class/net/%s/compat/devlink/steering_mode" % (mode, PFInfo['name']))
+
+            else:
+                (rc, output) = commands.getstatusoutput('devlink dev param set pci/%s name flow_steering_mode value "%s" cmode runtime' % (PFInfo['bus'], mode))
+
+            if rc:
+                raise RuntimeError('Failed to set %s steering mode to %s\n%s' % (PFInfo['name'], 'software' if self.sw_steering_mode else 'firmware', output))
+
     def ConfigurePF(self):
         for PFInfo in self.host.PNics:
             self.Logger.info("Changing %s to switchdev mode" % (PFInfo['name']))
@@ -391,6 +408,8 @@ class SetupConfigure(object):
 
         if self.dpdk:
             conf += '\nDPDK=1'
+
+        conf += '\nSTEERING_MODE=%s' % self.sw_steering_mode
 
         with open('/workspace/dev_reg_conf.sh', 'w+') as f:
             f.write(conf)
