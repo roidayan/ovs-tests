@@ -307,23 +307,19 @@ class SetupConfigure(object):
 
         sleep(5)
 
+    def RestartOVS(self):
+        (rc, output) = commands.getstatusoutput('systemctl restart openvswitch')
+
+        if rc:
+            raise RuntimeError('Failed to restart openvswitch service\n%s' % (output))
+
     def ConfigureOVS(self):
         self.Logger.info("Setting [hw-offload=true] configuration to OVS" )
-
-        (rc, output) = commands.getstatusoutput('systemctl restart openvswitch')
-
-        if rc:
-            raise RuntimeError('Failed to restart openvswitch service\n%s' % (output))
-
+        self.RestartOVS()
         (rc, output) = commands.getstatusoutput('ovs-vsctl set Open_vSwitch . other_config:hw-offload=true')
-
         if rc:
             raise RuntimeError("Failed to set openvswitch configuration [hw-offload=true]]\n%s" % output)
-
-        (rc, output) = commands.getstatusoutput('systemctl restart openvswitch')
-
-        if rc:
-            raise RuntimeError('Failed to restart openvswitch service\n%s' % (output))
+        self.RestartOVS()
 
     def EnableDevOffload(self):
         for PFInfo in self.host.PNics:
