@@ -132,9 +132,17 @@ tests:
       ignore_not_supported:
         - ucloud
     test-ovs-vf-lag2.sh:
+      min_kernel: 4.18
+      min_kernel_rhel: 3.10.0-957
+      ignore_not_supported:
+        - ucloud
       ignore_kernel:
         .*: [1830683]
     test-vf-lag-nic-tc-rule.sh:
+      min_kernel: 4.18
+      min_kernel_rhel: 4.18.0-80
+      ignore_not_supported:
+        - ucloud
       ignore_kernel:
         .*: [2232232]
     test-ovs-vf-mirror.sh:

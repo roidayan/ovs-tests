@@ -93,6 +93,8 @@ tests:
     test-tc-insert-fail-hw.sh:
       min_kernel: 5.0
       min_kernel_rhel: 4.18.0-193
+      ignore_not_supported:
+        - ucloud
     test-tc-insert-rule-rep-uplink-vlan.sh:
       min_kernel: 5.4
       min_kernel_rhel: 3.10.0-1127
@@ -136,9 +138,8 @@ tests:
     test-tc-insert-rules-matchall.sh:
       min_kernel: 5.6
       min_kernel_rhel: 4.18.0-193
-      2224914:
+      ignore_not_supported:
         - ucloud
-        - byd
     test-tc-insert-rules-mirror.sh:
     test-tc-insert-rules-pedit.sh:
       min_kernel: 4.14
