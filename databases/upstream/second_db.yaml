@@ -21,6 +21,8 @@ tests:
     test-mod-depends.sh:
     test-ifstat.sh:
     test-ovs-100-diff-masks.sh:
+        ignore_kernel:
+            .*: [2233099]
     test-ovs-aging-tc-rules.sh:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
     test-ovs-dpctl-flows.sh:
