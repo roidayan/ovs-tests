@@ -392,7 +392,8 @@ class SetupConfigure(object):
         with open('/workspace/dev_reg_conf.sh', 'w+') as f:
             f.write(conf)
 
-    def GetLogger(self):
+    @property
+    def Logger(self):
         if not hasattr(self, 'logger'):
             self.logger = logging
 
@@ -401,14 +402,13 @@ class SetupConfigure(object):
 
         return self.logger
 
-    def GetParser(self):
+    @property
+    def Parser(self):
         if not hasattr(self, 'parser'):
             self.parser = ArgumentParser(prog=self.__class__.__name__)
 
         return self.parser
 
-    Logger = property(GetLogger)
-    Parser = property(GetParser)
 
 if __name__ == "__main__":
     setupConfigure = SetupConfigure()
