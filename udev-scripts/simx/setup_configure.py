@@ -235,7 +235,7 @@ class SetupConfigure(object):
 
             self.Logger.info("Load rep info PF %s rep %s", PFInfo['name'], repName)
 
-            pfIndex  = int(re.search('pf(\d+)vf\d+', port_name).group(1)) & 0x7
+            pfIndex = int(re.search('pf(\d+)vf\d+', port_name).group(1)) & 0x7
             vfIndex = int(re.search('(?:pf\d+vf)?(\d+)', port_name).group(1))
             PFInfo = self.get_pf_info(sw_id, pfIndex)
             if not PFInfo:
@@ -270,8 +270,8 @@ class SetupConfigure(object):
     def SetVFMACs(self):
         for PFInfo in self.host.PNics:
             for VFInfo in PFInfo['vfs']:
-                splitedBus    = map(lambda x: int(x, 16), VFInfo['bus'].replace('.', ':').split(':')[1:])
-                splitedIP     = map(lambda x: int(x), self.host.name.split('.'))[-2:]
+                splitedBus = map(lambda x: int(x, 16), VFInfo['bus'].replace('.', ':').split(':')[1:])
+                splitedIP = map(lambda x: int(x), self.host.name.split('.'))[-2:]
                 VFInfo['mac'] = 'e4:%02x:%02x:%02x:%02x:%02x' % tuple(splitedIP + splitedBus)
                 vfIndex = PFInfo['vfs'].index(VFInfo)
 
@@ -331,7 +331,7 @@ class SetupConfigure(object):
                 commands.getstatusoutput('ethtool -K %s hw-tc-offload on' % devName)
 
     def BringUpDevices(self):
-        PFNames  = map(lambda pfInfo: pfInfo['name'], self.host.PNics)
+        PFNames = map(lambda pfInfo: pfInfo['name'], self.host.PNics)
         RepNames = [VFInfo['rep'] for PFInfo in self.host.PNics for VFInfo in PFInfo['vfs'] if VFInfo['rep'] is not None]
 
         for devName in PFNames + RepNames:
