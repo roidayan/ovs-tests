@@ -138,6 +138,10 @@ tests:
       ignore_kernel:
         .*: [1830683]
     test-vf-lag.sh:
+      min_kernel: 4.18
+      min_kernel_rhel: 3.10.0-957
+      ignore_not_supported:
+        - ucloud
     test-vf-lag-nic-tc-rule.sh:
       min_kernel: 4.18
       min_kernel_rhel: 4.18.0-80
@@ -158,16 +162,16 @@ tests:
         .*: [2145401]
     test-ovs-vxlan-in-ns.sh:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
-      ignore_kernel:
-        (4.14.0.*): [2205650]
-        (3.10.0-693.el7.x86_64): [2228009]
+      2228009:
+        - ucloud
+        - 3.10.0-693.el7.x86_64
     test-ovs-vxlan.sh:
     test-ovs-vlan-implicit.sh:
       min_kernel: 4.14
       min_kernel_rhel: 3.10.0-862
     test-ovs-100-diff-masks.sh:
       ignore_kernel:
-        .*: [2231462]
+        .*: [2231462, 2233099]
     test-ovs-probe.sh:
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:
@@ -200,8 +204,7 @@ tests:
     test-vxlan-rx-vlan-push-offload.sh:
       ignore_not_supported: true
     test-tc-par-add-ovr-del.sh:
-      ignore_kernel:
-        .*: [2103183]
+      ignore_not_supported: true
     test-tc-par-add-del.sh:
       ignore_kernel:
         (3.10.0-693.el7.x86_64): [1992660]
