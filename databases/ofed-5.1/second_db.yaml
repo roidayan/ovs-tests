@@ -13,35 +13,35 @@ tests:
       ignore_kernel:
         .*: [2204918]
     test-ecmp-add-multipath-rule.sh:
-      2144905:
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-862
       ignore_kernel:
         .*: [2231097]
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
-      2144905:
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-862
       ignore_kernel:
         .*: [2228493]
     test-ecmp-add-vxlan-rule.sh:
-      2144905:
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-862
     test-ecmp-failover-failback.sh:
-      2144905:
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-862
     test-ecmp-load-balance.sh:
-      2144905:
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-862
       ignore_kernel:
         .*: [2090125]
     test-ecmp-restore-rule.sh:
-      2144905:
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-862
     test-ecmp-route-events.sh:
-      2144905:
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-862
     test-ecmp-rule-stats.sh:
-      2144905:
-        - 3.10.0-693.el7.x86_64
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-862
     test-ethtool-basic.sh:
     test-ethtool-nic-mode.sh:
     test-ethtool-steering.sh:
@@ -63,34 +63,32 @@ tests:
     test-ovs-geneve.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
-      2119499:
-        - byd
+      ignore_not_supported:
         - ucloud
+        - byd
       2231386:
         - 3.10.0-693.el7.x86_64
     test-ovs-geneve-in-ns-ipv6.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
-      2119499:
-        - byd
+      ignore_not_supported:
         - ucloud
+        - byd
     test-ovs-geneve-in-ns.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
-      2119499:
-        - byd
+      ignore_not_supported:
         - ucloud
+        - byd
       2211681:
         - 5.4.19.*
     test-ovs-gre-in-ns.sh:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
-      2142118:
+      ignore_not_supported:
+        - ucloud #2148342
         - byd
-      2148342:
-        - ucloud
-      2227577:
-        - ngn
+        - ngn #2227577
     test-ovs-icmp-frag.sh:
       min_kernel: 4.0
       min_kernel_rhel: 3.10.0-862
