@@ -49,9 +49,13 @@ tests:
     test-tc-insert-rule-rep-uplink-vlan.sh:
     test-tc-insert-rules-act-pass.sh:
     test-tc-insert-rules-hw-stats.sh:
+      ignore_kernel:
+        .*: [2234193]
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-geneve.sh:
+      ignore_kernel:
+        .*: [2234143]
     test-tc-insert-rules-gre.sh:
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
@@ -78,7 +82,11 @@ tests:
     test-tc-reoffload.sh:
     test-tc-replace.sh:
     test-tc-restore-after-miss.sh:
+      ignore_kernel:
+        .*: [2234237]
     test-tc-rule-act-add.sh:
+      ignore_kernel:
+        .*: [2234315]
     test-tc-rule-add-null-qdisc.sh:
     test-tc-shuffle-2.sh:
     test-tc-shuffle-3.sh:
