@@ -7,6 +7,8 @@ tests:
     test-ct-icmp.sh:
     test-ct-nat-tcp.sh:
     test-ct-nat-tcp-ipv6.sh:
+      ignore_kernel:
+        .*: [2235488]
     test-ct-tcp-ipv6.sh:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-pedit-ct-clear.sh:
@@ -25,6 +27,7 @@ tests:
     test-ovs-ct-scapy-udp-aging-ovs.sh:
       ignore_not_supported: true
     test-ovs-ct-scapy-udp-aging.sh:
+      ignore_not_supported: true
     test-ovs-ct-scapy-udp-ct-clear.sh:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
     test-ovs-ct-scapy-udp-down-up.sh:
