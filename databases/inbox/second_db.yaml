@@ -56,7 +56,6 @@ tests:
         ignore_kernel:
             .*: [1658441]
     test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh:
-    test-ovs-vxlan-in-ns-dpctl.sh:
     test-ovs-vxlan-in-ns-ipv6.sh:
     test-ovs-vxlan-in-ns.sh:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:

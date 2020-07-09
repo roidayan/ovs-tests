@@ -127,10 +127,6 @@ tests:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh:
         ignore_kernel:
              .*: [1708975]
-    test-ovs-vxlan-in-ns-dpctl.sh:
-        ignore_kernel:
-          .*: [2145401]
-          (3.10.0-327.el7.x86_64).*: [1919896]
     test-ovs-vxlan-in-ns-ipv6.sh:
         ignore_kernel:
           .*: [2145401]

@@ -151,9 +151,6 @@ tests:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh:
       min_kernel: 4.14
       min_kernel_rhel: 3.10.0-862
-    test-ovs-vxlan-in-ns-dpctl.sh:
-      ignore_kernel:
-        .*: [2145401]
     test-ovs-vxlan-in-ns-ipv6.sh:
       ignore_kernel:
         .*: [2145401]
