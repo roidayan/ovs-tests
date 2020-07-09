@@ -58,6 +58,10 @@ tests:
             .*: [2043842]
     test-ovs-vf-mirror.sh:
     test-ovs-vf-tunnel.sh:
+        ignore_nic:
+            - cx5
+        ignore_fw:
+            ^22.*: [2235133]
     test-ovs-vlan.sh:
     test-ovs-vlan-implicit.sh:
     test-ovs-vxlan-flow-key.sh:
@@ -107,8 +111,10 @@ tests:
         ignore_fw:
             ^22.*: [2120288]
     test-devlink-show-in-each-link-mode.sh:
-        ignore_fw:
-            ^22.*: [2107070]
+        ignore_nic:
+            - cx6
+            - cx6dx
+            - cx6lx
     test-tc-par-add-ovr-del.sh:
     test-tc-par-add-del.sh:
     test-tc-par-add-del-vxlan.sh:
