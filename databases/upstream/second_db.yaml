@@ -101,9 +101,6 @@ tests:
     test-vf-veth-fwd.sh:
     test-vf-zero-header-raw.sh:
     test-vf-vf-different-esw-ping.sh:
-    test-vf-vf-fwd-fl_classify.sh:
-        ignore_kernel:
-            .*: [1546760]
     test-vf-vf-fwd-fl_delete.sh:
     test-vf-vf-fwd.sh:
     test-vf-vf-ping.sh:

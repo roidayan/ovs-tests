@@ -174,11 +174,6 @@ tests:
     test-vf-rep-udp-fragmented.sh:
     test-vf-veth-fwd.sh:
     test-vf-vf-different-esw-ping.sh:
-    test-vf-vf-fwd-fl_classify.sh:
-      min_kernel: 4.0
-      min_kernel_rhel: 3.10.0-1127
-      ignore_kernel:
-        (3.10.0-1127.el7.x86_64): [2223619]
     test-vf-vf-fwd-fl_delete.sh:
       min_kernel: 4.0
       min_kernel_rhel: 3.10.0-1127
