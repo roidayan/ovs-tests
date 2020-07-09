@@ -36,8 +36,7 @@ tests:
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
     test-ovs-ct-scapy-udp-pedit-nat.sh:
-        ignore_kernel:
-            .*: [2115017]
+        ignore_not_supported: true
     test-ovs-ct-scapy-udp-nat-dnat.sh:
         ignore_kernel:
             .*upstream.*: [2231285]
