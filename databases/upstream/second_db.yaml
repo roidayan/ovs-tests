@@ -109,7 +109,6 @@ tests:
             ^22.*: [2120288]
     test-devlink-show-in-each-link-mode.sh:
         ignore_nic:
-            - cx6
             - cx6dx
             - cx6lx
     test-tc-par-add-ovr-del.sh:
