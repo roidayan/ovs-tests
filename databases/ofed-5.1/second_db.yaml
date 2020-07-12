@@ -47,6 +47,7 @@ tests:
     test-ethtool-steering.sh:
       ignore_kernel:
         .*: [2214966]
+    test-ethtool-steering-traffic-spread.sh:
     test-ifstat.sh:
     test-ovs-aging-tc-rules.sh:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
@@ -167,6 +168,7 @@ tests:
     test-ovs-100-diff-masks.sh:
       ignore_kernel:
         .*: [2231462]
+    test-ovs-probe.sh:
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:
     test-vf-rep-ping-change-mtu.sh:

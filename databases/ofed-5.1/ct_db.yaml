@@ -85,3 +85,7 @@ tests:
         (4.18.0-g5458cbf403b8-dirty): [2216433]
     test-ct-nat-tcp.sh:
     test-ct-tcp-ipv6.sh:
+    test-ovs-ct-tcp-snat.sh:
+    test-ovs-ct-tcp-nat-restore.sh:
+    test-ovs-ct-scapy-udp-flush.sh:
+    test-tc-restore-after-miss.sh:

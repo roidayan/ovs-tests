@@ -66,6 +66,8 @@ tests:
     test-eswitch-toggle-modes.sh:
     test-eswitch-hw-tc-offload.sh:
     test-eswitch-reload-modules.sh:
+    test-eswitch-par-actions-devlink-compat.sh:
+    test-eswitch-persist-mac.sh:
     test-tc-bad-egdev-rules.sh:
       ignore_kernel:
         (4.14.0.*|3.10.0-693.el7.x86_64): [2211344]
@@ -231,3 +233,4 @@ tests:
     test-tc-insert-rules-mpls.sh:
       ignore_not_supported: true
     test-tc-merged-esw-vf-pf.sh:
+    test-tc-merged-esw-pf-pf.sh:
