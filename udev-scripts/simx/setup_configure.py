@@ -409,8 +409,6 @@ class SetupConfigure(object):
         if self.dpdk:
             conf += '\nDPDK=1'
 
-        conf += '\nSTEERING_MODE=%s' % self.sw_steering_mode
-
         with open('/workspace/dev_reg_conf.sh', 'w+') as f:
             f.write(conf)
 
