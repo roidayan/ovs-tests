@@ -15,6 +15,7 @@ tests:
     test-ecmp-rule-stats.sh:
     test-ethtool-basic.sh:
     test-ethtool-steering.sh:
+    test-ethtool-steering-traffic-cleanup.sh:
     test-ethtool-steering-traffic-on-rule.sh:
     test-ethtool-steering-traffic-spread.sh:
     test-ethtool-nic-mode.sh:
