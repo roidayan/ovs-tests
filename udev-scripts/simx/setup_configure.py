@@ -341,18 +341,25 @@ class SetupConfigure(object):
             raise RuntimeError("Failed to set openvswitch configuration [hw-offload=true]]\n%s" % output)
         self.RestartOVS()
 
-    def EnableDevOffload(self):
+    def get_reps(self):
+        reps = []
         for PFInfo in self.host.PNics:
-            for devName in [PFInfo['name']] + map(lambda VFInfo: VFInfo['rep'], PFInfo['vfs']):
-                self.Logger.info("Enabling hw-tc-offload for %s" % (devName))
-                commands.getstatusoutput('ethtool -K %s hw-tc-offload on' % devName)
+            reps.append(PFInfo['name'])
+            for VFInfo in PFInfo['vfs']:
+                if VFInfo['rep']:
+                    reps.append(VFInfo['rep'])
+        return reps
+
+    def EnableDevOffload(self):
+        reps = self.get_reps()
+        for devName in reps:
+            self.Logger.info("Enabling hw-tc-offload for %s" % (devName))
+            commands.getstatusoutput('ethtool -K %s hw-tc-offload on' % devName)
 
     def BringUpDevices(self):
-        PFNames = map(lambda pfInfo: pfInfo['name'], self.host.PNics)
-        RepNames = [VFInfo['rep'] for PFInfo in self.host.PNics for VFInfo in PFInfo['vfs'] if VFInfo['rep'] is not None]
-
-        for devName in PFNames + RepNames:
-            self.Logger.info("Bringing up %s " % devName)
+        reps = self.get_reps()
+        for devName in reps:
+            self.Logger.info("Bringing up %s" % devName)
             commands.getstatusoutput('ip link set dev %s up' % devName)
 
     def AttachVFs(self):
