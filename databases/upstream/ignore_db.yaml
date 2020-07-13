@@ -1,0 +1,28 @@
+description:
+    This db is for tests that are not running
+tests:
+    test-eswitch-nic-netdev-tx.sh:                         # nic-netdev is not supported upstream
+    test-eswitch-toggle-mode-nic-netdev.sh:                # nic-netdev is not supported upstream
+    test-eswitch-toggle-mode-nic-netdev-chans.sh:          # nic-netdev is not supported upstream
+    test-eswitch-toggle-mode-nic-netdev-disable-sriov.sh:  # nic-netdev is not supported upstream
+    test-eswitch-toggle-mode-nic-netdev-reload.sh:         # nic-netdev is not supported upstream
+    test-vf-lag-nic-netdev.sh:                             # nic-netdev is not supported upstream
+    test-eswitch-trust-dscp.sh:                            # Ofed only
+    test-eswitch-par-actions-devlink-compat.sh:            # Ofed only
+    test-tc-insert-rules-macvlan.sh:                       # bytedance only
+    test-tc-insertion-rate-fw.sh:                          # Performance test. We should not run.
+    test-tc-insertion-rate-fw-no_percpu.sh:                # Performance test. We should not run.
+    test-tc-insertion-rate-skip_hw.sh:                     # Performance test. We should not run.
+    test-tc-insertion-rate-skip_hw-no_percpu.sh:           # Performance test. We should not run.
+    test-tc-insertion-rate-sw.sh:                          # Performance test. We should not run.
+    test-tc-insertion-rate-sw-no_percpu.sh:                # Performance test. We should not run.
+    test-tc-perf-update.sh:                                # Performance test. We should not run.
+    test-vf-vf-iperf-perf.sh:                              # Performance test. We should not run.
+    test-vf-vf-fwd-fl_classify.sh:                         # Old test. No need to run it.
+    test-eswitch-127-reps.sh:                              # Bug SW #2103982: [DevTest] Check transforming eswitch-127-reps and eswitch-sriov-vf-up tests to use the maximum allowed vfs (16) over cloud
+    test-eswitch-sriov-vf-up.sh:                           # Bug SW #2103982: [DevTest] Check transforming eswitch-127-reps and eswitch-sriov-vf-up tests to use the maximum allowed vfs (16) over cloud
+    test-devlink-encap.sh:                                 # CX4 test
+    test-devlink-inline-mode.sh:                           # CX4 test
+    test-devlink-inline-mode2.sh:                          # CX4 test
+    test-ovs-vxlan-in-ns-dpctl.sh:                         # Test not relevant for this version of ovs
+    test-tc-vxlan-decap-in-skip-sw.sh:                     # Bug SW #1360599: [upstream] decap rule offload attempt with skip_sw fails
