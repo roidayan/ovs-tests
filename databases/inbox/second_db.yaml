@@ -45,6 +45,8 @@ tests:
     test-ovs-tc-rules-checker.sh:
     test-ovs-udp-offload.sh:
     test-ovs-vf-lag.sh:
+      ignore_kernel:
+        .*: [2232321]
     test-ovs-vf-lag2.sh:
       ignore_kernel:
         .*: [2232321]
