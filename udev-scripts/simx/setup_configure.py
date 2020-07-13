@@ -295,19 +295,19 @@ class SetupConfigure(object):
                     raise RuntimeError('Failed to unbind %s\n%s' % (VFBus, output))
 
     def ConfigureSWSteering(self):
+        mode = 'smfs' if self.sw_steering_mode else 'dmfs'
+        mode2 = 'software' if self.sw_steering_mode else 'firmware'
+
         for PFInfo in self.host.PNics:
             self.Logger.info("Setting %s steering mode to %s steering" % (PFInfo['name'], 'software' if self.sw_steering_mode else 'firmware'))
 
-            mode = 'smfs' if self.sw_steering_mode else 'dmfs'
-
             if os.path.exists('/sys/class/net/%s/compat/devlink/steering_mode' % PFInfo['name']):
                 (rc, output) = commands.getstatusoutput("echo %s > /sys/class/net/%s/compat/devlink/steering_mode" % (mode, PFInfo['name']))
-
             else:
                 (rc, output) = commands.getstatusoutput('devlink dev param set pci/%s name flow_steering_mode value "%s" cmode runtime' % (PFInfo['bus'], mode))
 
             if rc:
-                raise RuntimeError('Failed to set %s steering mode to %s\n%s' % (PFInfo['name'], 'software' if self.sw_steering_mode else 'firmware', output))
+                raise RuntimeError('Failed to set %s steering mode to %s\n%s' % (PFInfo['name'], mode2, output))
 
     def ConfigurePF(self):
         for PFInfo in self.host.PNics:
