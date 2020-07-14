@@ -58,6 +58,8 @@ tests:
     test-ovs-ct-scapy-udp-flush.sh:
     test-ovs-ct-tcp-snat.sh:
     test-ovs-ct-tcp-2ports.sh:
+        ignore_kernel:
+            .*: [2239605]
     test-ovs-ct-tcp-iperf3.sh:
     test-ovs-ct-tcp-ipv6.sh:
     test-ovs-ct-tcp-ipv6-2.sh:
@@ -73,12 +75,6 @@ tests:
     test-ovs-ct-tcp-nat-mark-ipv6.sh:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp-nat-restore.sh:
-    test-ovs-ct-tcp-testpmd.sh:
-        ignore_for_linust: 1
-        ignore_for_upstream: 1
-    test-ovs-ct-tcp-testpmd-remote.sh:
-        ignore_for_linust: 1
-        ignore_for_upstream: 1
     test-ovs-ct-tcp.sh:
     test-ovs-ct-tcp-2.sh:
     test-ovs-ct-udp-frag.sh:

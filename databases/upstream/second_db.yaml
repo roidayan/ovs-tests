@@ -62,7 +62,7 @@ tests:
         ignore_nic:
             - cx5
         ignore_fw:
-            ^22.*: [2235133]
+            ^22.*: [2193029]
     test-ovs-vlan.sh:
     test-ovs-vlan-implicit.sh:
     test-ovs-vxlan-flow-key.sh:

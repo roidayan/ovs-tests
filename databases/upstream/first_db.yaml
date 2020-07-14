@@ -41,6 +41,10 @@ tests:
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
+        ignore_nic:
+            - cx6
+            - cx6lx
+            - cx6dx
     test-eswitch-hw-tc-offload.sh:
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
