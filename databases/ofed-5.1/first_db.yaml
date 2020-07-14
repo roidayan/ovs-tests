@@ -9,9 +9,6 @@ custom_kernels:
   ucloud: 4.14.0.*
 
 tests:
-    test-eswitch-127-reps.sh:
-      ignore_kernel:
-        .*: [2150491]
     test-eswitch-add-del-different-flows2.sh:
     test-eswitch-add-del-different-flows.sh:
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
@@ -51,9 +48,6 @@ tests:
     test-eswitch-set-vf-rate.sh:
     test-eswitch-set-vf-vlan.sh:
     test-eswitch-sqn-overflow.sh:
-    test-eswitch-sriov-vf-up.sh:
-      ignore_kernel:
-        .*: [2150491]
     test-eswitch-switchdev-ndos.sh:
       ignore_kernel:
         .*: [2226688]
@@ -217,9 +211,6 @@ tests:
       1835642:
         - byd
         - ucloud
-    test-tc-vxlan-decap-in-skip-sw.sh:
-      ignore_kernel:
-        .*: [2153600]
     test-tc-vxlan-decap-key-port-only.sh:
     test-tc-vxlan-decap-not-properly-offloaded.sh:
     test-tc-vxlan-decap-proto-all.sh:
