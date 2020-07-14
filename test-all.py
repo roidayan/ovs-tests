@@ -730,7 +730,7 @@ def main():
         if args.html and not args.dry:
             save_summary_html()
 
-        res = 'OK'
+        res = ''
         reason = ''
         out = ''
 
