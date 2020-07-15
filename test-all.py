@@ -766,7 +766,9 @@ def main():
             reason = test.reason
         elif args.dry:
             res = 'DRY'
+            logname = ''
         else:
+            logname = os.path.join(LOGDIR, test.test_log)
             try:
                 reason = test.run(args.html)
                 res = 'TEST PASSED'
@@ -785,7 +787,6 @@ def main():
         print("%s " % total_seconds, end=' ')
 
         test.status = format_result(res, reason, html=True)
-        logname = os.path.join(LOGDIR, test.test_log)
         print("%s %s" % (format_result(res, reason), logname))
 
         if args.stop and failed:
