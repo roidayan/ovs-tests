@@ -1360,7 +1360,7 @@ function not_relevant_for_cx4() {
 
 function not_relevant_for_cx4lx() {
     if [ "$DEVICE_IS_CX4_LX" = 1 ]; then
-        fail "Test not relevant for ConnectX-4 Lx)"
+        fail "Test not relevant for ConnectX-4 Lx"
     fi
 }
 
