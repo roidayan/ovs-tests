@@ -69,6 +69,13 @@ tests:
       ignore_flow_steering: smfs
     test-eswitch-par-actions-devlink-compat.sh:
     test-eswitch-persist-mac.sh:
+    test-eswitch-trust-dscp.sh:
+    test-eswitch-with-ipv4-ttl-modify-enabled.sh:
+      ignore_flow_steering: smfs
+      ignore_nic:
+        - cx6
+        - cx6lx
+        - cx6dx
     test-tc-bad-egdev-rules.sh:
       ignore_kernel:
         (4.14.0.*|3.10.0-693.el7.x86_64): [2211344]
@@ -170,6 +177,11 @@ tests:
       ignore_kernel:
         (4.14.0.*|4.9.0.*): [2150470]
     test-tc-multi-prio-chains.sh:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-1127
+      ignore_not_supported:
+        - ucloud
+    test-tc-multi-prio-chains-high.sh:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-1127
       ignore_not_supported:

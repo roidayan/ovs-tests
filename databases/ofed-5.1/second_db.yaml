@@ -47,6 +47,10 @@ tests:
     test-ethtool-steering.sh:
       ignore_kernel:
         .*: [2214966]
+    test-ethtool-steering-traffic-on-rule.sh:
+    test-ethtool-steering-traffic-cleanup.sh:
+      ignore_kernel:
+        .*: [2241084]
     test-ethtool-steering-traffic-spread.sh:
     test-ifstat.sh:
     test-ovs-aging-tc-rules.sh:
@@ -125,6 +129,11 @@ tests:
     test-ovs-tcp-offload.sh:
     test-ovs-tc-rules-checker.sh:
     test-ovs-udp-offload.sh:
+    test-ovs-vxlan-vf-lag.sh:
+      min_kernel: 4.18
+      min_kernel_rhel: 3.10.0-957
+      ignore_not_supported:
+        - ucloud
     test-ovs-vf-lag.sh:
       min_kernel: 4.18
       min_kernel_rhel: 3.10.0-957

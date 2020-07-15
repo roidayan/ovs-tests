@@ -48,6 +48,7 @@ tests:
       ignore_kernel:
         (5.4.31+.*|4.18.0-g5458cbf403b8-dirty): [2225871]
     test-ovs-ct-tcp-label.sh:
+    test-ovs-ct-tcp-label-128.sh:
     test-ovs-ct-tcp-mac-rewrite.sh:
     test-ovs-ct-tcp-nat-mark-ipv6.sh:
     test-ovs-ct-tcp-nat-mark.sh:
