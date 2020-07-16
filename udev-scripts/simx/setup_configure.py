@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/python
 # Author:  Anton Metsner - Antonm@mellanox.com
 # --
 # Copyright (c) 2018-2020 Mellanox Technologies. All rights reserved.
@@ -35,12 +35,29 @@ import os
 import sys
 import socket
 import logging
-import commands
 import traceback
 from glob import glob
 from time import sleep
 from itertools import chain
 from argparse import ArgumentParser
+from subprocess import check_call
+from subprocess import check_output
+from subprocess import CalledProcessError
+
+
+def runcmd(cmd):
+    return check_call(cmd, shell=True)
+
+
+def runcmd2(cmd):
+    try:
+        return check_call(cmd, shell=True)
+    except CalledProcessError:
+        return 1
+
+
+def runcmd_output(cmd):
+    return check_output(cmd, shell=True).decode()
 
 
 class DynamicObject(object):
@@ -112,13 +129,13 @@ class SetupConfigure(object):
     def ReloadModules(self):
         self.Logger.info("Reload modules")
         # workaround because udev rules changed in jenkins script but didn't take affect
-        commands.getstatusoutput('modprobe -rq act_ct')
-        commands.getstatusoutput('modprobe -rq cls_flower')
-        commands.getstatusoutput('modprobe -rq mlx5_fpga_tools')
-        commands.getstatusoutput('modprobe -rq mlx5_ib')
-        commands.getstatusoutput('modprobe -rq mlx5_core')
+        runcmd2('modprobe -rq act_ct')
+        runcmd2('modprobe -rq cls_flower')
+        runcmd2('modprobe -rq mlx5_fpga_tools')
+        runcmd2('modprobe -rq mlx5_ib')
+        runcmd2('modprobe -rq mlx5_core')
         # load mlx5_core
-        commands.getstatusoutput('modprobe -q mlx5_core')
+        runcmd2('modprobe -q mlx5_core')
         sleep(5)
 
     def UpdatePATHEnvironmentVariable(self):
@@ -162,11 +179,7 @@ class SetupConfigure(object):
 
     def UpdatePFInfo(self):
         for PFInfo in self.host.PNics:
-            (rc, output) = commands.getstatusoutput('readlink /sys/class/net/* | grep -m1 %s' % PFInfo['bus'])
-
-            if rc:
-                raise RuntimeError('Failed to query interface names\n%s' % (output))
-
+            output = runcmd_output('readlink /sys/class/net/* | grep -m1 %s' % PFInfo['bus'])
             new_name = os.path.basename(output.strip())
             self.Logger.info("Update PF name %s -> %s", PFInfo['name'], new_name)
             PFInfo['name'] = new_name
@@ -249,50 +262,32 @@ class SetupConfigure(object):
         for PFInfo in self.host.PNics:
             if not os.path.exists("/sys/class/net/%s/device/sriov_numvfs" % PFInfo['name']):
                 continue
-
             self.Logger.info('Destroying VFs over %s' % PFInfo['name'])
-            (rc, output) = commands.getstatusoutput('echo 0 > /sys/class/net/%s/device/sriov_numvfs' % PFInfo['name'])
-
-            if rc:
-                raise RuntimeError('Failed to delete VFs over %s\n%s' % (PFInfo['name'], output))
-
+            runcmd('echo 0 > /sys/class/net/%s/device/sriov_numvfs' % PFInfo['name'])
             sleep(2)
 
     def CreateVFs(self):
         for PFInfo in self.host.PNics:
             self.Logger.info('Creating 2 VFs over %s' % PFInfo['name'])
-
-            (rc, output) = commands.getstatusoutput('echo 2 > /sys/class/net/%s/device/sriov_numvfs' % PFInfo['name'])
-
-            if rc:
-                raise RuntimeError('Failed to configure VFs over %s\n%s' % (PFInfo['name'], output))
-
+            runcmd('echo 2 > /sys/class/net/%s/device/sriov_numvfs' % PFInfo['name'])
             sleep(2)
 
     def SetVFMACs(self):
         for PFInfo in self.host.PNics:
             for VFInfo in PFInfo['vfs']:
-                splitedBus = map(lambda x: int(x, 16), VFInfo['bus'].replace('.', ':').split(':')[1:])
-                splitedIP = map(lambda x: int(x), self.host.name.split('.'))[-2:]
+                splitedBus = [int(x, 16) for x in VFInfo['bus'].replace('.', ':').split(':')[1:]]
+                splitedIP = [int(x) for x in self.host.name.split('.')[-2:]]
                 VFInfo['mac'] = 'e4:%02x:%02x:%02x:%02x:%02x' % tuple(splitedIP + splitedBus)
                 vfIndex = PFInfo['vfs'].index(VFInfo)
-
                 self.Logger.info('Setting MAC %s on %s vf %d (bus %s)' % (VFInfo['mac'], PFInfo['name'], vfIndex, VFInfo['bus']))
-
                 command = 'ip link set %s vf %d mac %s' % (PFInfo['name'], vfIndex, VFInfo['mac'])
-                (rc, output) = commands.getstatusoutput(command)
-
-                if rc:
-                    raise RuntimeError('Failed to set MAC address to %s\n%s' % (VFInfo['bus'], output))
+                runcmd(command)
 
     def UnbindVFs(self):
         for PFInfo in self.host.PNics:
             for VFBus in map(lambda VFInfo: VFInfo['bus'], PFInfo['vfs']):
-                self.Logger.info('Unbind %s' % (VFBus))
-                (rc, output) = commands.getstatusoutput('echo %s > /sys/bus/pci/drivers/mlx5_core/unbind' % VFBus)
-
-                if rc:
-                    raise RuntimeError('Failed to unbind %s\n%s' % (VFBus, output))
+                self.Logger.info('Unbind %s' % VFBus)
+                runcmd2('echo %s > /sys/bus/pci/drivers/mlx5_core/unbind' % VFBus)
 
     def ConfigureSWSteering(self):
         mode = 'smfs' if self.sw_steering_mode else 'dmfs'
@@ -302,43 +297,34 @@ class SetupConfigure(object):
             self.Logger.info("Setting %s steering mode to %s steering" % (PFInfo['name'], 'software' if self.sw_steering_mode else 'firmware'))
 
             if os.path.exists('/sys/class/net/%s/compat/devlink/steering_mode' % PFInfo['name']):
-                (rc, output) = commands.getstatusoutput("echo %s > /sys/class/net/%s/compat/devlink/steering_mode" % (mode, PFInfo['name']))
+                cmd = "echo %s > /sys/class/net/%s/compat/devlink/steering_mode" % (mode, PFInfo['name'])
             else:
-                (rc, output) = commands.getstatusoutput('devlink dev param set pci/%s name flow_steering_mode value "%s" cmode runtime' % (PFInfo['bus'], mode))
+                cmd = 'devlink dev param set pci/%s name flow_steering_mode value "%s" cmode runtime' % (PFInfo['bus'], mode)
 
-            if rc:
-                raise RuntimeError('Failed to set %s steering mode to %s\n%s' % (PFInfo['name'], mode2, output))
+            runcmd_output(cmd)
 
     def ConfigurePF(self):
         for PFInfo in self.host.PNics:
             self.Logger.info("Changing %s to switchdev mode" % (PFInfo['name']))
 
             if os.path.exists('/sys/class/net/%s/compat/devlink/mode' % PFInfo['name']):
-                (rc, output) = commands.getstatusoutput("echo switchdev > /sys/class/net/%s/compat/devlink/mode" % PFInfo['name'])
-
+                cmd = "echo switchdev > /sys/class/net/%s/compat/devlink/mode" % PFInfo['name']
             elif os.path.exists('/sys/kernel/debug/mlx5/%s/compat/mode' % PFInfo['bus']):
-                (rc, output) = commands.getstatusoutput("echo switchdev > /sys/kernel/debug/mlx5/%s/compat/mode" % PFInfo['bus'])
-
+                cmd = "echo switchdev > /sys/kernel/debug/mlx5/%s/compat/mode" % PFInfo['bus']
             else:
-                (rc, output) = commands.getstatusoutput("devlink dev eswitch set pci/%s mode switchdev" % PFInfo['bus'])
+                cmd = "devlink dev eswitch set pci/%s mode switchdev" % PFInfo['bus']
 
-            if rc:
-                raise RuntimeError('Failed to change %s mode to switchdev\n%s' % (PFInfo['name'], output))
+            runcmd_output(cmd)
 
         sleep(5)
 
     def RestartOVS(self):
-        (rc, output) = commands.getstatusoutput('systemctl restart openvswitch')
-
-        if rc:
-            raise RuntimeError('Failed to restart openvswitch service\n%s' % (output))
+        runcmd_output('systemctl restart openvswitch')
 
     def ConfigureOVS(self):
         self.Logger.info("Setting [hw-offload=true] configuration to OVS" )
         self.RestartOVS()
-        (rc, output) = commands.getstatusoutput('ovs-vsctl set Open_vSwitch . other_config:hw-offload=true')
-        if rc:
-            raise RuntimeError("Failed to set openvswitch configuration [hw-offload=true]]\n%s" % output)
+        runcmd_output('ovs-vsctl set Open_vSwitch . other_config:hw-offload=true')
         self.RestartOVS()
 
     def get_reps(self):
@@ -354,21 +340,18 @@ class SetupConfigure(object):
         reps = self.get_reps()
         for devName in reps:
             self.Logger.info("Enabling hw-tc-offload for %s" % (devName))
-            commands.getstatusoutput('ethtool -K %s hw-tc-offload on' % devName)
+            runcmd2('ethtool -K %s hw-tc-offload on' % devName)
 
     def BringUpDevices(self):
         reps = self.get_reps()
         for devName in reps:
             self.Logger.info("Bringing up %s" % devName)
-            commands.getstatusoutput('ip link set dev %s up' % devName)
+            runcmd2('ip link set dev %s up' % devName)
 
     def AttachVFs(self):
         for VFInfo in chain.from_iterable(map(lambda PFInfo: PFInfo['vfs'], self.host.PNics)):
             self.Logger.info("Binding %s" % VFInfo['bus'])
-            (rc, output) = commands.getstatusoutput('echo %s > /sys/bus/pci/drivers/mlx5_core/bind' % VFInfo['bus'])
-
-            if rc:
-                raise RuntimeError('Failed to bind %s\n%s' % (VFInfo['bus'], output))
+            runcmd2('echo %s > /sys/bus/pci/drivers/mlx5_core/bind' % VFInfo['bus'])
         # might need a second to let udev rename
         sleep(1)
 
