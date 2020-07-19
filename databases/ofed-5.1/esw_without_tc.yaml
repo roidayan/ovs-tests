@@ -8,4 +8,5 @@ tests:
     test-eswitch-toggle-modes.sh:
     test-eswitch-reps-2ports.sh:
     test-eswitch-reload-modules.sh:
+      ignore_flow_steering: smfs
 

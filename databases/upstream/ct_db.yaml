@@ -12,6 +12,7 @@ tests:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-pedit-ct-clear.sh:
     test-ct-tcp-reload.sh:
+        ignore_flow_steering: smfs
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
     test-ct-tcp.sh:
@@ -47,6 +48,7 @@ tests:
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
     test-ovs-ct-scapy-udp-reload.sh:
+        ignore_flow_steering: smfs
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
         ignore_kernel:

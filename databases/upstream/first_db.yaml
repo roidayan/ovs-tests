@@ -10,24 +10,30 @@ tests:
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
     test-eswitch-add-flows-during-reload.sh:
+        ignore_flow_steering: smfs
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
     test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-eswitch-change-hfunc.sh:
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
+        ignore_flow_steering: smfs
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
     test-eswitch-diff-vfs-per-port.sh:
+        ignore_flow_steering: smfs
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
     test-eswitch-no-carrier.sh:
+        ignore_flow_steering: smfs
         ignore_kernel:
             .*: [2037058]
     test-eswitch-par-actions.sh:
     test-eswitch-persist-mac.sh:
     test-eswitch-reload-modules.sh:
+        ignore_flow_steering: smfs
     test-eswitch-reload-modules-different-state.sh:
+        ignore_flow_steering: smfs
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
     test-eswitch-set-vf-mac.sh:
@@ -41,11 +47,13 @@ tests:
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
+        ignore_flow_steering: smfs
         ignore_nic:
             - cx6
             - cx6lx
             - cx6dx
     test-eswitch-hw-tc-offload.sh:
+        ignore_flow_steering: smfs
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
     test-tc-del-a-lot.sh:
@@ -87,6 +95,7 @@ tests:
     test-tc-insert-rules-vxlan-vf-tunnel.sh:
     test-tc-insert-rule-without-match.sh:
     test-tc-indr-block-driver-unload.sh:
+        ignore_flow_steering: smfs
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
         ignore_kernel:
