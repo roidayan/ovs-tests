@@ -37,6 +37,8 @@ tests:
       ignore_kernel:
         .*: [2231572]
     test-eswitch-miss-rules.sh:
+      ignore_kernel:
+        .*: [2245370]
     test-eswitch-netdev-tx.sh:
       ignore_kernel:
         .*: [2224579]
@@ -86,6 +88,8 @@ tests:
         (4.14.0.*): [2202756]
     test-tc-del-a-lot.sh:
     test-tc-duplicate-hw-rules.sh:
+      ignore_kernel:
+        .*: [2245370]
     test-tc-groups-multi-fgs.sh:
     test-tc-groups-overlapping.sh:
     test-tc-hairpin-disable-sriov.sh:
@@ -110,6 +114,7 @@ tests:
       min_kernel_rhel: 3.10.0-1127
       ignore_kernel:
         (4.14.0.*): [2202756]
+        .*: [2245370]
     test-tc-insert-rules-act-pass.sh:
     test-tc-insert-rules-duplicates.sh:
       ignore_kernel:
@@ -237,9 +242,13 @@ tests:
       ignore_kernel:
         .*: [1706116]
     test-tc-vxlan-outer-dst-mac.sh:
+      ignore_kernel:
+        .*: [2245370]
     test-tc-wrong-tunnel.sh:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
+      ignore_kernel:
+        .*: [2245370]
     test-tc-insert-rules-mpls.sh:
       ignore_not_supported: true
     test-tc-merged-esw-vf-pf.sh:
