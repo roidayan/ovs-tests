@@ -7,7 +7,6 @@ tests:
     test-ct-icmp.sh:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-reload.sh:
-      ignore_flow_steering: smfs
       ignore_kernel:
         (5.4.31+.*|4.18.0-g5458cbf403b8-dirty): [2211704]
     test-ct-tcp.sh:
@@ -34,7 +33,6 @@ tests:
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-reload.sh:
-      ignore_flow_steering: smfs
       ignore_kernel:
         .*: [2211704, 2227778]
     test-ovs-ct-scapy-udp.sh:

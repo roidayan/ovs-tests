@@ -17,16 +17,13 @@ tests:
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
     test-eswitch-add-flows-during-reload.sh:
-      ignore_flow_steering: smfs
       ignore_kernel:
         (4.14.0.*): [2202773]
     test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-eswitch-change-hfunc.sh:
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
-      ignore_flow_steering: smfs
     test-eswitch-diff-vfs-per-port.sh:
-      ignore_flow_steering: smfs
     test-eswitch-ingress-rate-limit.sh:
       min_kernel: 5.6
       min_kernel_rhel: 3.10.0-1127
@@ -44,10 +41,8 @@ tests:
         .*: [2224579]
         (3.10.0-693.el7.x86_64): [2231864]
     test-eswitch-no-carrier.sh:
-      ignore_flow_steering: smfs
     test-eswitch-par-actions.sh:
     test-eswitch-reload-modules-different-state.sh:
-      ignore_flow_steering: smfs
       ignore_kernel:
         (3.10.0-693.el7.x86_64): [2228024]
     test-eswitch-reps-2ports.sh:
@@ -66,14 +61,11 @@ tests:
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-hw-tc-offload.sh:
-      ignore_flow_steering: smfs
     test-eswitch-reload-modules.sh:
-      ignore_flow_steering: smfs
     test-eswitch-par-actions-devlink-compat.sh:
     test-eswitch-persist-mac.sh:
     test-eswitch-trust-dscp.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
-      ignore_flow_steering: smfs
       ignore_nic:
         - cx6
         - cx6lx
