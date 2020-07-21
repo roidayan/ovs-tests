@@ -102,6 +102,8 @@ tests:
     test-vf-rep-udp-fragmented.sh:
     test-vf-veth-fwd.sh:
     test-vf-zero-header-raw.sh:
+        ignore_kernel:
+            .*: [2235157]
     test-vf-vf-different-esw-ping.sh:
     test-vf-vf-fwd-fl_delete.sh:
     test-vf-vf-fwd.sh:
