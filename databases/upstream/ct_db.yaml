@@ -69,7 +69,6 @@ tests:
     test-ovs-ct-tcp-ipv6-2.sh:
     test-ovs-ct-tcp-label-128.sh:
         ignore_for_linust: 1
-        ignore_for_upstream: 1
     test-ovs-ct-tcp-label2.sh:
     test-ovs-ct-tcp-label-reconfig.sh:
         ignore_kernel:

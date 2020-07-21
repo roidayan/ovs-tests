@@ -20,6 +20,9 @@ tests:
         ignore_flow_steering: smfs
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
+    test-eswitch-devlink-reload.sh:
+        ignore_kernel:
+            .*: [2245297]
     test-eswitch-diff-vfs-per-port.sh:
         ignore_flow_steering: smfs
     test-eswitch-miss-rules.sh:
