@@ -32,6 +32,8 @@ tests:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
+      ignore_kernel:
+        .*: [2242318]
     test-ovs-ct-scapy-udp-pedit-nat.sh:
       ignore_not_supported: true
     test-ovs-ct-scapy-udp-nat-dnat.sh:
