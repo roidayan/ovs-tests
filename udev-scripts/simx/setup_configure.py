@@ -279,8 +279,12 @@ class SetupConfigure(object):
                 self.Logger.info('Unbind %s' % VFBus)
                 runcmd2('echo %s > /sys/bus/pci/drivers/mlx5_core/unbind' % VFBus)
 
+    @property
+    def flow_steering_mode(self):
+        return 'smfs' if self.sw_steering_mode else 'dmfs'
+
     def ConfigureSWSteering(self):
-        mode = 'smfs' if self.sw_steering_mode else 'dmfs'
+        mode = self.flow_steering_mode
         mode2 = 'software' if self.sw_steering_mode else 'firmware'
 
         for PFInfo in self.host.PNics:
@@ -385,6 +389,8 @@ class SetupConfigure(object):
             conf += '\nREMOTE_NIC2=%s' % self.host.PNics[1]['name']
 
         conf += '\nB2B=1'
+
+        conf += '\nSTEERING_MODE=%s' % self.flow_steering_mode
 
         if self.dpdk:
             conf += '\nDPDK=1'
