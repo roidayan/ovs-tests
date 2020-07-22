@@ -179,9 +179,8 @@ tests:
         .*: [2145401]
     test-ovs-vxlan-in-ns.sh:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
-      2228009:
-        - ucloud
-        - 3.10.0-693.el7.x86_64
+      ignore_kernel:
+        .*: [2228009]
     test-ovs-vxlan.sh:
     test-ovs-vlan-implicit.sh:
       min_kernel: 4.14
@@ -228,9 +227,11 @@ tests:
     test-tc-par-add-del-vxlan.sh:
       ignore_kernel:
         (3.10.0-693.el7.x86_64): [1992660]
+        .*: [2245638]
     test-tc-par-add-del-vxlan-neigh-update.sh:
       ignore_kernel:
         (3.10.0-693.el7.x86_64): [1992660]
+        .*: [2245638]
     test-tc-par-add-dump-del.sh:
       ignore_kernel:
         (3.10.0-693.el7.x86_64): [1992660]
@@ -243,3 +244,5 @@ tests:
         .*: [2211639]
     test-eswitch-rep-up-time.sh:
     test-mod-depends.sh:
+      ignore_not_supported:
+        - 5.7.0.*

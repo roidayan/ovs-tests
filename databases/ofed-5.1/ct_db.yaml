@@ -19,8 +19,12 @@ tests:
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
     test-ovs-ct-scapy-udp-2ports.sh:
+      ignore_kernel:
+        .*: [2245844]
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
+      ignore_not_supported:
+        - 5.7.0.*
     test-ovs-ct-scapy-udp-ct-clear.sh:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
     test-ovs-ct-scapy-udp-down-up.sh:
@@ -31,11 +35,15 @@ tests:
       ignore_not_supported: true
     test-ovs-ct-scapy-udp-nat-dnat.sh:
     test-ovs-ct-scapy-udp-nat-nop.sh:
+      ignore_kernel:
+        .*: [2245844]
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-reload.sh:
       ignore_kernel:
         .*: [2211704, 2227778]
     test-ovs-ct-scapy-udp.sh:
+      ignore_kernel:
+        .*: [2245844]
     test-ovs-ct-scapy-udp-vf-mirror.sh:
       ignore_not_supported: true
     test-ovs-ct-tcp-2ports.sh:
@@ -49,6 +57,8 @@ tests:
     test-ovs-ct-tcp-label-128.sh:
     test-ovs-ct-tcp-mac-rewrite.sh:
     test-ovs-ct-tcp-nat-mark-ipv6.sh:
+      ignore_kernel:
+        .*: [2245864]
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-tcp-2.sh:

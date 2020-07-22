@@ -215,6 +215,7 @@ tests:
     test-tc-vf-mirror.sh:
       ignore_kernel:
         (3.10.0-1127.el7.x86_64): [2224090]
+        .*: [2245282]
     test-tc-vf-remote-mirror.sh:
     test-tc-vlan-modify.sh:
       min_kernel: 4.0
