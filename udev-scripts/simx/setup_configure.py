@@ -248,8 +248,7 @@ class SetupConfigure(object):
             if not sw_id or not port_name:
                 continue
 
-            self.Logger.info("Load rep info PF %s rep %s", PFInfo['name'], repName)
-
+            self.Logger.info("Load rep info rep %s", repName)
             pfIndex = int(re.search('pf(\d+)vf\d+', port_name).group(1)) & 0x7
             vfIndex = int(re.search('(?:pf\d+vf)?(\d+)', port_name).group(1))
             PFInfo = self.get_pf_info(sw_id, pfIndex)
