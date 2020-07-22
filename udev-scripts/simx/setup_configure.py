@@ -92,7 +92,6 @@ class SetupConfigure(object):
             self.LoadPFInfo()
             self.DestroyVFs()
 
-            self.UpdatePFInfo()
             self.CreateVFs()
             self.LoadVFInfo()
 
@@ -100,7 +99,6 @@ class SetupConfigure(object):
 
             self.ConfigureSWSteering()
             self.ConfigurePF()
-            self.UpdatePFInfo()
             self.SetVFMACs()
 
             self.LoadRepInfo()
@@ -176,13 +174,6 @@ class SetupConfigure(object):
 
             self.Logger.info("Found PF %s", PFName)
             self.host.PNics = sorted(getattr(self.host, 'PNics', []) + [PFInfo], key=lambda k: k['bus'])
-
-    def UpdatePFInfo(self):
-        for PFInfo in self.host.PNics:
-            output = runcmd_output('readlink /sys/class/net/* | grep -m1 %s' % PFInfo['bus'])
-            new_name = os.path.basename(output.strip())
-            self.Logger.info("Update PF name %s -> %s", PFInfo['name'], new_name)
-            PFInfo['name'] = new_name
 
     def LoadVFInfo(self):
         for PFInfo in self.host.PNics:
