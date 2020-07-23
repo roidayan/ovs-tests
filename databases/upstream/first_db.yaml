@@ -26,6 +26,7 @@ tests:
     test-eswitch-diff-vfs-per-port.sh:
         ignore_flow_steering: smfs
     test-eswitch-miss-rules.sh:
+        ignore_flow_steering: smfs
     test-eswitch-netdev-tx.sh:
     test-eswitch-no-carrier.sh:
         ignore_flow_steering: smfs
@@ -61,6 +62,7 @@ tests:
     test-tc-bad-indr-vlan-rule.sh:
     test-tc-del-a-lot.sh:
     test-tc-duplicate-hw-rules.sh:
+        ignore_flow_steering: smfs
     test-tc-groups-multi-fgs.sh:
     test-tc-groups-overlapping.sh:
     test-tc-geneve.sh:
@@ -139,9 +141,13 @@ tests:
     test-tc-vxlan-decap-inner-match-drop.sh:
     test-tc-vxlan-decap-key-port-only.sh:
     test-tc-vxlan-decap-not-properly-offloaded.sh:
+        ignore_flow_steering: smfs
     test-tc-vxlan-decap-proto-all.sh:
     test-tc-vxlan-encap.sh:
+        ignore_flow_steering: smfs
         ignore_kernel:
             .*: [1647028]
     test-tc-vxlan-outer-dst-mac.sh:
+        ignore_flow_steering: smfs
     test-tc-wrong-tunnel.sh:
+        ignore_flow_steering: smfs

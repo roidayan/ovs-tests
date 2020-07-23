@@ -3,14 +3,18 @@ description:
 tests:
     test-ecmp-add-multipath-rule.sh:
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
+        ignore_flow_steering: smfs
     test-ecmp-add-vxlan-rule.sh:
+        ignore_flow_steering: smfs
         ignore_kernel:
             .*for_upstream.*: [2202600]
     test-ecmp-failover-failback.sh:
+        ignore_flow_steering: smfs
     test-ecmp-load-balance.sh:
         ignore_kernel:
             .*: [2090125]
     test-ecmp-restore-rule.sh:
+        ignore_flow_steering: smfs
     test-ecmp-route-events.sh:
     test-ecmp-rule-stats.sh:
     test-ethtool-basic.sh:
@@ -92,6 +96,7 @@ tests:
         ignore_kernel:
             .*: [2210791]
     test-vf-lag.sh:
+        ignore_flow_steering: smfs
     test-vf-lag-nic-tc-rule.sh:
     test-vf-rep-ping.sh:
     test-vf-rep-change-mtu.sh:
