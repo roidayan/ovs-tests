@@ -77,8 +77,6 @@ tests:
       ignore_kernel:
         .*: [2216404]
     test-ovs-ct-vxlan-vf-lag.sh:
-      ignore_kernel:
-        .*: [2227778]
     test-ovs-ct-vxlan-vf-mirror.sh:
       ignore_not_supported: true
     test-ct-tcp-pedit-ct-clear.sh:

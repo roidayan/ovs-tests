@@ -106,7 +106,6 @@ tests:
       min_kernel_rhel: 3.10.0-1127
       ignore_kernel:
         (4.14.0.*): [2202756]
-        .*: [2245370]
     test-tc-insert-rules-act-pass.sh:
     test-tc-insert-rules-duplicates.sh:
       ignore_kernel:
@@ -212,10 +211,11 @@ tests:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-957
     test-tc-vf-mirror-pedit.sh:
+      ignore_kernel:
+        .*: [2245282]
     test-tc-vf-mirror.sh:
       ignore_kernel:
         (3.10.0-1127.el7.x86_64): [2224090]
-        .*: [2245282]
     test-tc-vf-remote-mirror.sh:
     test-tc-vlan-modify.sh:
       min_kernel: 4.0
@@ -230,6 +230,8 @@ tests:
         - ucloud
     test-tc-vxlan-decap-key-port-only.sh:
     test-tc-vxlan-decap-not-properly-offloaded.sh:
+      ignore_kernel:
+        .*: [2245370]
     test-tc-vxlan-decap-proto-all.sh:
     test-tc-vxlan-encap.sh:
       ignore_kernel:
