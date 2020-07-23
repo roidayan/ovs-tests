@@ -63,7 +63,7 @@ tests:
     test-ovs-ct-tcp-snat.sh:
     test-ovs-ct-tcp-2ports.sh:
         ignore_kernel:
-            .*: [2239605]
+            .*: [2225102]
     test-ovs-ct-tcp-iperf3.sh:
     test-ovs-ct-tcp-ipv6.sh:
     test-ovs-ct-tcp-ipv6-2.sh:

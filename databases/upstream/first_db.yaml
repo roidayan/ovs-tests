@@ -6,7 +6,7 @@ tests:
     test-eswitch-add-del-different-flows.sh:
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
          ignore_kernel:
-            .*linust.*: [2202627]
+            .*: [2202627]
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
     test-eswitch-add-flows-during-reload.sh:
