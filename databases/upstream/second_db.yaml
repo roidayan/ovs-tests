@@ -3,7 +3,6 @@ description:
 tests:
     test-ecmp-add-multipath-rule.sh:
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
-        ignore_flow_steering: smfs
     test-ecmp-add-vxlan-rule.sh:
         ignore_flow_steering: smfs
         ignore_kernel:
