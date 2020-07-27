@@ -15,6 +15,9 @@ tests:
     test-ethtool-steering.sh:
     test-ethtool-steering-traffic-on-rule.sh:
     test-ethtool-steering-traffic-spread.sh:
+    test-ethtool-chans-other.sh:
+      ignore_not_supported: true
+    test-mod-depends.sh:
     test-ifstat.sh:
     test-ovs-aging-tc-rules.sh:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:

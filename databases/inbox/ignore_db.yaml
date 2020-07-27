@@ -26,3 +26,4 @@ tests:
     test-devlink-inline-mode2.sh:                          # CX4 test
     test-ovs-ct-tcp-testpmd.sh:                            # Test require a lot of memory and we can't run over cloud vms. There will be a light version for cloud.
     test-ovs-ct-tcp-testpmd-remote.sh:                     # Test require a lot of memory and we can't run over cloud vms. There will be a light version for cloud.
+    test-ovs-vxlan-in-ns-dpctl.sh:                         # Test not relevant for this version of ovs

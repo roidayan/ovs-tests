@@ -6,6 +6,7 @@ tests:
     test-eswitch-add-del-different-flows.sh:
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
+    test-eswitch-add-del-flows-during-flows-cleanup3.sh:
     test-eswitch-add-flows-during-reload.sh:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-eswitch-change-hfunc.sh:
@@ -29,6 +30,11 @@ tests:
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
+    test-eswitch-reload-modules.sh:
+    test-eswitch-devlink-reload.sh:
+        ignore_kernel:
+            .*: [2248283]
+    test-eswitch-hw-tc-offload.sh:
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
     test-tc-del-a-lot.sh:
@@ -36,6 +42,7 @@ tests:
     test-tc-groups-multi-fgs.sh:
     test-tc-groups-overlapping.sh:
     test-tc-geneve.sh:
+    test-tc-hairpin-nic-rules.sh:
     test-tc-hairpin-disable-sriov.sh:
     test-tc-hairpin-rules.sh:
     test-tc-hairpin-esw-upl1-esw-upl1.sh:
@@ -66,8 +73,17 @@ tests:
     test-tc-insert-rules-port2.sh:
     test-tc-insert-rules.sh:
     test-tc-insert-rules-goto.sh:
+    test-tc-insert-rules-goto2.sh:
     test-tc-insert-rules-vxlan.sh:
     test-tc-insert-rule-without-match.sh:
+    test-tc-insert-rules-vxlan-vf-tunnel.sh:
+      ignore_not_supported: true
+    test-tc-insert-rules-mpls.sh:
+        ignore_kernel:
+            .*: [2248319]
+    test-tc-indr-block-driver-unload.sh:
+        ignore_kernel:
+            .*: [2248743]
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
     test-tc-max-rules-legacy.sh:
