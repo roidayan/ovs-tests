@@ -15,8 +15,12 @@ tests:
     test-ethtool-steering.sh:
     test-ethtool-steering-traffic-on-rule.sh:
     test-ethtool-steering-traffic-spread.sh:
+    test-ethtool-steering-traffic-cleanup.sh:
+      ignore_kernel:
+        .*: [2249609]
     test-ethtool-chans-other.sh:
       ignore_not_supported: true
+    test-ethtool-nic-mode.sh:
     test-mod-depends.sh:
     test-ifstat.sh:
     test-ovs-aging-tc-rules.sh:
@@ -47,6 +51,8 @@ tests:
     test-ovs-tcp-offload.sh:
     test-ovs-tc-rules-checker.sh:
     test-ovs-udp-offload.sh:
+    test-ovs-vf-tunnel.sh:
+      ignore_not_supported: true
     test-ovs-vf-lag.sh:
       ignore_kernel:
         .*: [2232321]
@@ -66,6 +72,7 @@ tests:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
     test-ovs-vxlan.sh:
     test-ovs-vxlan-vf-lag.sh:
+    test-ovs-probe.sh:
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
     test-vxlan-neigh-update.sh:
     test-vxlan-neigh-update-stack.sh:
@@ -75,6 +82,7 @@ tests:
     test-vxlan-port-offload.sh:
     test-vxlan-rx-vlan-push-offload.sh:
     test-vf-lag.sh:
+    test-vf-lag-nic-tc-rule.sh:
     test-vf-rep-ping.sh:
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:
