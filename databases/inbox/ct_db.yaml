@@ -5,6 +5,9 @@ tests:
       ignore_not_supported: true
     test-ct-icmp-fwd.sh:
     test-ct-icmp.sh:
+    test-ovs-ct-tcp-label-128.sh:
+      ignore_kernel:
+        .*: [2237122]
     test-ct-nat-tcp.sh:
     test-ct-nat-tcp-ipv6.sh:
       ignore_kernel:
