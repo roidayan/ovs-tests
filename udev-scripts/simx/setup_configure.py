@@ -189,7 +189,11 @@ class SetupConfigure(object):
                         }
 
                 self.Logger.info('PF %s VF %s', PFInfo['name'], nameOutput)
-                PFInfo['vfs'] = sorted(PFInfo['vfs'] + [VFInfo], key=lambda k: k['bus'])
+                PFInfo['vfs'].append(VFInfo)
+
+            PFInfo['vfs'] = sorted(PFInfo['vfs'], key=lambda k: k['bus'])
+            if len(PFInfo['vfs']) == 0:
+                raise RuntimeError("Cannot find VFs for PF %s" % PFInfo['name'])
 
     def UpdateVFInfo(self):
         for PFInfo in self.host.PNics:
@@ -245,6 +249,9 @@ class SetupConfigure(object):
             PFInfo = self.get_pf_info(sw_id, pfIndex)
             if not PFInfo:
                 continue
+
+            if vfIndex >= len(PFInfo['vfs']):
+                raise RuntimeError("Cannot find relevant VF for rep %s" % repName)
 
             PFInfo['vfs'][vfIndex]['rep'] = repName
 
