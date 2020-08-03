@@ -376,7 +376,7 @@ class SetupConfigure(object):
                     if 'CLOUD_PLAYER_2_IP' in line:
                         cloud_player_2_ip = line.strip().split('=')[1]
         except IOError:
-            self.Logger.debug('Failed to read cloud_tools/.setup_info')
+            self.Logger.error('Failed to read cloud_tools/.setup_info')
 
         if cloud_player_2_ip == self.host.name:
             conf += '\nREMOTE_SERVER=%s' % cloud_player_1_ip
