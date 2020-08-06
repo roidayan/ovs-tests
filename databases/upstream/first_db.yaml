@@ -120,8 +120,7 @@ tests:
     test-tc-rule-act-add.sh:
     test-tc-rule-add-null-qdisc.sh:
     test-tc-sample.sh:
-        ignore_for_linust: 1
-        ignore_for_upstream: 1
+        ignore_not_supported: true
     test-tc-shuffle-2.sh:
     test-tc-shuffle-3.sh:
     test-tc-shuffle-4.sh:

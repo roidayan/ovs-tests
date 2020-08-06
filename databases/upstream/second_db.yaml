@@ -79,8 +79,7 @@ tests:
     test-ovs-vxlan.sh:
     test-ovs-vxlan-vf-lag.sh:
     test-ovs-sflow.sh:
-        ignore_for_linust: 1
-        ignore_for_upstream: 1
+        ignore_not_supported: true
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
     test-vxlan-neigh-update.sh:
     test-vxlan-neigh-update-stack.sh:
