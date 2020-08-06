@@ -87,7 +87,6 @@ tests:
     test-vxlan-neigh-update-with-pedit.sh:
     test-vxlan-port-del.sh:
     test-vxlan-port-offload.sh:
-        ignore_flow_steering: smfs
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
     test-vxlan-rx-vlan-push-offload.sh:
@@ -116,7 +115,6 @@ tests:
         ignore_fw:
             ^22.*: [2120288]
     test-devlink-show-in-each-link-mode.sh:
-        ignore_flow_steering: smfs
         ignore_nic:
             - cx6dx
             - cx6lx
@@ -124,7 +122,6 @@ tests:
     test-tc-par-add-del.sh:
     test-tc-par-add-del-vxlan.sh:
     test-tc-par-add-del-vxlan-neigh-update.sh:
-        ignore_flow_steering: smfs
     test-tc-par-add-dump-del.sh:
     test-tc-par-add-dup.sh:
     test-eswitch-rep-channels-time.sh:

@@ -12,7 +12,6 @@ tests:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-pedit-ct-clear.sh:
     test-ct-tcp-reload.sh:
-        ignore_flow_steering: smfs
         ignore_kernel:
             .*(debug|dbg).*: [2130620]
     test-ct-tcp.sh:

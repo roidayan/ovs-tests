@@ -51,13 +51,11 @@ tests:
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
-        ignore_flow_steering: smfs
         ignore_nic:
             - cx6
             - cx6lx
             - cx6dx
     test-eswitch-hw-tc-offload.sh:
-        ignore_flow_steering: smfs
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
     test-tc-del-a-lot.sh:
@@ -76,7 +74,7 @@ tests:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rules-mpls.sh:
         ignore_kernel:
-            .*: [2203983]
+            .*: [2256948]
     test-tc-insert-rule-rep-uplink-vlan.sh:
         ignore_kernel:
             .*: [2094890]
@@ -100,7 +98,6 @@ tests:
     test-tc-insert-rules-vxlan-vf-tunnel.sh:
     test-tc-insert-rule-without-match.sh:
     test-tc-indr-block-driver-unload.sh:
-        ignore_flow_steering: smfs
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
         ignore_kernel:
