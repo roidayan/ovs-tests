@@ -1,0 +1,250 @@
+description:
+    This DB is for running eswitch and tc tests for ofed regression
+
+custom_kernels:
+  ngn: 4.18.0-g5458cbf403b8-dirty
+  bf1: 4.20.17.*
+  bf2: 5.4.31+.*
+  byd: 4.19.36.*
+  ucloud: 4.14.0.*
+
+tests:
+    test-eswitch-add-del-different-flows2.sh:
+    test-eswitch-add-del-different-flows.sh:
+    test-eswitch-add-del-flows-during-flows-cleanup3.sh:
+      ignore_kernel:
+        .*: [2228422]
+    test-eswitch-add-del-flows-during-flows-cleanup2.sh:
+    test-eswitch-add-del-flows-during-flows-cleanup.sh:
+    test-eswitch-add-flows-during-reload.sh:
+      ignore_kernel:
+        (4.14.0.*): [2202773]
+    test-eswitch-add-in-mode1-del-in-mode2.sh:
+    test-eswitch-change-hfunc.sh:
+    test-eswitch-del-flows-during-add.sh:
+    test-eswitch-del-flows-during-reload.sh:
+    test-eswitch-diff-vfs-per-port.sh:
+    test-eswitch-ingress-rate-limit.sh:
+      min_kernel: 5.6
+      min_kernel_rhel: 3.10.0-1127
+      2224914:
+        - 3.10.0-1127.el7.x86_64
+        - ucloud
+        - byd
+      ignore_kernel:
+        .*: [2231572]
+    test-eswitch-miss-rules.sh:
+      ignore_kernel:
+        .*: [2245370]
+    test-eswitch-netdev-tx.sh:
+      ignore_kernel:
+        .*: [2224579]
+        (3.10.0-693.el7.x86_64): [2231864]
+    test-eswitch-no-carrier.sh:
+    test-eswitch-par-actions.sh:
+    test-eswitch-reload-modules-different-state.sh:
+      ignore_kernel:
+        (3.10.0-693.el7.x86_64): [2228024]
+    test-eswitch-reps-2ports.sh:
+    test-eswitch-set-vf-mac.sh:
+    test-eswitch-set-vf-rate.sh:
+    test-eswitch-set-vf-vlan.sh:
+    test-eswitch-sqn-overflow.sh:
+    test-eswitch-switchdev-ndos.sh:
+      ignore_kernel:
+        .*: [2226688]
+    test-eswitch-toggle-mode-ovs-crash.sh:
+    test-eswitch-toggle-mode-parallel2.sh:
+    test-eswitch-toggle-mode-parallel3.sh:
+      ignore_kernel:
+        .*: [2202767]
+    test-eswitch-toggle-mode-parallel.sh:
+    test-eswitch-toggle-modes.sh:
+    test-eswitch-hw-tc-offload.sh:
+    test-eswitch-reload-modules.sh:
+    test-eswitch-par-actions-devlink-compat.sh:
+    test-eswitch-persist-mac.sh:
+    test-eswitch-trust-dscp.sh:
+    test-eswitch-with-ipv4-ttl-modify-enabled.sh:
+      ignore_nic:
+        - cx6
+        - cx6lx
+        - cx6dx
+    test-tc-bad-egdev-rules.sh:
+      ignore_kernel:
+        (4.14.0.*|3.10.0-693.el7.x86_64): [2211344]
+    test-tc-bad-indr-vlan-rule.sh:
+      min_kernel: 5.0
+      min_kernel_rhel: 4.18.0-193
+      ignore_kernel:
+        (4.14.0.*): [2202756]
+    test-tc-del-a-lot.sh:
+    test-tc-duplicate-hw-rules.sh:
+      ignore_kernel:
+        .*: [2245370]
+    test-tc-groups-multi-fgs.sh:
+    test-tc-groups-overlapping.sh:
+    test-tc-hairpin-disable-sriov.sh:
+    test-tc-hairpin-rules.sh:
+    test-tc-hairpin-nic-rules.sh:
+      ignore_kernel:
+        .*: [2232232]
+    test-tc-icmp-4-channels.sh:
+    test-tc-geneve.sh:
+      min_kernel: 5.3
+      min_kernel_rhel: 3.10.0-1127
+      ignore_not_supported:
+        - ucloud
+        - byd
+    test-tc-insert-fail-hw.sh:
+      min_kernel: 5.0
+      min_kernel_rhel: 4.18.0-193
+      ignore_not_supported:
+        - ucloud
+    test-tc-insert-rule-rep-uplink-vlan.sh:
+      min_kernel: 5.4
+      min_kernel_rhel: 3.10.0-1127
+      ignore_kernel:
+        (4.14.0.*): [2202756]
+    test-tc-insert-rules-act-pass.sh:
+    test-tc-insert-rules-duplicates.sh:
+      ignore_kernel:
+        (4.14.0.*|3.10.0-693.el7.x86_64): [2202774]
+        (5.4.31+.*|5.4.19.*): [2211334]
+    test-tc-insert-rules-frag.sh:
+      min_kernel: 4.17
+      min_kernel_rhel: 3.10.0-1127
+    test-tc-insert-rules-geneve.sh:
+      min_kernel: 5.3
+      min_kernel_rhel: 3.10.0-1127
+      ignore_not_supported:
+        - ucloud
+        - byd
+      2211324:
+        - 5.6.0.*
+        - bf2
+        - ngn
+        - 5.4.19.*
+    test-tc-insert-rules-goto.sh:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-957
+      ignore_not_supported:
+        - ucloud
+    test-tc-insert-rules-goto2.sh:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-957
+      ignore_not_supported:
+        - ucloud
+    test-tc-insert-rules-gre.sh:
+      min_kernel: 5.0
+      min_kernel_rhel: 3.10.0-1127
+      ignore_not_supported:
+        - byd
+    test-tc-insert-rules-legacy.sh:
+    test-tc-insert-rules-matchall.sh:
+      min_kernel: 5.6
+      min_kernel_rhel: 4.18.0-193
+      ignore_not_supported:
+        - ucloud
+    test-tc-insert-rules-mirror.sh:
+    test-tc-insert-rules-pedit.sh:
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
+    test-tc-insert-rules-pedit-ttl-ip.sh:
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
+    test-tc-insert-rules-pedit-ttl.sh:
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
+    test-tc-insert-rules-port2.sh:
+    test-tc-insert-rules.sh:
+    test-tc-insert-rules-vxlan.sh:
+    test-tc-insert-rule-without-match.sh:
+    test-tc-ip-tos-ip-ttl.sh:
+    test-tc-max-rules-1M-rules.sh:
+      ignore_kernel:
+        .*: [2211328]
+    test-tc-max-rules-legacy.sh:
+    test-tc-max-rules.sh:
+    test-tc-merged-esw-vf-vf.sh:
+    test-tc-multi-masks-per-prio.sh:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-957
+      ignore_kernel:
+        (4.14.0.*|4.9.0.*): [2150470]
+    test-tc-multi-prio-chains.sh:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-1127
+      ignore_not_supported:
+        - ucloud
+    test-tc-multi-prio-chains-high.sh:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-1127
+      ignore_not_supported:
+        - ucloud
+    test-tc-qinq-rules.sh:
+    test-tc-reoffload.sh:
+      ignore_kernel:
+        (4.14.0.*|3.10.0-693.el7.x86_64): [2202775]
+        (3.10.0-1127.el7.x86_64): [2225899]
+    test-tc-replace.sh:
+    test-tc-shuffle-2.sh:
+    test-tc-shuffle-3.sh:
+    test-tc-shuffle-4.sh:
+    test-tc-shuffle-cls_api.sh:
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-1127
+    test-tc-shuffle-reload-gact.sh:
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-1127
+    test-tc-shuffle-reload-mirred.sh:
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-1127
+    test-tc-shuffle-reload-mirred-skip-hw.sh:
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-1127
+    test-tc-shuffle.sh:
+    test-tc-traffic-chain-flush.sh:
+    test-tc-traffic-filters-add-del.sh:
+    test-tc-traffic-proto-add-del.sh:
+    test-tc-traffic-qdisc-del.sh:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-957
+    test-tc-vf-mirror-pedit.sh:
+      ignore_kernel:
+        .*: [2245282]
+    test-tc-vf-mirror.sh:
+      ignore_kernel:
+        (3.10.0-1127.el7.x86_64): [2224090]
+    test-tc-vf-remote-mirror.sh:
+    test-tc-vlan-modify.sh:
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-862
+      ignore_kernel:
+        (3.10.0-1127.el7.x86_64): [2211315]
+    test-tc-vxlan-decap-inner-match-drop.sh:
+      min_kernel: 5.0
+      min_kernel_rhel: 3.10.0-1127
+      1835642:
+        - byd
+        - ucloud
+    test-tc-vxlan-decap-key-port-only.sh:
+    test-tc-vxlan-decap-not-properly-offloaded.sh:
+      ignore_kernel:
+        .*: [2245370]
+    test-tc-vxlan-decap-proto-all.sh:
+    test-tc-vxlan-encap.sh:
+      ignore_kernel:
+        .*: [1706116]
+    test-tc-vxlan-outer-dst-mac.sh:
+      ignore_kernel:
+        .*: [2245370]
+    test-tc-wrong-tunnel.sh:
+      min_kernel: 5.0
+      min_kernel_rhel: 3.10.0-1127
+      ignore_kernel:
+        .*: [2245370]
+    test-tc-insert-rules-mpls.sh:
+      ignore_not_supported: true
+    test-tc-merged-esw-vf-pf.sh:
+    test-tc-merged-esw-pf-pf.sh:
