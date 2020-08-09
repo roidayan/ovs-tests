@@ -1,0 +1,5 @@
+description:
+    This DB is running only in a native machine and it contains tests that can not run in cloud.
+tests:
+    test-eswitch-127-reps.sh:
+    test-eswitch-sriov-vf-up.sh:
