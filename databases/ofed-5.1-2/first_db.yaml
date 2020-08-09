@@ -14,6 +14,7 @@ tests:
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
       ignore_kernel:
         .*: [2228422]
+        (4.14.0.*): [2257786]
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
     test-eswitch-add-flows-during-reload.sh:
@@ -214,6 +215,8 @@ tests:
       ignore_kernel:
         .*: [2245282]
     test-tc-vf-mirror.sh:
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-1062
       ignore_kernel:
         (3.10.0-1127.el7.x86_64): [2224090]
     test-tc-vf-remote-mirror.sh:
