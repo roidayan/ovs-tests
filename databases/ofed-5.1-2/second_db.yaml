@@ -60,6 +60,7 @@ tests:
       ignore_kernel:
         .*: [2241084]
     test-ethtool-steering-traffic-spread.sh:
+    test-ethtool-chans-other.sh:
     test-ifstat.sh:
     test-ovs-aging-tc-rules.sh:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
@@ -184,6 +185,7 @@ tests:
       ignore_kernel:
         .*: [2228009]
     test-ovs-vxlan.sh:
+    test-ovs-vlan.sh:
     test-ovs-vlan-implicit.sh:
       min_kernel: 4.14
       min_kernel_rhel: 3.10.0-862

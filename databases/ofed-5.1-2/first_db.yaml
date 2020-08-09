@@ -71,6 +71,7 @@ tests:
         - cx6
         - cx6lx
         - cx6dx
+    test-eswitch-devlink-reload.sh:
     test-tc-bad-egdev-rules.sh:
       ignore_kernel:
         (4.14.0.*|3.10.0-693.el7.x86_64): [2211344]
@@ -184,6 +185,7 @@ tests:
       ignore_not_supported:
         - ucloud
     test-tc-qinq-rules.sh:
+    test-tc-insert-rule-qinq-pop2-mirror.sh:
     test-tc-reoffload.sh:
       ignore_kernel:
         (4.14.0.*|3.10.0-693.el7.x86_64): [2202775]
