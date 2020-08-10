@@ -22,3 +22,5 @@ tests:
     test-tc-vxlan-decap-in-skip-sw.sh:                     # Bug SW #1360599: [upstream] decap rule offload attempt with skip_sw fails
     test-ovs-ct-tcp-testpmd.sh:                            # Test require a lot of memory and we can't run over cloud vms. There will be a light version for cloud.
     test-ovs-ct-tcp-testpmd-remote.sh:                     # Test require a lot of memory and we can't run over cloud vms. There will be a light version for cloud.
+    test-eswitch-bond-change-mode.sh:                      # Can’t run anywhere. Wait for uplink representor re-design.
+    test-eswitch-persistent-netdev.sh:                     # Can’t run anywhere. Wait for uplink representor re-design.

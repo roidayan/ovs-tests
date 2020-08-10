@@ -17,6 +17,7 @@ tests:
     test-ecmp-route-events.sh:
     test-ecmp-rule-stats.sh:
     test-ethtool-basic.sh:
+    test-ethtool-chans-other.sh:
     test-ethtool-steering.sh:
     test-ethtool-steering-traffic-cleanup.sh:
     test-ethtool-steering-traffic-on-rule.sh:
@@ -127,3 +128,4 @@ tests:
     test-eswitch-rep-channels-time.sh:
     test-eswitch-rep-up-time.sh:
     test-eswitch-reps-2ports.sh:
+    test-bond-pf-to-bridge.sh:

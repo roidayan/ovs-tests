@@ -97,6 +97,7 @@ tests:
     test-tc-insert-rules-vxlan.sh:
     test-tc-insert-rules-vxlan-vf-tunnel.sh:
     test-tc-insert-rule-without-match.sh:
+    test-tc-insert-rule-qinq-pop2-mirror.sh:
     test-tc-indr-block-driver-unload.sh:
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
