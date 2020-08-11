@@ -253,3 +253,4 @@ tests:
       ignore_not_supported: true
     test-tc-merged-esw-vf-pf.sh:
     test-tc-merged-esw-pf-pf.sh:
+    test-tc-indr-block-driver-unload.sh:

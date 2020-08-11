@@ -250,3 +250,4 @@ tests:
     test-mod-depends.sh:
       ignore_not_supported:
         - 5.7.0.*
+    test-bond-pf-to-bridge.sh:

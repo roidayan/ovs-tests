@@ -27,3 +27,5 @@ tests:
     test-tc-rule-act-add.sh:                               # act-add add-null test kernel and not driver. if there is a bug 99.9% we cannot fix it in ofed.
     test-tc-rule-add-null-qdisc.sh:                        # act-add add-null test kernel and not driver. if there is a bug 99.9% we cannot fix it in ofed.
     test-tc-sample.sh:                                     # tc-sample not supported.
+    test-eswitch-bond-change-mode.sh:                      # not supported yet.
+    test-eswitch-persistent-netdev.sh:                     # not supported. yet.
