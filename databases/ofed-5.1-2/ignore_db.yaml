@@ -29,3 +29,5 @@ tests:
     test-tc-sample.sh:                                     # tc-sample not supported.
     test-eswitch-bond-change-mode.sh:                      # not supported yet.
     test-eswitch-persistent-netdev.sh:                     # not supported. yet.
+    test-tc-insert-rules-hw-stats.sh:                      # needs kernel support and it is supported from kernel 5.8 and above.
+    test-ovs-rewrite-header-reload.sh:                     # it checks ovs issue that wont be fixed https://redmine.mellanox.com/issues/1932655.
