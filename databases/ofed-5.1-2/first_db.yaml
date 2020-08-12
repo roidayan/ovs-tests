@@ -262,3 +262,5 @@ tests:
     test-tc-merged-esw-vf-pf.sh:
     test-tc-merged-esw-pf-pf.sh:
     test-tc-indr-block-driver-unload.sh:
+      ignore_kernel:
+        (3.10.0-693.el7.x86_64): [2260389]
