@@ -109,6 +109,8 @@ tests:
       ignore_kernel:
         (4.14.0.*): [2202756]
     test-tc-insert-rules-act-pass.sh:
+      ignore_kernel:
+        .*: [2259957]
     test-tc-insert-rules-duplicates.sh:
       ignore_kernel:
         (4.14.0.*|3.10.0-693.el7.x86_64): [2202774]
@@ -167,6 +169,8 @@ tests:
       ignore_kernel:
         .*: [2211328]
     test-tc-max-rules-legacy.sh:
+      ignore_kernel:
+        (4.18.0-g5458cbf403b8-dirty): [2260021]
     test-tc-max-rules.sh:
     test-tc-merged-esw-vf-vf.sh:
     test-tc-multi-masks-per-prio.sh:
@@ -179,11 +183,15 @@ tests:
       min_kernel_rhel: 3.10.0-1127
       ignore_not_supported:
         - ucloud
+      ignore_fw:
+        ^26.*: [2260036]
     test-tc-multi-prio-chains-high.sh:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-1127
       ignore_not_supported:
         - ucloud
+      ignore_fw:
+        ^26.*: [2260036]
     test-tc-qinq-rules.sh:
     test-tc-insert-rule-qinq-pop2-mirror.sh:
     test-tc-reoffload.sh:

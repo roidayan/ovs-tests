@@ -114,6 +114,8 @@ tests:
     test-ovs-no-implicit-rewrite-on-match.sh:
       min_kernel: 4.14
       min_kernel_rhel: 3.10.0-862
+      ignore_fw:
+        ^26.*: [2260036]
     test-ovs-overlap-rules.sh:
       min_kernel: 4.17
       min_kernel_rhel: 3.10.0-1127
@@ -133,6 +135,8 @@ tests:
     test-ovs-rewrite-ipv4-macs.sh:
       min_kernel: 4.14
       min_kernel_rhel: 3.10.0-862
+      ignore_fw:
+        ^26.*: [2260036]
     test-ovs-rewrite-tos-dscp.sh:
       min_kernel: 4.14
       min_kernel_rhel: 3.10.0-862
