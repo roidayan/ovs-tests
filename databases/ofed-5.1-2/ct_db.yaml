@@ -100,3 +100,6 @@ tests:
     test-ovs-ct-scapy-udp-flush.sh:
     test-tc-restore-after-miss.sh:
     test-ct-nic-tcp.sh:
+    test-ovs-ct-udp-frag-16k.sh:
+     ignore_kernel:
+        .*: [2261219]
