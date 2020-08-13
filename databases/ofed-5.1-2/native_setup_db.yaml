@@ -2,4 +2,8 @@ description:
     This DB is running only in a native machine and it contains tests that can not run in cloud.
 tests:
     test-eswitch-127-reps.sh:
+      ignore_kernel:
+        (3.10.0-957.el7.x86_64): [1134323]
     test-eswitch-sriov-vf-up.sh:
+      ignore_kernel:
+        (3.10.0-957.el7.x86_64): [1134323]
