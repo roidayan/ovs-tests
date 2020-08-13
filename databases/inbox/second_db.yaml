@@ -107,4 +107,4 @@ tests:
     test-eswitch-rep-channels-time.sh:
     test-eswitch-rep-up-time.sh:
     test-eswitch-reps-2ports.sh:
-
+    test-bond-pf-to-bridge.sh:

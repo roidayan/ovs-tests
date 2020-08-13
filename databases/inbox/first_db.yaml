@@ -64,6 +64,9 @@ tests:
       ignore_kernel:
         .*: [2234143]
     test-tc-insert-rules-gre.sh:
+    test-tc-insert-rule-qinq-pop2-mirror.sh:
+     ignore_kernel:
+        .*: [2261246]
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
     test-tc-insert-rules-mirror.sh:

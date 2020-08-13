@@ -22,3 +22,6 @@ tests:
     test-ovs-ct-tcp-testpmd-remote.sh:                     # Test require a lot of memory and we can't run over cloud vms. There will be a light version for cloud.
     test-ovs-vxlan-in-ns-dpctl.sh:                         # Test not relevant for this version of ovs
     test-tc-sample.sh:                                     # tc-sample not supported.
+    test-eswitch-bond-change-mode.sh:                      # Can’t run anywhere. Wait for uplink representor re-design.
+    test-eswitch-persistent-netdev.sh:                     # Can’t run anywhere. Wait for uplink representor re-design.
+    test-ct-nic-tcp.sh:                                    # Not supported over inbox
