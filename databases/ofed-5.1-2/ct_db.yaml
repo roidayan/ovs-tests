@@ -98,3 +98,4 @@ tests:
     test-ovs-ct-tcp-nat-restore.sh:
     test-ovs-ct-scapy-udp-flush.sh:
     test-tc-restore-after-miss.sh:
+    test-ct-nic-tcp.sh:
