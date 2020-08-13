@@ -82,6 +82,7 @@ tests:
     test-ovs-ct-udp-frag.sh:
         ignore_kernel:
             .*: [1976103]
+            .*: [2256867]
     test-ovs-ct-vxlan-2.sh:
         ignore_kernel:
             .*: [2216404]
