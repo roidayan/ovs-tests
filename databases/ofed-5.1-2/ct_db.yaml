@@ -63,7 +63,8 @@ tests:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-tcp-2.sh:
     test-ovs-ct-udp-frag.sh:
-      ignore_not_supported: true
+      ignore_kernel:
+        .*: [2261227]
     test-ovs-ct-vxlan-2.sh:
       ignore_kernel:
         .*: [2216404]
