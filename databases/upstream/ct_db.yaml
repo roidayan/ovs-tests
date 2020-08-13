@@ -8,6 +8,8 @@ tests:
     test-ct-icmp.sh:
     test-ct-nat-tcp.sh:
     test-ct-nat-tcp-ipv6.sh:
+    test-ct-nic-tcp.sh:
+        ignore_not_supported: true
     test-ct-tcp-ipv6.sh:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-pedit-ct-clear.sh:
@@ -83,6 +85,10 @@ tests:
         ignore_kernel:
             .*: [1976103]
             .*: [2256867]
+    test-ovs-ct-udp-frag-16k.sh:
+        ignore_kernel:
+            .*: [1976103]
+            .*: [2261207]
     test-ovs-ct-vxlan-2.sh:
         ignore_kernel:
             .*: [2216404]
