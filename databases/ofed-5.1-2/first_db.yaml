@@ -271,3 +271,4 @@ tests:
       2261850:
         - ucloud
         - ngn
+    test-tc-restore-after-miss.sh:
