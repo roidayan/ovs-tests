@@ -268,3 +268,6 @@ tests:
     test-tc-indr-block-driver-unload.sh:
       ignore_kernel:
         (3.10.0-693.el7.x86_64): [2260389]
+      2261850:
+        - ucloud
+        - ngn
