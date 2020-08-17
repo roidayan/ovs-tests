@@ -98,6 +98,7 @@ tests:
     test-ovs-ct-tcp-snat.sh:
     test-ovs-ct-tcp-nat-restore.sh:
     test-ovs-ct-scapy-udp-flush.sh:
+    test-tc-restore-after-miss.sh:
     test-ct-nic-tcp.sh:
       ignore_fw:
         ^22.*: [2261746]
