@@ -165,6 +165,8 @@ tests:
       ignore_kernel:
         .*: [2211328]
     test-tc-max-rules-legacy.sh:
+      ignore_kernel:
+        .*: [2260021]
     test-tc-max-rules.sh:
     test-tc-merged-esw-vf-vf.sh:
     test-tc-multi-masks-per-prio.sh:
