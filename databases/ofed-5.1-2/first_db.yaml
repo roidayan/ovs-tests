@@ -173,8 +173,10 @@ tests:
       ignore_kernel:
         .*: [2211328]
     test-tc-max-rules-legacy.sh:
-      ignore_kernel:
-        (4.18.0-g5458cbf403b8-dirty): [2260021]
+      2260021:
+        - ngn
+        - 3.10.0-693.el7.x86_64
+        - 3.10.0-1127.el7.x86_64
     test-tc-max-rules.sh:
     test-tc-merged-esw-vf-vf.sh:
     test-tc-multi-masks-per-prio.sh:
