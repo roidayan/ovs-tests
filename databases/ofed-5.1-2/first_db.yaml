@@ -188,14 +188,14 @@ tests:
       ignore_not_supported:
         - ucloud
       ignore_fw:
-        ^26.*: [2260036]
+        ^26.*: [2260080]
     test-tc-multi-prio-chains-high.sh:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-1127
       ignore_not_supported:
         - ucloud
       ignore_fw:
-        ^26.*: [2260036]
+        ^26.*: [2260080]
     test-tc-qinq-rules.sh:
     test-tc-insert-rule-qinq-pop2-mirror.sh:
     test-tc-reoffload.sh:
