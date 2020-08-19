@@ -81,6 +81,7 @@ class SetupConfigure(object):
 
     def Run(self):
         try:
+            self.flow_steering_mode_supp = True
             self.ReloadModules()
 
             self.host = DynamicObject()
@@ -300,6 +301,13 @@ class SetupConfigure(object):
             if os.path.exists('/sys/class/net/%s/compat/devlink/steering_mode' % PFInfo['name']):
                 cmd = "echo %s > /sys/class/net/%s/compat/devlink/steering_mode" % (mode, PFInfo['name'])
             else:
+                # try to set the mode only if kernel supports flow_steering_mode parameter
+                try:
+                    runcmd_output('devlink dev param show pci/%s name flow_steering_mode' % (PFInfo['bus']))
+                except CalledProcessError:
+                    self.flow_steering_mode_supp = False
+                    self.Logger.info("The kernel does not support devlink flow_steering_mode param! Skipping.")
+                    return
                 cmd = 'devlink dev param set pci/%s name flow_steering_mode value "%s" cmode runtime' % (PFInfo['bus'], mode)
 
             runcmd_output(cmd)
@@ -397,7 +405,8 @@ class SetupConfigure(object):
 
         conf += '\nB2B=1'
 
-        conf += '\nSTEERING_MODE=%s' % self.flow_steering_mode
+        if self.flow_steering_mode_supp:
+            conf += '\nSTEERING_MODE=%s' % self.flow_steering_mode
 
         if self.dpdk:
             conf += '\nDPDK=1'
