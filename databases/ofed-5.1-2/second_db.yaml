@@ -216,6 +216,8 @@ tests:
     test-vf-vf-prio-tag-ping.sh:
       ignore_kernel:
         .*: [2204918]
+      ignore_fw:
+        ^22.*: [2248680]
     test-vf-zero-header-raw.sh:
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
       min_kernel: 4.14
