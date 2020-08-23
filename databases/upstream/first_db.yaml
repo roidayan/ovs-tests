@@ -69,6 +69,8 @@ tests:
     test-tc-hairpin-rules.sh:
     test-tc-hairpin-esw-upl1-esw-upl1.sh:
     test-tc-hairpin-esw-upl1-encap-esw-upl1.sh:
+        ignore_smfs:
+            .*: [2123497]
     test-tc-hairpin-esw-upl1-decap-esw-upl1.sh:
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
@@ -87,6 +89,8 @@ tests:
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
     test-tc-insert-rules-mirror.sh:
+        ignore_smfs:
+            .*: [2265168]
     test-tc-insert-rules-pedit.sh:
     test-tc-insert-rules-pedit-ttl-ip.sh:
     test-tc-insert-rules-pedit-ttl.sh:
@@ -105,6 +109,8 @@ tests:
             .*(debug|dbg).*: [2130644]
     test-tc-max-rules-legacy.sh:
     test-tc-max-rules.sh:
+        ignore_smfs:
+            .*: [2130644]
     test-tc-merged-esw-pf-pf.sh:
     test-tc-merged-esw-vf-vf.sh:
     test-tc-merged-esw-vf-pf.sh:
