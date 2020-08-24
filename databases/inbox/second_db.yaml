@@ -70,6 +70,8 @@ tests:
     test-ovs-vxlan-in-ns-ipv6.sh:
     test-ovs-vxlan-in-ns.sh:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
+      ignore_kernel:
+        .*: [2242846]
     test-ovs-vxlan.sh:
     test-ovs-vxlan-vf-lag.sh:
     test-ovs-probe.sh:
