@@ -226,6 +226,8 @@ tests:
     test-vxlan-neigh-update-stack.sh:
     test-vxlan-neigh-update-warn.sh:
     test-vxlan-neigh-update-with-pedit.sh:
+      ignore_kernel:
+        .*: [2265628]
     test-vxlan-port-del.sh:
     test-vxlan-port-offload.sh:
     test-vxlan-rx-vlan-push-offload.sh:
