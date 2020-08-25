@@ -75,6 +75,7 @@ tests:
     test-ovs-vxlan.sh:
     test-ovs-vxlan-vf-lag.sh:
     test-ovs-probe.sh:
+    test-ovs-100-diff-masks.sh:
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
     test-vxlan-neigh-update.sh:
     test-vxlan-neigh-update-stack.sh:

@@ -25,3 +25,4 @@ tests:
     test-eswitch-bond-change-mode.sh:                      # Can’t run anywhere. Wait for uplink representor re-design.
     test-eswitch-persistent-netdev.sh:                     # Can’t run anywhere. Wait for uplink representor re-design.
     test-ct-nic-tcp.sh:                                    # Not supported over inbox
+    test-ovs-sflow.sh:                                     # sflow not supported.

@@ -17,6 +17,7 @@ tests:
     test-ct-tcp-pedit-ct-clear.sh:
     test-ct-tcp-reload.sh:
     test-ct-tcp.sh:
+    test-ovs-ct-tcp-2.sh:
     test-ct-tcp-vf-mirror-pedit.sh:
       ignore_not_supported: true
     test-ovs-ct-geneve.sh:
