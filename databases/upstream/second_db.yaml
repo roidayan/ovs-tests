@@ -5,8 +5,6 @@ tests:
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
     test-ecmp-add-vxlan-rule.sh:
         ignore_flow_steering: smfs
-        ignore_kernel:
-            .*for_upstream.*: [2202600]
     test-ecmp-failover-failback.sh:
         ignore_flow_steering: smfs
     test-ecmp-load-balance.sh:
@@ -26,8 +24,6 @@ tests:
     test-mod-depends.sh:
     test-ifstat.sh:
     test-ovs-100-diff-masks.sh:
-        ignore_kernel:
-            .*: [2233099]
     test-ovs-aging-tc-rules.sh:
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
     test-ovs-dpctl-flows.sh:
@@ -89,7 +85,7 @@ tests:
     test-vxlan-port-del.sh:
     test-vxlan-port-offload.sh:
         ignore_kernel:
-            .*(debug|dbg).*: [2130620]
+            .*: [2268723]
     test-vxlan-rx-vlan-push-offload.sh:
         ignore_kernel:
             .*: [2210791]
@@ -113,12 +109,14 @@ tests:
     test-vf-vf-ping.sh:
     test-vf-vf-prio-tag-ping.sh:
         ignore_flow_steering: smfs
-        ignore_fw:
-            ^22.*: [2120288]
+        ignore_kernel:
+            .*: [2268723]
     test-devlink-show-in-each-link-mode.sh:
         ignore_nic:
             - cx6dx
             - cx6lx
+        ignore_kernel:
+            .*: [2268723]
     test-tc-par-add-ovr-del.sh:
     test-tc-par-add-del.sh:
     test-tc-par-add-del-vxlan.sh:
