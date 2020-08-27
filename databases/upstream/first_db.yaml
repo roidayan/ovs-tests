@@ -83,10 +83,14 @@ tests:
             .*: [2256948]
     test-tc-insert-rule-rep-uplink-vlan.sh:
     test-tc-insert-rules-act-pass.sh:
+        ignore_kernel:
+            .*: [2270795]
     test-tc-insert-rules-hw-stats.sh:
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-geneve.sh:
+        ignore_kernel:
+            .*: [2270846]
     test-tc-insert-rules-gre.sh:
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:

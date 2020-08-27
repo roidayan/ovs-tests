@@ -66,6 +66,8 @@ tests:
     test-ovs-ct-tcp-label-reconfig.sh:
     test-ovs-ct-tcp-label.sh:
     test-ovs-ct-tcp-mac-rewrite.sh:
+        ignore_kernel:
+            .*: [2270815]
     test-ovs-ct-tcp-nat-mark-ipv6.sh:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp-nat-restore.sh:
