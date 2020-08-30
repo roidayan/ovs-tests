@@ -21,6 +21,8 @@ tests:
         ignore_kernel:
             .*: [1912698]
     test-ovs-ct-geneve.sh:
+        ignore_kernel:
+            .*: [2270846]
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
         ignore_kernel:
@@ -71,6 +73,8 @@ tests:
     test-ovs-ct-tcp-nat-mark-ipv6.sh:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp-nat-restore.sh:
+        ignore_kernel:
+            .*: [2270815]
     test-ovs-ct-tcp.sh:
     test-ovs-ct-tcp-2.sh:
     test-ovs-ct-udp-frag.sh:

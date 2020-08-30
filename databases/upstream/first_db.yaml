@@ -129,6 +129,8 @@ tests:
     test-tc-reoffload.sh:
     test-tc-replace.sh:
     test-tc-restore-after-miss.sh:
+        ignore_kernel:
+            .*: [2270846]
     test-tc-rule-act-add.sh:
     test-tc-rule-add-null-qdisc.sh:
     test-tc-sample.sh:
