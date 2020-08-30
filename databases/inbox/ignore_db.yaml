@@ -11,6 +11,7 @@ tests:
     test-tc-insertion-rate-sw.sh:                          # Performance test that we can not run in cloud.
     test-tc-insertion-rate-sw-no_percpu.sh:                # Performance test that we can not run in cloud.
     test-tc-perf-update.sh:                                # Performance test that we can not run in cloud.
+    test-tc-vxlan-decap-in-skip-sw.sh:                     # Bug SW #1824082: [Inbox, ASAP] add vxlan decap rule with skip_sw fails
     test-vf-vf-iperf-perf.sh:                              # Performance test that we can not run in cloud.
     test-vf-vf-fwd-fl_classify.sh:                         # Old test. No need to run it.
     test-eswitch-127-reps.sh:                              # Bug SW #2103982: [DevTest] Check transforming eswitch-127-reps and eswitch-sriov-vf-up tests to use the maximum allowed vfs (16) over cloud

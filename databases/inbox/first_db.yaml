@@ -89,6 +89,8 @@ tests:
             .*: [2248743]
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
+      ignore_kernel:
+        .*: [2272340]
     test-tc-max-rules-legacy.sh:
     test-tc-max-rules.sh:
     test-tc-merged-esw-pf-pf.sh:
@@ -124,7 +126,6 @@ tests:
     test-tc-vf-remote-mirror.sh:
     test-tc-vlan-modify.sh:
     test-tc-vxlan-decap-inner-match-drop.sh:
-    test-tc-vxlan-decap-in-skip-sw.sh:
     test-tc-vxlan-decap-key-port-only.sh:
     test-tc-vxlan-decap-not-properly-offloaded.sh:
     test-tc-vxlan-decap-proto-all.sh:
