@@ -151,6 +151,10 @@ tests:
     test-tc-vf-mirror.sh:
     test-tc-vf-remote-mirror.sh:
     test-tc-vlan-modify.sh:
+        ignore_kernel:
+            .*: [2273423]
+        ignore_fw:
+            ^22.*: [2270815]
     test-tc-vxlan-decap-inner-match-drop.sh:
     test-tc-vxlan-decap-key-port-only.sh:
     test-tc-vxlan-decap-not-properly-offloaded.sh:
