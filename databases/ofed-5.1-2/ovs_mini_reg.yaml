@@ -1,13 +1,22 @@
 description:
     devtests OVS CI
+
+custom_kernels:
+  ngn: 4.18.0-g5458cbf403b8-dirty
+  bf2: 5.4.31+.*
+
 tests:
     test-ovs-aging-tc-rules.sh:
     test-vf-vf-ping.sh:
     test-ovs-vf-lag.sh:
+      min_kernel: 4.18
+      min_kernel_rhel: 3.10.0-957
     test-ovs-icmp-offload.sh:
     test-ovs-tcp-offload.sh:
     test-ovs-vf-mirror.sh:
     test-ovs-ct-tcp.sh:
+      min_kernel: 5.7
+      min_kernel_rhel: 4.18.0-234
     test-ovs-ct-miss-to-sw.sh:
     test-ovs-multi-vxlan-bridge-ingress.sh:
     test-ovs-vxlan-in-ns.sh:
