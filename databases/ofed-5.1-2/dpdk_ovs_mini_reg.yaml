@@ -1,0 +1,17 @@
+description:
+    devtests OVS-DPDK CI
+
+tests_subfolder: ovs-dpdk-tests
+
+tests:
+    test-ovs-dpdk-e2e-ct-tcp.sh:
+    test-ovs-dpdk-e2e-ct-udp.sh:
+    test-ovs-dpdk-e2e-del-flows.sh:
+    test-ovs-dpdk-e2e-mt-aging.sh:
+    test-ovs-dpdk-vxlan-ct-snat-tcp.sh:
+    test-ovs-dpdk-vxlan-ct-tcp-label.sh:
+    test-ovs-dpdk-vxlan-ct-tcp.sh:
+    test-ovs-dpdk-vxlan-ct-udp.sh:
+    test-ovs-dpdk-vxlan-ct-zoneid-value.sh:
+    test-ovs-dpdk-vxlan-load-action.sh:
+    test-ovs-dpdk-vxlan.sh:
