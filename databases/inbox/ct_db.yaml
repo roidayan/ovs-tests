@@ -21,6 +21,8 @@ tests:
     test-ct-tcp-vf-mirror-pedit.sh:
       ignore_not_supported: true
     test-ovs-ct-geneve.sh:
+    test-ovs-ct-geneve-options.sh:
+    test-ovs-ct-geneve-options-vlan.sh:
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
       ignore_not_supported: true
