@@ -63,6 +63,7 @@ tests:
             - cx5
         ignore_fw:
             ^22.*: [2193029]
+        ignore_for_linust: 1
     test-ovs-vlan.sh:
     test-ovs-vlan-implicit.sh:
     test-ovs-vxlan-flow-key.sh:
@@ -76,7 +77,9 @@ tests:
     test-ovs-vxlan.sh:
     test-ovs-vxlan-vf-lag.sh:
     test-ovs-sflow.sh:
-        ignore_not_supported: true
+        ignore_kernel:
+            .*: [1707154]
+        ignore_for_linust: 1
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
     test-vxlan-neigh-update.sh:
     test-vxlan-neigh-update-stack.sh:
@@ -127,6 +130,14 @@ tests:
             .*: [2123497]
     test-tc-par-add-dump-del.sh:
     test-tc-par-add-dup.sh:
+    test-eswitch-bond-change-mode.sh:
+        ignore_kernel:
+            .*: [1778080]
+        ignore_for_linust: 1
+    test-eswitch-persistent-netdev.sh:
+        ignore_kernel:
+            .*: [1778080]
+        ignore_for_linust: 1
     test-eswitch-rep-channels-time.sh:
     test-eswitch-rep-up-time.sh:
     test-eswitch-reps-2ports.sh:

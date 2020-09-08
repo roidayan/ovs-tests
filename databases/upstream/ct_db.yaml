@@ -9,7 +9,7 @@ tests:
     test-ct-nat-tcp.sh:
     test-ct-nat-tcp-ipv6.sh:
     test-ct-nic-tcp.sh:
-        ignore_not_supported: true
+        ignore_for_linust: 1
     test-ct-tcp-ipv6.sh:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-pedit-ct-clear.sh:
@@ -23,6 +23,8 @@ tests:
     test-ovs-ct-geneve.sh:
         ignore_kernel:
             .*: [2270846]
+    test-ovs-ct-geneve-options.sh:
+    test-ovs-ct-geneve-options-vlan.sh:
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
         ignore_kernel:
@@ -63,7 +65,6 @@ tests:
     test-ovs-ct-tcp-ipv6.sh:
     test-ovs-ct-tcp-ipv6-2.sh:
     test-ovs-ct-tcp-label-128.sh:
-        ignore_for_linust: 1
     test-ovs-ct-tcp-label2.sh:
     test-ovs-ct-tcp-label-reconfig.sh:
     test-ovs-ct-tcp-label.sh:

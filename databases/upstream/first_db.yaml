@@ -134,7 +134,9 @@ tests:
     test-tc-rule-act-add.sh:
     test-tc-rule-add-null-qdisc.sh:
     test-tc-sample.sh:
-        ignore_not_supported: true
+        ignore_kernel:
+            .*: [1707154]
+        ignore_for_linust: 1
     test-tc-shuffle-2.sh:
     test-tc-shuffle-3.sh:
     test-tc-shuffle-4.sh:
@@ -147,6 +149,10 @@ tests:
     test-tc-traffic-filters-add-del.sh:
     test-tc-traffic-proto-add-del.sh:
     test-tc-traffic-qdisc-del.sh:
+    test-tc-trap.sh:
+        ignore_kernel:
+            .*: [2234654]
+        ignore_for_linust: 1
     test-tc-vf-mirror-pedit.sh:
     test-tc-vf-mirror.sh:
     test-tc-vf-remote-mirror.sh:
