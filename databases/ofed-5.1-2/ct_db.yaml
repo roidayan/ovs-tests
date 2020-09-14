@@ -67,6 +67,13 @@ tests:
     test-ovs-ct-udp-frag.sh:
       ignore_kernel:
         .*: [2261227]
+        (5.4.31+.*|4.18.0-g5458cbf403b8-dirty): [2292541]
+        5.7.0.*: [2292583]
+    test-ovs-ct-udp-frag-16k.sh:
+     ignore_kernel:
+        .*: [2261219]
+        (5.4.31+.*|4.18.0-g5458cbf403b8-dirty): [2292557]
+        5.7.0.*: [2292583]
     test-ovs-ct-vxlan-2.sh:
       ignore_kernel:
         .*: [2216404]
@@ -104,6 +111,3 @@ tests:
     test-ct-nic-tcp.sh:
       ignore_fw:
         ^22.*: [2261746]
-    test-ovs-ct-udp-frag-16k.sh:
-     ignore_kernel:
-        .*: [2261219]
