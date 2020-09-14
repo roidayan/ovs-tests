@@ -10,6 +10,14 @@ tests:
     test-ct-nat-tcp-ipv6.sh:
     test-ct-nic-tcp.sh:
         ignore_for_linust: 1
+    test-ct-tcp-trk-new.sh:
+        ignore_kernel:
+            .*: [2253220]
+        ignore_for_linust: 1
+    test-ct-tcp-trk-new-miss.sh:
+        ignore_kernel:
+            .*: [2253220]
+        ignore_for_linust: 1
     test-ct-tcp-ipv6.sh:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-pedit-ct-clear.sh:

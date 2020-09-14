@@ -150,8 +150,6 @@ tests:
     test-tc-traffic-proto-add-del.sh:
     test-tc-traffic-qdisc-del.sh:
     test-tc-trap.sh:
-        ignore_kernel:
-            .*: [2234654]
         ignore_for_linust: 1
     test-tc-vf-mirror-pedit.sh:
     test-tc-vf-mirror.sh:
