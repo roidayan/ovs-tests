@@ -76,6 +76,8 @@ tests:
     test-ovs-ct-tcp-label2.sh:
     test-ovs-ct-tcp-label-reconfig.sh:
     test-ovs-ct-tcp-label.sh:
+        ignore_kernel:
+            .*: [2295768]
     test-ovs-ct-tcp-mac-rewrite.sh:
         ignore_kernel:
             .*: [2270815]

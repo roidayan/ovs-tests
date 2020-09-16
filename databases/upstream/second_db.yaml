@@ -2,6 +2,8 @@ description:
     This DB is for running remaining dev tests for upstream regression.
 tests:
     test-ecmp-add-multipath-rule.sh:
+        ignore_kernel:
+            .*: [2295812]
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
     test-ecmp-add-vxlan-rule.sh:
         ignore_flow_steering: smfs
