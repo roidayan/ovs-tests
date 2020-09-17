@@ -8,6 +8,8 @@ tests:
          ignore_kernel:
             .*: [2202627]
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
+        ignore_kernel:
+            .*: [2297742]
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
     test-eswitch-add-flows-during-reload.sh:
         ignore_flow_steering: smfs
