@@ -80,6 +80,8 @@ tests:
       min_kernel_rhel: 3.10.0-1127
       ignore_not_supported:
         - ucloud
+      2299327:
+        - 5.4.0.*
     test-tc-insert-rules-act-pass.sh:
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
@@ -91,16 +93,22 @@ tests:
       ignore_not_supported:
         - ucloud
         - byd
+      2299356:
+        - 5.4.0.*
     test-tc-insert-rules-goto.sh:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-957
       ignore_not_supported:
         - ucloud
+      2299374:
+        - 5.4.0.*
     test-tc-insert-rules-goto2.sh:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-957
       ignore_not_supported:
         - ucloud
+      2299374:
+        - 5.4.0.*
     test-tc-insert-rules-gre.sh:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
@@ -171,6 +179,8 @@ tests:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-957
     test-tc-vf-mirror-pedit.sh:
+      2299420:
+        - 5.4.0.*
     test-tc-vf-mirror.sh:
       min_kernel: 4.0
       min_kernel_rhel: 3.10.0-1062
@@ -196,7 +206,11 @@ tests:
     test-tc-insert-rules-mpls.sh:
       ignore_not_supported: true
     test-tc-merged-esw-vf-pf.sh:
+      2299398:
+        - 5.4.0.*
     test-tc-merged-esw-pf-pf.sh:
+      2299398:
+        - 5.4.0.*
     test-tc-indr-block-driver-unload.sh:
       ignore_kernel:
         (3.10.0-693.el7.x86_64): [2260389]
