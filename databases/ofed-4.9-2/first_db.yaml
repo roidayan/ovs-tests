@@ -52,10 +52,6 @@ tests:
     test-eswitch-devlink-reload.sh:
       2299278:
         - 5.4.0.*
-    test-eswitch-persistent-netdev.sh:
-    test-eswitch-bond-change-mode.sh:
-      2299274:
-        - 5.4.0.*
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
       min_kernel: 5.0
@@ -142,11 +138,6 @@ tests:
       ignore_not_supported:
         - ucloud
     test-tc-multi-prio-chains.sh:
-      min_kernel: 4.19
-      min_kernel_rhel: 3.10.0-1127
-      ignore_not_supported:
-        - ucloud
-    test-tc-multi-prio-chains-high.sh:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-1127
       ignore_not_supported:
