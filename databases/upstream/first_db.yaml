@@ -118,6 +118,8 @@ tests:
         ignore_kernel:
             .*: [2130644]
     test-tc-max-rules-legacy.sh:
+        ignore_kernel:
+            .*for_upstream.*: [2299071]
     test-tc-max-rules.sh:
         ignore_smfs:
             .*: [2130644]
