@@ -37,6 +37,8 @@ tests:
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:
     test-eswitch-toggle-mode-parallel3.sh:
+      1955352:
+        - 5.4.0.*
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-hw-tc-offload.sh:
@@ -83,6 +85,8 @@ tests:
       2299327:
         - 5.4.0.*
     test-tc-insert-rules-act-pass.sh:
+      2301329:
+        - 5.4.0.*
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
       min_kernel: 4.17
@@ -150,6 +154,8 @@ tests:
       min_kernel_rhel: 3.10.0-1127
       ignore_not_supported:
         - ucloud
+      2301321:
+        - 5.4.0.*
     test-tc-qinq-rules.sh:
     test-tc-insert-rule-qinq-pop2-mirror.sh:
     test-tc-reoffload.sh:
