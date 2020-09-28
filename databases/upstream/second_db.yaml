@@ -97,6 +97,8 @@ tests:
     test-vf-lag.sh:
         ignore_flow_steering: smfs
     test-vf-lag-nic-tc-rule.sh:
+    test-vf-lag-warn-unsupported-mode.sh:
+        ignore_for_linust: 1
     test-vf-rep-ping.sh:
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:

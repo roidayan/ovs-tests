@@ -22,3 +22,4 @@ tests:
     test-tc-vxlan-decap-in-skip-sw.sh:                     # Bug SW #1360599: [upstream] decap rule offload attempt with skip_sw fails
     test-ovs-ct-tcp-testpmd.sh:                            # Test require a lot of memory and we can't run over cloud vms. There will be a light version for cloud.
     test-ovs-ct-tcp-testpmd-remote.sh:                     # Test require a lot of memory and we can't run over cloud vms. There will be a light version for cloud.
+    test-vf-lag-warn-65-vfs.sh:                            # Currently cloud supports up to 16 vf
