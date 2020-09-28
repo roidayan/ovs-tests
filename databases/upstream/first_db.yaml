@@ -156,6 +156,8 @@ tests:
     test-tc-trap.sh:
         ignore_for_linust: 1
     test-tc-vf-mirror-pedit.sh:
+        ignore_smfs:
+            .*: [2304188]
     test-tc-vf-mirror.sh:
     test-tc-vf-remote-mirror.sh:
     test-tc-vlan-modify.sh:
