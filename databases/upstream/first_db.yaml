@@ -101,6 +101,8 @@ tests:
             .*: [2265168]
     test-tc-insert-rules-pedit.sh:
     test-tc-insert-rules-pedit-ttl-ip.sh:
+        ignore_kernel:
+            .*: [2304255]
     test-tc-insert-rules-pedit-ttl.sh:
     test-tc-insert-rules-port2.sh:
     test-tc-insert-rules.sh:
