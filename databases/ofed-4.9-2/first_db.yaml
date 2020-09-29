@@ -72,6 +72,8 @@ tests:
       ignore_not_supported:
         - ucloud
         - byd
+      2303918:
+        - 5.4.0.*
     test-tc-insert-fail-hw.sh:
       min_kernel: 5.0
       min_kernel_rhel: 4.18.0-193
