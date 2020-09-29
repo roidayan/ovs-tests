@@ -42,8 +42,6 @@ tests:
     test-ovs-ct-scapy-udp.sh:
     test-ovs-ct-tcp-2ports.sh:
     test-ovs-ct-tcp-iperf3.sh:
-     ignore_kernel:
-       (4.19.*).*: [2119519]
     test-ovs-ct-tcp-label2.sh:
      ignore_kernel:
        (4.19.*).*: [2166530]
@@ -55,8 +53,7 @@ tests:
     test-ovs-ct-tcp-nat-mark-ipv6.sh:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-udp-frag.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142768]
+     ignore_not_supported: true
     test-ct-tcp-pedit-ct-clear.sh:
      ignore_kernel:
        (4.19.*).*: [2142704]

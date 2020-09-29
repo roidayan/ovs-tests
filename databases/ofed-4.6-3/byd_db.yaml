@@ -7,22 +7,17 @@ tests:
     test-eswitch-add-del-different-flows2.sh:
     test-eswitch-add-del-different-flows.sh:
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
-        ignore_kernel:
-            .*: [1928565]
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
-        ignore_kernel:
-            .*: [1928565]
     test-eswitch-add-flows-during-reload.sh:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-eswitch-change-hfunc.sh:
         ignore_kernel:
-          (4.19.*).*: [1927267]
+          (4.19.*).*: [2203673]
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
     test-eswitch-diff-vfs-per-port.sh:
     test-eswitch-ingress-rate-limit.sh:
-        ignore_kernel:
-             .*: [2153635]
+        ignore_not_supported: true
     test-eswitch-miss-rules.sh:
     test-eswitch-netdev-tx.sh:
     test-eswitch-no-carrier.sh:
@@ -65,20 +60,18 @@ tests:
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rule-rep-uplink-vlan.sh:
-        ignore_kernel:
-          (4.19.*).*: [2153648]
+        min_kernel: 5.4
+        min_kernel_rhel: 3.10.0-1127
     test-tc-insert-rules-act-pass.sh:
-       ignore_kernel:
-          (4.19.*).*: [2153587]
+        ignore_not_supported: true
     test-tc-insert-rules-duplicates.sh:
-       ignore_kernel:
+        ignore_kernel:
           (4.19.*).*: [1610862]
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-goto.sh:
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
-        ignore_kernel:
-          .*: [2153487]
+        ignore_not_supported: true
     test-tc-insert-rules-mirror.sh:
        ignore_kernel:
           (4.19.*).*: [2169704]
@@ -125,37 +118,34 @@ tests:
     test-tc-traffic-qdisc-del.sh:
     test-tc-vlan-modify.sh:
     test-tc-wrong-tunnel.sh:
-       ignore_kernel:
-          (4.19.*).*: [2150475]
-    test-devlink-encap.sh:
-    test-devlink-inline-mode2.sh:
-    test-devlink-inline-mode.sh:
+        min_kernel: 5.0
+        min_kernel_rhel: 3.10.0-1127
     test-devlink-show-in-each-link-mode.sh:
         ignore_kernel:
           (4.19.*).*: [2170746]
     test-ecmp-add-multipath-rule.sh:
-       ignore_kernel:
+        ignore_kernel:
           (4.19.*).*: [2163715]
     test-ecmp-failover-failback.sh:
-       ignore_kernel:
+        ignore_kernel:
           (4.19.*).*: [2145381]
     test-ecmp-load-balance.sh:
-       ignore_kernel:
+        ignore_kernel:
           (4.19.*).*: [1825745]
     test-ecmp-restore-rule.sh:
-       ignore_kernel:
+        ignore_kernel:
           (4.19.*).*: [2145381]
     test-ecmp-route-events.sh:
-       ignore_kernel:
+        ignore_kernel:
           (4.19.*).*: [2163387]
     test-ecmp-rule-stats.sh:
-       ignore_kernel:
+        ignore_kernel:
           (4.19.*).*: [1825745]
     test-ethtool-basic.sh:
         ignore_kernel:
-             .*: [1825751]
+             .*: [2203673]
     test-ethtool-steering.sh:
-       ignore_kernel:
+        ignore_kernel:
           (4.19.*).*: [2169689]
     test-ifstat.sh:
     test-ovs-aging-tc-rules.sh:
