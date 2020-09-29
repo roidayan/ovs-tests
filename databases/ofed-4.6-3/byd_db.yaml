@@ -214,3 +214,5 @@ tests:
     test-vf-zero-header-raw.sh:
         ignore_kernel:
             .*: [2145280]
+    test-vf-lag.sh:
+    test-eswitch-trust-dscp.sh:

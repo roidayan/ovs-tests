@@ -49,8 +49,10 @@ tests:
        (4.19.*).*: [2166530]
     test-ovs-ct-tcp-label-reconfig.sh:
     test-ovs-ct-tcp-label.sh:
+    test-ovs-ct-tcp-label-128.sh:
     test-ovs-ct-tcp-mac-rewrite.sh:
     test-ovs-ct-tcp-nat-mark.sh:
+    test-ovs-ct-tcp-nat-mark-ipv6.sh:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-udp-frag.sh:
      ignore_kernel:
@@ -65,3 +67,16 @@ tests:
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
      ignore_kernel:
        (4.19.*).*: [2166565]
+    test-ovs-ct-vxlan.sh:
+    test-ovs-ct-vxlan-2.sh:
+    test-ovs-ct-vxlan-3.sh:
+    test-ovs-ct-vxlan-many-conns.sh:
+      ignore_kernel:
+        .*: [2164217]
+    test-ovs-ct-vxlan-ipv6.sh:
+    test-ovs-ct-tcp-snat.sh:
+    test-ct-tcp-vf-mirror-pedit.sh:
+      ignore_not_supported: true
+    test-ovs-ct-scapy-udp-vf-mirror.sh:
+    test-ovs-ct-vxlan-vf-mirror.sh:
+      ignore_not_supported: true
