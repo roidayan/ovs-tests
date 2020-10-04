@@ -40,7 +40,11 @@ tests:
     test-eswitch-switchdev-ndos.sh:
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:
+      ignore_kernel:
+        .*: [2316749]
     test-eswitch-toggle-mode-parallel3.sh:
+      ignore_kernel:
+        .*: [2316749]
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-hw-tc-offload.sh:
@@ -55,6 +59,8 @@ tests:
         - cx6dx
     test-eswitch-devlink-reload.sh:
     test-eswitch-persistent-netdev.sh:
+      ignore_kernel:
+        .*: [2312231]
     test-eswitch-bond-change-mode.sh:
       ignore_kernel:
         .*: [2226884]
