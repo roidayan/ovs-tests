@@ -66,6 +66,8 @@ tests:
        (4.19.*).*: [2166565]
     test-ovs-ct-vxlan.sh:
     test-ovs-ct-vxlan-2.sh:
+     ignore_kernel:
+       (4.19.*).*: [1824795]
     test-ovs-ct-vxlan-3.sh:
     test-ovs-ct-vxlan-many-conns.sh:
       ignore_kernel:
