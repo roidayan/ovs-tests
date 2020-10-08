@@ -158,6 +158,8 @@ tests:
       min_kernel_rhel: 4.18.0-80
       ignore_not_supported:
         - ucloud
+      ignore_kernel:
+        .*: [2322192]
     test-ovs-vf-mirror.sh:
     test-ovs-vxlan-flow-key.sh:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:

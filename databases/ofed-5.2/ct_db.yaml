@@ -49,10 +49,16 @@ tests:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-tcp-2.sh:
     test-ovs-ct-udp-frag.sh:
+      ignore_kernel:
+        .*: [2292541]
     test-ovs-ct-udp-frag-16k.sh:
+      ignore_kernel:
+        .*: [2292557]
     test-ovs-ct-vxlan-2.sh:
     test-ovs-ct-vxlan-3.sh:
     test-ovs-ct-vxlan-many-conns.sh:
+      ignore_kernel:
+        .*: [2164217]
     test-ovs-ct-vxlan.sh:
     test-ovs-ct-vxlan-vf-lag.sh:
     test-ovs-ct-vxlan-vf-mirror.sh:
