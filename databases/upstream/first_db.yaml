@@ -149,6 +149,8 @@ tests:
     test-tc-shuffle-cls_api.sh:
     test-tc-shuffle-reload-gact.sh:
     test-tc-shuffle-reload-mirred.sh:
+        ignore_kernel:
+            .*: [2322564]
     test-tc-shuffle-reload-mirred-skip-hw.sh:
     test-tc-shuffle.sh:
     test-tc-traffic-chain-flush.sh:

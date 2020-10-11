@@ -9,6 +9,8 @@ tests:
     test-ct-nat-tcp.sh:
     test-ct-nat-tcp-ipv6.sh:
     test-ct-nic-tcp.sh:
+        ignore_kernel:
+            .*: [2324224]
         ignore_for_linust: 1
     test-ct-tcp-trk-new.sh:
         ignore_for_upstream: 1
