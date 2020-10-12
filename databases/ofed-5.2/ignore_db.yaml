@@ -20,9 +20,6 @@ tests:
     test-ovs-sflow.sh:                                     # sflow not supported.
     test-ovs-vf-tunnel.sh:                                 # the dpctl in ovs is not supported anymore. its for old ovs.
     test-ovs-vxlan-in-ns-dpctl.sh:                         # the dpctl in ovs is not supported anymore. its for old ovs.
-    test-tc-hairpin-esw-upl1-decap-esw-upl1.sh:            # hairpin-esw not supported.
-    test-tc-hairpin-esw-upl1-encap-esw-upl1.sh:            # hairpin-esw not supported.
-    test-tc-hairpin-esw-upl1-esw-upl1.sh:                  # hairpin-esw not supported.
     test-tc-insert-rules-vxlan-vf-tunnel.sh:               # vf-tunnel not supported.
     test-tc-rule-act-add.sh:                               # act-add add-null test kernel and not driver. if there is a bug 99.9% we cannot fix it in ofed.
     test-tc-rule-add-null-qdisc.sh:                        # act-add add-null test kernel and not driver. if there is a bug 99.9% we cannot fix it in ofed.

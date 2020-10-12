@@ -81,6 +81,11 @@ tests:
     test-tc-hairpin-disable-sriov.sh:
     test-tc-hairpin-rules.sh:
     test-tc-hairpin-nic-rules.sh:
+    test-tc-hairpin-esw-upl1-decap-esw-upl1.sh:
+    test-tc-hairpin-esw-upl1-encap-esw-upl1.sh:
+      ignore_kernel:
+        .*: [2325151]
+    test-tc-hairpin-esw-upl1-esw-upl1.sh:
     test-tc-icmp-4-channels.sh:
     test-tc-geneve.sh:
       min_kernel: 5.3
