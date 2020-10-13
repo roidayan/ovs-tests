@@ -32,6 +32,8 @@ tests:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
+     ignore_kernel:
+       (4.19.*).*: [2334580]
     test-ovs-ct-scapy-udp-pedit-nat.sh:
     test-ovs-ct-scapy-udp-nat-dnat.sh:
      ignore_kernel:
@@ -46,12 +48,15 @@ tests:
      ignore_kernel:
        (4.19.*).*: [2166530]
     test-ovs-ct-tcp-label-reconfig.sh:
+     ignore_kernel:
+       (4.19.*).*: [2334580]
     test-ovs-ct-tcp-label.sh:
     test-ovs-ct-tcp-label-128.sh:
     test-ovs-ct-tcp-mac-rewrite.sh:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp-nat-mark-ipv6.sh:
     test-ovs-ct-tcp.sh:
+    test-ovs-ct-tcp-2.sh:
     test-ovs-ct-udp-frag.sh:
      ignore_not_supported: true
     test-ct-tcp-pedit-ct-clear.sh:
@@ -79,3 +84,33 @@ tests:
     test-ovs-ct-scapy-udp-vf-mirror.sh:
     test-ovs-ct-vxlan-vf-mirror.sh:
       ignore_not_supported: true
+    test-ovs-ct-tcp-ipv6.sh:
+    test-ovs-ct-tcp-ipv6-2.sh:
+     ignore_kernel:
+       (4.19.*).*: [2334580]
+    test-ct-nat-tcp-ipv6.sh:
+     ignore_kernel:
+       (4.19.*).*: [2142704]
+    test-ct-nat-tcp.sh:
+     ignore_kernel:
+       (4.19.*).*: [2142704]
+    test-ct-tcp-ipv6.sh:
+     ignore_kernel:
+       (4.19.*).*: [2142704]
+    test-ct-nic-tcp.sh:
+     ignore_kernel:
+       (4.19.*).*: [2142704]
+    test-tc-restore-after-miss.sh:
+      ignore_not_supported: true
+    test-ovs-ct-geneve.sh:
+      ignore_not_supported: true
+    test-ovs-ct-geneve-options.sh:
+      ignore_not_supported: true
+    test-ovs-ct-geneve-options-vlan.sh:
+      ignore_not_supported: true
+    test-ovs-ct-tcp-nat-restore.sh:
+      ignore_not_supported: true
+    test-ovs-ct-scapy-udp-flush.sh:
+      ignore_kernel:
+        (4.19.*).*: [2334625]
+
