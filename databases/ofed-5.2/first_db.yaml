@@ -238,7 +238,8 @@ tests:
       ignore_kernel:
         .*: [2245370]
     test-tc-insert-rules-mpls.sh:
-      ignore_not_supported: true
+      ignore_kernel:
+        .*: [2327181]
     test-tc-merged-esw-vf-pf.sh:
     test-tc-merged-esw-pf-pf.sh:
     test-tc-indr-block-driver-unload.sh:
