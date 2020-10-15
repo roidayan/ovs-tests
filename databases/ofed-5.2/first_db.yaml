@@ -182,6 +182,8 @@ tests:
       min_kernel_rhel: 4.18.0-193
       ignore_not_supported:
         - ucloud
+      ignore_kernel:
+        .*: [2328171]
     test-tc-replace.sh:
     test-tc-shuffle-2.sh:
     test-tc-shuffle-3.sh:

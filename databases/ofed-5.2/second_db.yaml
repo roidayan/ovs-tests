@@ -173,6 +173,8 @@ tests:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
       min_kernel: 4.0
       min_kernel_rhel: 3.10.0-1062
+      ignore_kernel:
+        .*: [2328183]
     test-ovs-vxlan.sh:
     test-ovs-vlan.sh:
     test-ovs-vlan-implicit.sh:
