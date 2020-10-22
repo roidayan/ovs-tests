@@ -26,6 +26,8 @@ tests:
     test-ethtool-steering-traffic-spread.sh:
     test-ethtool-nic-mode.sh:
     test-mod-depends.sh:
+        ignore_kernel:
+            .*: [2335304]
     test-ifstat.sh:
     test-ovs-100-diff-masks.sh:
     test-ovs-aging-tc-rules.sh:

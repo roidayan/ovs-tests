@@ -66,8 +66,10 @@ tests:
     test-ovs-ct-scapy-udp-reload.sh:
         ignore_flow_steering: smfs
         ignore_kernel:
-            .*: [2334431]
+            .*: [2333558]
     test-ovs-ct-scapy-udp.sh:
+        ignore_kernel:
+            .*: [2333337]
     test-ovs-ct-scapy-udp-vf-mirror.sh:
         ignore_kernel:
             .*: [1912698]
