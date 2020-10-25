@@ -208,3 +208,4 @@ tests:
             .*: [2145280]
     test-vf-lag.sh:
     test-eswitch-trust-dscp.sh:
+    test-ovs-sflow.sh:
