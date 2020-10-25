@@ -9,29 +9,21 @@ tests:
     test-ct-nat-tcp.sh:
     test-ct-nat-tcp-ipv6.sh:
     test-ct-nic-tcp.sh:
-        ignore_kernel:
-            .*: [2324224]
         ignore_for_linust: 1
     test-ct-tcp-trk-new.sh:
         ignore_for_upstream: 1
         ignore_for_linust: 1
     test-ct-tcp-trk-new-miss.sh:
-        ignore_kernel:
-            .*: [2253220]
         ignore_for_linust: 1
     test-ct-tcp-ipv6.sh:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-pedit-ct-clear.sh:
     test-ct-tcp-reload.sh:
-        ignore_kernel:
-            .*: [2334431]
     test-ct-tcp.sh:
     test-ct-tcp-vf-mirror-pedit.sh:
         ignore_kernel:
             .*: [1912698]
     test-ovs-ct-geneve.sh:
-        ignore_kernel:
-            .*: [2270846]
     test-ovs-ct-geneve-options.sh:
     test-ovs-ct-geneve-options-vlan.sh:
     test-ovs-ct-icmp-cycle-esw-modes.sh:
@@ -40,12 +32,10 @@ tests:
             .*: [2261261]
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
-        ignore_kernel:
-            .*: [2299050]
     test-ovs-ct-scapy-hw-ovs-miss.sh:
-        ignore_kernel:
-            .*: [2299050]
     test-ovs-ct-scapy-udp-2ports.sh:
+        ignore_kernel:
+            .*: [2333337]
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
         ignore_kernel:
@@ -86,13 +76,9 @@ tests:
         ignore_kernel:
             .*: [2295768]
     test-ovs-ct-tcp-mac-rewrite.sh:
-        ignore_kernel:
-            .*: [2270815]
     test-ovs-ct-tcp-nat-mark-ipv6.sh:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp-nat-restore.sh:
-        ignore_kernel:
-            .*: [2270815]
     test-ovs-ct-tcp.sh:
     test-ovs-ct-tcp-2.sh:
     test-ovs-ct-udp-frag.sh:
@@ -102,8 +88,6 @@ tests:
         ignore_kernel:
             .*: [2261207]
     test-ovs-ct-vxlan.sh:
-        ignore_kernel:
-            .*: [2270846]
     test-ovs-ct-vxlan-2.sh:
     test-ovs-ct-vxlan-3.sh:
     test-ovs-ct-vxlan-many-conns.sh:

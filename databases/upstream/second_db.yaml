@@ -26,8 +26,6 @@ tests:
     test-ethtool-steering-traffic-spread.sh:
     test-ethtool-nic-mode.sh:
     test-mod-depends.sh:
-        ignore_kernel:
-            .*: [2335304]
     test-ifstat.sh:
     test-ovs-100-diff-masks.sh:
     test-ovs-aging-tc-rules.sh:
@@ -93,11 +91,7 @@ tests:
     test-vxlan-neigh-update-with-pedit.sh:
     test-vxlan-port-del.sh:
     test-vxlan-port-offload.sh:
-        ignore_kernel:
-            .*: [2334431]
     test-vxlan-rx-vlan-push-offload.sh:
-        ignore_kernel:
-            .*: [2210791]
     test-vf-lag.sh:
         ignore_flow_steering: smfs
     test-vf-lag-nic-tc-rule.sh:
@@ -145,6 +139,4 @@ tests:
     test-eswitch-rep-channels-time.sh:
     test-eswitch-rep-up-time.sh:
     test-eswitch-reps-2ports.sh:
-        ignore_smfs:
-            .*: [2265168]
     test-bond-pf-to-bridge.sh:

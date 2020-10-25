@@ -13,15 +13,11 @@ tests:
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
     test-eswitch-add-flows-during-reload.sh:
         ignore_flow_steering: smfs
-        ignore_kernel:
-            .*: [2334431]
     test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-eswitch-change-hfunc.sh:
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
         ignore_flow_steering: smfs
-        ignore_kernel:
-            .*: [2334431]
     test-eswitch-devlink-reload.sh:
         ignore_kernel:
             .*: [2245297]
@@ -36,12 +32,8 @@ tests:
     test-eswitch-persist-mac.sh:
     test-eswitch-reload-modules.sh:
         ignore_flow_steering: smfs
-        ignore_kernel:
-            .*: [2334431]
     test-eswitch-reload-modules-different-state.sh:
         ignore_flow_steering: smfs
-        ignore_kernel:
-            .*: [2334431]
     test-eswitch-set-vf-mac.sh:
     test-eswitch-set-vf-rate.sh:
     test-eswitch-set-vf-vlan.sh:
@@ -50,6 +42,8 @@ tests:
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:
     test-eswitch-toggle-mode-parallel3.sh:
+        ignore_kernel:
+            .*: [2337053]
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
@@ -58,8 +52,6 @@ tests:
             - cx6lx
             - cx6dx
     test-eswitch-hw-tc-offload.sh:
-        ignore_kernel:
-            .*: [2334431]
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
     test-tc-del-a-lot.sh:
@@ -83,24 +75,16 @@ tests:
             .*: [2256948]
     test-tc-insert-rule-rep-uplink-vlan.sh:
     test-tc-insert-rules-act-pass.sh:
-        ignore_kernel:
-            .*: [2270795]
     test-tc-insert-rules-hw-stats.sh:
     test-tc-insert-rules-duplicates.sh:
     test-tc-insert-rules-frag.sh:
     test-tc-insert-rules-geneve.sh:
-        ignore_kernel:
-            .*: [2270846]
     test-tc-insert-rules-gre.sh:
     test-tc-insert-rules-legacy.sh:
     test-tc-insert-rules-matchall.sh:
     test-tc-insert-rules-mirror.sh:
-        ignore_smfs:
-            .*: [2265168]
     test-tc-insert-rules-pedit.sh:
     test-tc-insert-rules-pedit-ttl-ip.sh:
-        ignore_kernel:
-            .*: [2304255]
     test-tc-insert-rules-pedit-ttl.sh:
     test-tc-insert-rules-port2.sh:
     test-tc-insert-rules.sh:
@@ -111,8 +95,6 @@ tests:
     test-tc-insert-rule-without-match.sh:
     test-tc-insert-rule-qinq-pop2-mirror.sh:
     test-tc-indr-block-driver-unload.sh:
-        ignore_kernel:
-            .*: [2334431]
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
         ignore_kernel:
@@ -133,8 +115,6 @@ tests:
     test-tc-reoffload.sh:
     test-tc-replace.sh:
     test-tc-restore-after-miss.sh:
-        ignore_kernel:
-            .*: [2270846]
     test-tc-rule-act-add.sh:
     test-tc-rule-add-null-qdisc.sh:
     test-tc-sample.sh:
@@ -163,8 +143,6 @@ tests:
     test-tc-vf-mirror.sh:
     test-tc-vf-remote-mirror.sh:
     test-tc-vlan-modify.sh:
-        ignore_kernel:
-            .*: [2273423]
         ignore_fw:
             ^22.*: [2270815]
     test-tc-vxlan-decap-inner-match-drop.sh:
