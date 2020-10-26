@@ -95,6 +95,8 @@ tests:
     test-tc-insert-rule-without-match.sh:
     test-tc-insert-rule-qinq-pop2-mirror.sh:
     test-tc-indr-block-driver-unload.sh:
+        ignore_kernel:
+            .*: [2334382]
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
         ignore_kernel:

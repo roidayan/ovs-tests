@@ -33,6 +33,8 @@ tests:
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
     test-ovs-ct-scapy-hw-ovs-miss.sh:
+        ignore_kernel:
+            .*: [2333337]
     test-ovs-ct-scapy-udp-2ports.sh:
         ignore_kernel:
             .*: [2333337]
