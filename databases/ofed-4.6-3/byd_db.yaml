@@ -209,3 +209,4 @@ tests:
     test-vf-lag.sh:
     test-eswitch-trust-dscp.sh:
     test-ovs-sflow.sh:
+    test-tc-sample.sh:
