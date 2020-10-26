@@ -72,7 +72,7 @@ tests:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rules-mpls.sh:
         ignore_kernel:
-            .*: [2256948]
+            .*: [2338156]
     test-tc-insert-rule-rep-uplink-vlan.sh:
     test-tc-insert-rules-act-pass.sh:
     test-tc-insert-rules-hw-stats.sh:
