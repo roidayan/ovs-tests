@@ -12,28 +12,22 @@ tests:
             .*: [2297742]
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
     test-eswitch-add-flows-during-reload.sh:
-        ignore_flow_steering: smfs
     test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-eswitch-change-hfunc.sh:
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
-        ignore_flow_steering: smfs
     test-eswitch-devlink-reload.sh:
         ignore_kernel:
             .*: [2245297]
     test-eswitch-diff-vfs-per-port.sh:
-        ignore_flow_steering: smfs
     test-eswitch-miss-rules.sh:
         ignore_flow_steering: smfs
     test-eswitch-netdev-tx.sh:
     test-eswitch-no-carrier.sh:
-        ignore_flow_steering: smfs
     test-eswitch-par-actions.sh:
     test-eswitch-persist-mac.sh:
     test-eswitch-reload-modules.sh:
-        ignore_flow_steering: smfs
     test-eswitch-reload-modules-different-state.sh:
-        ignore_flow_steering: smfs
     test-eswitch-set-vf-mac.sh:
     test-eswitch-set-vf-rate.sh:
     test-eswitch-set-vf-vlan.sh:
@@ -71,6 +65,7 @@ tests:
     test-tc-icmp-4-channels.sh:
     test-tc-insert-fail-hw.sh:
     test-tc-insert-rules-mpls.sh:
+        ignore_flow_steering: smfs
         ignore_kernel:
             .*: [2338156]
     test-tc-insert-rule-rep-uplink-vlan.sh:

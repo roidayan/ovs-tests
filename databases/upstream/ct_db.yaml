@@ -56,7 +56,6 @@ tests:
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
     test-ovs-ct-scapy-udp-reload.sh:
-        ignore_flow_steering: smfs
         ignore_kernel:
             .*: [2333558]
     test-ovs-ct-scapy-udp.sh:
