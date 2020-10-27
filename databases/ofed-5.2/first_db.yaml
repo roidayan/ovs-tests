@@ -240,6 +240,9 @@ tests:
       ignore_kernel:
         .*: [2245370]
     test-tc-insert-rules-mpls.sh:
+      min_kernel: 5.9
+      ignore_not_supported:
+        - .*el.*
       ignore_kernel:
         .*: [2327181]
     test-tc-merged-esw-vf-pf.sh:
