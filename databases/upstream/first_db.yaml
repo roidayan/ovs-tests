@@ -133,7 +133,6 @@ tests:
     test-tc-traffic-proto-add-del.sh:
     test-tc-traffic-qdisc-del.sh:
     test-tc-trap.sh:
-        ignore_for_linust: 1
     test-tc-vf-mirror-pedit.sh:
         ignore_smfs:
             .*: [2304188]
