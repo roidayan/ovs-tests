@@ -243,6 +243,7 @@ tests:
       min_kernel: 5.9
       ignore_not_supported:
         - .*el.*
+        - ucloud
       ignore_kernel:
         .*: [2327181]
     test-tc-merged-esw-vf-pf.sh:
