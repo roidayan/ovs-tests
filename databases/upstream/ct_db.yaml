@@ -42,6 +42,8 @@ tests:
             .*: [2114634]
     test-ovs-ct-scapy-udp-ct-clear.sh:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
+        ignore_kernel:
+            .*: [2333337]
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
         ignore_kernel:
@@ -93,6 +95,8 @@ tests:
         ignore_kernel:
             .*: [2164217]
     test-ovs-ct-vxlan-vf-lag.sh:
+        ignore_kernel:
+            .*: [2333337]
     test-ovs-ct-vxlan-vf-mirror.sh:
         ignore_kernel:
             .*: [1912698]
