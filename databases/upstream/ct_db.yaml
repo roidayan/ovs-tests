@@ -6,16 +6,32 @@ tests:
             .*: [2261261]
     test-ct-icmp-fwd.sh:
     test-ct-icmp.sh:
+    test-ct-nic-tcp.sh:
     test-ct-nat-tcp.sh:
     test-ct-nat-tcp-ipv6.sh:
-    test-ct-nic-tcp.sh:
+    test-ct-nat-tcp-e2e-cache.sh:
+        ignore_kernel:
+            .*: [2312004]
+        ignore_for_linust: 1
+    test-ct-tcp-e2e-cache.sh:
+        ignore_kernel:
+            .*: [2312004]
+        ignore_for_linust: 1
+    test-ct-tcp-e2e-cache2.sh:
+        ignore_kernel:
+            .*: [2312004]
+        ignore_for_linust: 1
+    test-ct-tcp-pedit.sh:
+    test-ct-tcp-pedit-ct-clear.sh:
+    test-ct-tcp-pedit-e2e-cache.sh:
+        ignore_kernel:
+            .*: [2312004]
+        ignore_for_linust: 1
     test-ct-tcp-trk-new.sh:
         ignore_for_upstream: 1
         ignore_for_linust: 1
     test-ct-tcp-trk-new-miss.sh:
     test-ct-tcp-ipv6.sh:
-    test-ct-tcp-pedit.sh:
-    test-ct-tcp-pedit-ct-clear.sh:
     test-ct-tcp-reload.sh:
     test-ct-tcp.sh:
     test-ct-tcp-vf-mirror-pedit.sh:
