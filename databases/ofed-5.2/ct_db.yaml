@@ -77,3 +77,5 @@ tests:
     test-ovs-ct-scapy-udp-flush.sh:
     test-tc-restore-after-miss.sh:
     test-ct-nic-tcp.sh:
+    test-ct-tcp-trk-new.sh:
+    test-ct-tcp-trk-new-miss.sh:
