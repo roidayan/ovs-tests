@@ -38,6 +38,8 @@ tests:
         ignore_kernel:
             .*: [1912698]
     test-ovs-ct-geneve.sh:
+        ignore_fw:
+            ^22.*: [2345288]
     test-ovs-ct-geneve-options.sh:
     test-ovs-ct-geneve-options-vlan.sh:
     test-ovs-ct-icmp-cycle-esw-modes.sh:
@@ -61,6 +63,8 @@ tests:
         ignore_kernel:
             .*: [2333337]
     test-ovs-ct-scapy-udp-down-up.sh:
+        ignore_kernel:
+            .*: [2333337]
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
         ignore_kernel:
             .*: [2235094]

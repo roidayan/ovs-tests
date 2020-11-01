@@ -33,6 +33,8 @@ tests:
     test-ovs-dpctl-flows.sh:
     test-ovs-dpctl-flows-ttl-tos.sh:
     test-ovs-geneve.sh:
+        ignore_fw:
+            ^22.*: [2345288]
     test-ovs-geneve-in-ns-ipv6.sh:
     test-ovs-geneve-in-ns.sh:
     test-ovs-gre-in-ns.sh:
