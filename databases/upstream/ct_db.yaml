@@ -11,21 +11,21 @@ tests:
     test-ct-nat-tcp-ipv6.sh:
     test-ct-nat-tcp-e2e-cache.sh:
         ignore_kernel:
-            .*: [2312004]
+            .*: [2197229]
         ignore_for_linust: 1
     test-ct-tcp-e2e-cache.sh:
         ignore_kernel:
-            .*: [2312004]
+            .*: [2197229]
         ignore_for_linust: 1
     test-ct-tcp-e2e-cache2.sh:
         ignore_kernel:
-            .*: [2312004]
+            .*: [2197229]
         ignore_for_linust: 1
     test-ct-tcp-pedit.sh:
     test-ct-tcp-pedit-ct-clear.sh:
     test-ct-tcp-pedit-e2e-cache.sh:
         ignore_kernel:
-            .*: [2312004]
+            .*: [2197229]
         ignore_for_linust: 1
     test-ct-tcp-trk-new.sh:
         ignore_for_upstream: 1
@@ -85,6 +85,8 @@ tests:
         ignore_kernel:
             .*: [1912698]
     test-ovs-ct-scapy-udp-flush.sh:
+        ignore_kernel:
+            .*: [2333337]
     test-ovs-ct-tcp-snat.sh:
     test-ovs-ct-tcp-2ports.sh:
     test-ovs-ct-tcp-iperf3.sh:
