@@ -88,6 +88,12 @@ tests:
     test-ovs-ct-tcp-nat-restore.sh:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-tcp-2.sh:
+    test-ovs-ct-tcp-testpmd.sh:
+        ignore_kernel:
+            .*: [2350696]
+    test-ovs-ct-tcp-testpmd-remote.sh:
+        ignore_kernel:
+            .*: [2350696]
     test-ovs-ct-udp-frag.sh:
         ignore_kernel:
             .*: [2261207]
