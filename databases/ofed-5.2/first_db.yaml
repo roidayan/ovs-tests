@@ -29,6 +29,8 @@ tests:
       ignore_kernel:
         .*: [2245370]
     test-eswitch-netdev-tx.sh:
+      ignore_kernel:
+        (3.10.0-693.el7.x86_64): [2231864]
     test-eswitch-no-carrier.sh:
     test-eswitch-par-actions.sh:
     test-eswitch-reload-modules-different-state.sh:
@@ -256,3 +258,5 @@ tests:
       2261850:
         - ucloud
         - ngn
+      2353146:
+        - 4.18.0-240.el8.x86_64
