@@ -36,8 +36,6 @@ tests:
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:
     test-eswitch-toggle-mode-parallel3.sh:
-        ignore_kernel:
-            .*: [2337053]
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
@@ -90,8 +88,6 @@ tests:
     test-tc-insert-rule-without-match.sh:
     test-tc-insert-rule-qinq-pop2-mirror.sh:
     test-tc-indr-block-driver-unload.sh:
-        ignore_kernel:
-            .*: [2334382]
     test-tc-ip-tos-ip-ttl.sh:
     test-tc-max-rules-1M-rules.sh:
         ignore_kernel:
@@ -139,8 +135,6 @@ tests:
     test-tc-vf-mirror.sh:
     test-tc-vf-remote-mirror.sh:
     test-tc-vlan-modify.sh:
-        ignore_fw:
-            ^22.*: [2270815]
     test-tc-vxlan-decap-inner-match-drop.sh:
     test-tc-vxlan-decap-key-port-only.sh:
     test-tc-vxlan-decap-not-properly-offloaded.sh:

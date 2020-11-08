@@ -5,8 +5,6 @@ tests:
         ignore_kernel:
             .*: [2295812]
     test-ecmp-add-vxlan-encap-disable-sriov.sh:
-        ignore_kernel:
-            .*: [2334382]
     test-ecmp-add-vxlan-rule.sh:
         ignore_flow_steering: smfs
     test-ecmp-failover-failback.sh:
@@ -94,6 +92,7 @@ tests:
     test-vxlan-port-del.sh:
     test-vxlan-port-offload.sh:
     test-vxlan-rx-vlan-push-offload.sh:
+    test-vf-zero-header-raw.sh:
     test-vf-lag.sh:
         ignore_flow_steering: smfs
     test-vf-lag-nic-tc-rule.sh:
@@ -106,9 +105,6 @@ tests:
     test-vf-rep-ping-reconfig-sriov.sh:
     test-vf-rep-udp-fragmented.sh:
     test-vf-veth-fwd.sh:
-    test-vf-zero-header-raw.sh:
-        ignore_kernel:
-            .*: [2235157]
     test-vf-vf-different-esw-ping.sh:
     test-vf-vf-fwd-fl_delete.sh:
     test-vf-vf-fwd.sh:
