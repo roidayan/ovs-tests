@@ -121,12 +121,8 @@ tests:
     test-tc-par-add-dump-del.sh:
     test-tc-par-add-dup.sh:
     test-eswitch-bond-change-mode.sh:
-        ignore_kernel:
-            .*: [1778080]
         ignore_for_linust: 1
     test-eswitch-persistent-netdev.sh:
-        ignore_kernel:
-            .*: [1778080]
         ignore_for_linust: 1
     test-eswitch-rep-channels-time.sh:
     test-eswitch-rep-up-time.sh:
