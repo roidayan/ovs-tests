@@ -12,8 +12,14 @@ tests:
     test-eswitch-add-del-different-flows2.sh:
     test-eswitch-add-del-different-flows.sh:
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
+      ignore_kernel:
+        .*: [2359156]
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
+      ignore_kernel:
+        .*: [2359156]
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
+      ignore_kernel:
+        .*: [2359156]
     test-eswitch-add-flows-during-reload.sh:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
     test-eswitch-change-hfunc.sh:
