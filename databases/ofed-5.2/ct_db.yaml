@@ -9,11 +9,14 @@ tests:
     test-ct-tcp-reload.sh:
     test-ct-tcp.sh:
     test-ct-tcp-vf-mirror-pedit.sh:
-      ignore_kernel:
-        .*: [2357254]
+      ignore_nic:
+        - cx5
+        - cx6
+        - cx6lx
     test-ovs-ct-geneve.sh:
       ignore_fw:
         ^22.*: [2335523]
+        ^26.*: [2335523]
     test-ovs-ct-geneve-options.sh:
     test-ovs-ct-geneve-options-vlan.sh:
     test-ovs-ct-icmp-cycle-esw-modes.sh:
@@ -38,8 +41,10 @@ tests:
     test-ovs-ct-scapy-udp-reload.sh:
     test-ovs-ct-scapy-udp.sh:
     test-ovs-ct-scapy-udp-vf-mirror.sh:
-      ignore_kernel:
-        .*: [2357254]
+      ignore_nic:
+        - cx5
+        - cx6
+        - cx6lx
     test-ovs-ct-tcp-2ports.sh:
     test-ovs-ct-tcp-iperf3.sh:
     test-ovs-ct-tcp-ipv6.sh:
@@ -66,6 +71,10 @@ tests:
     test-ovs-ct-vxlan.sh:
     test-ovs-ct-vxlan-vf-lag.sh:
     test-ovs-ct-vxlan-vf-mirror.sh:
+      ignore_nic:
+        - cx5
+        - cx6
+        - cx6lx
       ignore_kernel:
         .*: [2357254]
     test-ct-tcp-pedit-ct-clear.sh:

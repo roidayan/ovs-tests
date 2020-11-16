@@ -69,6 +69,7 @@ tests:
         - byd
       ignore_fw:
         ^22.*: [2335523]
+        ^26.*: [2335523]
     test-ovs-geneve-in-ns-ipv6.sh:
       min_kernel: 5.3
       min_kernel_rhel: 3.10.0-1127
