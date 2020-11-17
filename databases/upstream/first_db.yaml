@@ -3,7 +3,11 @@ description:
 tests:
     test-eswitch-ingress-rate-limit.sh:
     test-eswitch-add-del-different-flows2.sh:
+         ignore_kernel:
+            .*: [2363244]
     test-eswitch-add-del-different-flows.sh:
+         ignore_kernel:
+            .*: [2363244]
     test-eswitch-add-del-flows-during-flows-cleanup.sh:
          ignore_kernel:
             .*: [2202627]
@@ -13,6 +17,8 @@ tests:
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
     test-eswitch-add-flows-during-reload.sh:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
+         ignore_kernel:
+            .*: [2363244]
     test-eswitch-change-hfunc.sh:
     test-eswitch-del-flows-during-add.sh:
     test-eswitch-del-flows-during-reload.sh:
@@ -46,6 +52,8 @@ tests:
     test-eswitch-hw-tc-offload.sh:
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
+         ignore_kernel:
+            .*: [2363244]
     test-tc-del-a-lot.sh:
     test-tc-duplicate-hw-rules.sh:
         ignore_flow_steering: smfs
@@ -81,6 +89,8 @@ tests:
     test-tc-insert-rules-pedit-ttl.sh:
     test-tc-insert-rules-port2.sh:
     test-tc-insert-rules.sh:
+         ignore_kernel:
+            .*: [2363244]
     test-tc-insert-rules-goto.sh:
     test-tc-insert-rules-goto2.sh:
     test-tc-insert-rules-vxlan.sh:
