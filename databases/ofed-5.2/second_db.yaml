@@ -160,6 +160,11 @@ tests:
       ignore_kernel:
         .*: [2322192]
     test-ovs-vf-mirror.sh:
+    test-ovs-vf-tunnel.sh:
+      ignore_nic:
+        - cx5
+      ignore_kernel:
+        .*: [2363619]
     test-ovs-vxlan-flow-key.sh:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:
       ignore_kernel:
