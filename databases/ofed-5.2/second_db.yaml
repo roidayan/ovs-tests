@@ -110,11 +110,15 @@ tests:
       min_kernel_rhel: 3.10.0-957
       ignore_not_supported:
         - ucloud
+      ignore_kernel:
+        .*: [2365343]
     test-ovs-qinq-2.sh:
       min_kernel: 4.18
       min_kernel_rhel: 3.10.0-957
       ignore_not_supported:
         - ucloud
+      ignore_kernel:
+        .*: [2365343]
     test-ovs-replace-rule-hw.sh:
     test-ovs-replace-rule.sh:
     test-ovs-rewrite-ipv4-macs.sh:
