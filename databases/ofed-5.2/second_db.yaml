@@ -244,3 +244,4 @@ tests:
       ignore_not_supported:
         - 5.7.0.*
     test-bond-pf-to-bridge.sh:
+    test-ovs-sflow.sh:

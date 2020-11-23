@@ -271,3 +271,4 @@ tests:
         - cx5
       ignore_kernel:
         .*: [2363619]
+    test-tc-sample.sh:
