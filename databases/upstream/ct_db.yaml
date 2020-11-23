@@ -7,12 +7,13 @@ tests:
     test-ct-icmp-fwd.sh:
     test-ct-icmp.sh:
     test-ct-nic-tcp.sh:
+        ignore_kernel:
+            .*: [2368113]
     test-ct-nat-tcp.sh:
     test-ct-nat-tcp-ipv6.sh:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-pedit-ct-clear.sh:
     test-ct-tcp-trk-new.sh:
-        ignore_for_upstream: 1
         ignore_for_linust: 1
     test-ct-tcp-trk-new-miss.sh:
     test-ct-tcp-ipv6.sh:
@@ -96,8 +97,6 @@ tests:
     test-ovs-ct-vxlan-ipv6.sh:
     test-ovs-ct-vxlan-vf-lag.sh:
     test-ovs-ct-vf-lag.sh:
-        ignore_kernel:
-            .*: [2363371]
     test-ovs-ct-vf-tunnel.sh:
         ignore_nic:
             - cx5
