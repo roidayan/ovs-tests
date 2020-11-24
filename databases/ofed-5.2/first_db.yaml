@@ -261,6 +261,8 @@ tests:
     test-tc-indr-block-driver-unload.sh:
       ignore_not_supported:
         - 3.10.0-693.el7.x86_64
+        - ucloud
+        - ngn
       2261850:
         - ucloud
         - ngn
@@ -272,3 +274,5 @@ tests:
       ignore_kernel:
         .*: [2363619]
     test-tc-sample.sh:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-957

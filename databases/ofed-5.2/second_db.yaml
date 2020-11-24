@@ -245,3 +245,5 @@ tests:
         - 5.7.0.*
     test-bond-pf-to-bridge.sh:
     test-ovs-sflow.sh:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-957
