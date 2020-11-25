@@ -276,3 +276,5 @@ tests:
     test-tc-sample.sh:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-957
+      ignore_not_supported:
+        - ucloud
