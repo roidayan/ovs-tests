@@ -22,3 +22,5 @@ tests:
     test-tc-vxlan-decap-in-skip-sw.sh:                     # Bug SW #1360599: [upstream] decap rule offload attempt with skip_sw fails
     test-vf-lag-warn-65-vfs.sh:                            # Currently cloud supports up to 16 vf
     test-devlink-show-in-each-link-mode.sh:                # As synced with RoiD, we don't care about checking IB mode. Also, it seems that devlink show is not supported in IB mode.
+    test-ovs-ct-tcp-testpmd.sh:                            # Performance test. We should not run. Check task #2350696 for more details.
+    test-ovs-ct-tcp-testpmd-remote.sh:                     # Performance test. We should not run. Check task #2350696 for more details.
