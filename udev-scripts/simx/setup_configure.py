@@ -106,6 +106,9 @@ class SetupConfigure(object):
 
             self.EnableDevOffload()
 
+            if self.dpdk:
+                self.configure_hugepages()
+
             self.ConfigureOVS()
 
             self.AttachVFs()
@@ -415,6 +418,10 @@ class SetupConfigure(object):
 
         with open('/workspace/dev_reg_conf.sh', 'w+') as f:
             f.write(conf)
+
+    def configure_hugepages(self):
+        self.Logger.info("Allocating 2MB in the RAM for DPDK")
+        runcmd2('echo 2048 > /sys/kernel/mm/hugepages/hugepages-2048kB/nr_hugepages')
 
     @property
     def Logger(self):
