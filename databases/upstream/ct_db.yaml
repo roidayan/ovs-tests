@@ -82,9 +82,6 @@ tests:
     test-ovs-ct-vxlan.sh:
     test-ovs-ct-vxlan-2.sh:
     test-ovs-ct-vxlan-3.sh:
-    test-ovs-ct-vxlan-many-conns.sh:
-        ignore_kernel:
-            .*: [2359450]
     test-ovs-ct-vxlan-vf-mirror.sh:
         ignore_kernel:
             .*: [1912698]
