@@ -13,10 +13,11 @@ tests:
     test-ovs-dpdk-e2e-vxlan-ct-tcp.sh:
     test-ovs-dpdk-e2e-vxlan-ct-udp.sh:
     test-ovs-dpdk-vxlan-ct-multi-zone.sh:
-    test-ovs-dpdk-vxlan-ct-snat-tcp.sh:
+    test-ovs-dpdk-ct-dnat-tcp.sh:
     test-ovs-dpdk-vxlan-ct-tcp-label.sh:
     test-ovs-dpdk-vxlan-ct-tcp.sh:
     test-ovs-dpdk-vxlan-ct-udp.sh:
     test-ovs-dpdk-vxlan-ct-zoneid-value.sh:
     test-ovs-dpdk-vxlan-load-action.sh:
     test-ovs-dpdk-vxlan.sh:
+    test-ovs-dpdk-geneve.sh:
