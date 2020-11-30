@@ -334,6 +334,7 @@ class SetupConfigure(object):
 
     def ConfigureOVS(self):
         self.Logger.info("Setting [hw-offload=true] configuration to OVS" )
+        self.RestartOVS()
         runcmd_output('ovs-vsctl set Open_vSwitch . other_config:hw-offload=true')
         self.RestartOVS()
 
