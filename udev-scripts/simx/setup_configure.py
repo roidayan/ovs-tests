@@ -81,6 +81,7 @@ class SetupConfigure(object):
     def Run(self):
         try:
             self.flow_steering_mode_supp = True
+            self.StopOVS()
             self.ReloadModules()
 
             self.host = DynamicObject()
@@ -325,12 +326,14 @@ class SetupConfigure(object):
 
         sleep(5)
 
+    def StopOVS(self):
+        runcmd_output('systemctl stop openvswitch')
+
     def RestartOVS(self):
         runcmd_output('systemctl restart openvswitch')
 
     def ConfigureOVS(self):
         self.Logger.info("Setting [hw-offload=true] configuration to OVS" )
-        self.RestartOVS()
         runcmd_output('ovs-vsctl set Open_vSwitch . other_config:hw-offload=true')
         self.RestartOVS()
 
