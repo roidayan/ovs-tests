@@ -69,7 +69,6 @@ class SetupConfigure(object):
 
     def ParseArgs(self):
         parser = ArgumentParser(prog=self.__class__.__name__)
-        parser.add_argument('--skip_ovs_config', help='Skip openvswitch configuration', action='store_true')
         parser.add_argument('--second-server', help='Second server config', action='store_true')
         parser.add_argument('--dpdk', help='Add DPDK=1 to configuration file', action='store_true')
         parser.add_argument('--sw-steering-mode', help='Configure software steering mode', action='store_true')
@@ -106,8 +105,7 @@ class SetupConfigure(object):
 
             self.EnableDevOffload()
 
-            if not self.skip_ovs_config:
-                self.ConfigureOVS()
+            self.ConfigureOVS()
 
             self.AttachVFs()
             self.UpdateVFInfo()
