@@ -98,3 +98,8 @@ tests:
     test-ct-tcp-trk-new.sh:
     test-ct-tcp-trk-new-miss.sh:
     test-ovs-ct-vf-lag.sh:
+    test-ovs-ct-vf-tunnel.sh:
+      ignore_nic:
+        - cx5
+      ignore_kernel:
+        .*: [2363619]
