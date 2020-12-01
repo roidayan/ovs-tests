@@ -7,21 +7,33 @@ tests:
     test-ovs-dpdk-ct-tcp.sh:
     test-ovs-dpdk-ct-udp.sh:
     test-ovs-dpdk-e2e-ct-tcp.sh:
+      ignore_kernel:
+        .*: [2362610]
       ignore_nic:
        - cx5
     test-ovs-dpdk-e2e-ct-udp.sh:
+      ignore_kernel:
+        .*: [2362610]
       ignore_nic:
        - cx5
     test-ovs-dpdk-e2e-del-flows.sh:
+      ignore_kernel:
+        .*: [2362610]
       ignore_nic:
        - cx5
     test-ovs-dpdk-e2e-mt-aging.sh:
+      ignore_kernel:
+        .*: [2362610]
       ignore_nic:
        - cx5
     test-ovs-dpdk-e2e-vxlan-ct-tcp.sh:
+      ignore_kernel:
+        .*: [2379882, 2362610]
       ignore_nic:
        - cx5
     test-ovs-dpdk-e2e-vxlan-ct-udp.sh:
+      ignore_kernel:
+        .*: [2379882, 2362610]
       ignore_nic:
        - cx5
     test-ovs-dpdk-vxlan-ct-multi-zone.sh:
