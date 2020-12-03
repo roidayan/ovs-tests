@@ -50,6 +50,8 @@ tests:
     test-ethtool-chans-other.sh:
     test-ifstat.sh:
     test-ovs-aging-tc-rules.sh:
+      ignore_kernel:
+        5.4.60.*: [2383159]
     test-ovs-dpctl-flows-enc_ttl-enc_tos.sh:
       min_kernel: 4.19
       min_kernel_rhel: 3.10.0-1127

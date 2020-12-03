@@ -26,6 +26,8 @@ tests:
     test-ovs-ct-miss-to-sw.sh:
     test-ovs-ct-scapy-udp-2ports.sh:
     test-ovs-ct-scapy-udp-aging-ovs.sh:
+      ignore_kernel:
+        5.4.60.*: [2383159]
     test-ovs-ct-scapy-udp-aging.sh:
       ignore_not_supported:
         - 5.9.0.*
