@@ -219,7 +219,6 @@ tests:
     test-vxlan-port-del.sh:
     test-vxlan-port-offload.sh:
     test-vxlan-rx-vlan-push-offload.sh:
-      ignore_not_supported: true
     test-tc-par-add-ovr-del.sh:
       ignore_not_supported: true
     test-tc-par-add-del.sh:
