@@ -250,3 +250,8 @@ tests:
       min_kernel_rhel: 3.10.0-957
       ignore_not_supported:
         - ucloud
+    test-ovs-vxlan-over-vlan-int-port.sh:
+      ignore_nic:
+        - cx5
+        - cx6
+        - cx6lx
