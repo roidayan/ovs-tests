@@ -27,3 +27,6 @@ tests:
     test-vf-lag-warn-65-vfs.sh:                            # Not supported in OFED 5.2.
     test-vf-lag-warn-unsupported-mode.sh:                  # Not supported in OFED 5.2.
     test-ovs-rewrite-ipv6-tos-dscp.sh:                     # Not supported in OFED 5.2.
+    test-tc-bad-tunnel.sh:                                 # Irrelevant test.
+    test-tc-bad-tunnel2.sh:                                # Irrelevant test.
+    test-eswitch-sf.sh:                                    # Not supported in OFED 5.2.
