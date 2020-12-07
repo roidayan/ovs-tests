@@ -25,3 +25,5 @@ tests:
     test-ovs-ct-tcp-testpmd.sh:                            # Performance test. We should not run. Check task #2350696 for more details.
     test-ovs-ct-tcp-testpmd-remote.sh:                     # Performance test. We should not run. Check task #2350696 for more details.
     test-ovs-ct-vxlan-many-conns.sh:                       # Performance test. We should not run. Check task #2359450 for more details.
+    test-tc-bad-tunnel.sh:                                 # Dummy test. Check test for details.
+    test-tc-bad-tunnel2.sh:                                # Dummy test. Check test for details.
