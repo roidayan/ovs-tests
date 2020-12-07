@@ -23,10 +23,14 @@ tests:
         ignore_kernel:
             .*: [1912698]
     test-ovs-ct-geneve.sh:
-        ignore_fw:
-            ^22.*: [2335523]
+        ignore_kernel:
+            .*: [2386814]
     test-ovs-ct-geneve-options.sh:
+        ignore_kernel:
+            .*: [2386814]
     test-ovs-ct-geneve-options-vlan.sh:
+        ignore_kernel:
+            .*: [2386814]
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
         ignore_kernel:
