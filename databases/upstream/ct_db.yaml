@@ -22,6 +22,8 @@ tests:
     test-ct-tcp-vf-mirror-pedit.sh:
         ignore_nic:
             - cx5
+            - cx6
+            - cx6lx
     test-ovs-ct-geneve.sh:
         ignore_kernel:
             .*: [2386814]
@@ -61,6 +63,8 @@ tests:
     test-ovs-ct-scapy-udp-vf-mirror.sh:
         ignore_nic:
             - cx5
+            - cx6
+            - cx6lx
     test-ovs-ct-scapy-udp-flush.sh:
     test-ovs-ct-tcp-snat.sh:
     test-ovs-ct-tcp-2ports.sh:
@@ -89,6 +93,8 @@ tests:
     test-ovs-ct-vxlan-vf-mirror.sh:
         ignore_nic:
             - cx5
+            - cx6
+            - cx6lx
     test-ovs-ct-vxlan-ipv6.sh:
     test-ovs-ct-vxlan-vf-lag.sh:
     test-ovs-ct-vf-lag.sh:
