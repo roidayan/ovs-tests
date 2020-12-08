@@ -98,6 +98,8 @@ tests:
             - cx5
             - cx6
             - cx6lx
+        ignore_fw:
+            ^22.*: [2390749]
     test-ovs-ct-vxlan-ipv6.sh:
     test-ovs-ct-vxlan-vf-lag.sh:
     test-ovs-ct-vf-lag.sh:
