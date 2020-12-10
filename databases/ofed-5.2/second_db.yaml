@@ -218,6 +218,8 @@ tests:
     test-vxlan-neigh-update-with-pedit.sh:
     test-vxlan-port-del.sh:
     test-vxlan-port-offload.sh:
+      ignore_kernel:
+        (3.10.0-693.el7.x86_64): [2386785]
     test-vxlan-rx-vlan-push-offload.sh:
     test-tc-par-add-ovr-del.sh:
       ignore_not_supported: true
