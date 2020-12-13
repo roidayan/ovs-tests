@@ -84,7 +84,7 @@ tests:
         - cx6
         - cx6lx
       ignore_kernel:
-        .*: [2357254]
+        .*: [2393169]
     test-ct-tcp-pedit-ct-clear.sh:
     test-ovs-ct-scapy-hw-ovs-miss.sh:
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
