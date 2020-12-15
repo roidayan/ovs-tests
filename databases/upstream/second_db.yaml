@@ -31,14 +31,8 @@ tests:
     test-ovs-dpctl-flows.sh:
     test-ovs-dpctl-flows-ttl-tos.sh:
     test-ovs-geneve.sh:
-        ignore_kernel:
-            .*: [2386814]
     test-ovs-geneve-in-ns-ipv6.sh:
-        ignore_kernel:
-            .*: [2386814]
     test-ovs-geneve-in-ns.sh:
-        ignore_kernel:
-            .*: [2386814]
     test-ovs-gre-in-ns.sh:
     test-ovs-icmp-frag.sh:
     test-ovs-icmp-offload.sh:

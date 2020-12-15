@@ -60,8 +60,6 @@ tests:
     test-tc-groups-multi-fgs.sh:
     test-tc-groups-overlapping.sh:
     test-tc-geneve.sh:
-        ignore_kernel:
-            .*: [2386814]
     test-tc-hairpin-disable-sriov.sh:
     test-tc-hairpin-nic-rules.sh:
     test-tc-hairpin-rules.sh:
@@ -118,8 +116,6 @@ tests:
     test-tc-reoffload.sh:
     test-tc-replace.sh:
     test-tc-restore-after-miss.sh:
-        ignore_kernel:
-            .*: [2386814]
     test-tc-rule-act-add.sh:
     test-tc-rule-add-null-qdisc.sh:
     test-tc-sample.sh:

@@ -28,14 +28,8 @@ tests:
             - cx6
             - cx6lx
     test-ovs-ct-geneve.sh:
-        ignore_kernel:
-            .*: [2386814]
     test-ovs-ct-geneve-options.sh:
-        ignore_kernel:
-            .*: [2386814]
     test-ovs-ct-geneve-options-vlan.sh:
-        ignore_kernel:
-            .*: [2386814]
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
         ignore_kernel:
