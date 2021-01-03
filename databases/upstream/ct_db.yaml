@@ -30,6 +30,8 @@ tests:
     test-ovs-ct-geneve.sh:
     test-ovs-ct-geneve-options.sh:
     test-ovs-ct-geneve-options-vlan.sh:
+        ignore_kernel:
+            .*: [2391223]
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
         ignore_kernel:
@@ -37,6 +39,8 @@ tests:
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
     test-ovs-ct-scapy-hw-ovs-miss.sh:
+        ignore_kernel:
+            .*for_linust.*: [2404423]
     test-ovs-ct-scapy-udp-2ports.sh:
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
