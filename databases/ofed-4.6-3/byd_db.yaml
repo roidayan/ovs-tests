@@ -207,6 +207,12 @@ tests:
         ignore_kernel:
             .*: [2145280]
     test-vf-lag.sh:
+        ignore_not_supported:
+            - 4.19.36-00184-gc44898927334
     test-eswitch-trust-dscp.sh:
     test-ovs-sflow.sh:
+        ignore_not_supported:
+            - 4.19.36-00184-gc44898927334
     test-tc-sample.sh:
+        ignore_not_supported:
+            - 4.19.36-00184-gc44898927334
