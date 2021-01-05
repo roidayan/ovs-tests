@@ -9,8 +9,6 @@ tests:
     test-tc-vf-mirror.sh:
     test-tc-icmp-4-channels.sh:
     test-tc-insert-rules.sh:
-         ignore_kernel:
-            .*: [2370949]
     test-tc-insert-rules-pedit.sh:
     test-tc-insert-rules-goto.sh:
     test-tc-insert-rules-mirror.sh:
@@ -20,7 +18,5 @@ tests:
     test-vxlan-neigh-update.sh:
     test-eswitch-set-vf-vlan.sh:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
-         ignore_kernel:
-            .*: [2370949]
     test-ovs-icmp-offload.sh:
     test-ct-tcp.sh:
