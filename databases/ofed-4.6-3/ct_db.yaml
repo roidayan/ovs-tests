@@ -72,10 +72,15 @@ tests:
      ignore_kernel:
        (4.19.*).*: [2166565]
     test-ovs-ct-vxlan.sh:
+      ignore_kernel:
+        (4.19.36-00184-gc44898927334).*: [2403771]
     test-ovs-ct-vxlan-2.sh:
      ignore_kernel:
        (4.19.*).*: [1824795]
+       (4.19.36-00184-gc44898927334).*: [2403771]
     test-ovs-ct-vxlan-3.sh:
+      ignore_kernel:
+        (4.19.36-00184-gc44898927334).*: [2403771]
     test-ovs-ct-vxlan-many-conns.sh:
       ignore_kernel:
         .*: [2164217]
@@ -87,9 +92,12 @@ tests:
     test-ovs-ct-vxlan-vf-mirror.sh:
       ignore_not_supported: true
     test-ovs-ct-tcp-ipv6.sh:
+       ignore_kernel:
+          (4.19.36-00184-gc44898927334).*: [2413587]
     test-ovs-ct-tcp-ipv6-2.sh:
      ignore_kernel:
        (4.19.*).*: [2334580]
+       (4.19.36-00184-gc44898927334).*: [2413587]
     test-ct-nat-tcp-ipv6.sh:
      ignore_kernel:
        (4.19.*).*: [2142704]

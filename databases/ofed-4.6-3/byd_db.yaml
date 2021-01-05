@@ -76,10 +76,18 @@ tests:
        ignore_kernel:
           (4.19.*).*: [2169704]
     test-tc-insert-rules-pedit.sh:
+       ignore_kernel:
+          (4.19.36-00184-gc44898927334).*: [2404325]
     test-tc-insert-rules-pedit-ttl-ip.sh:
+       ignore_kernel:
+          (4.19.36-00184-gc44898927334).*: [2404325]
     test-tc-insert-rules-pedit-ttl.sh:
+       ignore_kernel:
+          (4.19.36-00184-gc44898927334).*: [2404325]
     test-tc-insert-rules-port2.sh:
     test-tc-insert-rules-macvlan.sh:
+       ignore_kernel:
+          (4.19.36-00184-gc44898927334).*: [2404337]
     test-tc-insert-rules.sh:
         ignore_kernel:
           (4.19.*).*: [1716797]
@@ -96,6 +104,8 @@ tests:
         ignore_kernel:
           (4.19.*).*: [2169683]
     test-tc-qinq-rules.sh:
+       ignore_kernel:
+          (4.19.36-00184-gc44898927334).*: [2404392]
     test-tc-reoffload.sh:
         ignore_kernel:
           (4.19.*).*: [2169607]
@@ -117,6 +127,8 @@ tests:
     test-tc-traffic-proto-add-del.sh:
     test-tc-traffic-qdisc-del.sh:
     test-tc-vlan-modify.sh:
+       ignore_kernel:
+          (4.19.36-00184-gc44898927334).*: [2404392]
     test-tc-wrong-tunnel.sh:
         min_kernel: 5.0
         min_kernel_rhel: 3.10.0-1127
@@ -171,6 +183,8 @@ tests:
     test-ovs-replace-rule-hw.sh:
     test-ovs-replace-rule.sh:
     test-ovs-rewrite-ipv4-macs.sh:
+       ignore_kernel:
+          (4.19.36-00184-gc44898927334).*: [2404325]
     test-ovs-rewrite-tos-dscp.sh:
         ignore_kernel:
           (4.19.*).*: [2146576]
