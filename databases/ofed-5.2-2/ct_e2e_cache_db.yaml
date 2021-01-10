@@ -1,0 +1,17 @@
+description:
+    This DB is for running e2e cache tests for ofed regression
+tests:
+    test-ct-nat-tcp-e2e-cache.sh:
+    test-ct-nat-tcp-e2e-cache2.sh:
+    test-ct-nat-tcp-port-e2e-cache.sh:
+    test-ct-tcp-pedit-e2e-cache.sh:
+    test-ct-udp-e2e-cache.sh:
+    test-ct-udp-e2e-cache2.sh:
+    test-ct-udp-e2e-cache3.sh:
+    test-ct-vlan-e2e-cache.sh:
+      ignore_kernel:
+        5.4.60.*: [2385103]
+    test-ovs-ct-vlan-e2e-cache.sh:
+    test-ovs-ct-vxlan-e2e-cache.sh:
+      ignore_kernel:
+        5.4.60.*: [2385192]

@@ -1,0 +1,38 @@
+description:
+    devtests CI
+
+custom_kernels:
+  byd: 4.19.36.*
+  ucloud: 4.14.0.*
+
+tests:
+    test-vf-vf-ping.sh:
+    test-vf-rep-ping.sh:
+    test-tc-groups-overlapping.sh:
+    test-tc-groups-multi-fgs.sh:
+    test-tc-vf-mirror.sh:
+      min_kernel: 4.0
+      min_kernel_rhel: 3.10.0-1062
+    test-tc-icmp-4-channels.sh:
+    test-tc-insert-rules.sh:
+    test-tc-insert-rules-pedit.sh:
+      min_kernel: 4.14
+      min_kernel_rhel: 3.10.0-862
+    test-tc-insert-rules-goto.sh:
+      min_kernel: 4.19
+      min_kernel_rhel: 3.10.0-957
+      ignore_not_supported:
+        - ucloud
+    test-tc-insert-rules-mirror.sh:
+    test-tc-hairpin-rules.sh:
+    test-tc-merged-esw-vf-vf.sh:
+    test-tc-vxlan-decap-inner-match-drop.sh:
+      min_kernel: 5.0
+      min_kernel_rhel: 3.10.0-1062
+      ignore_not_supported:
+        - ucloud
+        - byd
+    test-vxlan-neigh-update.sh:
+    test-eswitch-set-vf-vlan.sh:
+    test-eswitch-add-in-mode1-del-in-mode2.sh:
+    test-ovs-icmp-offload.sh:
