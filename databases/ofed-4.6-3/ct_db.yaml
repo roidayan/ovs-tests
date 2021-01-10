@@ -1,45 +1,52 @@
 description:
     This DB is for running connection tracking tests for ofed regression
+
+custom_kernels:
+  rtnl: 4.19.36-0018.*
+  byd: 4.19.*
+
 tests:
     test-ct-icmp-frag.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142704]
+      2142704:
+        - byd
     test-ct-icmp-fwd.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142704]
+      2142704:
+        - byd
     test-ct-icmp.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142704]
+      2142704:
+        - byd
     test-ct-tcp-pedit.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142704]
+      2142704:
+        - byd
     test-ct-tcp-reload.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142704]
+      2142704:
+        - byd
     test-ct-tcp.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142704]
+      2142704:
+        - byd
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
-     ignore_kernel:
-       (4.19.*).*: [2166555]
+      2166555:
+        - byd
     test-ovs-ct-scapy-udp-2ports.sh:
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
-     ignore_kernel:
-       (4.19.*).*: [2349640]
+      2349640:
+        - byd
     test-ovs-ct-scapy-udp-ct-clear.sh:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
-     ignore_kernel:
-       (4.19.*).*: [2334580]
+      2334580:
+        - byd
+      ignore_kernel:
+        rtnl: [2427388]
     test-ovs-ct-scapy-udp-pedit-nat.sh:
     test-ovs-ct-scapy-udp-nat-dnat.sh:
-     ignore_kernel:
-       (4.19.*).*: [1858134]
+      1858134:
+        - byd
     test-ovs-ct-scapy-udp-nat-nop.sh:
     test-ovs-ct-scapy-udp-nat-snat.sh:
     test-ovs-ct-scapy-udp-reload.sh:
@@ -47,11 +54,13 @@ tests:
     test-ovs-ct-tcp-2ports.sh:
     test-ovs-ct-tcp-iperf3.sh:
     test-ovs-ct-tcp-label2.sh:
-     ignore_kernel:
-       (4.19.*).*: [2166530]
+      2166530:
+        - byd
     test-ovs-ct-tcp-label-reconfig.sh:
-     ignore_kernel:
-       (4.19.*).*: [2334580]
+      2334580:
+        - byd
+      ignore_kernel:
+        rtnl: [2427388]
     test-ovs-ct-tcp-label.sh:
     test-ovs-ct-tcp-label-128.sh:
     test-ovs-ct-tcp-mac-rewrite.sh:
@@ -62,28 +71,28 @@ tests:
     test-ovs-ct-udp-frag.sh:
      ignore_not_supported: true
     test-ct-tcp-pedit-ct-clear.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142704]
+      2142704:
+        - byd
     test-ovs-ct-scapy-hw-ovs-miss.sh:
     test-ovs-ct-scapy-udp-nat-dnat-ct2.sh:
-     ignore_kernel:
-       (4.19.*).*: [1858134]
+      1858134:
+        - byd
     test-ovs-ct-scapy-udp-nat-snat-ct2.sh:
-     ignore_kernel:
-       (4.19.*).*: [2166565]
+      2166565:
+        - byd
     test-ovs-ct-vxlan.sh:
       ignore_kernel:
-        (4.19.36-00184-gc44898927334).*: [2403771]
+        rtnl: [2403771]
     test-ovs-ct-vxlan-2.sh:
-     ignore_kernel:
-       (4.19.*).*: [1824795]
-       (4.19.36-00184-gc44898927334).*: [2403771]
+      ignore_kernel:
+        byd: [1824795]
+        rtnl: [2403771]
     test-ovs-ct-vxlan-3.sh:
       ignore_kernel:
-        (4.19.36-00184-gc44898927334).*: [2403771]
+        rtnl: [2403771]
     test-ovs-ct-vxlan-many-conns.sh:
-      ignore_kernel:
-        .*: [2164217]
+      2164217:
+        - byd
     test-ovs-ct-vxlan-ipv6.sh:
     test-ovs-ct-tcp-snat.sh:
     test-ct-tcp-vf-mirror-pedit.sh:
@@ -92,24 +101,24 @@ tests:
     test-ovs-ct-vxlan-vf-mirror.sh:
       ignore_not_supported: true
     test-ovs-ct-tcp-ipv6.sh:
-       ignore_kernel:
-          (4.19.36-00184-gc44898927334).*: [2413587]
+      ignore_kernel:
+        rtnl: [2413587]
     test-ovs-ct-tcp-ipv6-2.sh:
-     ignore_kernel:
-       (4.19.*).*: [2334580]
-       (4.19.36-00184-gc44898927334).*: [2413587]
+      ignore_kernel:
+        byd: [2334580]
+        rtnl: [2413587]
     test-ct-nat-tcp-ipv6.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142704]
+      2142704:
+        - byd
     test-ct-nat-tcp.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142704]
+      2142704:
+        - byd
     test-ct-tcp-ipv6.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142704]
+      2142704:
+        - byd
     test-ct-nic-tcp.sh:
-     ignore_kernel:
-       (4.19.*).*: [2142704]
+      2142704:
+        - byd
     test-tc-restore-after-miss.sh:
       ignore_not_supported: true
     test-ovs-ct-geneve.sh:
@@ -121,6 +130,6 @@ tests:
     test-ovs-ct-tcp-nat-restore.sh:
       ignore_not_supported: true
     test-ovs-ct-scapy-udp-flush.sh:
-      ignore_kernel:
-        (4.19.*).*: [2334625]
+      2334625:
+        - byd
 
