@@ -102,6 +102,8 @@ tests:
     test-ct-nic-tcp-vf-legacy.sh:
     test-ct-tcp-trk-new.sh:
     test-ct-tcp-trk-new-miss.sh:
+      ignore_kernel:
+        .*: [2421648]
     test-ovs-ct-vf-lag.sh:
     test-ovs-ct-vf-tunnel.sh:
       ignore_nic:
