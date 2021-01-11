@@ -82,19 +82,23 @@ tests:
         - byd
     test-ovs-ct-vxlan.sh:
       ignore_kernel:
-        rtnl: [2403771]
+        rtnl: [2430333]
     test-ovs-ct-vxlan-2.sh:
       ignore_kernel:
         byd: [1824795]
-        rtnl: [2403771]
+        rtnl: [2430333]
     test-ovs-ct-vxlan-3.sh:
       ignore_kernel:
-        rtnl: [2403771]
+        rtnl: [2430333]
     test-ovs-ct-vxlan-many-conns.sh:
       2164217:
         - byd
     test-ovs-ct-vxlan-ipv6.sh:
+      ignore_kernel:
+        rtnl: [2430333]
     test-ovs-ct-tcp-snat.sh:
+      ignore_kernel:
+        rtnl: [2427388]
     test-ct-tcp-vf-mirror-pedit.sh:
       ignore_not_supported: true
     test-ovs-ct-scapy-udp-vf-mirror.sh:

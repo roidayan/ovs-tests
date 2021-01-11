@@ -67,6 +67,8 @@ tests:
     test-tc-insert-rule-rep-uplink-vlan.sh:
       min_kernel: 5.4
       min_kernel_rhel: 3.10.0-1127
+      ignore_not_supported:
+        - byd
     test-tc-insert-rules-act-pass.sh:
       ignore_not_supported: true
     test-tc-insert-rules-duplicates.sh:
@@ -139,9 +141,10 @@ tests:
     test-tc-wrong-tunnel.sh:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
+      ignore_not_supported:
+        - byd
     test-devlink-show-in-each-link-mode.sh:
-      ignore_kernel:
-        .*: [2170746]
+      ignore_not_supported: true
     test-ecmp-add-multipath-rule.sh:
       2163715:
         - byd
