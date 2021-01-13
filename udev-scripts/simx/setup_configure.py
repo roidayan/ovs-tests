@@ -60,8 +60,10 @@ def runcmd_output(cmd):
     return check_output(cmd, shell=True).decode()
 
 
-class DynamicObject(object):
-    pass
+class Host(object):
+    def __init__(self, name):
+        self.name = name
+        self.PNics = []
 
 
 class SetupConfigure(object):
@@ -84,15 +86,16 @@ class SetupConfigure(object):
             self.StopOVS()
             self.ReloadModules()
 
-            self.host = DynamicObject()
-
-            self.host.name = socket.gethostbyname(socket.gethostname())
+            self.host = Host(socket.gethostbyname(socket.gethostname()))
 
             self.UpdatePATHEnvironmentVariable()
 
             self.LoadPFInfo()
-            self.DestroyVFs()
+            if not self.host.PNics:
+                self.Logger.error("Cannot find PNics")
+                return 1
 
+            self.DestroyVFs()
             self.CreateVFs()
             self.LoadVFInfo()
 
