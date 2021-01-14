@@ -58,6 +58,8 @@ tests:
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-toggle-mode-fail.sh:
+      ignore_kernel:
+        .*: [2433698]
     test-eswitch-hw-tc-offload.sh:
     test-eswitch-reload-modules.sh:
     test-eswitch-par-actions-devlink-compat.sh:
