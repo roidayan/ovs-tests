@@ -4,6 +4,7 @@ description:
 custom_kernels:
   rtnl: 4.19.36-0018.*
   byd: 4.19.*
+  rss: 4.19.36+
 
 tests:
     test-ct-icmp-frag.sh:
@@ -31,12 +32,16 @@ tests:
       2166555:
         - byd
     test-ovs-ct-scapy-udp-2ports.sh:
+      ignore_not_supported:
+        - rss
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
       2349640:
         - byd
     test-ovs-ct-scapy-udp-ct-clear.sh:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
+      ignore_not_supported:
+        - rss
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
       2334580:

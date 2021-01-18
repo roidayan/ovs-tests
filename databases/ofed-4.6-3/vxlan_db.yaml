@@ -4,6 +4,7 @@ description:
 custom_kernels:
   rtnl: 4.19.36-0018.*
   byd: 4.19.*
+  rss: 4.19.36+
 
 tests:
     test-vxlan-port-del.sh:
@@ -20,6 +21,7 @@ tests:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh:
       ignore_kernel:
         rtnl: [2426496]
+        rss: [2436310]
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
       1610829:
         - byd
