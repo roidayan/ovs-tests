@@ -257,3 +257,7 @@ tests:
         - cx5
         - cx6
         - cx6lx
+    test-ovs-tcp-merged-esw.sh:
+    test-devlink-encap.sh:
+      ignore_kernel:
+        .*: [2437534]

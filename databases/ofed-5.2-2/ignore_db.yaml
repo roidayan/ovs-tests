@@ -11,7 +11,6 @@ tests:
     test-vf-vf-iperf-perf.sh:                              # Performance test that we can not run in cloud.
     test-tc-insert-rules-macvlan.sh:                       # bytedance only
     test-vf-vf-fwd-fl_classify.sh:                         # Old test. No need to run it.
-    test-devlink-encap.sh:                                 # CX4 test
     test-devlink-inline-mode.sh:                           # CX4 test
     test-devlink-inline-mode2.sh:                          # CX4 test
     test-tc-vxlan-decap-in-skip-sw.sh:                     # Bug SW #2153600: [ASAP, OFED] should not run test-tc-vxlan-decap-in-skip-sw.sh
