@@ -32,16 +32,16 @@ tests:
       2166555:
         - byd
     test-ovs-ct-scapy-udp-2ports.sh:
-      ignore_not_supported:
-        - rss
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
       2349640:
         - byd
+      2437807:
+        - rss
     test-ovs-ct-scapy-udp-ct-clear.sh:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
-      ignore_not_supported:
-        - rss
+      ignore_kernel:
+        rss: [2437807]
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
       2334580:
@@ -97,6 +97,7 @@ tests:
     test-ovs-ct-vxlan-3.sh:
       ignore_kernel:
         rtnl: [2430333]
+        rss: [2437807]
     test-ovs-ct-vxlan-many-conns.sh:
       2164217:
         - byd
@@ -114,10 +115,14 @@ tests:
     test-ovs-ct-tcp-ipv6.sh:
       ignore_kernel:
         rtnl: [2413587]
+      ignore_not_supported:
+        - rss
     test-ovs-ct-tcp-ipv6-2.sh:
       ignore_kernel:
         byd: [2334580]
         rtnl: [2413587]
+      ignore_not_supported:
+        - rss
     test-ct-nat-tcp-ipv6.sh:
       2142704:
         - byd
