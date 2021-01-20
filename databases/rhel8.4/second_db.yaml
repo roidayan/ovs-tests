@@ -44,6 +44,8 @@ tests:
     test-ovs-rewrite-ipv4-macs.sh:
     test-ovs-rewrite-tos-dscp.sh:
     test-ovs-rewrite-header-reload.sh:
+      ignore_kernel:
+        .*: [2235604]
     test-ovs-tcp-offload.sh:
     test-ovs-tc-rules-checker.sh:
     test-ovs-udp-offload.sh:
@@ -60,6 +62,8 @@ tests:
     test-ovs-vlan-implicit.sh:
     test-ovs-vxlan-flow-key.sh:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:
+      ignore_kernel:
+        .*: [2235611]
     test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh:
     test-ovs-vxlan-in-ns-ipv6.sh:
     test-ovs-vxlan-in-ns.sh:
