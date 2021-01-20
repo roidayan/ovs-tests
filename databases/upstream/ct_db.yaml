@@ -7,8 +7,6 @@ tests:
     test-ct-icmp-fwd.sh:
     test-ct-icmp.sh:
     test-ct-nic-tcp.sh:
-        ignore_kernel:
-            .*: [2368113]
     test-ct-nic-tcp-vf-legacy.sh:
         ignore_kernel:
             .*: [2389665]
