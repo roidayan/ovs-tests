@@ -29,6 +29,8 @@ tests:
     test-ovs-dpdk-vxlan-ct-multi-zone.sh:
     test-ovs-dpdk-ct-dnat-tcp.sh:
     test-ovs-dpdk-vxlan-ct-tcp-label.sh:
+      ignore_kernel:
+        .* : [2444204]
     test-ovs-dpdk-vxlan-ct-tcp.sh:
     test-ovs-dpdk-vxlan-ct-udp.sh:
     test-ovs-dpdk-vxlan-ct-zoneid-value.sh:
