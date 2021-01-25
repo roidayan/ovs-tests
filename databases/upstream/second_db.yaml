@@ -80,6 +80,7 @@ tests:
     test-ovs-vxlan-remove-tunnel-during-traffic.sh:
     test-ovs-vxlan.sh:
     test-ovs-vxlan-vf-lag.sh:
+    test-ovs-vxlan-vf-lag-termtbl.sh:
     test-ovs-sflow.sh:
         ignore_kernel:
             .*: [1707154]
