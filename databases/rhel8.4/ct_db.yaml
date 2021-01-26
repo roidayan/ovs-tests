@@ -74,3 +74,7 @@ tests:
       ignore_not_supported: true
     test-ovs-ct-vxlan-ipv6.sh:
       ignore_not_supported: true
+    test-ovs-ct-vf-lag.sh:
+    test-ovs-ct-vf-tunnel.sh:
+        ignore_nic:
+            - cx5

@@ -43,10 +43,12 @@ tests:
     test-ovs-replace-rule.sh:
     test-ovs-rewrite-ipv4-macs.sh:
     test-ovs-rewrite-tos-dscp.sh:
+    test-ovs-rewrite-ipv6-tos-dscp.sh:
     test-ovs-rewrite-header-reload.sh:
       ignore_kernel:
         .*: [2235604]
     test-ovs-tcp-offload.sh:
+    test-ovs-tcp-merged-esw.sh:
     test-ovs-tc-rules-checker.sh:
     test-ovs-udp-offload.sh:
     test-ovs-vf-tunnel.sh:
@@ -72,6 +74,7 @@ tests:
         .*: [2242846]
     test-ovs-vxlan.sh:
     test-ovs-vxlan-vf-lag.sh:
+    test-ovs-vxlan-vf-lag-termtbl.sh:
     test-ovs-probe.sh:
     test-ovs-100-diff-masks.sh:
     test-vxlan-inner-header-rewrite-icmp-v6.sh:
@@ -84,6 +87,7 @@ tests:
     test-vxlan-rx-vlan-push-offload.sh:
     test-vf-lag.sh:
     test-vf-lag-nic-tc-rule.sh:
+    test-vf-lag-warn-unsupported-mode.sh:
     test-vf-rep-ping.sh:
     test-vf-rep-change-mtu.sh:
     test-vf-rep-iperf.sh:

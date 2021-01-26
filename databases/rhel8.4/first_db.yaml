@@ -23,11 +23,13 @@ tests:
     test-eswitch-set-vf-rate.sh:
     test-eswitch-set-vf-vlan.sh:
     test-eswitch-sqn-overflow.sh:
+    test-eswitch-sqn-overflow-short.sh:
     test-eswitch-switchdev-ndos.sh:
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:
     test-eswitch-toggle-mode-parallel3.sh:
     test-eswitch-toggle-mode-parallel.sh:
+    test-eswitch-toggle-mode-fail.sh:
     test-eswitch-toggle-modes.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
     test-eswitch-reload-modules.sh:
