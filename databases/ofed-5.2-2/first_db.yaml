@@ -47,6 +47,7 @@ tests:
     test-eswitch-sqn-overflow.sh:
       ignore_kernel:
         .*: [2351618]
+    test-eswitch-sqn-overflow-short.sh:
     test-eswitch-switchdev-ndos.sh:
     test-eswitch-toggle-mode-ovs-crash.sh:
     test-eswitch-toggle-mode-parallel2.sh:

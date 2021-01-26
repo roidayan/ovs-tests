@@ -16,6 +16,7 @@ tests:
     test-tc-vxlan-decap-in-skip-sw.sh:                     # Bug SW #2153600: [ASAP, OFED] should not run test-tc-vxlan-decap-in-skip-sw.sh
     test-ovs-ct-tcp-testpmd.sh:                            # the testpmd tests are heavy and u will get out of mem. need to either lower the burst or create light test. Bug SW #2176088
     test-ovs-ct-tcp-testpmd-remote.sh:                     # the testpmd tests are heavy and u will get out of mem. need to either lower the burst or create light test. Bug SW #2176088
+    test-ovs-ct-tcp-testpmd-vxlan.sh:                      # the testpmd tests are heavy and u will get out of mem. need to either lower the burst or create light test. Bug SW #2176088
     test-ovs-vxlan-in-ns-dpctl.sh:                         # the dpctl in ovs is not supported anymore. its for old ovs.
     test-tc-rule-act-add.sh:                               # act-add add-null test kernel and not driver. if there is a bug 99.9% we cannot fix it in ofed.
     test-tc-rule-add-null-qdisc.sh:                        # act-add add-null test kernel and not driver. if there is a bug 99.9% we cannot fix it in ofed.
