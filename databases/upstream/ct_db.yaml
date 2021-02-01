@@ -14,9 +14,6 @@ tests:
     test-ct-nat-tcp-ipv6.sh:
     test-ct-tcp-pedit.sh:
     test-ct-tcp-pedit-ct-clear.sh:
-    test-ct-tcp-trk-new.sh:
-        ignore_for_linust: 1
-    test-ct-tcp-trk-new-miss.sh:
     test-ct-tcp-ipv6.sh:
     test-ct-tcp-reload.sh:
     test-ct-tcp.sh:
