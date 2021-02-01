@@ -132,3 +132,4 @@ tests:
         ignore_kernel:
             .*: [2439079]
         ignore_for_linust: 1
+    test-devlink-nic-health-report.sh:
