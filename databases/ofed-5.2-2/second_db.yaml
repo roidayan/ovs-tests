@@ -262,3 +262,4 @@ tests:
     test-devlink-encap.sh:
       ignore_kernel:
         .*: [2437534]
+    test-devlink-nic-health-report.sh:
