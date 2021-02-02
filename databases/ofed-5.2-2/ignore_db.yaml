@@ -30,3 +30,5 @@ tests:
     test-tc-bad-tunnel.sh:                                 # Irrelevant test.
     test-tc-bad-tunnel2.sh:                                # Irrelevant test.
     test-eswitch-sf.sh:                                    # Not supported in OFED 5.2.
+    test-ct-tcp-trk-new.sh:                                # Not supported anymore in OFED 5.2.
+    test-ct-tcp-trk-new-miss.sh:                           # Not supported anymore in OFED 5.2.
