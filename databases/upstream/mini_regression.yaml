@@ -22,3 +22,4 @@ tests:
     test-eswitch-reload-modules-different-state.sh:
     test-eswitch-netdev-tx.sh:
     test-ct-tcp.sh:
+    test-mod-depends.sh:
