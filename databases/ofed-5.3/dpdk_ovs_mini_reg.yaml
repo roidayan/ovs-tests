@@ -1,0 +1,26 @@
+description:
+    devtests OVS-DPDK CI
+
+tests_subfolder: ovs-dpdk-tests
+
+tests:
+    test-ovs-dpdk-ct-tcp.sh:
+    test-ovs-dpdk-ct-udp.sh:
+    test-ovs-dpdk-vxlan-ct-multi-zone.sh:
+    test-ovs-dpdk-ct-dnat-tcp.sh:
+    test-ovs-dpdk-vxlan-ct-tcp-label.sh:
+      ignore_kernel:
+        .* : [2444204]
+    test-ovs-dpdk-vxlan-ct-tcp.sh:
+    test-ovs-dpdk-vxlan-ct-udp.sh:
+    test-ovs-dpdk-vxlan-ct-zoneid-value.sh:
+    test-ovs-dpdk-vxlan-load-action.sh:
+    test-ovs-dpdk-vxlan.sh:
+    test-ovs-dpdk-geneve.sh:
+    test-ovs-dpdk-ct-geneve-tlv.sh:
+      min_kernel: 5.4
+      min_kernel_rhel: 4.18.0-193
+    test-ovs-dpdk-geneve-tlv.sh:
+      min_kernel: 5.4
+      min_kernel_rhel: 4.18.0-193
+    test-ovs-dpdk-ct-geneve.sh:

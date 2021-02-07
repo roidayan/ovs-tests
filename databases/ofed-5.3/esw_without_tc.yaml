@@ -1,0 +1,12 @@
+description:
+    This DB is for running eswitch tests for ofed regression
+tests:
+    test-eswitch-toggle-mode-ovs-crash.sh:
+    test-eswitch-toggle-mode-parallel2.sh:
+    test-eswitch-toggle-mode-parallel3.sh:
+    test-eswitch-toggle-mode-parallel.sh:
+    test-eswitch-toggle-modes.sh:
+    test-eswitch-reps-2ports.sh:
+    test-eswitch-reload-modules.sh:
+      ignore_flow_steering: smfs
+
