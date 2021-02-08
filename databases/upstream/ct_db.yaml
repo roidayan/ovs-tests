@@ -94,6 +94,8 @@ tests:
         ignore_fw:
             ^22.*: [2390749]
     test-ovs-ct-vxlan-ipv6.sh:
+        ignore_kernel:
+            .*: [2466306]
     test-ovs-ct-vxlan-vf-lag.sh:
     test-ovs-ct-vf-lag.sh:
     test-ovs-ct-vf-tunnel.sh:

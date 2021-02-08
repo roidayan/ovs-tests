@@ -87,6 +87,8 @@ tests:
     test-tc-insert-rules-goto2.sh:
     test-tc-insert-rules-vxlan.sh:
     test-tc-insert-rules-vxlan-vf-tunnel.sh:
+        ignore_kernel:
+            .*: [2466303]
     test-tc-insert-rule-without-match.sh:
     test-tc-insert-rule-qinq-pop2-mirror.sh:
     test-tc-indr-block-driver-unload.sh:
@@ -145,6 +147,8 @@ tests:
         ignore_kernel:
             .*: [1647028]
     test-tc-vxlan-outer-dst-mac.sh:
+        ignore_kernel:
+            .*: [2466313]
         ignore_flow_steering: smfs
     test-tc-wrong-tunnel.sh:
         ignore_flow_steering: smfs
