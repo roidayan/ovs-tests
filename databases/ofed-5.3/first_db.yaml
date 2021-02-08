@@ -72,6 +72,9 @@ tests:
     test-tc-del-a-lot.sh:
     test-tc-duplicate-hw-rules.sh:
       ignore_flow_steering: smfs
+      ignore_fw:
+        ^22.*: [2466612]
+        ^26.*: [2466612]
     test-tc-groups-multi-fgs.sh:
     test-tc-groups-overlapping.sh:
     test-tc-hairpin-disable-sriov.sh:
@@ -216,6 +219,8 @@ tests:
     test-tc-vxlan-decap-proto-all.sh:
     test-tc-vxlan-outer-dst-mac.sh:
       ignore_flow_steering: smfs
+      ignore_kernel:
+        .*: [2466594]
     test-tc-wrong-tunnel.sh:
       min_kernel: 5.0
       min_kernel_rhel: 3.10.0-1127
