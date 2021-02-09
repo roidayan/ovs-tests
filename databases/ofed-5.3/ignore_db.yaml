@@ -38,3 +38,4 @@ tests:
     test-tc-vxlan-encap.sh:                                # encap created when uplink is down is wrong limitation Bug #1706116.
     test-ovs-vf-lag2.sh:                                   # ingress_block could be missing after adding bond to ovs or restarting ovs Bug #1830683.
     test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:      # Cannot find packets after header rewrite of src port when gro is off Bug # 1708975.
+    test-tc-vxlan-outer-dst-mac.sh:                        # The driver no longer set dst mac implicitly.
