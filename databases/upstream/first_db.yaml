@@ -146,9 +146,5 @@ tests:
         ignore_flow_steering: smfs
         ignore_kernel:
             .*: [1647028]
-    test-tc-vxlan-outer-dst-mac.sh:
-        ignore_kernel:
-            .*: [2466313]
-        ignore_flow_steering: smfs
     test-tc-wrong-tunnel.sh:
         ignore_flow_steering: smfs
