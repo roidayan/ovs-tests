@@ -42,6 +42,7 @@ tests:
         ignore_kernel:
             .*: [2431774]
     test-eswitch-toggle-modes.sh:
+    test-eswitch-toggle-mode-ingress.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
         ignore_nic:
             - cx6

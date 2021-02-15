@@ -65,8 +65,10 @@ tests:
     test-ovs-vf-tunnel.sh:
         ignore_nic:
             - cx5
-        ignore_fw:
-            ^22.*: [2193029]
+        ignore_for_linust: 1
+    test-ovs-vf-tunnel-route-change.sh:
+        ignore_nic:
+            - cx5
         ignore_for_linust: 1
     test-ovs-vlan.sh:
     test-ovs-vlan-implicit.sh:

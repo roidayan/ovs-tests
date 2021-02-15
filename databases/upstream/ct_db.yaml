@@ -77,6 +77,10 @@ tests:
     test-ovs-ct-tcp-nat-restore.sh:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-tcp-2.sh:
+    test-ovs-ct-tcp-ct-state-rpl.sh:
+        ignore_kernel:
+            .*: [2485122]
+        ignore_for_linust: 1
     test-ovs-ct-udp-frag.sh:
         ignore_kernel:
             .*: [2261207]
@@ -101,6 +105,4 @@ tests:
     test-ovs-ct-vf-tunnel.sh:
         ignore_nic:
             - cx5
-        ignore_fw:
-            ^22.*: [2193029]
         ignore_for_linust: 1
