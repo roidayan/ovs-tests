@@ -31,3 +31,13 @@ tests:
     test-tc-vxlan-outer-dst-mac.sh:                        # Driver no longer set dst mac implicitly.
     test-ct-tcp-trk-new.sh:                                # Not supported. Design team reverted related support.
     test-ct-tcp-trk-new-miss.sh:                           # Not supported. Design team reverted related support.
+    test-ct-nat-tcp-e2e-cache2.sh:                         # e2e-cache feature is not supported
+    test-ct-nat-tcp-e2e-cache.sh:                          # e2e-cache feature is not supported
+    test-ct-nat-tcp-port-e2e-cache.sh:                     # e2e-cache feature is not supported
+    test-ct-tcp-pedit-e2e-cache.sh:                        # e2e-cache feature is not supported
+    test-ct-udp-e2e-cache2.sh:                             # e2e-cache feature is not supported
+    test-ct-udp-e2e-cache3.sh:                             # e2e-cache feature is not supported
+    test-ct-udp-e2e-cache.sh:                              # e2e-cache feature is not supported
+    test-ct-vlan-e2e-cache.sh:                             # e2e-cache feature is not supported
+    test-ovs-ct-vlan-e2e-cache.sh:                         # e2e-cache feature is not supported
+    test-ovs-ct-vxlan-e2e-cache.sh:                        # e2e-cache feature is not supported
