@@ -58,6 +58,14 @@ tests:
     test-ovs-ct-tcp-nat-mark.sh:
     test-ovs-ct-tcp.sh:
     test-ovs-ct-tcp-2.sh:
+    test-ovs-ct-tcp-ct-state-rpl.sh:
+      ignore_not_supported:
+        - 5.9.0.*
+        - 4.9.*
+        - 4.18.0-240.*
+        - 5.4.74.*
+        - 4.14.0.*
+        - .*el.*
     test-ovs-ct-udp-frag.sh:
       ignore_kernel:
         .*: [2292541]
