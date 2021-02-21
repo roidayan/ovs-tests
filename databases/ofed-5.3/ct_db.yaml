@@ -91,6 +91,8 @@ tests:
     test-tc-restore-after-miss.sh:
     test-ct-nic-tcp.sh:
     test-ct-nic-tcp-vf-legacy.sh:
+      ignore_kernel:
+        .*: [2494257]
     test-ovs-ct-vf-lag.sh:
     test-ovs-ct-vf-tunnel.sh:
       ignore_nic:
