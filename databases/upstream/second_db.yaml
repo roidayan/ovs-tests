@@ -20,6 +20,8 @@ tests:
     test-ethtool-steering-traffic-cleanup.sh:
     test-ethtool-steering-traffic-on-rule.sh:
     test-ethtool-steering-traffic-spread.sh:
+        ignore_kernel:
+            .*for_linust.*: [2497877]
     test-ethtool-nic-mode.sh:
     test-mod-depends.sh:
         ignore_kernel:
