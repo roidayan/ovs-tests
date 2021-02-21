@@ -39,3 +39,4 @@ tests:
     test-ovs-vf-lag2.sh:                                   # ingress_block could be missing after adding bond to ovs or restarting ovs Bug #1830683.
     test-ovs-vxlan-in-ns-and-rewrite-ipv4-gro-off.sh:      # Cannot find packets after header rewrite of src port when gro is off Bug # 1708975.
     test-tc-vxlan-outer-dst-mac.sh:                        # The driver no longer set dst mac implicitly.
+    test-ovs-ct-scapy-udp-many-conns.sh:                   # Performance test. We should not run. Check task #2359450 for more details.

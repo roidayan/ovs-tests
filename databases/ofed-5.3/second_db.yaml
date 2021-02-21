@@ -144,6 +144,9 @@ tests:
     test-ovs-vf-tunnel.sh:
       ignore_nic:
         - cx5
+    test-ovs-vf-tunnel-route-change.sh:
+      ignore_nic:
+        - cx5
     test-ovs-vxlan-flow-key.sh:
     test-ovs-vxlan-in-ns-and-rewrite-ipv4.sh:
       min_kernel: 4.14
