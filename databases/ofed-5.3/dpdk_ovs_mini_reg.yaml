@@ -22,3 +22,5 @@ tests:
       min_kernel: 5.4
       min_kernel_rhel: 4.18.0-193
     test-ovs-dpdk-ct-geneve.sh:
+    test-ovs-dpdk-vf-vf-mirror.sh:
+    test-ovs-dpdk-vxlan-vf-geneve-mirror.sh:
