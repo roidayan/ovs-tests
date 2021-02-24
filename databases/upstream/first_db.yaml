@@ -49,6 +49,7 @@ tests:
             - cx6lx
             - cx6dx
     test-eswitch-hw-tc-offload.sh:
+    test-eswitch-sf.sh:
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
     test-tc-del-a-lot.sh:
@@ -88,8 +89,15 @@ tests:
     test-tc-insert-rules-goto2.sh:
     test-tc-insert-rules-vxlan.sh:
     test-tc-insert-rules-vxlan-vf-tunnel.sh:
+        ignore_nic:
+            - cx5
+        ignore_for_linust: 1
+    test-tc-insert-rules-vxlan-vf-tunnel-with-mirror.sh:
+        ignore_nic:
+            - cx5
         ignore_kernel:
-            .*: [2466303]
+            .*: [2495074]
+        ignore_for_linust: 1
     test-tc-insert-rule-without-match.sh:
     test-tc-insert-rule-qinq-pop2-mirror.sh:
     test-tc-indr-block-driver-unload.sh:
@@ -149,3 +157,4 @@ tests:
             .*: [1647028]
     test-tc-wrong-tunnel.sh:
         ignore_flow_steering: smfs
+    test-tc-wrong-geneve.sh:

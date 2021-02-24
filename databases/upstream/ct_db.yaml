@@ -97,6 +97,7 @@ tests:
             - cx6lx
         ignore_fw:
             ^22.*: [2390749]
+    test-ovs-ct-vxlan-inner-ipv6.sh:
     test-ovs-ct-vxlan-ipv6.sh:
         ignore_kernel:
             .*: [2466306]
