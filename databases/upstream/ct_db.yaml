@@ -61,6 +61,8 @@ tests:
             - cx5
             - cx6
             - cx6lx
+        ignore_fw:
+            ^22.*: [2509912]
     test-ovs-ct-scapy-udp-flush.sh:
     test-ovs-ct-tcp-snat.sh:
     test-ovs-ct-tcp-2ports.sh:

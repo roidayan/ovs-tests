@@ -50,6 +50,7 @@ tests:
             - cx6dx
     test-eswitch-hw-tc-offload.sh:
     test-eswitch-sf.sh:
+        ignore_flow_steering: smfs
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
     test-tc-del-a-lot.sh:
@@ -158,3 +159,5 @@ tests:
     test-tc-wrong-tunnel.sh:
         ignore_flow_steering: smfs
     test-tc-wrong-geneve.sh:
+        ignore_kernel:
+            .*: [1903615]
