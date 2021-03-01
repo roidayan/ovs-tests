@@ -2,14 +2,10 @@ description:
     This DB is for running connection tracking tests for upstream regression
 tests:
     test-ct-icmp-frag.sh:
-        ignore_kernel:
-            .*: [2261261]
     test-ct-icmp-fwd.sh:
     test-ct-icmp.sh:
     test-ct-nic-tcp.sh:
     test-ct-nic-tcp-vf-legacy.sh:
-        ignore_kernel:
-            .*: [2389665]
     test-ct-nat-tcp.sh:
     test-ct-nat-tcp-ipv6.sh:
     test-ct-tcp-pedit.sh:
@@ -29,13 +25,9 @@ tests:
             .*: [2391223]
     test-ovs-ct-icmp-cycle-esw-modes.sh:
     test-ovs-ct-icmp-frag.sh:
-        ignore_kernel:
-            .*: [2261261]
     test-ovs-ct-icmp.sh:
     test-ovs-ct-miss-to-sw.sh:
     test-ovs-ct-scapy-hw-ovs-miss.sh:
-        ignore_kernel:
-            .*for_linust.*: [2404423]
     test-ovs-ct-scapy-udp-2ports.sh:
     test-ovs-ct-scapy-udp-aging-ovs.sh:
     test-ovs-ct-scapy-udp-aging.sh:
@@ -45,8 +37,6 @@ tests:
     test-ovs-ct-scapy-udp-cycle-esw-modes.sh:
     test-ovs-ct-scapy-udp-down-up.sh:
     test-ovs-ct-scapy-udp-pedit-nat-reconfig-flows.sh:
-        ignore_kernel:
-            .*: [2235094]
     test-ovs-ct-scapy-udp-pedit-nat.sh:
         ignore_not_supported: true
     test-ovs-ct-scapy-udp-nat-dnat.sh:

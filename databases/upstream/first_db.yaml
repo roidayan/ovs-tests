@@ -9,7 +9,7 @@ tests:
             .*: [2202627]
     test-eswitch-add-del-flows-during-flows-cleanup2.sh:
         ignore_kernel:
-            .*: [2439090, 2297742]
+            .*: [2297742]
     test-eswitch-add-del-flows-during-flows-cleanup3.sh:
     test-eswitch-add-flows-during-reload.sh:
     test-eswitch-add-in-mode1-del-in-mode2.sh:
@@ -39,8 +39,6 @@ tests:
     test-eswitch-toggle-mode-parallel3.sh:
     test-eswitch-toggle-mode-parallel.sh:
     test-eswitch-toggle-mode-fail.sh:
-        ignore_kernel:
-            .*: [2431774]
     test-eswitch-toggle-modes.sh:
     test-eswitch-toggle-mode-ingress.sh:
     test-eswitch-with-ipv4-ttl-modify-enabled.sh:
@@ -51,6 +49,7 @@ tests:
     test-eswitch-hw-tc-offload.sh:
     test-eswitch-sf.sh:
         ignore_flow_steering: smfs
+        ignore_for_linust: 1
     test-tc-bad-egdev-rules.sh:
     test-tc-bad-indr-vlan-rule.sh:
     test-tc-del-a-lot.sh:
@@ -142,8 +141,6 @@ tests:
     test-tc-traffic-qdisc-del.sh:
     test-tc-trap.sh:
     test-tc-vf-mirror-pedit.sh:
-        ignore_smfs:
-            .*: [2304188]
     test-tc-vf-mirror.sh:
     test-tc-vf-remote-mirror.sh:
     test-tc-vlan-modify.sh:
